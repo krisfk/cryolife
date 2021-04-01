@@ -7833,8 +7833,8 @@ body[class*=vmenu-]:not(.menu-overlay):not(.menu-offcanvas) .logo-container {
   }
   body.hmenu .menu-primary .menu-horizontal .menu-smart > li > a,
   .navbar-cta ul.menu-smart > li > a {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
   body[class*=hmenu-]:not(.hmenu-center-split):not(.hmenu-center-double):not(.hormenu-position-right) .logo-container {
     padding-left: 0px !important;
