@@ -1,0 +1,82 @@
+ul, ol, dl {
+	margin: 0 0 20px 0;
+	padding-left: 0;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+ul:not([class]),
+ol {
+	.hentry & {
+		list-style: none;
+		li {
+			& + li,
+			> ul li,
+			> ol li {
+				margin-top: 5px;
+			}
+		}
+
+		> li{
+			font-weight: 700;
+			&:before {
+				font-weight: 400;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+ul:not([class]) {
+	.hentry & {
+		> li{
+			&:before {
+				content: '•';
+			}
+		}
+	}
+}
+
+ol {
+	.hentry & {
+		counter-reset: li;
+		> li{
+			&:before{
+				content: counter(li, decimal-leading-zero) '.';
+				counter-increment: li;
+			}
+		}
+	}
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 20px;
+}
+
+dt {
+	float: left;
+	clear: left;
+	margin-right: 4px;
+}
+
+dd {
+	font-weight: 900;
+	margin-left: 0;
+}
+
+dt, dd {
+	&:not(:first-of-type) {
+		margin-top: 11px;
+	}
+}
+
+/* Inline list */
+.inline-list {
+	@include reset-list;
+	li {
+		display: inline-block;
+	}
+}

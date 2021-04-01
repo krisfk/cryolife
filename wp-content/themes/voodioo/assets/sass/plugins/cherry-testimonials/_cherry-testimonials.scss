@@ -1,0 +1,252 @@
+.tm-testi {
+
+	&-slider {
+		padding-bottom: 0;
+		@include media-breakpoint-up(lg) {
+			margin-left: 100px;
+		}
+
+		&__item {
+			display: flex;
+			height: auto;
+		}
+
+		.tm-testi__inner,
+		.tm-testi__item-body,
+		blockquote {
+			display: flex;
+			flex-grow: 1;
+		}
+
+		.tm-testi__item-body,
+		blockquote{
+			flex-direction: column;
+			padding: 0;
+		}
+
+		.tm-testi__item-body{
+			footer {
+				margin-top: auto;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 55px;
+
+		> *:not(:last-child) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__divider {
+		margin: 55px 0;
+	}
+
+	&__inner {
+		// boxed.impl
+		.tm-testi--boxed & {
+			border: 1px solid;
+			padding: 20px;
+			@include media-breakpoint-up(lg) {
+				padding: 50px;
+			}
+		}
+	}
+
+	&__item {
+
+		&,
+		.services-macros & {
+			margin-top: 0;
+			margin-bottom: 50px;
+		}
+
+		.tm-testi-slider & {
+			margin-bottom: 0;
+		}
+
+		&-avatar {
+			@include border-radius(50%);
+			display: block;
+			margin: 0 0 25px;
+
+			// default-without-icon.impl
+			.tm-testi--default-without-icon & {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		&-body {
+			position: relative;
+
+			// default-without-icon.impl
+			.tm-testi--default-without-icon & {
+				text-align: center;
+				max-width: 850px;
+				margin-left: auto;
+				margin-right: auto;
+
+				&:before { content: none }
+			}
+
+			p {
+				margin-bottom: 25px;
+			}
+	}
+
+		&-position,
+		&-email,
+		&-company {
+			font-weight: 400;
+			display: inline-block;
+
+			&:not(:last-child) {
+				&:after {
+					content: ', ';
+				}
+			}
+		}
+
+		blockquote {
+			&:before,
+			#tm_builder_outer_content &:before {
+				content: none;
+			}
+
+			footer {
+				@include font-size(.875);
+			}
+
+			cite {
+				margin-top: 0;
+				font-weight: 900;
+				display: inline-block;
+				text-transform: uppercase;
+				&:before {
+					content: none;
+				}
+
+				&:not(:last-child):after {
+					content: " — ";
+					font-weight: 400;
+				}
+			}
+
+			// default-without-icon.tmpl
+			.tm-testi--default-without-icon & {
+				padding-left: 0;
+			}
+
+			// boxed.tmpl
+			.tm-testi--boxed & {
+				padding: 0 0 0 45px;
+				border: none;
+			}
+
+			.tm-testi__wrap--perview-1 &,
+			.tm-testi-page--archive & {
+				flex-direction: column;
+				padding: 0;
+			}
+		}
+	}
+
+	.tm-testi-slider__pags.swiper-pagination {
+		position: static;
+		margin-top: 40px;
+		@include media-breakpoint-up(lg) {
+			margin-top: 89px;
+		}
+		@include media-breakpoint-up(lg) {
+		   text-align: left;
+		}
+	}
+	.swiper-button-next.tm-testi-slider__next {
+		display: block;
+		right: -60px;
+	}
+	.swiper-button-prev.tm-testi-slider__prev {
+		display: block;
+		left: -60px;
+	}
+	&:hover {
+		.swiper-button-next.tm-testi-slider__next {
+			right: 0;
+		}
+		.swiper-button-prev.tm-testi-slider__prev {
+			left: 0;
+		}
+	}
+
+	// speech-bubble.tmpl
+	&--speech-bubble {
+		.tm-testi__item-meta {
+			padding-top: 35px;
+			text-align: center;
+			display: block;
+			@include media-breakpoint-up(lg) {
+				text-align: inherit;
+				display: flex;
+				align-items: center;
+				flex-flow: row wrap;
+			}
+			.tm-testi__item-avatar {
+				margin: 0 auto 20px;
+				@include media-breakpoint-up(lg) {
+					flex-shrink: 0;
+					margin: 0 20px 0 0;
+				}
+			}
+			footer { margin: 10px 0; }
+		}
+
+		.tm-testi__item-body {
+			border: 1px solid;
+			padding: 20px;
+			background-color: $color__white;
+			@include media-breakpoint-up(lg) {
+				padding: 40px;
+			}
+
+			&:after {
+				@include triangle( bottom, 30px, 15px, $color__background-hr );
+				margin: 0;
+				z-index: 1;
+			}
+			&:before {
+				content: '';
+				@include triangle( bottom, 30px, 15px, $color__white );
+				top: 100%;
+				position: absolute;
+				z-index: 2;
+				margin-top: -1px;
+			}
+			&:before,
+			&:after {
+				left: 50%;
+				transform: translateX(-50%);
+				@include media-breakpoint-up(lg) {
+					left: 25px;
+					transform: translateX(0);
+				}
+			}
+
+			p {
+				position: relative;
+				padding-left: 45px;
+				margin-bottom: 0;
+				&:before {
+					content: '\ecbb';
+					position: absolute;
+					top: 3px;
+					left: 0;
+					display: block;
+					font-size: 24px;
+					line-height: 1;
+				}
+			}
+		}
+	}
+}

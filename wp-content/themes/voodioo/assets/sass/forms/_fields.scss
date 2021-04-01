@@ -1,0 +1,90 @@
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
+select,
+textarea {
+	padding: $input__indents_y $input__indents_x;
+	border: 2px solid;
+	@include font-size(0.875);
+	line-height: 1.5;
+	transition: .3s;
+
+	i + &.comment-form__field,
+	.wpcf7 i + .wpcf7-form-control-wrap > & {
+		padding-left: $input__indents_x + 30px;
+	}
+
+	&:focus {
+		outline: 0;
+		background-color: $color__white;
+	}
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
+textarea {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+input[type='file'] {
+	@include font-size(0.875);
+	line-height: 1.5;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'] {
+	hyphens: none;
+}
+
+select {
+	border: 1px solid;
+	max-width: 100%;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	min-height: 150px;
+
+	@include resizable(vertical);
+}
+
+/* Input Placeholders */
+::-webkit-input-placeholder { transition: .1s; color: inherit; }
+::-moz-placeholder          { transition: .1s; color: inherit; }
+:-moz-placeholder           { transition: .1s; color: inherit; }
+:-ms-input-placeholder      { transition: .1s; color: inherit; }
+
+::-moz-placeholder { opacity: 1 }
+:-moz-placeholder { opacity: 1 }
+
+:focus::-webkit-input-placeholder { font-weight: 900; }
+:focus::-moz-placeholder          { font-weight: 900; }
+:focus:-moz-placeholder           { font-weight: 900; }
+:focus:-ms-input-placeholder      { font-weight: 900; }

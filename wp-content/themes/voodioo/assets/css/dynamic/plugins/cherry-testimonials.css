@@ -1,0 +1,32 @@
+.tm-testi__title-sup {
+	font-style: $h6_font_style;
+	font-weight: $h6_font_weight;
+	font-size: $h6_font_size{px};
+	line-height: $h6_line_height;
+	font-family: @font_family( $h6_font_family );
+	letter-spacing: $h6_letter_spacing{em};
+	text-align: $h6_text_align;
+	color: $regular_h6_color;
+}
+
+.tm-testi blockquote footer {
+	color: $invert_link_hover_color;
+	font-family: @font_family( $meta_font_family );
+}
+.tm-testi--speech-bubble .tm-testi__item-body p:before {
+	color: @darken($grey_color_3, 7.5);
+}
+
+.tm-testi--speech-bubble .tm-testi__item-body,
+.tm-testi--boxed .tm-testi__inner{
+	border-color: $grey_color_3;
+}
+
+.tm-testi--speech-bubble .tm-testi__item-body:after{
+	border-top-color: $grey_color_3;
+}
+
+.tm-testi .swiper-container-3d .swiper-slide-shadow-left,
+.tm-testi .swiper-container-3d .swiper-slide-shadow-right {
+	background-color: $grey_color_4;
+}

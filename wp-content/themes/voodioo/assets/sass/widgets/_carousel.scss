@@ -1,0 +1,240 @@
+.widget-carousel {
+	.swiper {
+		&-carousel-container {
+			position: relative;
+		}
+		&-slide {
+			display: flex;
+			height: auto;
+
+			.inner {
+				display: flex;
+				overflow: hidden;
+				flex-direction: column;
+				width: 100%;
+				justify-content: space-between;
+				align-self: stretch;
+			}
+			.entry {
+				&-content {
+					margin: 0;
+				}
+				&-title {
+					margin-bottom: 5px;
+				}
+			}
+			.post-thumbnail__link {
+				display: block;
+				overflow: hidden;
+			}
+			.post-thumbnail__img {
+				display: block;
+				width: 100%;
+			}
+			.carousel__more-btn {
+				margin-top: 20px;
+			}
+			.post__excerpt {
+				margin-top: 0;
+			}
+
+			/*transition variables*/
+			$transition-default: .4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+			$transition-delay: .1s;
+
+			.content-wrapper {
+				position: relative;
+				z-index: 1;
+				&:before, &:after {
+					content: "";
+					position: absolute;
+					left: -100%;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					width: 100%;
+					height: 100%;
+					display: inline-block;
+					z-index: 1;
+					transition: $transition-default;
+					transition-delay: $transition-delay + 0.2s;
+				}
+
+				&:after {
+					background-color: $color__dark;
+					opacity: 0.5;
+					left: 0;
+					z-index: 0;
+				}
+
+				&:hover {
+					.entry-header .post__cats {
+						left: 100%;
+						transition-delay: $transition-delay;
+					}
+
+					.entry-title {
+						left: 100%;
+						transition-delay: $transition-delay + 0.1s;
+					}
+					.entry-meta {
+						left: 100%;
+						transition-delay: $transition-delay + 0.15s;
+					}
+
+					.entry-content {
+						left: 20px;
+						transition-delay: $transition-delay + 0.25s;
+						@include media-breakpoint-up(xl) {
+							left: 58px;
+						}
+					}
+
+					.entry-footer {
+						left: 20px;
+						transition-delay: $transition-delay + 0.3s;
+						@include media-breakpoint-up(xl) {
+							left: 58px;
+						}
+					}
+
+					&:before {
+						left: 0;
+						transition-delay: $transition-delay + 0.2s;
+					}
+
+					&:after {
+						left: 100%;
+						transition-delay: $transition-delay + 0.2s;
+					}
+				}
+				.carousel__more-btn.btn-link{
+					text-decoration: none;
+					span {
+						transition: .3s;
+						border-bottom: 1px solid currentColor;
+					}
+				}
+			}
+
+			.entry {
+				&-header {
+					.post__cats {
+						z-index: 1;
+						width: 80%;
+						max-width: 80%;
+						position: absolute;
+						top: 20px;
+						left: 20px;
+						transition: $transition-default;
+						transition-delay: $transition-delay + 0.25s;
+						@include media-breakpoint-up(xl) {
+							top: 50px;
+							left: 58px;
+						}
+					}
+				}
+
+				&-title {
+					z-index: 1;
+					width: 80%;
+					max-width: 80%;
+					position: absolute;
+					top: 44px;
+					left: 20px;
+					transition: $transition-default;
+					transition-delay: $transition-delay + 0.2s;
+					@include media-breakpoint-up(xl) {
+						top: 74px;
+						left: 58px;
+					}
+				}
+
+				&-meta {
+					z-index: 1;
+					width: 80%;
+					max-width: 80%;
+					position: absolute;
+					left: 20px;
+					bottom: 15px;
+					transition: $transition-default;
+					transition-delay: $transition-delay + 0.15s;
+					@include media-breakpoint-up(xl) {
+						left: 58px;
+						bottom: 43px;
+					}
+				}
+
+				&-content {
+					z-index: 1;
+					width: 80%;
+					max-width: 80%;
+					position: absolute;
+					top: 20px;
+					left: -100%;
+					margin: 0;
+					padding: 0;
+					transition: $transition-default;
+					transition-delay: $transition-delay + 0.1s;
+					@include media-breakpoint-up(xl) {
+						top: 50px;
+					}
+				}
+
+				&-footer {
+					z-index: 1;
+					width: 80%;
+					max-width: 80%;
+					position: absolute;
+					left: -100%;
+					bottom: 20px;
+					padding: 0;
+					margin: 0;
+					transition: $transition-default;
+					transition-delay: $transition-delay;
+					@include media-breakpoint-up(xl) {
+						bottom: 40px;
+					}
+				}
+
+			}
+
+			.carousel__more-btn {
+				margin-top: 25px;
+			}
+
+			.post-thumbnail__link {
+				display: block;
+				overflow: hidden;
+			}
+
+			.post-thumbnail__img {
+				display: block;
+				width: 100%;
+			}
+
+		}
+		&-pagination {
+			margin-top: 15px;
+			position: static;
+		}
+		&-button-next,
+		&-button-prev {
+			margin: 0;
+		}
+	}
+	.swiper-container[data-pagination="true"]{
+		.swiper-button-next,
+		.swiper-button-prev {
+			top: calc(50% - 20.5px);
+		}
+	}
+}
+
+@include sidebars-area(false){
+	.widget-carousel{
+		.entry-title {
+			@include font-size(1);
+		}
+	}
+}

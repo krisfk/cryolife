@@ -1,0 +1,63 @@
+.site {
+	@include hyphens(none);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	&-header,
+	&-content,
+	&-footer {
+		width: 100%;
+	}
+
+	&-content {
+		flex: auto;
+		min-height: 1px;
+	}
+
+	&-main{}
+
+	&-content_wrap {
+		margin-top: $site-content-top-indent;
+		margin-bottom: $site-content-bottom-indent;
+
+		.use-voodioopb-builder & {
+			margin-bottom: 0; 
+		}
+
+		.use-voodioopb-builder.position-fullwidth & {
+			margin-top: 0;
+		}
+		.error404 &,
+		.search.search-no-results & {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+@import "../layout/layout";
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "primary/header";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Post Formats
+--------------------------------------------------------------*/
+@import "primary/post-formats";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "primary/footer";

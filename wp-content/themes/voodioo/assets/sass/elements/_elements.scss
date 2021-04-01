@@ -1,0 +1,94 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background-color: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	vertical-align: top;
+}
+
+blockquote, q {
+	quotes: none;
+
+	&:before,
+	&:after {
+		content: '';
+	}
+}
+
+blockquote {
+	position: relative;
+	padding-left: 45px;
+	margin: 40px 0 45px;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	cite {
+		display: block;
+		margin-top: 25px;
+		@include font-size(.875);
+		&:before {
+			content: "— ";
+		}
+	}
+	&:before {
+		content: '\ecbb';
+		position: absolute;
+		top: 3px;
+		left: 0;
+		display: block;
+		font-size: 24px;
+		line-height: 1;
+	}
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	margin: 60px 0;
+	clear: both;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+## Lists
+--------------------------------------------------------------*/
+@import "lists";
+
+/*--------------------------------------------------------------
+## Tables
+--------------------------------------------------------------*/
+@import "tables";
+
+/*--------------------------------------------------------------
+## Icons
+--------------------------------------------------------------*/
+@import "icons";
+
+/*--------------------------------------------------------------
+## Preloader
+--------------------------------------------------------------*/
+@import "page-preloader";
+
+/*--------------------------------------------------------------
+## ToTop button
+--------------------------------------------------------------*/
+@import "totop-button";

@@ -1,0 +1,22 @@
+.site-header.style-6 {
+	.site-branding {
+		text-align: center;
+	}
+
+	.main-navigation {
+		@include media-breakpoint-up(sm) {
+			width: 100%;
+
+			.menu {
+				margin-top: 0;
+				justify-content: center;
+			}
+		}
+	}
+
+	.header-components {
+		@include media-breakpoint-up(sm) {
+			justify-content: flex-end;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.isStuck {
+	@include media-breakpoint-up(sm) {
+		position: fixed !important;
+		z-index: 1000;
+		margin: 0 !important;
+		width: 100%;
+		left: 0;
+		right: 0;
+	}
+
+	.site-header &.header-container.stuckMenu {
+		@include media-breakpoint-up(sm) {
+			position: fixed !important;
+		}
+	}
+}
+
+.pseudoStickyBlock {
+	@include media-breakpoint-down(xs) {
+		display: none !important;
+	}
+	width: 100%;
+	margin: 0 !important;
+
+	.site-header.transparent &,
+	.site-header.style-5 & {
+		position: absolute !important;
+	}
+}

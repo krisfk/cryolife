@@ -1,0 +1,29 @@
+.widget-about {
+	&__logo{
+		margin-bottom: 32px;
+	}
+	&__logo-img {
+		vertical-align: top;
+	}
+	&__content {
+		margin-top: 10px;
+		ul li+li{
+			margin-top: 5px;
+		}
+	}
+	&__tagline {
+		@include font-size(.75);
+		margin-top: 5px;
+	}
+
+	&__content,
+	&__tagline {
+		&:empty {
+			margin-top: 0;
+		}
+	}
+
+	&__social {
+		margin-top: 15px;
+	}
+}

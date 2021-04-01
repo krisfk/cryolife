@@ -1,0 +1,402 @@
+# Translation of Plugins - Gutenberg - Stable (latest release) in Tibetan
+# This file is distributed under the same license as the Plugins - Gutenberg - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-09 03:39:58+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: bo\n"
+"Project-Id-Version: Plugins - Gutenberg - Stable (latest release)\n"
+
+#: lib/full-site-editing/templates.php:59
+msgid "Templates to include in your theme."
+msgstr "ཁྱེད་ཀྱི་དཔེ་སྒྲོམ་ནང་དུ་ཐེ་བའི་དཔེ་པང་།"
+
+#: lib/full-site-editing/templates.php:36 build/edit-site/index.js:30
+msgid "Templates"
+msgstr "དཔེ་པང་།"
+
+#: lib/class-wp-theme-json-resolver.php:230 build/block-editor/index.js:1
+msgid "Vivid purple"
+msgstr "གསལ་ཆ་ཆེ་བའི་རྒྱ་སྨུག"
+
+#: gutenberg.php:89
+msgid "Experiments Settings"
+msgstr "ཚོད་ལྟའི་རང་བཞིན་ཅན་སྒྲིག་འགོད།"
+
+#: lib/experiments-page.php:19
+msgid "Experimental settings"
+msgstr "ཚོད་ལྟའི་རང་བཞིན་ཅན་སྒྲིག་འགོད།"
+
+#. translators: %s: taxonomy name
+#: build/block-library/blocks/tag-cloud.php:28
+msgid "Your site doesn&#8217;t have any %s, so there&#8217;s nothing to display here at the moment."
+msgstr "ཁྱེད་ཀྱི་དྲ་ཚིགས་སུ %s སྐོར་གྱི་ནང་དོན་གང་ཡང་མེད་པས་མིག་སྔར་འདི་རུ་འགྲེམས་སྟོན་བྱ་རྒྱུ་གང་ཡང་མེད།"
+
+#: build/block-library/blocks/rss.php:23
+msgid "An error has occurred, which probably means the feed is down. Try again later."
+msgstr "ནོར་འཁྲུལ་ཞིག་བྱུང་སོང་། ཁྱབ་སྤེལ་མེད་པ་འདྲ་བས། ཡུད་ཙམ་གྱིས་ཚོད་ལྟ་བྱ་རོགས།"
+
+#: build/block-library/blocks/rss.php:19
+msgid "RSS Error:"
+msgstr "RSS ནོར་འཁྲུལ:"
+
+#: build/block-library/blocks/search.php:25
+#: build/block-library/blocks/search.php:26
+#: build/block-library/blocks/search.php:52 build/block-editor/index.js:42
+#: build/block-library/index.js:59
+msgid "Search"
+msgstr "བཤེར་འཚོལ།"
+
+#: lib/editor-settings.php:28 build/block-editor/index.js:1
+msgid "Thumbnail"
+msgstr "བསྡུས་རིས།"
+
+#: lib/editor-settings.php:31 build/block-editor/index.js:1
+msgid "Full Size"
+msgstr "ཆེ་ཆུང་ཆ་ཚང་།"
+
+#: lib/full-site-editing/default-template-types.php:69
+#: build/block-editor/index.js:66 build/core-data/index.js:1
+#: build/blocks/index.js:1
+msgid "Media"
+msgstr "སྨྱན་སྦྱོར།"
+
+#: lib/class-wp-theme-json-resolver.php:261 lib/editor-settings.php:29
+#: lib/block-patterns.php:30 build/block-editor/index.js:1
+#: build/block-editor/index.js:9 build/components/index.js:10
+msgid "Medium"
+msgstr "འབྲིང་བ།"
+
+#: build/block-library/blocks/archives.php:97
+msgid "No archives to show."
+msgstr "ཡིག་མཛོད་འཆར་དགོས་པ་མེད།"
+
+#: post-content.php:41
+msgid "Beautiful landscape"
+msgstr "ལྟ་ན་སྡུག་པའི་ཡུལ་ལྗོངས།"
+
+#: post-content.php:185
+msgid "Thanks for testing Gutenberg!"
+msgstr "Gutenberg ཚོད་ལྟ་གནང་བར་ཐུགས་རྗེ་ཆེ་ཞུ།"
+
+#: post-content.php:177
+msgid "Help build Gutenberg"
+msgstr "Gutenberg ལ་རོགས་རམ་བྱས་ཏེ་འཛུགས་སྐྲུན་བྱེད་པ།"
+
+#. translators: %s: Gutenberg GitHub repository URL
+#: post-content.php:168
+msgid "If you want to learn more about how to build additional blocks, or if you are interested in helping with the project, head over to the <a href=\"%s\">GitHub repository</a>."
+msgstr "གལ་ཏེ་ཁྱེད་ཀྱིས་རྡོག་གཞན་པ་འཛུགས་སྐྲུན་བྱེད་པའི་ཐད་ནས་དེ་ལས་མང་བའི་གནས་ཚུལ་མཁྱེན་འདོད་པའམ་ཡང་ན་རྣམ་གྲངས་ལེགས་འགྲུབ་བྱེད་པར་རོགས་རམ་བྱེད་འདོད་ཡོད་ཚེ། <a href=\"%s\">GitHub repository</a> སྟེང་ལ་ཕེབས་རོགས།"
+
+#: post-content.php:159
+msgid "The WordPress community"
+msgstr "WordPress མི་སྡེ།"
+
+#: post-content.php:159 build/block-library/index.js:8
+msgid "Code is Poetry"
+msgstr "ཚབ་ཨང་ནི་སྙན་ངག་གོ།"
+
+#: post-content.php:155
+msgid "You can build any block you like, static or dynamic, decorative or plain. Here&#8217;s a pullquote block:"
+msgstr "ཁྱེད་ཀྱིས་རང་ཉིད་མོས་པའི་རྡོག་གང་རུང་འཛུགས་སྐྲུན་བྱེད་ཆོག་པ་ཡིན། གསོར་གནས་སམ་ཡང་ན་སྒུལ་ལྡན། རྒྱན་བཀོད་དང་ཡང་ན་གསལ་ཆ་དོད་པོ། འདི་ནི pullquote ཡི་རྡོག་ཞིག་ཡིན:"
+
+#: post-content.php:145
+msgid "Any block can opt into these alignments. The embed block has them also, and is responsive out of the box:"
+msgstr "Any block can opt into these alignments. The embed block has them also, and is responsive out of the box:"
+
+#: post-content.php:141
+msgid "The above is a gallery with just two images. It&#8217;s an easier way to create visually appealing layouts, without having to deal with floats. You can also easily convert the gallery back to individual images again, by using the block switcher."
+msgstr "The above is a gallery with just two images. It&#8217;s an easier way to create visually appealing layouts, without having to deal with floats. You can also easily convert the gallery back to individual images again, by using the block switcher."
+
+#: post-content.php:128
+msgid "Sure, the full-wide image can be pretty big. But sometimes the image is worth it."
+msgstr "Sure, the full-wide image can be pretty big. But sometimes the image is worth it."
+
+#: post-content.php:124
+msgid "Accessibility is important &mdash; don&#8217;t forget image alt attribute"
+msgstr "Accessibility is important &mdash; don&#8217;t forget image alt attribute"
+
+#: post-content.php:120
+msgid "If you combine the new <strong>wide</strong> and <strong>full-wide</strong> alignments with galleries, you can create a very media rich layout, very quickly:"
+msgstr "If you combine the new <strong>wide</strong> and <strong>full-wide</strong> alignments with galleries, you can create a very media rich layout, very quickly:"
+
+#: post-content.php:116
+msgid "Media Rich"
+msgstr "ཕུན་སུམ་ཚོགས་པའི་སྨྱན་གཟུགས།"
+
+#: post-content.php:112
+msgid "You can change the amount of columns in your galleries by dragging a slider in the block inspector in the sidebar."
+msgstr "You can change the amount of columns in your galleries by dragging a slider in the block inspector in the sidebar."
+
+#: post-content.php:98
+msgid "Blocks can be anything you need. For instance, you may want to add a subdued quote as part of the composition of your text, or you may prefer to display a giant stylized one. All of these options are available in the inserter."
+msgstr "Blocks can be anything you need. For instance, you may want to add a subdued quote as part of the composition of your text, or you may prefer to display a giant stylized one. All of these options are available in the inserter."
+
+#: post-content.php:94
+msgid "The information corresponding to the source of the quote is a separate text field, similar to captions under images, so the structure of the quote is protected even if you select, modify, or remove the source. It&#8217;s always easy to add it back."
+msgstr "The information corresponding to the source of the quote is a separate text field, similar to captions under images, so the structure of the quote is protected even if you select, modify, or remove the source. It&#8217;s always easy to add it back."
+
+#: post-content.php:88
+msgid "The editor will endeavor to create a new page and post building experience that makes writing rich posts effortless, and has “blocks” to make it easy what today might take shortcodes, custom HTML, or “mystery meat” embed discovery."
+msgstr "The editor will endeavor to create a new page and post building experience that makes writing rich posts effortless, and has “blocks” to make it easy what today might take shortcodes, custom HTML, or “mystery meat” embed discovery."
+
+#: post-content.php:89
+msgid "Matt Mullenweg, 2017"
+msgstr "Matt Mullenweg ཡིས 2017 ལོར་བརྩམས།"
+
+#: post-content.php:79
+msgid "Visual Editing"
+msgstr "ཐད་མཐོང་རྩོམ་སྒྲིག"
+
+#: post-content.php:67
+msgid "Galleries"
+msgstr "པར་དེབ།"
+
+#: post-content.php:66
+msgid "Images &amp; Videos"
+msgstr "བརྙན་རིས། &amp; བརྙན་ཟློས།"
+
+#: post-content.php:65
+msgid "Text &amp; Headings"
+msgstr "ཡི་གེ &amp; ཁ་བྱང་།"
+
+#: post-content.php:83
+msgid "A huge benefit of blocks is that you can edit them in place and manipulate your content directly. Instead of having fields for editing things like the source of a quote, or the text of a button, you can directly change the content. Try editing the following quote:"
+msgstr "A huge benefit of blocks is that you can edit them in place and manipulate your content directly. Instead of having fields for editing things like the source of a quote, or the text of a button, you can directly change the content. Try editing the following quote:"
+
+#: post-content.php:70
+msgid "And <em>Lists</em> like this one of course :)"
+msgstr "And <em>Lists</em> like this one of course :)"
+
+#: post-content.php:69
+msgid "Layout blocks, like Buttons, Hero Images, Separators, etc."
+msgstr "Layout blocks, like Buttons, Hero Images, Separators, etc."
+
+#: post-content.php:68
+msgid "Embeds, like YouTube, Tweets, or other WordPress posts."
+msgstr "Embeds, like YouTube, Tweets, or other WordPress posts."
+
+#: post-content.php:60
+msgid "Go give it a try, you may discover things WordPress can already add into your posts that you didn&#8217;t know about. Here&#8217;s a short list of what you can currently find there:"
+msgstr "Go give it a try, you may discover things WordPress can already add into your posts that you didn&#8217;t know about. Here&#8217;s a short list of what you can currently find there:"
+
+#: post-content.php:56
+msgid "Imagine everything that WordPress can do is available to you quickly and in the same place on the interface. No need to figure out HTML tags, classes, or remember complicated shortcode syntax. That&#8217;s the spirit behind the inserter—the <code>(+)</code> button you&#8217;ll see around the editor—which allows you to browse all available content blocks and add them into your post. Plugins and themes are able to register their own, opening up all sort of possibilities for rich editing and publishing."
+msgstr "Imagine everything that WordPress can do is available to you quickly and in the same place on the interface. No need to figure out HTML tags, classes, or remember complicated shortcode syntax. That&#8217;s the spirit behind the inserter—the <code>(+)</code> button you&#8217;ll see around the editor—which allows you to browse all available content blocks and add them into your post. Plugins and themes are able to register their own, opening up all sort of possibilities for rich editing and publishing."
+
+#: post-content.php:52
+msgid "The <em>Inserter</em> Tool"
+msgstr "ལག་ཆ་ <em>བར་འཇུག</em>"
+
+#: post-content.php:48
+msgid "Try selecting and removing or editing the caption, now you don&#8217;t have to be careful about selecting the image or other text by mistake and ruining the presentation."
+msgstr "Try selecting and removing or editing the caption, now you don&#8217;t have to be careful about selecting the image or other text by mistake and ruining the presentation."
+
+#: post-content.php:42
+msgid "If your theme supports it, you&#8217;ll see the \"wide\" button on the image toolbar. Give it a try."
+msgstr "If your theme supports it, you&#8217;ll see the \"wide\" button on the image toolbar. Give it a try."
+
+#: post-content.php:36
+msgid "Handling images and media with the utmost care is a primary focus of the new editor. Hopefully, you&#8217;ll find aspects of adding captions or going full-width with your pictures much easier and robust than before."
+msgstr "Handling images and media with the utmost care is a primary focus of the new editor. Hopefully, you&#8217;ll find aspects of adding captions or going full-width with your pictures much easier and robust than before."
+
+#: post-content.php:32
+msgid "A Picture is Worth a Thousand Words"
+msgstr "A Picture is Worth a Thousand Words"
+
+#: post-content.php:28
+msgid "Headings are separate blocks as well, which helps with the outline and organization of your content."
+msgstr "Headings are separate blocks as well, which helps with the outline and organization of your content."
+
+#: post-content.php:24
+msgid "... like this one, which is right aligned."
+msgstr "... like this one, which is right aligned."
+
+#: post-content.php:20
+msgid "What you are reading now is a <strong>text block</strong> the most basic block of all. The text block has its own controls to be moved freely around the post..."
+msgstr "What you are reading now is a <strong>text block</strong> the most basic block of all. The text block has its own controls to be moved freely around the post..."
+
+#: post-content.php:11
+msgid "Of Mountains &amp; Printing Presses"
+msgstr "Of Mountains &amp; Printing Presses"
+
+#: post-content.php:16
+msgid "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
+msgstr "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
+
+#: lib/demo.php:59
+msgid "Welcome to the Gutenberg Editor"
+msgstr "Gutenberg རྩོམ་སྒྲིག་ཆས་སུ་བྱོན་པ་ལེགས།"
+
+#: lib/class-wp-rest-menu-items-controller.php:862
+msgid "The title for the object."
+msgstr "བྱ་ཡུལ་གྱི་ཁ་བྱང་།"
+
+#: lib/class-wp-rest-menu-items-controller.php:68
+#: lib/class-wp-rest-menu-items-controller.php:887
+msgid "Unique identifier for the object."
+msgstr "བྱ་ཡུལ་གྱི་མཚོན་རྟགས་ཉག་གཅིག"
+
+#: gutenberg.php:73 gutenberg.php:74
+msgid "Support"
+msgstr "རམ་འདེགས།"
+
+#: build/block-library/blocks/latest-comments.php:141
+msgid "No comments to show."
+msgstr "དཔྱད་མཆན་འཆར་དགོས་པ་མེད།"
+
+#: build/block-library/blocks/archives.php:57
+msgid "Select Post"
+msgstr "རྩོམ་ཡིག་འདེམས།"
+
+#: build/block-library/blocks/archives.php:54
+msgid "Select Week"
+msgstr "གཟའ་འཁོར་འདེམས།"
+
+#: build/block-library/blocks/archives.php:51
+msgid "Select Day"
+msgstr "ཉིན་འདེམས།"
+
+#: build/block-library/blocks/archives.php:48
+msgid "Select Month"
+msgstr "ཟླ་བ་འདེམས།"
+
+#: build/block-library/blocks/archives.php:45
+msgid "Select Year"
+msgstr "ལོ་འདེམས།"
+
+#: build/block-library/blocks/archives.php:27
+msgid "Archives"
+msgstr "ཡིག་མཛོད།"
+
+#. translators: 1: author name (inside <a> or <span> tag, based on if they have
+#. a URL), 2: post title related to this comment
+#: build/block-library/blocks/latest-comments.php:99
+msgid "%1$s on %2$s"
+msgstr "%1$s ལགས་ཀྱིས &laquo;%2$s&raquo; སྟེང་དུ།"
+
+#: gutenberg.php:76
+msgid "https://wordpress.org/support/plugin/gutenberg/"
+msgstr "https://wordpress.org/support/plugin/gutenberg/"
+
+#: lib/class-wp-theme-json-resolver.php:220 build/block-editor/index.js:1
+msgid "Cyan bluish gray"
+msgstr "སྔོ་ལྗང་ཐལ་མདོག"
+
+#: lib/class-wp-theme-json-resolver.php:229 build/block-editor/index.js:1
+msgid "Vivid cyan blue"
+msgstr "སྔོ་ལྗང་གསལ་པོ།"
+
+#: lib/class-wp-theme-json-resolver.php:228 build/block-editor/index.js:1
+msgid "Pale cyan blue"
+msgstr "སྔོ་ལྗང་སྐྱ་མདངས།"
+
+#: lib/class-wp-theme-json-resolver.php:227 build/block-editor/index.js:1
+msgid "Vivid green cyan"
+msgstr "སྔོ་ལྗང་གསལ་པོ།"
+
+#: lib/class-wp-theme-json-resolver.php:226 build/block-editor/index.js:1
+msgid "Light green cyan"
+msgstr "སྔོ་ལྗང་འོད་ཅན།"
+
+#: lib/class-wp-theme-json-resolver.php:225 build/block-editor/index.js:1
+msgid "Luminous vivid amber"
+msgstr "སྤོས་ཤེལ་བཀྲ་མདངས་ཅན།"
+
+#: lib/class-wp-theme-json-resolver.php:224 build/block-editor/index.js:1
+msgid "Luminous vivid orange"
+msgstr "ལི་མདོག་བཀྲ་མདངས་ཅན།"
+
+#: lib/class-wp-theme-json-resolver.php:223 build/block-editor/index.js:1
+msgid "Vivid red"
+msgstr "དམར་གསལ།"
+
+#: lib/class-wp-theme-json-resolver.php:222 build/block-editor/index.js:1
+msgid "Pale pink"
+msgstr "ཟིང་སྐྱ།"
+
+#: lib/class-wp-theme-json-resolver.php:262 lib/editor-settings.php:30
+#: lib/block-patterns.php:12 build/block-editor/index.js:1
+#: build/components/index.js:10 build/block-library/index.js:68
+msgid "Large"
+msgstr "ཆེ་བ།"
+
+#: lib/class-wp-rest-menu-items-controller.php:919
+msgid "The ID for the parent of the object."
+msgstr "བྱ་ཡུལ་གྱི་ཕ་རྒྱུད་བྱ་ཡུལ་ ID."
+
+#: lib/class-wp-rest-menu-items-controller.php:487
+msgid "Invalid term ID."
+msgstr "ནུས་མེད་ཀྱི་སྡེ་ཚན ID."
+
+#: lib/full-site-editing/templates-utils.php:17 build/editor/index.js:5
+msgid "Status"
+msgstr "གནས་བབས།"
+
+#. translators: ARIA label for the Block Settings Sidebar tab, not selected.
+#. translators: Text label for the Block Settings Sidebar tab.
+#. translators: Text label for the Template Settings Sidebar tab.
+#: lib/class-wp-widget-block.php:40 lib/navigation.php:91 lib/navigation.php:96
+#: build/edit-widgets/index.js:23 build/edit-post/index.js:37
+#: build/edit-post/index.js:38 build/edit-site/index.js:28
+#: build/edit-site/index.js:29 build/edit-site/index.js:30
+msgid "Block"
+msgstr "རྡོག"
+
+#: build/block-library/blocks/latest-posts.php:102
+#: build/block-library/blocks/latest-comments.php:31
+#: build/block-library/blocks/rss.php:31 build/edit-post/index.js:40
+#: build/edit-site/index.js:30 build/editor/index.js:21
+#: build/editor/index.js:35 build/edit-navigation/index.js:6
+#: build/block-library/index.js:30 build/block-library/index.js:48
+msgid "(no title)"
+msgstr "(ཁ་བྱང་མེད)"
+
+#: lib/experiments-page.php:56 gutenberg.php:49 gutenberg.php:50
+#: build/edit-widgets/index.js:24 build/core-data/index.js:1
+#: build/blocks/index.js:1
+msgid "Widgets"
+msgstr "ལྷུ་ཆུང་།"
+
+#. Description of the plugin
+msgid "Printing since 1440. This is the development plugin for the new block editor in core."
+msgstr "Printing since 1440. This is the development plugin for the new block editor in core."
+
+#: build/block-library/blocks/categories.php:30
+msgid "Select Category"
+msgstr "དཀར་ཆག་འདེམས།"
+
+#. Author of the plugin
+msgid "Gutenberg Team"
+msgstr "Gutenberg ཚན་ཁག"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/WordPress/gutenberg"
+msgstr "https://github.com/WordPress/gutenberg"
+
+#. Plugin Name of the plugin
+msgid "Gutenberg"
+msgstr "Gutenberg"
+
+#: gutenberg.php:41 gutenberg.php:42
+msgid "Demo"
+msgstr "དཔེ་སྟོན།"
+
+#: gutenberg.php:80 gutenberg.php:81
+msgid "Documentation"
+msgstr "ཡིག་ཚགས།"
+
+#. translators: button label text should, if possible, be under 16 characters.
+#: lib/full-site-editing/templates-utils.php:15 build/editor/index.js:25
+#: build/components/index.js:5
+msgid "Slug"
+msgstr "མིང་གཞན།"
+
+#. translators: %s: Minimum required version
+#: gutenberg.php:173
+msgid "Gutenberg requires WordPress %s or later to function properly. Please upgrade WordPress before activating Gutenberg."
+msgstr "Gutenberg ལ་ངེས་པར་ཚང་དགོས་པ་ནི WordPress %s དང་ཡང་ན་དེ་ལས་མཐོ་བའི་ཐོན་རིམ་ཡིན། Gutenberg ནུས་སློང་མ་བྱས་སྔོན་ལ WordPress རིམ་སྤར་བྱེད་རོགས་གནང་།"

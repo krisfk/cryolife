@@ -1,0 +1,44 @@
+.comment {
+	&-respond {
+		.comment-list & {
+			margin-top: 60px;
+			margin-bottom: 60px;
+		}
+	}
+	&-reply-title {
+		margin-bottom: 30px;
+
+		#cancel-comment-reply-link {
+			@include font-size(.75);
+			float: right;
+			margin-left: 10px;
+		}
+	}
+	&-form {
+		&-comment,
+		&-author,
+		&-email,
+		&-url {
+			position: relative;
+			margin: 0 0 20px 0;
+			i {
+				pointer-events: none;
+				font-size: 18px;
+				position: absolute;
+				left: 20px;
+				top: 14px;
+			}
+		}
+		.form-submit {
+			margin: 40px 0 0 0;
+		}
+		&__field {
+			width: 100%;
+			vertical-align: top;
+		}
+		.logged-in-as,
+		.comment-notes {
+			margin: 0 0 20px;
+		}
+	}
+}

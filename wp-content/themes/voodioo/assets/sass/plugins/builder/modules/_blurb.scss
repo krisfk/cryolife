@@ -1,0 +1,171 @@
+#tm_builder_outer_content {
+
+	.tm_pb_blurb.tm_pb_module {
+		margin-bottom: 40px;
+
+		.tm_pb_blurb_content {
+			max-width: 100%;
+			align-items: flex-start;
+			display: block;
+			@include media-breakpoint-up(sm) {
+				display: flex;
+			}
+		}
+
+		.tm-pb-icon {
+			@include font-size(3.125);
+		}
+
+		.tm-pb-icon-circle {
+			@include font-size(1.5);
+		}
+
+		.tm-pb-icon-circle-border {
+			border: 1px solid;
+		}
+
+		.tm-pb-icon-circle {
+			width: 83px;
+			height: 83px;
+			border-radius: 45px;
+		}
+
+		.tm_pb_link,
+		.tm_pb_button{
+			margin-top: 30px;
+		}
+		.tm_pb_link {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		.tm_pb_blurb_container {
+
+			h4 {
+				padding-bottom: 0;
+				margin-bottom: 10px;
+			}
+
+		}
+
+		.tm_pb_main_blurb_image {
+			img {
+				vertical-align: top;
+			}
+		}
+
+		&.tm_pb_blurb_position_top {
+
+			.tm_pb_main_blurb_image {
+				img {
+					width: 100%;
+				}
+			}
+
+			&.tm_pb_text_align_left {
+				.tm-pb-icon {
+					margin-left: 0;
+
+					&:not(.tm-pb-icon-circle) {
+						justify-content: flex-start;
+					}
+				}
+			}
+			&.tm_pb_text_align_right {
+				.tm-pb-icon {
+					margin-right: 0;
+					&:not(.tm-pb-icon-circle) {
+						justify-content: flex-end;
+					}
+				}
+			}
+		}
+
+		&.tm_pb_blurb_position_left {
+
+			.tm_pb_main_blurb_image {
+				margin-right: 0;
+				text-align: center;
+				margin-bottom: 30px;
+
+				@include media-breakpoint-up(sm) {
+					padding-top: 8px;
+					text-align: left;
+					margin-bottom: 0;
+				}
+
+				img {
+					@include media-breakpoint-up(sm) {
+						padding-right: 15px;
+					}
+				}
+				.tm-pb-icon {
+					@include media-breakpoint-up(sm) {
+						margin-right: 15px;
+					}
+
+					@include media-breakpoint-up(lg) {
+						margin-right: 40px;
+					}
+				}
+				.tm-pb-icon-circle {
+					@include media-breakpoint-up(lg) {
+						margin-right: 25px;
+					}
+				}
+			}
+
+			.tm_pb_blurb_container {
+				text-align: center;
+				@include media-breakpoint-up(sm) {
+					text-align: inherit;
+				}
+			}
+
+		}
+
+		&.tm_pb_blurb_position_right {
+			.tm_pb_main_blurb_image {
+				text-align: center;
+				margin-left: 0;
+				margin-bottom: 30px;
+
+				@include media-breakpoint-up(sm) {
+					padding-top: 8px;
+					margin-bottom: 0;
+				}
+
+				img {
+					@include media-breakpoint-up(sm) {
+						padding-left: 15px;
+					}
+				}
+				.tm-pb-icon {
+					@include media-breakpoint-up(sm) {
+						margin-right: 0;
+						margin-left: 15px;
+					}
+
+					@include media-breakpoint-up(lg) {
+						margin-left: 40px;
+					}
+				}
+				.tm-pb-icon-circle {
+					@include media-breakpoint-up(lg) {
+						margin-left: 25px;
+					}
+				}
+			}
+			.tm_pb_blurb_container {
+				text-align: center;
+				@include media-breakpoint-up(sm) {
+					text-align: inherit;
+				}
+			}
+		}
+
+	}
+}

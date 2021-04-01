@@ -1,0 +1,25 @@
+.posts-list .share-btns__items {
+	background-color: @darken($grey_color_1, 15%);
+}
+.posts-list .share-btns__items:before {
+	border-top-color: @darken($grey_color_1, 15%);
+}
+
+.share-btns__before i {
+	color: $grey_color_2;
+}
+
+.share-btns__link,
+.social-list a {
+	color: $regular_text_color;
+}
+
+.share-btns__link:hover,
+.social-list a:hover {
+	color: $regular_link_color;
+}
+
+.invert .share-btns__link:hover,
+.invert .social-list a:hover {
+	color: $invert_accent_color_1;
+}

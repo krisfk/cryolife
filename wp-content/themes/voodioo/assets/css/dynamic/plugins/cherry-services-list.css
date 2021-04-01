@@ -1,0 +1,62 @@
+.cherry-services .service-icon {
+	color: @darken($grey_color_3, 7.5);
+}
+
+.services-container .cherry-services-filter {
+	font-family: @font_family( $h1_font_family );
+}
+.services-container .cherry-services-filter_link {
+	color: $regular_text_color;
+}
+.services-container .cherry-services-filter_link:hover,
+.services-container .cherry-services-filter_item.active .cherry-services-filter_link {
+	color: $regular_link_color;
+}
+
+.cherry-services .title_wrap a {
+	color: $regular_accent_color_2;
+}
+
+.cherry-services .title_wrap a:hover{
+	color: $invert_link_hover_color;
+}
+
+.cherry-services .cherry-spinner-double-bounce .cherry-double-bounce1,
+.cherry-services .cherry-spinner-double-bounce .cherry-double-bounce2 {
+	background-color: $regular_accent_color_1;
+}
+
+.template-media-icon-bg .services-item-inner{
+	border-color: $grey_color_3;
+}
+
+.template-media-icon-bg .services-item-inner:hover .icon_wrap,
+.template-media-icon-bg .services-item-inner:hover .icon_wrap i,
+.template-media-icon-bg .services-item-inner:hover .title_wrap a,
+.template-media-icon-bg .services-item-inner:hover .content_wrap{
+	color: $invert_accent_color_1;
+}
+
+.template-media-icon-bg .services-item-inner:hover .title_wrap a:hover{
+	color: $invert_link_hover_color;
+}
+
+.template-media-icon-bg .services-item-inner:before{
+	background-image: linear-gradient(to top, $regular_accent_color_2, @alpha($regular_accent_color_2, 50) 70%, @alpha($regular_accent_color_2, 0));
+}
+
+.template-media-icon-bg-2 .services-item-inner,
+.template-media-icon-bg-2 .service-icon,
+.template-media-icon-bg-2 .title_wrap a,
+.template-media-icon-bg-2 .btn-link {
+	color: $invert_accent_color_1;
+}
+
+.template-media-icon-bg-2 .services-item-inner:before{
+	background-color: $regular_accent_color_1;
+}
+
+.template-media-icon-bg-2 .title_wrap a:hover,
+.template-media-icon-bg-2 .btn-link:hover {
+	color: $regular_link_hover_color;
+}

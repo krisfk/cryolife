@@ -1,0 +1,246 @@
+.widget {
+	ul {
+		margin-bottom: 0;
+		padding: 0;
+		margin-left: 0;
+		list-style: none;
+
+		li {
+			& + li,
+			> ul li,
+			> ol li {
+				margin-top: 11px;
+			}
+			> ul {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Calendar
+--------------------------------------------------------------*/
+.widget_calendar {
+	caption,
+	thead,
+	tbody{
+		@include font-size(.875);
+	}
+	
+	table {
+		margin-bottom: 0;
+		table-layout: fixed;
+		width: 100%;
+		position: relative;
+		th,
+		td,
+		thead th,
+		tbody + tbody {
+			border: none;
+		}
+	}
+
+	thead {
+		text-align: center;
+		font-weight: 900;
+		border: 1px solid $color__background-hr;
+		border-top: none;
+	}
+	caption {
+		text-align: center;
+		padding: 15px 0;
+		font-weight: 900;
+	}
+	th {
+		padding: 12px 0;
+		font-weight: inherit;
+	}
+	tbody {
+		border: 1px solid $color__background-hr;
+	}
+	tbody td {
+		position: relative;
+		text-align: center;
+		line-height: 44px;
+		height: 44px;
+
+		a {
+			display: inline-block;
+			width: 36px;
+			max-width: 100%;
+			height: 32px;
+			line-height: 32px;
+			font-weight: 900;
+		}
+	}
+	tfoot td {
+		position: absolute;
+		top: 10px;
+		a {
+			font-size: 0;
+			&:before {
+				content: '\ee4f';
+				@include font-size(1.125);
+				transition: .3s;
+			}
+		}
+		&#prev {
+			left: 20px;
+			a:before {
+				content: '\ee4f';
+			}
+		}
+		&#next {
+			right: 20px;
+			a:before {
+				content: '\ee50';
+			}
+		}
+
+	}
+	td#today {
+		font-weight: 900;
+	}
+	#next {
+		text-align: right;
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Tag Cloud
+--------------------------------------------------------------*/
+.tagcloud {
+	margin: 0 -5px -10px;
+	a {
+		display: inline-block;
+		margin: 0 5px 10px;
+		vertical-align: top;
+		text-decoration: none;
+		font-weight: 900;
+
+		&:hover {}
+		&:focus {}
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Recent Posts
+--------------------------------------------------------------*/
+.widget_recent_entries {
+	ul li {
+		& + li {
+			margin-top: 20px;
+		}
+		display: flex;
+		flex-direction: column-reverse;
+		a {
+			font-weight: 900;
+			@include font-size(.875);
+		}
+		.post-date {
+			display: block;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Recent Comments
+--------------------------------------------------------------*/
+.widget_recent_comments {
+	ul li {
+		@include font-size(.75);
+		@extend .clear;
+		& + li {
+			margin-top: 20px;
+		}
+		.comment-author-link {
+			margin-right: 1px;
+			font-weight: 900;
+
+			& ~ a {
+				font-style: normal;
+				font-weight: 900;
+				@include font-size(.875);
+				&:before {
+					content: '';
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget RSS
+--------------------------------------------------------------*/
+.rss-widget-icon {
+	vertical-align: middle;
+}
+
+.widget_rss {
+	ul {
+		li {
+			& + li {
+				margin-top: 20px;
+			}
+
+			display: flex;
+			flex-direction: column;
+		}
+		a.rsswidget {
+			font-weight: 900;
+		}
+
+		.rss-date {
+			order: -1;
+		}
+	}
+	.rssSummary {
+		margin-top: 5px;
+	}
+}
+
+/*--------------------------------------------------------------
+## Widget Archives - Categories
+--------------------------------------------------------------*/
+.widget_archive,
+.widget_categories {
+	position: relative;
+	select {
+		width: 100%;
+		-webkit-appearance: none;
+		position: relative;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	label {
+		position: relative;
+		width: 100%;
+		height: 50px;
+		&:before {
+			content: "\ee47";
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: inline-block;
+			z-index: 1;
+			@include font-size(1.125);
+			pointer-events: none;
+		}
+	}
+	.screen-reader-text {
+		clip: auto;
+	}
+	ul li {
+		display: block;
+	}
+	a{
+		transition: .2s;
+		&:hover {
+			font-weight: 900;
+		}
+	}
+}

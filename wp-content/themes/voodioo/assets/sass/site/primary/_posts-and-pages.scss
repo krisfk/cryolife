@@ -1,0 +1,516 @@
+.page-content,
+.entry-content,
+.entry-summary {
+}
+
+/*--------------------------------------------------------------
+### Hentry (WordPress native CSS-class for post/page article)
+--------------------------------------------------------------*/
+.hentry {
+	position: relative;
+
+	.posts-list &,
+	.single-post & {
+		margin-bottom: 70px;
+	}
+
+	.posts-list--grid & {
+		margin-bottom: 35px;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+		}
+	}
+
+	.posts-list--vertical-justify & {
+		margin-bottom: $card-deck-margin;
+	}
+
+	.posts-list--default-small-image & {
+		@extend .clear;
+	}
+
+	&.page {}
+
+	.posts-list--search & {
+		& + .hentry {
+			padding-top: 70px;
+			border-top-width: 1px;
+			border-top-style: solid;
+		}
+
+		> .entry-footer {
+			margin-top: 30px;
+		}
+
+		@include media-breakpoint-up(sm) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			> .entry-footer {
+				flex-shrink: 0;
+				margin-top: 0;
+				margin-left: 40px;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+### Posts-list
+--------------------------------------------------------------*/
+.posts-list {
+	&__item-content {
+
+		.posts-list:not(.posts-list--default-modern) & {
+			border-width: 1px;
+			border-style: solid;
+			padding: 30px 20px;
+			transition: all .3s ease-out;
+
+			@include media-breakpoint-up(md) {
+				padding: 40px 45px;
+			}
+		}
+
+		.posts-list.one-left-sidebar:not(.posts-list--default-modern):not(.posts-list--default) &,
+		.posts-list.one-right-sidebar:not(.posts-list--default-modern):not(.posts-list--default) & {
+			@include media-breakpoint-up(md) {
+				padding: 30px 20px;
+			}
+		}
+
+		.posts-list--default-small-image .posts-list__item.format-standard &,
+		.posts-list--default-small-image .posts-list__item.format-image & {
+			@include media-breakpoint-up(md) {
+				padding: 0;
+				border: none;
+			}
+		}
+
+		.posts-list--default-modern & {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			background-color: $color__white;
+			position: relative;
+			z-index: 1;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			@include media-breakpoint-up(sm) {
+				padding-left: 5%;
+				padding-right: 5%;
+				max-width: 90%;
+				margin-top: -30px;
+			}
+			@include media-breakpoint-up(lg) {
+				max-width: 82.65%;
+				padding-left: 10%;
+				padding-right: 10%;
+				margin-top: -70px;
+			}
+		}
+
+		.posts-list--default-modern .post-thumbnail:empty + &,
+		.posts-list--default-modern .post-featured-content:empty + &,
+		.posts-list--default-modern .format-standard.no-thumb & {
+			margin-top: 0;
+		}
+	}
+
+	&--grid {
+		@if (0px == $card-grid-gutter) {
+
+			&.posts-list--grid-2-cols {
+				@include media-breakpoint-up(sm) {
+					.posts-list__item:not(:nth-child(-n + 2)) .posts-list__item-content {
+						border-top-color: transparent;
+					}
+
+					.posts-list__item:not(:nth-child(2n + 1)) .posts-list__item-content {
+						border-left-color: transparent;
+					}
+				}
+			}
+
+			&.posts-list--grid-3-cols,
+			&.posts-list--grid-4-cols {
+				@include media-breakpoint-between(sm, md) {
+					.posts-list__item:not(:nth-child(-n + 2)) .posts-list__item-content {
+						border-top-color: transparent;
+					}
+
+					.posts-list__item:not(:nth-child(2n + 1)) .posts-list__item-content {
+						border-left-color: transparent;
+					}
+				}
+			}
+
+			&.posts-list--grid-3-cols {
+				@include media-breakpoint-up(lg) {
+					.posts-list__item:not(:nth-child(-n + 3)) .posts-list__item-content {
+						border-top-color: transparent;
+					}
+
+					.posts-list__item:not(:nth-child(3n + 1)) .posts-list__item-content {
+						border-left-color: transparent;
+					}
+				}
+			}
+
+			&.posts-list--grid-4-cols {
+				@include media-breakpoint-up(lg) {
+					.posts-list__item:not(:nth-child(-n + 4)) .posts-list__item-content {
+						border-top-color: transparent;
+					}
+
+					.posts-list__item:not(:nth-child(4n + 1)) .posts-list__item-content {
+						border-left-color: transparent;
+					}
+				}
+			}
+		}
+	}
+
+	&--grid,
+	&--vertical-justify {
+
+		.posts-list__item:hover {
+			.post-thumbnail {
+				opacity: 1;
+			}
+		}
+
+		.post-thumbnail {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			opacity: 0;
+			transition: .3s ease-out;
+			z-index: 1;
+
+			&__link {
+				height: 100%;
+			}
+
+			&__img {
+				height: 100%;
+				object-fit: cover;
+
+				.ie & {
+					font-family: 'object-fit: cover';
+				}
+			}
+		}
+
+		.posts-list__item-content {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			min-height: 370px;
+			position: relative;
+			z-index: 3;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+### Entry (header, content, meta, footer)
+--------------------------------------------------------------*/
+.entry {
+	&-title {
+		margin: 0;
+
+		.entry-header * + & {
+			margin-top: 5px;
+		}
+	}
+
+	&-meta-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		@include grid-indent(10px);
+
+		.single-post .post & {
+			flex-wrap: wrap;
+		}
+
+		.posts-list--default-modern & {
+			display: block;
+		}
+	}
+
+	&-meta {
+
+		&:empty {
+			display: none;
+		}
+
+		> *:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		.posted-by:not(:last-child) {
+			margin-right: 4px;
+		}
+
+		.share-btns__list:not(:last-child),
+		.post__comments:not(:last-child) {
+			margin-right: 15px;
+		}
+
+		&--right {
+			flex-shrink: 0;
+		}
+	}
+
+	&-summary,
+	&-content {
+		.posts-list & {
+			> *:first-child {
+				margin-top: 25px;
+			}
+		}
+
+		.posts-list--search & {
+			> *:first-child {
+				margin-top: 10px;
+			}
+		}
+
+		.posts-list--default-small-image & {
+			&:after {
+				clear: none;
+			}
+		}
+	}
+	&-header {}
+
+	&-footer {
+
+		.posts-list--default-small-image & {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.posts-list--grid &,
+		.posts-list--vertical-justify &,
+		.related-post &{
+			margin-top: auto;
+		}
+
+		.entry-meta,
+		.post__button-wrap,
+		.cherry-trend-rating {
+			margin-top: 20px;
+
+			.posts-list--default-modern & {
+				margin-top: 25px;
+			}
+		}
+
+		.single-post .post & {
+			> *:first-child {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+### Post attributes (thumbnail, meta)
+--------------------------------------------------------------*/
+.post {
+
+	&-thumbnail {
+
+		&__link {
+			&.post-thumbnail--small {
+				display: block;
+				@include media-breakpoint-up(md) {
+					float: left;
+					margin-right: 30px;
+					margin-bottom: 15px;
+					width: auto;
+					max-width: 50%;
+				}
+			}
+		}
+		&__img {
+			display: inline-block;
+			vertical-align: top;
+
+			.single-post .hentry & {
+				width: 100%;
+			}
+		}
+		&--small {
+			img {
+				width: 100%;
+
+				@include media-breakpoint-up(md) {
+					width: auto;
+				}
+			}
+		}
+		&--fullwidth {
+			.posts-list & {
+				display: block;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__cats,
+	&__terms {
+		.entry-header & {
+			@include font-size(.875);
+		}
+		a:not(:last-child) {
+			margin-right: 12px;
+		}
+	}
+
+	&__terms a,
+	&__cats a,
+	&__tags a,
+	&__tags-delimiter,
+	&ed-by a {
+		font-weight: 900;
+	}
+
+	&__terms,
+	&__date,
+	&__comments,
+	&__tags,
+	&ed-by {
+		display: inline-block;
+
+		i {
+			font-size: 1.5em;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 6px;
+			position: relative;
+		}
+	}
+	&ed-by {
+		&__avatar {
+			img {
+				@include border-radius(50%);
+				width: 80px;
+				@include media-breakpoint-up(sm) {
+					width: auto;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+### Single post
+--------------------------------------------------------------*/
+.single-post {
+	&__full-width-section {
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+		padding-top: 60px;
+		@include media-breakpoint-up(sm) {
+			padding-top: 130px;
+		}
+		&.has-thumb {
+			background-color: $color__dark;
+			padding: 60px 0;
+			@include media-breakpoint-up(sm) {
+				padding: 120px 0;
+			}
+			@include media-breakpoint-up(lg) {
+				padding: 235px 0;
+			}
+		}
+
+		.post-thumbnail {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+
+			> img {
+				object-fit: cover;
+				object-position: center;
+				opacity: .5;
+				width: 100%;
+				height: 100%;
+
+				.ie & {
+					// Fallback to ie ( polyfill: object-fit-images - ofi.js )
+					font-family: 'object-fit: cover; object-position: center';
+				}
+			}
+		}
+		.container {
+			position: relative;
+			z-index: 2;
+		}
+		.entry-meta {
+			margin-top: 25px;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+### Related posts
+--------------------------------------------------------------*/
+.related-posts {
+
+	[class*="col-"] {
+		display: flex;
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+	.related-post {
+		margin-bottom: 60px;
+		display: flex;
+		flex-direction: column;
+	}
+	.related-post__content {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		border-width: 1px;
+		border-style: solid;
+		padding: 30px 20px;
+		transition: all .3s ease-out;
+
+		@include media-breakpoint-up(md) {
+			padding: 40px 45px;
+		}
+	}
+	.entry-footer {
+		margin-top: auto;
+	}
+	.post-thumbnail__img {
+		width: 100%;
+		height: auto;
+	}
+}
+/*--------------------------------------------------------------
+### Archive page
+--------------------------------------------------------------*/
+.archive .taxonomy-description {
+	margin-bottom: 25px;
+}
+
+/*--------------------------------------------------------------
+### Sticky Post
+--------------------------------------------------------------*/
+@import "sticky";

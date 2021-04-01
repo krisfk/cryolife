@@ -1,0 +1,13 @@
+/* #News-smart-box */
+.news-smart-box__navigation-terms-list-item {
+	font-family: @font_family( $h1_font_family );
+}
+.news-smart-box__navigation-terms-list-item:hover,
+.news-smart-box__navigation-terms-list-item.is-active {
+	color: $regular_accent_color_1;
+}
+
+.news-smart-box__instance .double-bounce-1,
+.news-smart-box__instance .double-bounce-2 {
+	background-color: $regular_accent_color_1;
+}

@@ -1,0 +1,90 @@
+/* Set icons font family */
+// wp-video
+.mejs-overlay-button:before,
+
+// to-top
+#toTop:before,
+
+// search-form
+.search-form__toggle,
+.search-form__close,
+.site-header .search-form__submit:before,
+
+// menu arrow
+.main-navigation .menu .menu-item-has-children :after,
+.sub-menu-toggle:before,
+nav.main-navigation > .voodioomega-menu.mega-menu-mobile-on .mega-menu-mobile-arrow i,
+
+// magnificPopup
+a[data-popup="magnificPopup"]:after,
+.mfp-iframe-holder .mfp-close:before, .mfp-image-holder .mfp-close:before,
+
+// Swiper
+.swiper-button-next:before,
+.swiper-button-prev:before,
+
+// blockquote
+blockquote:before,
+
+// voodiootesti
+.voodiootesti__item-body:before,
+.voodiootesti--speech-bubble .voodiootesti__item-body p:before,
+
+// builder toggle module
+#tm_builder_outer_content .tm_pb_module .tm_pb_toggle_title::before,
+
+// builder audio module
+#tm_builder_outer_content .tm_audio_container .mejs-controls .mejs-playpause-button button:before,
+#tm_builder_outer_content .tm_audio_container .mejs-controls .mejs-volume-button button:before,
+
+// builder map module
+#tm_builder_outer_content .tm_pb_map_container.tm_pb_module .gm-style .gm-style-iw + div:before,
+
+// builder arrow navigation
+#tm_builder_outer_content .tm_pb_module .voodioopb-arrow-next,
+#tm_builder_outer_content .tm_pb_module .voodioopb-arrow-prev,
+
+// builder video module
+#tm_builder_outer_content .tm_pb_video_overlay .tm_pb_video_overlay_hover a.tm_pb_video_play::before,
+
+// widgets
+.instagram__cover:before,
+.widget_archive label:before,
+.widget_categories label:before,
+.widget_calendar tfoot a:before,
+.smart-slider__instance .sp-full-screen-button:before,
+.smart-slider__instance .sp-arrow:before,
+
+// voodioophoto-gallery
+.voodioopg_front_gallery .tm_pg_gallery-item_default_icon:before,
+.voodioopg_front_gallery .voodioopg_front_gallery-masonry .tm_pg_gallery-item_link_show-more span:after,
+.voodioopg_front_gallery .voodioopg_front_gallery-grid .tm_pg_gallery-item_link_show-more span:after,
+.voodioopg_front_gallery .voodioopg_front_gallery-justify .tm_pg_gallery-item_link_show-more span:after,
+.voodioopg_front_gallery-navigation .tm_pg_nav-links a.tm_pg_page-numbers.next i:before,
+.voodioopg_front_gallery-navigation .tm_pg_nav-links a.tm_pg_page-numbers.prev i:before,
+.lg-outer .lg-actions .lg-icon.lg-prev:after,
+.lg-outer .lg-actions .lg-icon.lg-next:before,
+.lg-outer .lg-toolbar .lg-icon:after,
+.lg-outer .lg-thumb-outer .lg-icon:after,
+
+// wpml
+.wpml-ls-legacy-dropdown a.wpml-ls-item-toggle:after,
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after,
+
+// posts-list
+.posts-list--grid .posts-list__item:not(.format-standard ) .entry-header:before,
+.posts-list--vertical-justify .posts-list__item:not(.format-standard ) .entry-header:before{
+	@include nc-icon-outline;
+}
+
+/* Prev buttons icon */
+.swiper-button-prev:before,
+#tm_builder_outer_content .tm_pb_module .voodioopb-arrow-prev:before {
+	content: unicode($prev-icon);
+}
+
+/* Next buttons icon */
+.swiper-button-next:before,
+#tm_builder_outer_content .tm_pb_module .voodioopb-arrow-next:before {
+	content: unicode($next-icon);
+}

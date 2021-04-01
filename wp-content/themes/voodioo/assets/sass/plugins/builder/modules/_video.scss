@@ -1,0 +1,24 @@
+$icon-size: 50px;
+
+#tm_builder_outer_content {
+
+	.tm_pb_video_overlay .tm_pb_video_overlay_hover {
+		background: rgba(0, 0, 0, 0.1);
+		a.tm_pb_video_play {
+			font-size: $icon-size;
+			line-height: 1;
+			margin-left: - $icon-size / 2;
+			margin-top: - $icon-size / 2;
+
+			&::before {
+				content: "\e7fe";
+				text-align: center;
+				vertical-align: top;
+			}
+		}
+	}
+
+	.tm_pb_video.tm_pb_module .tm_pb_video_overlay_hover:hover {
+		background: rgba(0, 0, 0, 0.5);
+	}
+}

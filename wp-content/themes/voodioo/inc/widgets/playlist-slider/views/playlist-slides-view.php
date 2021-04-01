@@ -1,0 +1,23 @@
+<?php
+/**
+ * Template part to display slides Playlist-slider widget.
+ *
+ * @package Voodioo
+ * @subpackage widgets
+ */
+?>
+<div class="sp-slide format-<?php echo esc_attr( $post_format ); ?> <?php echo esc_attr( $is_invert ); ?> sp-slide--<?php echo esc_attr( $visible_content ); ?>">
+	<div class="sp-layer" data-position="bottomLeft" data-horizontal="0" data-show-transition="up" data-show-delay="500" data-hide-transition="down">
+		<header class="entry-header">
+			<?php echo $category; ?>
+			<?php echo $title; ?>
+		</header>
+		<div class="entry-meta">
+			<?php echo $author; ?>
+			<?php echo $date; ?>
+			<?php echo $tag; ?>
+			<?php echo $comments; ?>
+		</div>
+	</div>
+	<?php echo $slide; ?>
+</div>

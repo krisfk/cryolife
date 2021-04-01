@@ -1,0 +1,25 @@
+.site-header.style-4 {
+
+	.site-branding {
+		@include media-breakpoint-up(sm) {
+			margin-top: 10px;
+		}
+		@include media-breakpoint-up(md) {
+			margin-bottom: 10px;
+		}
+	}
+
+	.main-navigation {
+		@include media-breakpoint-up(sm) {
+			.menu {
+				margin-top: 0;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			.menu {
+				margin-top: 22px;
+				justify-content: flex-end;
+			}
+		}
+	}
+}

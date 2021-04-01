@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('a8c-fse-common-data-stores', 'lodash', 'wp-api-fetch', 'wp-components', 'wp-data', 'wp-data-controls', 'wp-element', 'wp-i18n', 'wp-nux', 'wp-plugins', 'wp-polyfill', 'wp-primitives'), 'version' => 'b04ba723044e8bca6e0c4c0d5fb12f06');

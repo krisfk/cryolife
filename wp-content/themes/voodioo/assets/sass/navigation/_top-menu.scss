@@ -1,0 +1,17 @@
+.top-panel__menu {
+	&-list {
+		text-align: center;
+		margin: 0 -6px;
+		.menu-item {
+			margin: 5px 6px;
+			@include font-size(.75);
+
+			a { text-decoration: none; }
+
+			&.current-menu-item,
+			&.current_page_item {
+				a {	}
+			}
+		}
+	}
+}

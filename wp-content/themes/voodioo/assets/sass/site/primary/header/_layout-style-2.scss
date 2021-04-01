@@ -1,0 +1,9 @@
+.site-header.style-2 {
+	.main-navigation {
+		@include media-breakpoint-up(sm) {
+			.menu {
+				margin-top: 0;
+			}
+		}
+	}
+}

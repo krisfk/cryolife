@@ -1,0 +1,139 @@
+$transition-time: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+
+#tm_builder_outer_content {
+
+	.tm_pb_team_member.tm_pb_module {
+		margin-bottom: 50px;
+		position: relative;
+		.tm_pb_team_member_top {
+			position: relative;
+			overflow: hidden;
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 100%;
+				bottom: 0;
+				opacity: 0;
+				z-index: 1;
+				transition: .3s $transition-time;
+				transition-delay: .25s;
+			}
+		}
+
+		.tm_pb_team_member_description {
+			position: absolute;
+			padding: 5px;
+			top: 50%;
+			left: 0;
+			right: 0;
+			transform: translateY(-50%);
+			z-index: 2;
+			opacity: 1;
+			transition: .3s ease-out;
+
+			> *:nth-of-type(n+1){
+				transform: translateY(300%);
+				transition: .3s $transition-time;
+				opacity: 0;
+			}
+
+			> *:nth-child(1){
+				transition-delay: 0.2s;
+			}
+			> *:nth-child(2){
+				transition-delay: 0.15s;
+			}
+			> *:nth-child(3){
+				transition-delay: 0.1s;
+			}
+			> *:nth-child(4){
+				transition-delay: 0.05s;
+			}
+		}
+		&:hover {
+			.tm_pb_team_member_top:before {
+				opacity: 0.9;
+				top:0;
+				transition: .300s cubic-bezier(0.780, 0.030, 0.000, 1.000);
+				transition-delay: 0s;
+			}
+			.tm_pb_team_member_description{
+				> *:nth-of-type(n+1){
+					transform: translateY(0);
+					transition: .45s cubic-bezier(0.640, 0.280, 0.280, 1.185);
+					opacity: 1;
+				}
+
+				> *:nth-child(1){
+					transition-delay: 0.1s;
+				}
+				> *:nth-child(2){
+					transition-delay: 0.15s;
+				}
+				> *:nth-child(3){
+					transition-delay: 0.2s;
+				}
+				> *:nth-child(4){
+					transition-delay: 0.25s;
+				}
+			}
+		}
+
+		&.tm_pb_team_member_no_image {
+			.tm_pb_team_member_top {
+				min-height: 300px;
+
+				&:before {
+					opacity: 0.9;
+					top:0;
+				}
+			}
+			.tm_pb_team_member_description {
+				opacity: 1;
+				transform: translateY(-50%);
+				> *:nth-of-type(n+1){
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+		}
+
+		.tm_pb_team_member_image {
+			img {
+				width: 100%;
+				vertical-align: top;
+			}
+		}
+
+		.tm_pb_team_member_name {
+			margin-bottom: 8px;
+		}
+
+		.tm_pb_member_position {
+			@include font-size(.875);
+			font-weight: 900;
+			margin: 0;
+		}
+
+		p:not([class]) {
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+
+		p:not([class]) + .tm_pb_member_social_links {
+			margin-top: 15px;
+		}
+
+		.tm_pb_member_social_links {
+			text-align: center;
+			margin-top: 20px;
+			li {
+				margin: 5px;
+				font-size: 16px;
+				line-height: 1;
+			}
+		}
+	}
+}

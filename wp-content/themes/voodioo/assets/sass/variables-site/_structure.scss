@@ -1,0 +1,51 @@
+// Options
+$enable-rounded: true !default;
+$border__radius: 3px;
+
+// Box-shadow
+$box__shadow:        0 2px 12px rgba(136,136,136,0.26);
+$box__shadow_mobile: 0 2px 6px rgba(136,136,136,0.26);
+
+$box__shadow_banner: 2px 2px 12px rgba(136,136,136,0.26);
+$box__shadow_banner_mobile: 2px 2px 6px rgba(136,136,136,0.26);
+
+// Input
+$input__indents_y: 13.5px;
+$input__indents_x: 20px;
+
+// Buttons
+$button__indents_y:        10px;
+$button__indents_x:        40px;
+$button__indents_y_large:  16px;
+$button__indents_x_large:  57.5px;
+$button__indents:          $button__indents_y $button__indents_x;
+$button__indents_large:    $button__indents_y_large $button__indents_x_large;
+
+// Embed ratio
+$embed__ratio: 56.25%;  //  thumbnail height / thumbnail width
+
+// Prev-next icons
+$prev-icon: 'ead2';
+$next-icon: 'ead3';
+
+// Post-format icons
+$post-format-icons: (
+	aside:   'ee99',
+	gallery: 'ee11',
+	image:   'e987',
+	link:    'ed6e',
+	quote:   'ecbb',
+	video:   'e848',
+	audio:   'e85a',
+	status:  'eda0'
+) !default;
+
+// Site content indent
+$site-content-top-indent:    70px;
+$site-content-bottom-indent: 60px;
+
+// Transitions
+$bounce: .25s cubic-bezier(0.590, 0.150, 0.280, 1.650);
+
+// Mobile-vertical menu bg
+$mobile_menu_bg: rgba(17, 17, 17, .98);

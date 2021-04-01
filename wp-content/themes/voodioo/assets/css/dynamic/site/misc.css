@@ -1,0 +1,53 @@
+/* #Magnific Popup*/
+.mfp-iframe-holder .mfp-close ,
+.mfp-image-holder .mfp-close {
+	color: @lighten($regular_text_color, 25%);
+}
+
+.mfp-iframe-holder .mfp-close:hover,
+.mfp-image-holder .mfp-close:hover{
+	color: $grey_color_1;
+}
+
+.mfp-iframe-holder .mfp-arrow:before,
+.mfp-iframe-holder .mfp-arrow:after,
+.mfp-image-holder .mfp-arrow:before,
+.mfp-image-holder .mfp-arrow:after{
+	background-color: @lighten($regular_text_color, 25%);
+}
+
+.mfp-iframe-holder .mfp-arrow:hover:before,
+.mfp-iframe-holder .mfp-arrow:hover:after,
+.mfp-image-holder .mfp-arrow:hover:before,
+.mfp-image-holder .mfp-arrow:hover:after{
+	background-color: $grey_color_1;
+}
+
+/* #Swiper navigation*/
+.swiper-pagination-bullet {
+	background-color: $grey_color_2;
+}
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet:hover{
+	background-color: $regular_accent_color_1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	color: $invert_accent_color_1;
+	background-color: $invert_link_hover_color;
+	box-shadow: 0 2px 16px 0 @alpha($invert_link_hover_color, 70);
+}
+
+/*Contact block*/
+.contact-block {
+	font-family: @font_family( $h1_font_family );
+}
+
+.contact-block__icon {
+	color: $grey_color_1;
+}
+
+.invert .contact-block__icon {
+	color: @darken($grey_color_3, 7.5);
+}

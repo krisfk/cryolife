@@ -1,0 +1,7 @@
+.site-info {
+	@include font-size(.75);
+	line-height: 1.75;
+}
+
+@import "footer/layout-style-1";
+@import "footer/layout-style-2";

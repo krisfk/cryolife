@@ -1,0 +1,68 @@
+.tm-posts_title_divider {
+	background-color: $grey_color_3;
+}
+
+#tm_builder_outer_content .tm-pb-spinner-double-bounce .tm-pb-double-bounce1,
+#tm_builder_outer_content .tm-pb-spinner-double-bounce .tm-pb-double-bounce2 {
+	background-color: $regular_accent_color_1;
+}
+/*Posts Layout 1*/
+.tm_pb_posts .tm-posts_layout-1 .tm-posts_item_content_footer a{
+	color:$regular_text_color;
+}
+
+.tm_pb_posts .tm-posts_layout-1 .tm-posts_item_content_footer a:hover{
+	color:$regular_accent_color_1;
+}
+
+	/*Posts Layout 2*/
+.tm_pb_posts .tm-posts_layout-2 .tm-posts_item_content_wrap *{
+	color: $invert_accent_color_1;
+}
+
+.tm_pb_posts .tm-posts_layout-2 .tm-posts_item_content_wrap a:hover *{
+	color: $regular_accent_color_1;
+}
+
+.tm_pb_posts .tm-posts_layout-2 .post__cats a:not(:hover){
+	color: $regular_accent_color_1;
+}
+
+.tm_pb_posts .tm-posts_layout-2 .tm-posts_item_content_wrap:before{
+	background-color: @alpha($regular_accent_color_2, 90);
+}
+
+.tm_pb_posts .tm-posts_layout-2 .content-wrapper a:hover *{
+	color: $regular_accent_color_1;
+}
+
+
+/*Posts Layout 3*/
+.tm_pb_posts .tm-posts_layout-3 .tm-posts_item .post-date{
+	color:$regular_text_color;
+}
+
+.tm_pb_posts .tm-posts_layout-3 .tm-posts_item .post-date:hover *{
+	color:$regular_accent_color_1;
+}
+
+.tm_pb_posts .tm-posts_layout-3 .tm-posts_item:hover *{
+	color: $invert_accent_color_1;
+}
+
+.tm_pb_posts .tm-posts_layout-3 .tm-posts_item:hover .post_category a{
+	color: $regular_accent_color_1;
+}
+
+.tm_pb_posts .tm-posts_layout-3 .tm-posts_item:hover .post_category a:hover{
+	color: $invert_accent_color_1;
+}
+
+.tm_pb_posts .tm-posts_layout-3 .tm-posts_item:hover a:hover{
+	color: $regular_accent_color_1;
+}
+
+.tm_pb_posts .tm-posts_layout-3 .tm-posts_item .tm-posts_item_content:before{
+	background-color: @alpha($regular_accent_color_2, 70);
+}
+

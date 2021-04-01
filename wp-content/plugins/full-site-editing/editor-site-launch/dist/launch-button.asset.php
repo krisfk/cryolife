@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('a8c-fse-common-data-stores', 'lodash', 'wp-data', 'wp-dom-ready', 'wp-editor', 'wp-i18n', 'wp-polyfill'), 'version' => '13aef38bccede216cd4b4ef12535f7ac');

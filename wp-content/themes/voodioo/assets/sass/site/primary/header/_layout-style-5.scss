@@ -1,0 +1,61 @@
+.site-header.style-5 {
+	.header-container {
+
+		@include media-breakpoint-up(sm) {
+			z-index: 90;
+			left: 0;
+			right: 0;
+			position: absolute !important;
+			margin: 25px auto 0;
+
+			&:not(.isStuck) {
+				max-width: calc( 100% - 50px );
+
+				.header-container_wrap {
+					max-width: 100%;
+				}
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			margin: 50px auto 0;
+
+			&:not(.isStuck) {
+				.header-container_wrap {
+					padding-left: 40px;
+					padding-right: 40px;
+				}
+			}
+		}
+	}
+
+	.site-branding {
+		@include media-breakpoint-up(sm) {
+			margin-top: 10px;
+		}
+		@include media-breakpoint-up(md) {
+			margin-bottom: 10px;
+		}
+	}
+
+	.main-navigation {
+		@include media-breakpoint-up(sm) {
+			.menu {
+				margin-top: 0;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			.menu {
+				margin-top: 22px;
+				justify-content: center;
+			}
+		}
+
+		&:only-child {
+			@include media-breakpoint-up(md) {
+				.menu {
+					justify-content: flex-end;
+				}
+			}
+		}
+	}
+}

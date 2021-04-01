@@ -1,0 +1,16 @@
+#tm_builder_outer_content .tm_pb_promo {
+	color: $invert_accent_color_1;
+}
+#tm_builder_outer_content .tm_pb_promo h2 {
+	font-style: $h3_font_style;
+	font-weight: $h3_font_weight;
+	line-height: $h3_line_height;
+	font-family: @font_family( $h3_font_family );
+	letter-spacing: $h3_letter_spacing{em};
+	color: $invert_h3_color;
+}
+@media (min-width: 992px) {
+	#tm_builder_outer_content .tm_pb_promo h2 {
+		font-size: @font_size($h2_font_size, multiple, ceil, 0.7)px;
+	}
+}

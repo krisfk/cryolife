@@ -1,0 +1,42 @@
+#tm_builder_outer_content {
+
+	.tm_pb_counters.tm_pb_module {
+
+		> [class^="tm_pb_counter_"] {
+			position: relative;
+
+			& + [class^="tm_pb_counter_"]{
+				margin-top: 33px;
+			}
+		}
+
+		.tm_pb_counter {
+
+			&_amount {
+				padding-top: 9.5px;
+				padding-bottom: 9.5px;
+				/*rtl:raw:
+				float: right;
+				*/
+			}
+
+			&_amount_number {
+				position: absolute;
+				top: -5px;
+				left: 0;
+			}
+
+			&_title {
+				margin-bottom: 0;
+				padding-left: 65px;
+			}
+
+			&_container {
+				margin-top: 13px;
+				padding: 0;
+				margin-bottom: 0;
+				position: static;
+			}
+		}
+	}
+}

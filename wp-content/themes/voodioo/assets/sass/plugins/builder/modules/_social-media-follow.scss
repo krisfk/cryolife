@@ -1,0 +1,27 @@
+#tm_builder_outer_content {
+
+	.tm_pb_social_media_follow.tm_pb_module {
+
+		li {
+			float: none;
+			display: inline-block;
+			&:not(:last-child) {
+				margin-right: 2px;
+			}
+
+			a.icon {
+				margin-right: 0;
+			}
+			a.follow_button {
+				margin-right: 0;
+				margin-left: 5px;
+				padding: 1px 10px;
+			}
+
+			span.tm-pb-icon {
+				@include font-size(1);
+				line-height: 2;
+			}
+		}
+	}
+}

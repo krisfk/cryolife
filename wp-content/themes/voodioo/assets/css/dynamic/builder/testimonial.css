@@ -1,0 +1,7 @@
+.tm_pb_testimonial:before {
+	color: @darken($grey_color_3, 7.45);
+}
+.tm_pb_testimonial_meta {
+	color: $invert_link_hover_color;
+	font-family: @font_family( $h1_font_family );
+}

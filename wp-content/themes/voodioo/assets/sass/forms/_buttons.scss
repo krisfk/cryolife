@@ -1,0 +1,30 @@
+// General styles
+.btn,
+form button,
+form input[type='button'],
+form input[type='reset'],
+form input[type='submit'] {
+	@include btn;
+	@include btn-mods;
+}
+
+.link,
+.btn-link,
+.tm_pb_link {
+	display: inline-block;
+	@include font-size(1.125);
+	line-height: 1.5;
+	font-weight: 800;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.link,
+.btn-link {
+	@include sidebars-area() {
+		@include font-size(1);
+	}
+}

@@ -1,0 +1,98 @@
+/* #Widget Calendar */
+.widget_calendar caption,
+.widget_calendar thead,
+.widget_calendar tbody{
+	color: $regular_text_color;
+	font-family: @font_family( $h6_font_family );
+}
+
+.widget_calendar caption {
+	background-color: $grey_color_4;
+}
+
+.widget_calendar tbody td:not(.pad),
+#tm_builder_outer_content .tm_pb_widget_area .widget_calendar table tbody td:not(.pad) {
+	color: $regular_text_color;
+}
+
+.widget_calendar tbody td a,
+#tm_builder_outer_content .tm_pb_widget_area .widget_calendar table tbody td a {
+	color: $regular_accent_color_2;
+}
+
+.widget_calendar tbody td a:hover,
+#tm_builder_outer_content .tm_pb_widget_area .widget_calendar table tbody td a:hover {
+	background-color: $regular_accent_color_2;
+	color: $invert_text_color;
+}
+.widget_calendar tbody td#today,
+#tm_builder_outer_content .tm_pb_widget_area .widget_calendar table tbody td#today {
+	color: $regular_accent_color_1;
+}
+
+.widget_calendar tfoot a:before{
+	color: $grey_color_2;
+}
+
+.widget_calendar tfoot a:hover:before{
+	color: $grey_color_1;
+}
+
+/* #Widget Tag Cloud */
+.tagcloud a {
+	color: $regular_text_color;
+}
+
+.tagcloud a:hover {
+	color: $regular_accent_color_2;
+}
+
+/* #Widget Recent Posts - Comments*/
+.widget_recent_entries a,
+.widget_recent_comments a {
+	color: $regular_accent_color_1;
+}
+
+.widget_recent_entries a:hover,
+.widget_recent_comments a:hover {
+	color: $regular_accent_color_2;
+}
+
+/* #Widget Archive - Categories */
+.widget_archive label:before,
+.widget_categories label:before{
+	color: $grey_color_2;
+}
+
+.widget_categories a,
+.invert .widget_categories a,
+.widget_archive a,
+.invert .widget_archive a {
+	color: $regular_accent_color_2;
+}
+
+/* #Widgets misc */
+.widget_archive ul,
+.widget_categories ul,
+.widget_recent_entries ul,
+.widget_recent_comments ul,
+a.rsswidget,
+.tagcloud a {
+	font-family: @font_family( $h1_font_family );
+}
+
+/* #Widget date style */
+.widget_recent_entries .post-date,
+.rss-date {
+	font-style: $meta_font_style;
+	font-weight: $meta_font_weight;
+	font-size: $meta_font_size{px};
+	line-height: $meta_line_height;
+	font-family: @font_family( $meta_font_family );
+	letter-spacing: $meta_letter_spacing{em};
+	color: $regular_text_color;
+}
+
+.cherry-search__results-item a{
+	color: $regular_link_hover_color;
+}

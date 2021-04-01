@@ -1,0 +1,132 @@
+#tm_builder_outer_content {
+	.tm_pb_slider {
+		
+		.tm_pb_slide {
+			text-align: left;
+		}
+
+		.tm_pb_slider_with_text_overlay {
+			.tm_pb_slide_title,
+			.tm_pb_slide_content {
+				padding: 0;
+			}
+			.tm_pb_slide_description_inner {
+				padding: 30px;
+			}
+		}
+		
+		.tm_pb_slide_content {
+			@include font-size(1.375);
+			line-height: 1.55;
+		}
+
+		.tm-pb-controllers {
+			bottom: 7%;
+			@include media-breakpoint-up(lg) {
+				bottom: 14%;
+			}
+		}
+
+		.tm_pb_slide_description {
+			padding: 20% 0;
+		}
+
+		.tm_pb_slide_title {
+			padding-bottom: 0;
+			margin-bottom: 30px;
+		}
+
+		.tm_pb_more_button {
+			margin-top: 35px;
+			margin-left: 0;
+			margin-bottom: 0;
+			@include builder-btn-large-mods;
+			@include media-breakpoint-up(md) {
+				margin-top: 70px;
+			}
+
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+
+	}
+	.tm_pb_section_video_bg{
+		&:after{
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    content: "";
+		    width: 100%;
+		    height: 100%;
+		    opacity: 0.5;
+		}
+	}
+}
+
+#tm_builder_outer_content {
+	.tm_pb_module {
+		.tm-pb-controllers {
+			a {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				opacity: 1;
+				transition: .3s;
+				margin: 0 7px 5px;
+				line-height: 1;
+			}
+		}
+
+		.tm-pb-arrow {
+
+			&-prev,
+			&-next {
+				font-size: 30px;
+				line-height: 50px;
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				margin-top: -25px;
+			}
+
+			&-prev{
+				right: auto;
+				left: -25px;
+				@include media-breakpoint-up(xl) {
+					left: 0;
+				}
+			}
+
+
+			&-next{
+				right: -25px;
+				left: auto;
+				@include media-breakpoint-up(xl) {
+					right: 0;
+				}
+			}
+		}
+
+		&:hover {
+			.tm-pb-arrow-prev {
+				right: auto;
+				left: 0;
+				@include media-breakpoint-up(xl) {
+					left: 40px;
+				}
+			}
+			.tm-pb-arrow-next {
+				left: auto;
+				right: 0;
+				@include media-breakpoint-up(xl) {
+					right: 40px;
+				}
+			}
+		}
+	}
+}
+
+.tm_pb_post_slider .tm_pb_slide_overlay_container{
+	background-color: rgba($color__dark, 0.5);
+}

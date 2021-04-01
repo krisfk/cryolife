@@ -1,0 +1,332 @@
+/*rtl:begin:ignore*/
+.smart-slider {
+	&__instance {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+
+		&[data-thumbnails-position="top"] {
+			.slider-pro {
+				padding-top: 0 !important;
+			}
+		}
+		// sp-full-screen-button
+		.sp-full-screen-button {
+			right: 15px;
+			left: auto;
+			top: 15px;
+			color: $color__white;
+			transition: .3s;
+			transform: none;
+			font-size: 24px;
+			line-height: 1;
+
+			&:before {
+				content: '\ee6f';
+			}
+		}
+		.sp-full-screen .sp-full-screen-button {
+			&:before {
+				content: '\ee43';
+			}
+		}
+
+		&[data-thumbnails="true"][data-thumbnails-position="right"] .sp-full-screen-button {
+			@include media-breakpoint-up(sm) {
+				right: 180px;
+			}
+		}
+
+		// sp-thumbnail
+		.sp-thumbnail {
+			img {
+				display: block;
+			}
+		}
+		.sp-selected-thumbnail {
+			border: 2px solid;
+		}
+		.sp-bottom-thumbnails,
+		.sp-top-thumbnails {
+			.sp-thumbnail-container {
+				margin-right: 0;
+				margin-left: 0;
+			}
+		}
+		.sp-bottom-thumbnails {
+			position: absolute;
+			bottom: 9%;
+			left: 50%;
+			transform: translateX(-50%);
+			@include media-breakpoint-up(sm) {
+				bottom: 7%;
+			}
+			@include media-breakpoint-up(md) {
+				bottom: 5%;
+			}
+		}
+		.sp-top-thumbnails {
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.sp-right-thumbnails,
+		.sp-left-thumbnails {
+			.sp-previous-thumbnail-arrow {
+				top: 5px;
+			}
+			.sp-next-thumbnail-arrow {
+				bottom: 5px;
+			}
+		}
+		.sp-top-thumbnails,
+		.sp-bottom-thumbnails {
+			.sp-previous-thumbnail-arrow {
+				left: 5px;
+			}
+			.sp-next-thumbnail-arrow {
+				right: 5px;
+			}
+		}
+
+		// sp-arrow (navigation)
+		.sp-arrow {
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			z-index: 1;
+			&:before {
+				font-size: 30px;
+				position: relative;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				line-height: 50px;
+				transform: none;
+				background-color: transparent;
+			}
+			&:after {
+				display: none;
+			}
+		}
+		.sp-horizontal {
+			.sp-arrows {
+				margin-top: -25px;
+			}
+			.sp-previous-arrow {
+				left: 0;
+				&:before {
+					content: '\ead2';
+				}
+			}
+			.sp-next-arrow {
+				right: 0;
+				&:before {
+					content: '\ead3';
+				}
+			}
+		}
+		.sp-vertical {
+			.sp-arrows {
+				margin-left: 0;
+				left: calc(100% - 70px);
+			}
+			.sp-previous-arrow {
+				top: auto;
+				bottom: 95px;
+				&:before {
+					content: '\ead2';
+				}
+			}
+			.sp-next-arrow {
+				bottom: 30px;
+				&:before {
+					content: '\ead3';
+				}
+			}
+		}
+
+		// sp-buttons (pagination)
+		.sp-buttons {
+			position: absolute;
+			bottom: 13%;
+			padding: 0;
+		}
+		&[data-thumbnails="true"][data-thumbnails-position="bottom"] .sp-buttons {
+			bottom: 0;
+		}
+		&[data-thumbnails="true"][data-thumbnails-position="right"] .sp-buttons,
+		&[data-thumbnails="true"][data-thumbnails-position="left"] .sp-buttons {
+			@include media-breakpoint-down(sm) {
+				bottom: 0;
+			}
+		}
+		&[data-thumbnails="true"][data-thumbnails-position="right"] .sp-buttons {
+			@include media-breakpoint-up(sm) {
+				left: 0;
+				max-width: calc(100% - 162px);
+			}
+		}
+		&[data-thumbnails="true"][data-thumbnails-position="left"] .sp-buttons {
+			@include media-breakpoint-up(sm) {
+				left: auto;
+				right: 0;
+				max-width: calc(100% - 162px);
+			}
+		}
+		.sp-button {
+			width: 10px;
+			height: 10px;
+			margin: 0 8px;
+			border: none;
+			transition: .3s;
+			&.sp-selected-button {}
+		}
+
+		// Slider content elements
+		.sp-content-container {
+			width: 100%;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			padding: 15px $grid-gutter-width/2;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			box-sizing: border-box;
+
+			@include media-breakpoint-up(sm) {
+				text-align: left;
+			}
+
+			.sp-layer {
+				position: static;
+				& + .sp-layer {
+					margin-top: 20px;
+				}
+				& + .sp-more {
+					margin-top: 20px;
+					@include media-breakpoint-up(xl) {
+						margin-top: 70px;
+					}
+				}
+			}
+			.sp-content {
+				display: none;
+				@include media-breakpoint-up(sm) {
+					display: block;
+				}
+			}
+			.sp-more {}
+		}
+
+		&[data-pagination="true"] {
+			.sp-content-container {
+				padding: calc(5% + 88px) $grid-gutter-width/2;
+			}
+		}
+		&[data-thumbnails-position="bottom"],
+		&[data-thumbnails-position="top"] {
+			.sp-content-container {
+				padding: 5% $grid-gutter-width/2;
+			}
+		}
+		&[data-thumbnails-position="right"],
+		&[data-thumbnails-position="left"] {
+			.sp-content-container {
+				@include media-breakpoint-up(sm) {
+					padding-left: 100px;
+					padding-right: 100px;
+				}
+			}
+		}
+
+		.sp-title a,
+		.sp-more a {
+			transition: .3s !important;
+		}
+
+		h2.sp-title {
+			font-size: 25px;
+			line-height: 1.3;
+
+			@include media-breakpoint-up(sm) {
+				font-size: 30px;
+			}
+			@include media-breakpoint-up(md) {
+				font-size: 40px;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 60px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 90px;
+			}
+		}
+		p.sp-content {
+			font-size: 14px;
+			@include media-breakpoint-up(sm) {
+				font-size: 16px;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 22px;
+			}
+		}
+		.sp-slide {
+			text-align: left;
+			&.text-wrapped {
+				h2.sp-title {}
+			}
+		}
+		.sp-image-container:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			content: '';
+			background-color: rgba($color__dark, .5);
+		}
+
+		.btn {
+			@include media-breakpoint-up(xl) {
+				@include font-size(1.125);
+				font-weight: 800;
+				padding: 16px 57.5px;
+			}
+		}
+	}
+
+}
+
+@include sidebars-area(false) {
+	.smart-slider__instance {
+		.sp-content-container {
+			text-align: center;
+
+			.sp-layer {
+				& + .sp-more {
+					margin-top: 20px;
+				}
+			}
+		}
+		h2.sp-title {
+			font-size: 25px;
+		}
+		p.sp-content {
+			font-size: 14px;
+		}
+		.btn{
+			padding: $button__indents;
+			@include font-size(.875);
+		}
+	}
+}
+
+/*rtl:end:ignore*/

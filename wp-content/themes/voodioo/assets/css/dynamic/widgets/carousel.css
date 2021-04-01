@@ -1,0 +1,24 @@
+.swiper-wrapper .content-wrapper:before{
+	background-color: @alpha($regular_accent_color_2, 90);
+}
+
+.swiper-wrapper .content-wrapper *{
+	color: $invert_accent_color_1;
+}
+
+.swiper-wrapper .content-wrapper a:hover *{
+	color: $invert_link_hover_color;
+}
+
+.swiper-wrapper .post__cats a:not(:hover),
+.swiper-wrapper .entry-title a:hover {
+	color: $invert_accent_color_1;
+}
+
+.tm_pb_swiper.tm_pb_module .content-wrapper:before{
+	background-color: @alpha($regular_accent_color_2, 90);
+}
+
+.tm_pb_swiper.tm_pb_module .content-wrapper a:hover *{
+	color: $regular_accent_color_1;
+}

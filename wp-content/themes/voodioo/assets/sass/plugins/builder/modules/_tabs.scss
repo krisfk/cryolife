@@ -1,0 +1,38 @@
+#tm_builder_outer_content {
+
+	.tm_pb_tabs.tm_pb_module {
+
+		.tm_pb_tabs_controls {
+			background: transparent;
+			border: none;
+			@include grid-indent(17.5px);
+
+			li {
+				padding-top: 18px;
+				padding-bottom: 18px;
+
+				a { 
+					@include font-size(1);
+					transition: .3s all ease; 
+				}
+
+				&.tm_pb_tab_active {
+					bottom: 0;
+					border-bottom: none;
+				}
+
+			}
+
+		}
+
+		.tm_pb_all_tabs {
+			padding: 40px 0 20px;
+			background-color: transparent;
+			border-top: 1px solid;
+
+			.tm_pb_tab.tab-content {
+				line-height: inherit;
+			}
+		}
+	}
+}

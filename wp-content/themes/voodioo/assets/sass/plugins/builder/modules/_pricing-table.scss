@@ -1,0 +1,172 @@
+#tm_builder_outer_content {
+
+	.tm_pb_column_4_4 .tm_pb_pricing.tm_pb_module .tm_pb_pricing_table {
+		margin-top: 0;
+		@include media-breakpoint-up(sm) {
+			flex: 0 0 calc(50% - #{$grid-gutter-width});
+			max-width: calc(50% - #{$grid-gutter-width});
+		}
+		@include media-breakpoint-up(lg) {
+			flex: 0 0 calc(25% - #{$grid-gutter-width});
+			max-width: calc(25% - #{$grid-gutter-width});
+		}
+	}
+
+	.tm_pb_column_1_2 .tm_pb_pricing.tm_pb_module .tm_pb_pricing_table,
+	.tm_pb_column_2_3 .tm_pb_pricing.tm_pb_module .tm_pb_pricing_table {
+		@include media-breakpoint-up(lg) {
+			flex: 0 0 calc(50% - #{$grid-gutter-width});
+			max-width: calc(50% - #{$grid-gutter-width});
+		}
+	}
+
+	.tm_pb_column_3_4 .tm_pb_pricing.tm_pb_module .tm_pb_pricing_table {
+		@include media-breakpoint-up(lg) {
+			flex: 0 0 calc(33.33% - #{$grid-gutter-width});
+			max-width: calc(33.33% - #{$grid-gutter-width});
+		}
+	}
+	.tm_pb_column > .tm_pb_pricing.tm_pb_module > .tm_pb_pricing_table:nth-child(n) {
+		margin-top: 0;
+	}
+
+	.tm_pb_pricing.tm_pb_module {
+		margin-left: -$grid-gutter-width/2;
+		margin-right: -$grid-gutter-width/2;
+		display: flex;
+		flex-flow: row wrap;
+		&:after {
+			content: none;
+			display: none;
+		}
+
+		.tm_pb_pricing {
+
+			&_table {
+				background-color: $color__background-body;
+				border: 1px solid;
+				padding-bottom: 43px;
+				margin: 0 $grid-gutter-width/2 30px;
+				float: none;
+				width: calc(100% - #{$grid-gutter-width});
+				flex: 0 0 calc(100% - #{$grid-gutter-width});
+
+				&.tm_pb_featured_table {}
+			}
+
+			&_heading {
+				position: relative;
+				z-index: 5;
+				padding: 48px 10px 26px;
+				margin-bottom: 0;
+
+				.tm_pb_best_value {
+					margin-top: 10px;
+				}
+			}
+
+			&_title {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+
+			&_content_top {
+				position: relative;
+				z-index: 5;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-bottom: 20px;
+
+				.tm_pb_tm_price {
+					display: block;
+				}
+				
+				.tm_pb_sum {
+					@include font-size(2.5);
+					font-weight: 800;
+					line-height: 1;
+				}
+				.tm_pb_dollar_sign {
+					font-size: 22px;
+					font-weight: 800;
+					position: static;
+					/*rtl:ignore*/
+					margin-left: 0;
+					margin-top: -2px;
+					display: inline-block;
+					vertical-align: top;
+				}
+				.tm_pb_frequency {
+					@include font-size(.75);
+					line-height: 1;
+					display: block;
+				}
+			}
+
+			&_content {
+				padding: 20px 15px;
+				@include font-size(.75);
+				ul.tm_pb_pricing {
+					li{
+						padding-left: 15px;
+						padding-right: 15px;
+						padding-bottom: 10px;
+						position: relative;
+						font-weight: 900;
+						&:last-child {
+							padding-bottom: 0;
+						}
+						&:before {
+							top: 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.tm_pb_pricing_sticker {
+
+		&.sticker-top-right,
+		&.sticker-top-left {
+			width: 105px;
+			height: 105px;
+			border-radius: 0;
+			margin-top: -1px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+			}
+		}
+
+		&.sticker-top-right {
+			margin-right: -1px;
+			&:before {
+				left: 0;
+				@include triangle(bottom_left, 105px, 105px, $color__background-body );
+			}
+			.tm_pb_sticker_text {
+				transform: rotate(45deg) translateY(-30px);
+			}
+		}
+		&.sticker-top-left {
+			margin-left: -1px;
+			&:before {
+				right: 0;
+				@include triangle(bottom_right, 105px, 105px, $color__background-body );
+			}
+			.tm_pb_sticker_text {
+				transform: rotate(-45deg) translateY(-30px);
+			}
+		}
+
+	}
+	.tm_pb_sticker_text {
+		line-height: 1.15;
+		text-transform: uppercase;
+		font-weight: 900;
+		display: block;
+	}
+}

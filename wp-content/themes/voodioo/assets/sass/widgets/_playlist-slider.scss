@@ -1,0 +1,142 @@
+.widget-playlist-slider {
+
+	.playlist {
+		&-slider {
+			position: relative;
+			opacity: 0;
+		}
+		&-img {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+	.sp-slide {
+		iframe,
+		.wp-video-shortcode,
+		.wp-video {
+			width: 100% !important;
+			height: 100% !important;
+		}
+
+		&--content-visible .sp-layer {
+			background: linear-gradient(to bottom, rgba($color__dark, 0%), rgba($color__dark, 80%));
+		}
+	}
+	.sp-layer {
+		width: 100%;
+		padding: 45px 15px 30px;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-end;
+		@include media-breakpoint-up(md) {
+			padding: 60px 40px 33px;
+			min-height: 180px;
+		}
+		@include media-breakpoint-up(lg) {
+			min-height: 195px;
+		}
+		@include sidebars-area(){
+			padding: 30px 15px 15px;
+		}
+
+		.title {
+			margin-top: 5px;
+			margin-bottom: 5px;
+			@include media-breakpoint-between(xs,sm) {
+				@include font-size(18/16);
+			}
+			@include sidebars-area(){
+				@include font-size(18/16);
+			}
+		}
+
+		a {
+			transition: .3s !important;
+		}
+	}
+	.format-video {
+		.sp-layer {
+			display: none;
+		}
+	}
+	.playlist--slide {
+		width: 100%;
+		height: 100%;
+	}
+
+	.sp-vertical {
+		.sp-previous-arrow {
+			top: 5px;
+		}
+		.sp-next-arrow {
+			bottom: 5px;
+		}
+	}
+
+	// Thumbnails.
+	.sp-thumbnail {
+		&-text {
+			overflow: hidden;
+		}
+		&-title {
+			@include font-size(18/16);
+			margin-bottom: 8px;
+		}
+
+		.posted-by {
+			font-weight: 900;
+		}
+
+	}
+	.sp-right-thumbnails {
+		&.sp-has-pointer .sp-selected-thumbnail {
+			&:before, &:after {
+				display: none;
+			}
+		}
+		.sp-thumbnail-container {
+			margin: 0;
+			transition: .3s;
+		}
+		.sp-thumbnail-text {
+			padding: 5px 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border: 1px solid;
+			border-left: none;
+			flex-grow: 1;
+		}
+		.playlist--thumbnail {
+			height: 100%;
+			width: 176px;
+			min-height: 132px;
+			margin-right: 0;
+		}
+		&.sp-has-pointer {
+			margin-left: 0;
+			.sp-thumbnail {
+				position: static;
+				padding: 0;
+				display: flex;
+			}
+		}
+	}
+	.sp-bottom-thumbnails {
+		.sp-thumbnail-arrows {
+			margin-top: 0;
+		}
+		.playlist--thumbnail {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+		}
+		&.sp-has-pointer {
+			.sp-thumbnail {
+				bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+<?php
+/**
+ * Template part to display a single post while in a layout posts loop
+ *
+ * @package Voodioo
+ * @subpackage widgets
+ */
+
+?>
+<div class="widget-fpblock__item invert widget-fpblock__item-<?php echo $key; ?> widget-fpblock__item-<?php echo esc_attr( $special_class ); ?> post-<?php the_ID(); ?>" style="background-image: url('<?php echo esc_url( $image ); ?>');">
+	<div class="widget-fpblock__item-inner">
+		<header class="entry-header">
+			<?php echo $cats; ?>
+			<?php echo $title; ?>
+		</header>
+
+		<?php echo $content; ?>
+
+		<div class="entry-meta">
+			<?php echo $author; ?>
+			<?php echo $date; ?>
+			<?php echo $tags; ?>
+		</div>
+	</div>
+</div>

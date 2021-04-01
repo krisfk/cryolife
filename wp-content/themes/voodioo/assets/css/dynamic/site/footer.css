@@ -1,0 +1,18 @@
+/* #Footer */
+.site-info {
+	font-family: @font_family( $h1_font_family );
+}
+.site-footer {
+	background-color: $footer_bg;
+}
+.footer-area-wrap {
+	background-color: $footer_widgets_bg;
+}
+.site-info-wrap:before{
+	background-color: $grey_color_2;
+}
+/* ##Invert Footer Style*/
+.invert.footer-area-wrap,
+.invert.footer-container {
+	color: $regular_text_color;
+}

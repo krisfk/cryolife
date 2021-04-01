@@ -1,0 +1,39 @@
+h1, h2, h3 {
+	&,
+	#tm_builder_outer_content &.tm_pb_text_align_center {
+		margin: 0 0 35px;
+		@include media-breakpoint-up(lg) {
+			margin: 0 0 55px;
+		}
+	}
+}
+
+h4, h5, h6 {
+	&,
+	#tm_builder_outer_content &.tm_pb_text_align_center {
+		margin: 0 0 20px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	&,
+	#tm_builder_outer_content &.tm_pb_text_align_center {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+h3 + h4 {
+	&,
+	#tm_builder_outer_content &.tm_pb_text_align_center {
+		margin-top: 55px;
+	}
+}
+
+h6 + h3 {
+	&,
+	#tm_builder_outer_content &.tm_pb_text_align_center {
+		margin-top: 35px;
+	}
+}

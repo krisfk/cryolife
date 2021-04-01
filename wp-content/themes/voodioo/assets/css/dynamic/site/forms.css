@@ -1,0 +1,101 @@
+/* #Form buttons */
+form button,
+form input[type='button'],
+form input[type='reset'],
+form input[type='submit'] {
+	font-family: @font_family( $h1_font_family );
+}
+
+
+/* #Fields */
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
+select,
+textarea {
+	font-family: @font_family( $h1_font_family );
+	background-color: $grey_color_4;
+	border-color: $grey_color_4;
+	color: $regular_text_color;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='number']:focus,
+input[type='tel']:focus,
+input[type='range']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='week']:focus,
+input[type='time']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='color']:focus,
+select:focus,
+textarea:focus {
+	border-color: $grey_color_3;
+}
+
+/* #Search Form */
+.search-form__field {
+	color: $regular_text_color;
+}
+
+.invert.header-container .search-form__field {
+	color: $invert_text_color;
+}
+
+.search-form__toggle,
+.search-form__close,
+.site-header .search-form .search-form__submit {
+	color: $grey_color_1;
+}
+.invert .search-form__toggle:not(:hover),
+.invert .search-form__close:not(:hover),
+.site-header .invert .search-form .search-form__submit:not(:hover) {
+	color: $invert_accent_color_1;
+}
+.search-form__toggle:hover,
+.search-form__close:hover,
+.site-header .search-form .search-form__submit:hover{
+	color: $regular_accent_color_1;
+}
+
+/* #Comment, Contact, Password Forms */
+[class^="comment-form-"] i {
+	color: $grey_color_2;
+}
+
+.wpcf7-submit,
+.post-password-form label + input {
+	color: $invert_accent_color_1;
+	background-color: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+	box-shadow: 0 2px 16px 0 @alpha($regular_accent_color_1, 70);
+}
+
+.wpcf7-submit:hover,
+.post-password-form label + input:hover {
+	box-shadow: 0 19px 16px 0 @alpha($regular_accent_color_1, 60);
+}
+
+.wpcf7-submit:active,
+.post-password-form label + input:active {
+	background-color: @darken($regular_accent_color_1, 10);
+	border-color: @darken($regular_accent_color_1, 10);
+}

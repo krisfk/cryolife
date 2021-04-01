@@ -1,0 +1,278 @@
+.post {
+	// Gallery
+	&-gallery {
+
+		&:not(:first-child) {
+			margin-top: 60px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 60px;
+		}
+
+		.posts-list & {
+			margin: 0;
+		}
+
+		.single-post.position-fullwidth & {
+			width: calc(100vw - 16.5px);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&__image {
+			display: block;
+			margin: auto;
+			width: 100%;
+		}
+		&__slide {
+			&.swiper-slide:hover {
+				background-color: transparent;
+			}
+		}
+		&__caption {
+			position: absolute;
+			right: 0;
+			top: 0;
+			left: 0;
+			padding: 15px;
+			color: $color__white;
+			background: rgba(0,0,0,.5);
+		}
+		&__link {
+			display: block;
+		}
+	}
+	// Link
+	&-format-link {
+		position: relative;
+		display: block;
+		padding-left: 45px;
+		&:before {
+			content: '\ed6e';
+			position: absolute;
+			left: 0;
+			top: 5px;
+			font-size: 24px;
+			line-height: 1;
+		}
+
+		.posts-list--grid &,
+		.posts-list--vertical-justify & {
+			clear: right;
+			margin-top: 5px;
+			padding-left: 0;
+
+			&:before { content: none; }
+		}
+
+		.single-post & {
+			margin-bottom: 50px;
+		}
+	}
+	// Quote
+	&-format-quote {
+		margin: 0;
+		display: block;
+
+		&:before {
+			color: inherit;
+		}
+
+		.posts-list--default-modern &,
+		.single-post & {
+			padding-left: 0;
+			text-align: center;
+			&:before {
+				position: static;
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+
+		.posts-list--grid &,
+		.posts-list--vertical-justify & {
+			padding-left: 0;
+			margin-top: 5px;
+			clear: right;
+
+			&:before {
+				content: none;
+			}
+		}
+		
+		.single-post & {
+			margin: auto;
+		}
+	}
+
+	&-format-link,
+	&-format-quote,
+	&-format-audio {
+		.posts-list--default-modern & {
+			width: 100%;
+			margin: auto;
+		}
+	}
+
+	&-format-link,
+	&-format-quote {
+		.posts-list--default-modern & {
+			max-width: 800px;
+		}
+	}
+
+	&-format-audio {
+		.posts-list--default-modern & {
+			@include media-breakpoint-up(lg) {
+				max-width: calc((100% + 100px)*0.8265);
+			}
+		}
+	}
+
+	// Wrapper for non-image featured content
+	&-featured-content {
+
+		&:empty {
+			display: none;
+		}
+
+		.format-video & {
+			iframe {
+				display: block;
+			}
+		}
+
+		.format-audio &,
+		.format-quote &,
+		.format-link & {
+			padding: 40px 20px;
+
+			.posts-list.one-left-sidebar:not(.posts-list--default-modern):not(.posts-list--default) &,
+			.posts-list.one-right-sidebar:not(.posts-list--default-modern):not(.posts-list--default) & {
+				@include media-breakpoint-up(md) {
+					padding: 40px 20px;
+				}
+			}
+
+			.posts-list--default-modern & {
+				display: flex;
+				@include media-breakpoint-up(sm) {
+					padding-top: 75px;
+					padding-bottom: 75px;
+				}
+				@include media-breakpoint-up(lg) {
+					min-height: 425px;
+				}
+				@include media-breakpoint-up(xl) {
+					min-height: 508px;
+				}
+			}
+		}
+
+		.format-audio & {
+			@include media-breakpoint-up(md) {
+				padding: 50px;
+			}
+		}
+
+		.format-quote &,
+		.format-link & {
+			@include media-breakpoint-up(md) {
+				padding: 40px 50px;
+			}
+		}
+
+		.format-quote & {
+			.single-post & {
+				margin-bottom: 60px;
+				display: flex;
+				@include media-breakpoint-up(lg) {
+					min-height: 400px;
+				}
+				@include media-breakpoint-up(xl) {
+					min-height: 460px;
+				}
+			}
+		}
+	}
+}
+
+/* Aside */
+.format {
+	&-aside {
+		.entry-title {
+			display: none;
+		}
+	}
+}
+
+/* Post format icons to grid and justify layouts */
+.posts-list--grid,
+.posts-list--vertical-justify {
+	.posts-list__item:not(.format-standard ) .entry-header {
+
+		.entry-title {
+			clear: right;
+		}
+
+		&:before {
+			float: right;
+			margin-left: 15px;
+			margin-bottom: 5px;
+			font-size: 24px;
+			line-height: 1;
+		}
+	}
+
+	@each $post-format, $icon in $post-format-icons {
+		.format-#{$post-format} .entry-header:before {
+			content: unicode($icon);
+		}
+	}
+}
+
+/* Image pop-up */
+a[data-popup="magnificPopup"] {
+	display: block;
+	position: relative;
+	cursor: zoom-in;
+	&:before {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		transition: all 0.4s ease-out;
+		content: '';
+		background-color: rgba(0,0,0, 0.5);
+	}
+	&:after {
+		color: $color__white;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		content: '\ed31';
+		@include font-size(2);
+		width: 2rem;
+		height: 2rem;
+		line-height: 1;
+		text-align: center;
+		margin: -1.25rem 0 0 -1.25rem;
+		transform: scale(0) translate3d(0,0,0);
+		transition: all 0.4s ease-out;
+	}
+	&:hover {
+		&:before {
+			opacity: 1;
+		}
+		&:after {
+			transform: scale(1) translate3d(0,0,0);
+		}
+	}
+	&:focus {
+		outline: 0;
+	}
+}

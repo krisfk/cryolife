@@ -1,0 +1,38 @@
+/* #Button Appearance Styles */
+.btn,
+.btn-link,
+.link {
+	font-family: @font_family( $h1_font_family );
+}
+
+.btn.btn-accent-1,
+.btn.btn-primary {
+	color: $invert_accent_color_1;
+	background-color: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+.btn.btn-accent-1:hover,
+.btn.btn-primary:hover{
+	color: $invert_accent_color_1;
+	border-color: $regular_accent_color_1;
+	box-shadow: 0 19px 16px 0 @alpha($regular_accent_color_1, 60);
+}
+.btn.btn-accent-1:active,
+.btn.btn-primary:active {
+	background-color: @darken($regular_accent_color_1, 10);
+	border-color: @darken($regular_accent_color_1, 10);
+}
+
+.btn.btn-accent-2 {
+	color: $invert_accent_color_1;
+	background-color: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+.btn.btn-accent-2:hover {
+	color: $invert_accent_color_1;
+	box-shadow: 0 19px 16px 0 @alpha($regular_accent_color_1, 60);
+}
+.btn.btn-accent-2:active {
+	background-color: @darken($regular_accent_color_1, 10);
+	border-color: @darken($regular_accent_color_1, 10);
+}

@@ -1,0 +1,24 @@
+.site-header.style-7 {
+	.site-branding {
+		text-align: center;
+	}
+
+	.main-navigation {
+		margin: 0;
+	}
+
+	.header-components {
+		@include media-breakpoint-up(sm) {
+			justify-content: flex-end;
+		}
+	}
+}
+.header-layout-fullwidth {
+	.site-header.style-7 {
+		.header-container_wrap.container {
+			@include media-breakpoint-up(xl) {
+				max-width: none;
+			}
+		}
+	}
+}
