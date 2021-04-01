@@ -2061,7 +2061,8 @@ body.compose-mode .main-container .row-container .with-zoomout .background-inner
   animation: backwash 1s ease alternate forwards;
 }
 .main-container .row-container .row-parent {
-  padding: 36px 36px 36px 36px;
+  /* padding: 36px 36px 36px 36px; */
+padding: 18px 36px 18px 36px;
 }
 .main-container .row-container .row-parent .no-internal-gutter .uncont > * {
   margin-top: 0px;
