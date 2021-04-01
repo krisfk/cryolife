@@ -16673,3 +16673,8 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed="1000
     transform: scale(1);
   }
 }
+
+
+.nav.navbar-nav.navbar-nav-last{
+  display:none !important;
+}
