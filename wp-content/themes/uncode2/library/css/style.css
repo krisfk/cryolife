@@ -16687,3 +16687,13 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed="1000
 .home-main-point-text{
   font-size:24px;
 }
+
+.home-plan-title{
+  margin:10px 0 0 0;
+}
+
+
+.home-plan-cost{
+  margin:10px 0 0 0;
+  font-weight:bold;
+}
