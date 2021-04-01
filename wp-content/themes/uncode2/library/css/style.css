@@ -16701,10 +16701,10 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed="1000
 
 
 @media (max-width: 1920px) {
-  .home-banner-1{
+  .home-banner-main{
     min-height:600px;
   }
-  .home-banner-2{
+  .home-banner{
     min-height:750px;
   }
 }
@@ -16716,20 +16716,20 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed="1000
 }
 
 @media (max-width: 768px) {
-  \ .home-banner-1{
+  .home-banner-main{
     min-height:350px;
   }
-  .home-banner-2{
+  .home-banner{
     min-height:350px;
   }
 }
 
 
 @media (max-width: 640px) {
-  .home-banner-1{
+  .home-banner-main{
     min-height:250px;
   }
-  .home-banner-2{
+  .home-banner{
     min-height:250px;
   }
 }
