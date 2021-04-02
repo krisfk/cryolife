@@ -16703,6 +16703,10 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed="1000
   margin-top:0;
 }
 
+.lead-form-row{
+  max-width:400px;
+}
+
 @media (max-width: 1920px) {
   .home-banner-main{
     min-height:600px;
