@@ -19800,7 +19800,7 @@ footer .full-width img {
     margin: 120px 0 0 0;
 }
 h1.black{
-  color:#000;
+  color:#000  !important;
   font-weight: normal;
 }
 @media (max-width: 1920px) {
