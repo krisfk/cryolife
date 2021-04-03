@@ -16705,7 +16705,7 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed="1000
 
 .lead-form-row{
   margin: 0 auto;
-  max-width:700px;
+  max-width:1200px;
 }
 
 @media (max-width: 1920px) {
