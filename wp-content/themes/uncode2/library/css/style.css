@@ -19802,6 +19802,7 @@ footer .full-width img {
 h1.black{
   color:#000  !important;
   font-weight: normal;
+  padding:0 0 30px 0;
 }
 @media (max-width: 1920px) {
     .home-banner-main {
