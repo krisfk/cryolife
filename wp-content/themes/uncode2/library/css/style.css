@@ -19816,7 +19816,8 @@ footer .full-width img {
 
 
 .flexible-margin-first-row {
-  margin: 20px 0 0 0;
+  margin: 0 0 0 0;
+  padding:20px 0 0 0;
 }
 }
 
