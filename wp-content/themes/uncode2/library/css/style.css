@@ -19789,6 +19789,12 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed="1000
   width:100%;
 }
 
+footer .full-width img{
+  display: inline;
+  width:auto;
+
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
