@@ -2161,7 +2161,8 @@ body:not(.video-not-supported) .column-background .uncode-video-container.self-v
 }
 
 .main-container .row-inner>div {
-    padding: 0px 0px 0px 36px;
+    /* padding: 0px 0px 0px 36px; */
+    padding: 0px;
 }
 
 @media (max-width: 959px) {
