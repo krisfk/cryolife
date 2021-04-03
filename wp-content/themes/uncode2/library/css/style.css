@@ -19799,7 +19799,10 @@ footer .full-width img {
 .flexible-margin-first-row {
     margin: 120px 0 0 0;
 }
-
+h1.black{
+  color:#000;
+  font-weight: normal;
+}
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
