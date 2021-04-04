@@ -19813,7 +19813,7 @@ h2.black {
     background: #000 url(../img/arrow-right.png) no-repeat 14px center !important;
     padding: 5px 21px 5px 35px;
     text-align: center;
-    color: #fff;
+    color: #fff !important;
 }
 
 @media (max-width: 1920px) {
