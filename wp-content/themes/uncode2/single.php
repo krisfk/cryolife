@@ -686,10 +686,11 @@ while (have_posts()):
 // echo $feat_image;
 // echo "'>";
 
+echo '<div style="single-post-feature-img-top">';
 if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	the_post_thumbnail( 'full' );
 	}
-	
+	echo '</div>';
 	echo 	'<article id="post-'. get_the_ID().'" class="'.implode(' ', get_post_class('page-body' . $bg_color)) .'">
           <div class="post-wrapper">
           	<div class="post-body">';
