@@ -19828,6 +19828,10 @@ h2.black {
     /* font-size: 42px; */
 }
 
+p:empty {
+    line-height: 0 !important;
+}
+
 h3.black {
     color: #000 !important;
     font-weight: normal;
