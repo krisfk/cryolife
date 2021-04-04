@@ -680,7 +680,7 @@ while (have_posts()):
 
 	/** Display post html **/
 	the_post_thumbnail( 'full' );
-echo 1111;
+// echo 1111;
 	echo 	'<article id="post-'. get_the_ID().'" class="'.implode(' ', get_post_class('page-body' . $bg_color)) .'">
           <div class="post-wrapper">
           	<div class="post-body">';
