@@ -19814,7 +19814,9 @@ h3.black {
     font-size: 38px;
 }
 
-.think-bottom-border {}
+.thick-bottom-border {
+    border-bottom: 3px solid #000;
+}
 
 .video-btn {
     width: 120px;
