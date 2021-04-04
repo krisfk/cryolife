@@ -19870,6 +19870,10 @@ h3.black {
     text-align: center;
 }
 
+.single-post-feature-img-top img {
+    display: inline-block;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
