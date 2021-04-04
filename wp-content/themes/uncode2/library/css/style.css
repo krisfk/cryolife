@@ -19877,6 +19877,7 @@ h3.black {
 
 .post-content .post-title {
     color: #000 !important;
+    font-weight: normal;
 }
 
 @media (max-width: 1920px) {
