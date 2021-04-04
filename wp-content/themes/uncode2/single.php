@@ -322,7 +322,7 @@ while (have_posts()):
 
 	if ($show_title) {
 		$title_content .= apply_filters( 'uncode_before_body_title', '' );
-		$featured_img_url = get_the_post_thumbnail_url('full');
+		$featured_img_url = wp_get_attachment_image_url('full');
 		$title_content.=$featured_img_url;
 		// $title_content .= '<div><img src="'.$featured_img_url.'"></div>';
 		$title_content .='<div class="post-title-wrapper"><h1 class="post-title">' . get_the_title() . '</h1>';
