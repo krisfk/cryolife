@@ -19809,7 +19809,8 @@ h2.black {
 
 .video-btn {
     display: block;
-    background: #fff;
+    /* background: #fff; */
+    background: url(../img/arrow-right.png) no-repeat;
 }
 
 @media (max-width: 1920px) {
