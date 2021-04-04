@@ -322,7 +322,9 @@ while (have_posts()):
 
 	if ($show_title) {
 		$title_content .= apply_filters( 'uncode_before_body_title', '' );
-		$title_content .= '<div>test</div><div class="post-title-wrapper"><h1 class="post-title">' . get_the_title() . '</h1>';
+		$featured_img_url = get_the_post_thumbnail_url('full'); 
+		$title_content .= '<div><img src="'.$featured_img_url.'"></div>';
+		$title_content .='<div class="post-title-wrapper"><h1 class="post-title">' . get_the_title() . '</h1>';
 		$title_content .= uncode_post_info() . '</div>';
 		$title_content .= apply_filters( 'uncode_after_body_title', '' );
 	}
