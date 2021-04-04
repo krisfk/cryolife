@@ -679,8 +679,8 @@ while (have_posts()):
 	}
 
 	/** Display post html **/
-	$feat_image = wp_get_attachment_url( get_post_thumbnail_id( ));
-echo $feat_image;
+	the_post_thumbnail( 'full' );
+
 	echo 	'<article id="post-'. get_the_ID().'" class="'.implode(' ', get_post_class('page-body' . $bg_color)) .'">
           <div class="post-wrapper">
           	<div class="post-body">';
