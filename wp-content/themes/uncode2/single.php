@@ -611,8 +611,9 @@ while (have_posts()):
 										</div>';
 
 		$the_content = '<div class="row-container">
-        							<div class="row row-parent un-sidebar-layout' . $row_classes . $limit_content_width . '"' . $page_custom_width . '>
-												<div class="row-inner">
+        							<div class="row row-parent un-sidebar-layout' . $row_classes . $limit_content_width . '"' . $page_custom_width . '>';
+									echo 9999;			
+									echo'<div class="row-inner">
 													' . (($layout === 'sidebar_right') ? $main_content : '') . '
 													<div class="col-lg-' . $sidebar_size . ' col-widgets-sidebar">
 														<div class="uncol style-' . $sidebar_style . $expand_col . $sidebar_padding . (($sidebar_fill === 'on' && $sidebar_bg_color !== '') ? '' : $sidebar_sticky) . '">
@@ -679,13 +680,6 @@ while (have_posts()):
           <div class="post-wrapper">
           	<div class="post-body">';
 			 ?>
-ffdsa <br>
-ffdsa <br>
-ffdsa <br>
-ffdsa <br>
-ffdsa <br>
-ffdsa <br>
-ffdsa <br>
 <?php
 			 echo uncode_remove_p_tag($the_content);
 			 echo'</div>' ;
