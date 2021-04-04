@@ -19691,8 +19691,7 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed='1000
 /* Typewriter keyframe */
 
 @keyframes typewriter {
-    0,
-    99% {
+    0% {
         opacity: 0;
     }
     100% {
@@ -19798,14 +19797,21 @@ footer .full-width img {
 }
 
 .flexible-margin-first-row {
-    margin: 120px 0 0 0  !important;
+    margin: 120px 0 0 0 !important;
 }
-h2.black{
-  color:#000  !important;
-  font-weight: normal;
-  padding:0 0 30px 0;
-  font-size:42px;
+
+h2.black {
+    color: #000 !important;
+    font-weight: normal;
+    padding: 0 0 30px 0;
+    font-size: 42px;
 }
+
+.video-btn {
+    display: block;
+    background: #fff;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
@@ -19818,13 +19824,12 @@ h2.black{
 @media (max-width: 1200px) {}
 
 @media (max-width: 991px) {}
+
 @media (max-width: 959px) {
-
-
-.flexible-margin-first-row {
-  margin: 0 0 0 0 !important ;
-  padding:30px 0 0 0;
-}
+    .flexible-margin-first-row {
+        margin: 0 0 0 0 !important;
+        padding: 30px 0 0 0;
+    }
 }
 
 @media (max-width: 768px) {
