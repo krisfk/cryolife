@@ -19875,6 +19875,10 @@ h3.black {
     display: inline-block;
 }
 
+.post-content .post-title {
+    color: #000 !important;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
