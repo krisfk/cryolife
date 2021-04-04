@@ -678,7 +678,15 @@ while (have_posts()):
 	echo 	'<article id="post-'. get_the_ID().'" class="'.implode(' ', get_post_class('page-body' . $bg_color)) .'">
           <div class="post-wrapper">
           	<div class="post-body">';
-			 echo 34234;
+			 ?>
+ffdsa <br>
+ffdsa <br>
+ffdsa <br>
+ffdsa <br>
+ffdsa <br>
+ffdsa <br>
+ffdsa <br>
+<?php
 			 echo uncode_remove_p_tag($the_content);
 			 echo'</div>' ;
           	echo $navigation_content . '
