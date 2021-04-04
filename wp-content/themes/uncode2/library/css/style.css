@@ -19808,9 +19808,11 @@ h2.black {
 }
 
 .video-btn {
+    width: 120px;
     display: block;
-    /* background: #fff; */
-    background: url(../img/arrow-right.png) no-repeat;
+    background: #000 url(../img/arrow-right.png) no-repeat 14px center !important;
+    padding: 5px 21px 5px 35px;
+    text-align: center;
 }
 
 @media (max-width: 1920px) {
