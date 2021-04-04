@@ -19868,6 +19868,7 @@ h3.black {
 
 .single-post-feature-img-top {
     text-align: center;
+    margin: 120px 0 0 0 !important;
 }
 
 .single-post-feature-img-top img {
@@ -19891,6 +19892,10 @@ h3.black {
     .flexible-margin-first-row {
         margin: 0 0 0 0 !important;
         padding: 30px 0 0 0;
+    }
+    .single-post-feature-img-top {
+        /* text-align: center; */
+        margin: 0px 0 0 0 !important;
     }
 }
 
