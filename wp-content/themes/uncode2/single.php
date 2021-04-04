@@ -681,8 +681,8 @@ while (have_posts()):
 	/** Display post html **/
 	echo 111111;
 	$feat_image = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) );
-// echo $feat_image;
-echo '<img="'.$feat_image.'">';
+echo $feat_image;
+// echo '<img="'.$feat_image.'">';
 // echo 1111;
 	echo 	'<article id="post-'. get_the_ID().'" class="'.implode(' ', get_post_class('page-body' . $bg_color)) .'">
           <div class="post-wrapper">
