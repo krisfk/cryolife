@@ -198,7 +198,8 @@ while (have_posts()):
 	if ($page_header_type !== '' && $page_header_type !== 'none') {
 		$page_header = new unheader($metabox_data, $post->post_title, $post->post_excerpt);
 
-		$header_html = $page_header->html;
+		$header_html = '';
+		//$page_header->html;
 		if ($header_html !== '') {
 			echo '<div id="page-header">';
 			echo uncode_remove_p_tag( $page_header->html );
