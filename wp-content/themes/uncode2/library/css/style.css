@@ -19814,6 +19814,11 @@ h2.black {
     padding: 5px 21px 5px 35px;
     text-align: center;
     color: #fff !important;
+    transition: 0.2s all;
+}
+
+.video-btn:hover {
+    opacity: 0.85;
 }
 
 @media (max-width: 1920px) {
