@@ -19815,6 +19815,7 @@ h2.black {
     text-align: center;
     color: #fff !important;
     transition: 0.2s all;
+    margin: 20px 0 0 0;
 }
 
 .video-btn:hover {
