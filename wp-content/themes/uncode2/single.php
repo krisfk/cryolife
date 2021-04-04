@@ -322,7 +322,7 @@ while (have_posts()):
 
 	if ($show_title) {
 		$title_content .= apply_filters( 'uncode_before_body_title', '' );
-		$title_content .= '<div class="post-title-wrapper"><h1 class="post-title">' . get_the_title() . '</h1>';
+		$title_content .= '<div>test</div><div class="post-title-wrapper"><h1 class="post-title">' . get_the_title() . '</h1>';
 		$title_content .= uncode_post_info() . '</div>';
 		$title_content .= apply_filters( 'uncode_after_body_title', '' );
 	}
@@ -612,7 +612,7 @@ while (have_posts()):
 
 		$the_content = '<div class="row-container">
         							<div class="row row-parent un-sidebar-layout' . $row_classes . $limit_content_width . '"' . $page_custom_width . '>';
-									echo 9999;			
+											
 									echo'<div class="row-inner">
 													' . (($layout === 'sidebar_right') ? $main_content : '') . '
 													<div class="col-lg-' . $sidebar_size . ' col-widgets-sidebar">
