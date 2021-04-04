@@ -685,7 +685,7 @@ while (have_posts()):
 // echo "<img='";
 // echo $feat_image;
 // echo "'>";
-echo 1111;
+
 if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	the_post_thumbnail( 'full' );
 	}
