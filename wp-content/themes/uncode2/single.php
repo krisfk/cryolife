@@ -323,7 +323,7 @@ while (have_posts()):
 	if ($show_title) {
 		$title_content .= apply_filters( 'uncode_before_body_title', '' );
 		$featured_img_url = wp_get_attachment_image_url('full');
-		$title_content.=$featured_img_url;
+		// $title_content.=$featured_img_url;
 		// $title_content .= '<div><img src="'.$featured_img_url.'"></div>';
 		$title_content .='<div class="post-title-wrapper"><h1 class="post-title">' . get_the_title() . '</h1>';
 		$title_content .= uncode_post_info() . '</div>';
@@ -679,6 +679,8 @@ while (have_posts()):
 	}
 
 	/** Display post html **/
+	$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+echo $feat_image;
 	echo 	'<article id="post-'. get_the_ID().'" class="'.implode(' ', get_post_class('page-body' . $bg_color)) .'">
           <div class="post-wrapper">
           	<div class="post-body">';
