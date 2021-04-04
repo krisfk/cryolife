@@ -19866,6 +19866,10 @@ h3.black {
     padding: 0 !important;
 }
 
+.single-post-feature-img-top {
+    text-align: center;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
