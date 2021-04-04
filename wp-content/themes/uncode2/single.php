@@ -688,6 +688,7 @@ while (have_posts()):
 
 echo '<div class="single-post-feature-img-top">';
 if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+	echo 111;
 	the_post_thumbnail( 'full' );
 	}
 	echo '</div>';
