@@ -675,7 +675,7 @@ while (have_posts()):
 	}
 
 	/** Display post html **/
-	
+	echo 1111;
 	echo 	'<article id="post-'. get_the_ID().'" class="'.implode(' ', get_post_class('page-body' . $bg_color)) .'">
           <div class="post-wrapper">
           	<div class="post-body">' . uncode_remove_p_tag($the_content) . '</div>' .
