@@ -726,6 +726,7 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
     padding-bottom: 56.25%;
     position: relative;
     height: 0;
+    margin: 20px 0 0 0;
 }
 
 .video-responsive iframe {
