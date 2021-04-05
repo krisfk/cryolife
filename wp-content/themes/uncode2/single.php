@@ -705,7 +705,28 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 <?php
 			 echo uncode_remove_p_tag($the_content);
 			 echo'</div>' ;
-			 echo 'fdsfsf';
+		
+			 ?>
+\<div class="video-responsive"><iframe
+        src="https://www.youtube.com/embed/dngmK1rtARk?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1" width="560"
+        height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+<style>
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+</style>
+<?php
           	echo $navigation_content . '
           </div>
         </article>';
