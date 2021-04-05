@@ -707,7 +707,7 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 			 echo'</div>' ;
 		
 			 ?>
-\<div class="video-responsive"><iframe
+<div class="video-responsive"><iframe
         src="https://www.youtube.com/embed/dngmK1rtARk?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1" width="560"
         height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 <style>
