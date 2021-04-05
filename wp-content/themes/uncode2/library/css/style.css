@@ -19881,6 +19881,10 @@ h3.black {
     font-weight: normal;
 }
 
+.single-post .date-info {
+    display: none;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
