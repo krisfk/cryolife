@@ -400,6 +400,7 @@ body {
 
 .hmenu .main-wrapper {
     display: table-row;
+    background: #fff;
 }
 
 .main-container .row-content {
