@@ -705,6 +705,7 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 <?php
 			 echo uncode_remove_p_tag($the_content);
 			 echo'</div>' ;
+			 echo 'fdsfsf';
           	echo $navigation_content . '
           </div>
         </article>';
