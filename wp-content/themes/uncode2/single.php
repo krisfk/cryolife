@@ -693,7 +693,8 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 	}
 	echo '</div>';
 	?>
-<img src="<?php echo get_template_directory_uri().'/library/img/orange-bar.png';?>" alt="">
+<div><img src="<?php echo get_template_directory_uri().'/library/img/orange-bar.png';?>" alt=""></div>
+
 <?php
 	
 	echo 	'<article id="post-'. get_the_ID().'" class="'.implode(' ', get_post_class('page-body' . $bg_color)) .'">
