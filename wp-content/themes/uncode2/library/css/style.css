@@ -19871,8 +19871,8 @@ h3.black {
 .more-btn {
     width: 120px;
     display: block;
-    background: #000;
-    padding: 8px 21px 8px 21px;
+    background: #000 url(../img/arrow-right.png) no-repeat 14px center !important;
+    padding: 8px 21px 8px 35px;
     text-align: center;
     color: #fff !important;
     transition: 0.2s all;
