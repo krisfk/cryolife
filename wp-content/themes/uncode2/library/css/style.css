@@ -19883,6 +19883,21 @@ h3.black {
     opacity: 0.7;
 }
 
+.see-more-btn {
+    width: 140px;
+    display: block;
+    background: #fff;
+    padding: 8px 21px 8px 35px;
+    text-align: center;
+    color: #000 !important;
+    transition: 0.2s all;
+    margin: 40px 0 0 0;
+}
+
+.see-more-btn:hover {
+    opacity: 0.7;
+}
+
 .single-post-feature-img-top {
     text-align: center;
     margin: 120px 0 0 0 !important;
