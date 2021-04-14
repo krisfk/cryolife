@@ -19930,6 +19930,10 @@ h3.black {
     z-index: 100;
 }
 
+.have-inside-white-block {
+    position: relative;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
