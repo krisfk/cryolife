@@ -19764,10 +19764,12 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed='1000
 
 .home-plan-title {
     margin: 20px 0 0 0;
+    color: #777777 !important;
 }
 
 .home-plan-cost {
     margin: 5px 0 0 0;
+    color: #777777 !important;
     font-weight: bold;
 }
 
