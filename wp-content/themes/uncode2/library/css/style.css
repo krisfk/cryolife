@@ -19952,7 +19952,8 @@ h3.black {
     color: #000 !important;
 }
 
-b.black {
+b.black,
+strong.black {
     color: #000 !important;
 }
 
