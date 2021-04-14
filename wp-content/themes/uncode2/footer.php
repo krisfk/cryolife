@@ -250,7 +250,7 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 
 }
 ?>
-<a href="#" class="ask-us-anything-a">Ash us<br>Anything</a>
+<a href="#" class="ask-us-anything-a"></a>
 <?php
 wp_footer(); ?>
 </body>
