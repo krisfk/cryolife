@@ -19963,6 +19963,11 @@ strong.black {
     color: #000;
 }
 
+.cli-style-v2 a {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
