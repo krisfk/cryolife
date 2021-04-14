@@ -19919,7 +19919,11 @@ h3.black {
 }
 
 .ask-us-anything-a {
-    background: #000;
+    background: url(../img/ask-us-anything-icon.png);
+    background-size: 100% 100%;
+    display: block;
+    width: 80px;
+    height: 80px;
 }
 
 @media (max-width: 1920px) {
