@@ -183,30 +183,30 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 		}
 
 	} ?>
-								</div><!-- sections container -->
-							</div><!-- page wrapper -->
-						<?php
+</div><!-- sections container -->
+</div><!-- page wrapper -->
+<?php
 						$footer_content = apply_filters( 'uncode_filter_for_translation', $footer_content );
 						if ( $is_redirect !== true && $footer_content!=='' )  : ?>
-						<footer id="colophon" class="<?php echo esc_attr( $class_footer ); ?>">
-							<?php
+<footer id="colophon" class="<?php echo esc_attr( $class_footer ); ?>">
+    <?php
 								echo uncode_switch_stock_string( $footer_content );
 
 								$is_footer = false;
 							?>
-						</footer>
-						<?php endif; ?>
-					</div><!-- main container -->
-				</div><!-- main wrapper -->
-				<?php
+</footer>
+<?php endif; ?>
+</div><!-- main container -->
+</div><!-- main wrapper -->
+<?php
 				if (!wp_is_mobile() && $is_redirect !== true && $menutype === 'vmenu' && $vmenu_position === 'right' ) {
 					$mainmenu = new unmenu($menutype, $menutype);
 					echo uncode_remove_p_tag( $mainmenu->html );
 				}
 				?>
-			</div><!-- box container -->
-		</div><!-- box wrapper -->
-		<?php
+</div><!-- box container -->
+</div><!-- box wrapper -->
+<?php
 		$footer_uparrow = ot_get_option('_uncode_footer_uparrow');
 		if (wp_is_mobile()) {
 			$footer_uparrow_mobile = ot_get_option('_uncode_footer_uparrow_mobile');
@@ -232,20 +232,27 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 			}
 
 		?>
-		<div class="overlay overlay-<?php echo esc_attr( $search_animation ); ?> style-dark style-dark-bg overlay-search" data-area="search" data-container="box-container">
-			<div class="mmb-container"><div class="menu-close-search mobile-menu-button menu-button-offcanvas mobile-menu-button-dark lines-button x2 overlay-close close" data-area="search" data-container="box-container"><span class="lines"></span></div></div>
-			<div class="search-container"><?php
+<div class="overlay overlay-<?php echo esc_attr( $search_animation ); ?> style-dark style-dark-bg overlay-search"
+    data-area="search" data-container="box-container">
+    <div class="mmb-container">
+        <div class="menu-close-search mobile-menu-button menu-button-offcanvas mobile-menu-button-dark lines-button x2 overlay-close close"
+            data-area="search" data-container="box-container"><span class="lines"></span></div>
+    </div>
+    <div class="search-container"><?php
 				global $overlay_search;
 				$overlay_search = 'yes';
 				get_search_form( true );
 				$overlay_search = '';
 			?></div>
-		</div>
+</div>
 
-	<?php }
+<?php }
 
 }
-
+?>
+<a href="#" class="ask-us-anything-a">Ash us<br>Anything</a>
+<?php
 wp_footer(); ?>
 </body>
+
 </html>
