@@ -19884,15 +19884,15 @@ h3.black {
 }
 
 .see-more-btn {
-    width: 140px;
+    /* width: 140px; */
     display: block;
     background: #fff;
-    padding: 8px 21px 8px 35px;
+    padding: 8px 21px 8px 21px;
     text-align: center;
     color: #000 !important;
     transition: 0.2s all;
     margin: 40px 0 0 0;
-    border: 1px solid #000;
+    border: 1px solid #e5e5e5;
 }
 
 .see-more-btn:hover {
