@@ -19963,7 +19963,7 @@ strong.black {
     color: #000;
 }
 
-.cli-style-v2 a {
+.cli-style-v2 a.privacy {
     color: #fff !important;
     text-decoration: underline;
 }
