@@ -19948,6 +19948,7 @@ h3.black {
 .inside-white-block h2 {
     font-size: 16px !important;
     line-height: 1.2;
+    margin: 0;
     color: #000 !important;
 }
 
