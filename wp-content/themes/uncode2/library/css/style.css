@@ -20016,7 +20016,7 @@ strong.black {
     height: 30px !important;
     width: 64px;
     text-align: center;
-    padding: 0 !important;
+    padding: 0 5px !important;
     /* display: inline-block !important; */
     float: left;
     color: #fff !important;
@@ -20029,7 +20029,7 @@ strong.black {
     height: 30px !important;
     width: 142px;
     text-align: center;
-    padding: 0 !important;
+    padding: 0 5px !important;
     display: inline-block;
     float: left;
     color: #fff !important;
