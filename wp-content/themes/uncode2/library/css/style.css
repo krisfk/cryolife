@@ -20010,6 +20010,16 @@ strong.black {
     margin: 0 auto;
 }
 
+.login-btn {
+    background: url(../img/orange-btn-bg.jpg);
+    background-size: 100% 100%;
+}
+
+.register-now-btn {
+    background: url(../img/orange-btn-bg.jpg);
+    background-size: 100% 100%;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
