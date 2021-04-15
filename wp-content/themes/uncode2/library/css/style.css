@@ -19970,6 +19970,7 @@ strong.black {
 
 .search-header-col {
     width: 50%;
+    display: table-cell;
 }
 
 .w-100 {
