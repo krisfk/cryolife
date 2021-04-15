@@ -20001,6 +20001,10 @@ strong.black {
     font-size: 22px;
 }
 
+.mobile-flex-col {
+    padding: 0 80px;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
@@ -20015,6 +20019,9 @@ strong.black {
 @media (max-width: 991px) {}
 
 @media (max-width: 959px) {
+    .mobile-flex-col {
+        padding: 0 20px;
+    }
     .flexible-margin-first-row {
         margin: 0 0 0 0 !important;
         padding: 30px 0 0 0;
