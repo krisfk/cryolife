@@ -19980,6 +19980,10 @@ strong.black {
     width: 50%;
 }
 
+.d-table {
+    display: table;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;

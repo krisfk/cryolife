@@ -102,7 +102,7 @@ if ($page_header_type !== '' && $page_header_type !== 'none') {
 		echo '<div id="page-header">';
 
 		?>
-<div class="w-100">
+<div class="w-100 d-table">
 
     <div class="search-header-col w-50">
 
