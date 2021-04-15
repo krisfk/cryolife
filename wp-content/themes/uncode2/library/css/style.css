@@ -19994,7 +19994,7 @@ strong.black {
         display: flex;
         flex-direction: column-reverse;
     }
-    .flex-mobile-col {
+    .flex-mobile-col h2 {
         text-align: center;
         padding: 36px;
     }
