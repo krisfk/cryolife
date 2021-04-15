@@ -19994,6 +19994,10 @@ strong.black {
         display: flex;
         flex-direction: column-reverse;
     }
+    .flex-mobile-col {
+        text-align: center;
+        padding: 36px;
+    }
 }
 
 @media (max-width: 768px) {
