@@ -20037,7 +20037,7 @@ strong.black {
 }
 
 .login-register-li {
-    display: flex;
+    display: flex !important;
 }
 
 .float-left {
