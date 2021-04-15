@@ -104,7 +104,10 @@ if ($page_header_type !== '' && $page_header_type !== 'none') {
 		?>
 <div class="w-100">
 
-    <div class="search-header-col w-50"></div>
+    <div class="search-header-col w-50">
+
+        <h2>Search</h2>
+    </div>
     <div class="search-header-col w-50">
 
         <img class="w-100" src="http://165.22.180.89/wp-content/uploads/2021/04/1.search.jpg" alt="">
