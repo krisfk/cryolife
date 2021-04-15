@@ -100,6 +100,17 @@ if ($page_header_type !== '' && $page_header_type !== 'none') {
 	$header_html = $page_header->html;
 	if ($header_html !== '') {
 		echo '<div id="page-header">';
+
+		?>
+<div>
+
+    <div class="search-header-col w-50"></div>
+    <div class="search-header-col w-50">
+
+        <img class="w-100" src="http://165.22.180.89/wp-content/uploads/2021/04/1.search.jpg" alt="">
+    </div>
+</div>
+<?php
 		// echo uncode_remove_p_tag( $page_header->html );
 		echo '</div>';
 	}

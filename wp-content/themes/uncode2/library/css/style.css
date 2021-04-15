@@ -19968,6 +19968,18 @@ strong.black {
     text-decoration: underline;
 }
 
+.search-header-col {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
