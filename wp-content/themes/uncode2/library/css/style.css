@@ -20028,7 +20028,7 @@ strong.black {
         flex-direction: column-reverse;
     }
     .mobile-flex-row .row-inner div {
-        padding: 0 !important;
+        /* padding: 0 !important; */
     }
     .flex-mobile-col h2 {
         text-align: center;
