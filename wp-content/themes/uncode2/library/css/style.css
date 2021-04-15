@@ -20031,6 +20031,9 @@ strong.black {
     .search-header-col {
         width: 100% !important;
     }
+    .search-header-col h2 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
