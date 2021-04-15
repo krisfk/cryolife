@@ -19974,6 +19974,10 @@ strong.black {
     vertical-align: middle;
 }
 
+.search-header-col h2 {
+    padding: 0 80px;
+}
+
 .w-100 {
     width: 100%;
 }
