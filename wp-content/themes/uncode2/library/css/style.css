@@ -19990,6 +19990,10 @@ strong.black {
         /* text-align: center; */
         margin: 0px 0 0 0 !important;
     }
+    .mobile-flex-row .row-inner {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 @media (max-width: 768px) {
