@@ -19990,6 +19990,11 @@ strong.black {
     display: table;
 }
 
+.search a[rel="bookmark"] {
+    font-size: 17px;
+    color: #000;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
