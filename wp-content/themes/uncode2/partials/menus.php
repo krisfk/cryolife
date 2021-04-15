@@ -1067,7 +1067,7 @@ if (!class_exists('unmenu')) {
 																					);
 																				}
 
-																				$this->html .= ( ($search !== '' || $type === 'hmenu-center-double' || ( $type === 'hmenu-justify' && !$cta_menu) ) ? '<div class="nav navbar-nav navbar-nav-last">'.$search.'fff</div>' : '');
+																				$this->html .= ( ($search !== '' || $type === 'hmenu-center-double' || ( $type === 'hmenu-justify' && !$cta_menu) ) ? '<div class="nav navbar-nav navbar-nav-last">'.$search.'</div>' : '');
 						if ($no_secondary !== 'on') {
 							$this->html .=										'<div class="desktop-hidden">
 														 							'.wp_nav_menu( array(
@@ -1207,6 +1207,9 @@ if (!class_exists('unmenu')) {
 			}
 		}
 	}
+	
+	$this->html .= 	'aaa';
+
 }
 
 ?>
