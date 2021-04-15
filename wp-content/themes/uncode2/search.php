@@ -313,7 +313,7 @@ if (have_posts()):
 	}
 
 	/** Display post html **/
-	echo 	'<div class="page-body' . $bg_color . '">
+	echo 	'ff<div class="page-body' . $bg_color . '">
           <div class="post-wrapper">
           	<div class="post-body">' . do_shortcode($the_content) . '</div>' .
           	$navigation_content . '
