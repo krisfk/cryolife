@@ -20026,8 +20026,6 @@ strong.black {
 .register-now-btn {
     background: url(../img/orange-btn-bg.jpg);
     background-size: 100% 100%;
-    background: url(../img/orange-btn-bg.jpg);
-    background-size: 100% 100%;
     height: 30px !important;
     width: 142px;
     text-align: center;
@@ -20036,6 +20034,10 @@ strong.black {
     float: left;
     color: #fff !important;
     margin: 38px 0 0 0;
+}
+
+.login-register-li {
+    display: flex;
 }
 
 @media (max-width: 1920px) {
