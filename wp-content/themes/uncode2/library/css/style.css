@@ -20010,7 +20010,7 @@ strong.black {
     margin: 0 auto;
 }
 
-.login-btn {
+.navbar-nav-last>ul>li:last-child>a.login-btn {
     background: url(../img/orange-btn-bg.jpg);
     background-size: 100% 100%;
     height: 30px !important;
@@ -20023,7 +20023,7 @@ strong.black {
     margin: 38px 10px 0 0 !important;
 }
 
-.register-now-btn {
+.navbar-nav-last>ul>li:last-child>a.register-now-btn {
     background: url(../img/orange-btn-bg.jpg);
     background-size: 100% 100%;
     height: 30px !important;
