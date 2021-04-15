@@ -20025,7 +20025,7 @@ strong.black {
 
 @media (max-width: 959px) {
     .mobile-flex-col {
-        padding: 36px !important;
+        padding: 5px 36px 5px 36px !important;
     }
     .flexible-margin-first-row {
         margin: 0 0 0 0 !important;
