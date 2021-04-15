@@ -20005,6 +20005,11 @@ strong.black {
     padding: 0 80px !important;
 }
 
+.compare-table {
+    width: 90%;
+    margin: 0 auto;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;

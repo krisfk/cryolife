@@ -344,6 +344,6 @@ if (have_posts()):
           </div>
         </div>';
 
-// end of the loop.
+// end of the loop. 
 
 get_footer(); ?>
