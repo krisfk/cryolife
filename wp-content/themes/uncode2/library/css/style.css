@@ -20045,6 +20045,9 @@ strong.black {
     .search-header-col h2 {
         text-align: center;
     }
+    .mobile-flex-text {
+        margin: 36px;
+    }
 }
 
 @media (max-width: 768px) {
