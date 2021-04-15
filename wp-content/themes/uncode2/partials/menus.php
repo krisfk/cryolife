@@ -566,6 +566,11 @@ if (!class_exists('unmenu')) {
 														</li>
 													</ul>';
 						$search_inner .= 	'</li>';
+						$search_inner .= 	'<li>';
+						$search_inner .= 	'abc';
+
+						$search_inner .= 	'</li>';
+
 					}
 
 					if ($param === 'menu-overlay-center' && $vmenu_position === 'right') {
