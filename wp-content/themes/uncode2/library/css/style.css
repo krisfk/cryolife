@@ -20028,6 +20028,9 @@ strong.black {
         display: flex;
         flex-direction: column-reverse;
     }
+    .search-header-col {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -20045,9 +20048,6 @@ strong.black {
     }
     .home-banner {
         min-height: 250px;
-    }
-    .search-header-col {
-        width: 100%;
     }
 }
 
