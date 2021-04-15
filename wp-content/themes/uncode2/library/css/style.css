@@ -20046,7 +20046,7 @@ strong.black {
         text-align: center;
     }
     .mobile-flex-text {
-        margin: 36px;
+        padding: 36px !important;
     }
 }
 
