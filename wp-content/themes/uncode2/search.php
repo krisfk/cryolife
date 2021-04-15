@@ -113,6 +113,8 @@ if ($page_header_type !== '' && $page_header_type !== 'none') {
         <img class="w-100" src="http://165.22.180.89/wp-content/uploads/2021/04/1.search.jpg" alt="">
     </div>
 </div>
+
+<div> Results for: <?php echo $_GET['s'];?></div>
 <?php
 		// echo uncode_remove_p_tag( $page_header->html );
 		echo '</div>';
