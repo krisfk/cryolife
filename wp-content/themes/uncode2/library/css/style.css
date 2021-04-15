@@ -19995,6 +19995,12 @@ strong.black {
     color: #000;
 }
 
+.results-for-div {
+    text-align: center;
+    padding: 20px 0 0 0;
+    font-size: 22px;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
