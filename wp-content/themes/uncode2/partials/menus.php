@@ -546,7 +546,7 @@ if (!class_exists('unmenu')) {
 					}
 
 					if ($search_active === 'on') {
-						$search_inner .= '<li class="menu-item-link search-icon style-'.$stylemain.' dropdown">';
+						$search_inner .= '<li class="float-left menu-item-link search-icon style-'.$stylemain.' dropdown">';
 						$search_inner .= 	'<a href="#"'.(!$vertical ? ' class="trigger-overlay search-icon" data-area="search" data-container="box-container"' : '').'>
 													<i class="fa fa-search3"></i>';
 						if (!$vertical) {
