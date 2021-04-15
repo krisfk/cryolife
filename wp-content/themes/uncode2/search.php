@@ -114,7 +114,15 @@ if ($page_header_type !== '' && $page_header_type !== 'none') {
     </div>
 </div>
 
+<?php 
+
+if($_GET['s'])
+{
+	?>
 <div class="results-for-div"> Results for: <?php echo $_GET['s'];?></div>
+
+<?php
+	?>
 <?php
 		// echo uncode_remove_p_tag( $page_header->html );
 		echo '</div>';
