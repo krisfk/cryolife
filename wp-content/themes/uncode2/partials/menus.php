@@ -1208,7 +1208,7 @@ if (!class_exists('unmenu')) {
 		}
 	}
 	
-	$this->html .= 	'aaa';
+	// $this->html .= 	'aaa';
 
 }
 
