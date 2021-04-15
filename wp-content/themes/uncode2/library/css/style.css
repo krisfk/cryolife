@@ -20000,6 +20000,7 @@ strong.black {
     .flex-mobile-col h2 {
         text-align: center;
         /* padding: 10px; */
+        padding: 20px 0 0 0 !important;
     }
 }
 
