@@ -100,7 +100,7 @@ if ($page_header_type !== '' && $page_header_type !== 'none') {
 	$header_html = $page_header->html;
 	if ($header_html !== '') {
 		echo '<div id="page-header">';
-		echo uncode_remove_p_tag( $page_header->html );
+		// echo uncode_remove_p_tag( $page_header->html );
 		echo '</div>';
 	}
 }
@@ -313,7 +313,7 @@ if (have_posts()):
 	}
 
 	/** Display post html **/
-	echo 	'ff<div class="page-body' . $bg_color . '">
+	echo 	'<div class="page-body' . $bg_color . '">
           <div class="post-wrapper">
           	<div class="post-body">' . do_shortcode($the_content) . '</div>' .
           	$navigation_content . '
