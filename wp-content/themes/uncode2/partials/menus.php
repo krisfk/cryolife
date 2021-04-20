@@ -545,35 +545,35 @@ if (!class_exists('unmenu')) {
 						}
 					}
 
-					// if ($search_active === 'on') {
-					// 	$search_inner .= '<li class="float-left menu-item-link search-icon style-'.$stylemain.' dropdown">';
-					// 	$search_inner .= 	'<a href="#"'.(!$vertical ? ' class="trigger-overlay search-icon" data-area="search" data-container="box-container"' : '').'>
-					// 								<i class="fa fa-search3"></i>';
-					// 	if (!$vertical) {
-					// 		$search_inner .= 		'<span class="desktop-hidden">';
-					// 	}
-					// 		$search_inner .= 		'<span>' .esc_html__('Search','uncode') . '</span>';
-					// 	if (!$vertical) {
-					// 		$search_inner .=		'</span>';
-					// 	}
-					// 	$search_inner .=			'<i class="fa fa-angle-down fa-dropdown'.(!$vertical ? ' desktop-hidden' : '').'"></i>
-					// 								</a>
-					// 								<ul role="menu" class="drop-menu'.(!$vertical ? ' desktop-hidden' : '').'">
-					// 									<li>
-					// 										<form class="search" method="get" action="'. get_home_url(get_current_blog_id(),'/') .'">
-					// 											<input type="search" class="search-field no-livesearch" placeholder="'.esc_html__('Search…','uncode').'" value="" name="s" title="Search for:" />
-					// 										</form>
-					// 									</li>
-					// 								</ul>';
-					// 	$search_inner .= 	'</li>';
-					// 	$search_inner .= 	'<li class="login-register-li">';
-					// 	$search_inner .= 	'<a class="login-btn" href="https://cryolifehk.force.com/customer/s/login" target="_blank">Login</a>';
-					// 	$search_inner .= 	'<a class="register-now-btn" href="https://cryolifehk.formtitan.com/ftd8e33f871615871999320_copy" target="_blank">Register NOW</a>';
+					if ($search_active === 'on') {
+						// $search_inner .= '<li class="float-left menu-item-link search-icon style-'.$stylemain.' dropdown">';
+						// $search_inner .= 	'<a href="#"'.(!$vertical ? ' class="trigger-overlay search-icon" data-area="search" data-container="box-container"' : '').'>
+						// 							<i class="fa fa-search3"></i>';
+						// if (!$vertical) {
+						// 	$search_inner .= 		'<span class="desktop-hidden">';
+						// }
+						// 	$search_inner .= 		'<span>' .esc_html__('Search','uncode') . '</span>';
+						// if (!$vertical) {
+						// 	$search_inner .=		'</span>';
+						// }
+						// $search_inner .=			'<i class="fa fa-angle-down fa-dropdown'.(!$vertical ? ' desktop-hidden' : '').'"></i>
+						// 							</a>
+						// 							<ul role="menu" class="drop-menu'.(!$vertical ? ' desktop-hidden' : '').'">
+						// 								<li>
+						// 									<form class="search" method="get" action="'. get_home_url(get_current_blog_id(),'/') .'">
+						// 										<input type="search" class="search-field no-livesearch" placeholder="'.esc_html__('Search…','uncode').'" value="" name="s" title="Search for:" />
+						// 									</form>
+						// 								</li>
+						// 							</ul>';
+						// $search_inner .= 	'</li>';
+						$search_inner .= 	'<li class="login-register-li">';
+						$search_inner .= 	'<a class="login-btn" href="https://cryolifehk.force.com/customer/s/login" target="_blank">Login</a>';
+						$search_inner .= 	'<a class="register-now-btn" href="https://cryolifehk.formtitan.com/ftd8e33f871615871999320_copy" target="_blank">Register NOW</a>';
 
 
-					// 	$search_inner .= 	'</li>';
+						$search_inner .= 	'</li>';
 
-					// }
+					}
 
 					if ($param === 'menu-overlay-center' && $vmenu_position === 'right') {
 						if ($socials_active === 'on' && strpos($type, 'vmenu') === false && $type !== 'hmenu-center-split') {
