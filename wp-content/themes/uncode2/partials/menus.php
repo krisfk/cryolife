@@ -559,11 +559,11 @@ if (!class_exists('unmenu')) {
 						$search_inner .=			'<i class="fa fa-angle-down fa-dropdown'.(!$vertical ? ' desktop-hidden' : '').'"></i>
 													</a>
 													<ul role="menu" class="drop-menu'.(!$vertical ? ' desktop-hidden' : '').'">
-														<li>
-															<form class="search" method="get" action="'. get_home_url(get_current_blog_id(),'/') .'">
-																<input type="search" class="search-field no-livesearch" placeholder="'.esc_html__('Search…','uncode').'" value="" name="s" title="Search for:" />
-															</form>
-														</li>
+														<li>';
+															// <form class="search" method="get" action="'. get_home_url(get_current_blog_id(),'/') .'">
+															// 	<input type="search" class="search-field no-livesearch" placeholder="'.esc_html__('Search…','uncode').'" value="" name="s" title="Search for:" />
+															// </form>
+															$search_inner .='</li>
 													</ul>';
 						$search_inner .= 	'</li>';
 						$search_inner .= 	'<li class="login-register-li">';
