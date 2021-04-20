@@ -776,6 +776,7 @@ body[data-border='9'] .box-wrapper {
 body[data-border='9'] .footer-scroll-top {
     padding-right: 9px;
     padding-bottom: 9px;
+    display: none;
 }
 
 body[data-border='9'] .overlay .menu-close-search {
