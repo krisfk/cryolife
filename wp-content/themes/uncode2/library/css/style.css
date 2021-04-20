@@ -776,7 +776,6 @@ body[data-border='9'] .box-wrapper {
 body[data-border='9'] .footer-scroll-top {
     padding-right: 9px;
     padding-bottom: 9px;
-    display: none;
 }
 
 body[data-border='9'] .overlay .menu-close-search {
@@ -20045,6 +20044,10 @@ strong.black {
 
 .float-left {
     float: left;
+}
+
+.scroll-top {
+    display: none !important;
 }
 
 @media (max-width: 1920px) {
