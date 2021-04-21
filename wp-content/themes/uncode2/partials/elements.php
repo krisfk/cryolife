@@ -1424,1164 +1424,1240 @@ if (!function_exists('uncode_create_single_block')) {
 							$text_class = ' text-lead';
 						}
 						if ($single_text === 'overlay' && $single_elements_click !== 'yes') {
-							$inner_entry .= '<div class="t-entry-excerpt'.$text_class.'">'.preg_replace('/<\/?a(.|\s)*?>/', '', $block_text).'</div>';
-						} else {
-							if (isset($value[0]) && ($value[0] === 'full')) {
-								$inner_entry .= $block_text;
-							} else {
-								$inner_entry .='<div class="t-entry-excerpt'.$text_class.'">'.$block_text.'</div>';
-							}
-						}
-					}
-
-				break;
-
-				case 'link':
-					$btn_shape = ' btn-default';
-					$btn_has_style = false;
-
-					if ( isset($value[2]) ) {
-						if ( $value[2] === 'outline_inv') {
-							$btn_shape .= ' btn-outline';
-							$btn_has_style = true;
-						} elseif ( $value[2] === 'flat') {
-							$btn_shape .= ' btn-flat';
-							$btn_has_style = true;
-						} elseif ( $value[2] === 'outline') {
-							$btn_has_style = true;
-						}
-					}
-
-					if (isset($value[1]) && $value[1] === 'small_size') {
-						$btn_shape .= ' btn-sm';
-					}
-
-					if (isset($value[0]) && $value[0] !== 'default') {
-						if ($value[0] === 'link') {
-							$btn_shape = ' btn-link';
-						} else {
-							$btn_shape .= ' btn-' . $value[0];
-						}
-					}
-					if ( uncode_btn_style() !== '' ) {
-						$btn_shape .= ' ' . uncode_btn_style();
-					}
-
-                    $data_values = (isset($block_data['link']['target']) && !empty($block_data['link']['target']) && is_array($block_data['link'])) ? ' target="'.trim($block_data['link']['target']).'"' : '';
-                    $read_more_text = esc_html__('Read More','uncode');
-
-					if (isset($block_data['read_more_text']) && $block_data['read_more_text'] !== '') {
-						$read_more_text = $block_data['read_more_text'];
-					} elseif (isset($value[3]) && !empty($value[3])) {
-						$read_more_text = $value[3];
-					} elseif (isset($value[2]) && !empty($value[2]) && $btn_has_style === false) {
-						$read_more_text = $value[2];
-					} elseif (isset($value[1]) && !empty($value[1]) && $value[1]!== 'default_size' && $value[1]!== 'small_size') {
-						$read_more_text = $value[1];
-					}
-
-					if ($single_text === 'overlay' && $single_elements_click !== 'yes') {
-						$inner_entry .= '<p class="t-entry-readmore"><span class="btn'.$btn_shape.'">' . $read_more_text . '</span></p>';
-					} else {
-						$inner_entry .= '<p class="t-entry-readmore"><a href="'.$create_link.'" class="btn'.$btn_shape.'"' . $data_values . '>' . $read_more_text . '</a></p>';
-					}
-				break;
-
-				case 'author':
-					$author = get_post_field( 'post_author', $block_data['id'] );
-					$author_name = get_the_author_meta( 'display_name', $author );
-					$author_link = get_author_posts_url( $author );
-					$inner_entry .= '<p class="t-entry-author">';
-					$avatar_size = 20;
-					$avatar_size_class = 'sm';
-					$qualification = false;
-					if (isset($value[0]) && !empty($value[0]) && $value[0]!== '' && $value[0]!== 'display_qualification') {
-						if ( $value[0] === 'md_size' ){
-							$avatar_size = $avatar_size*2;
-							$avatar_size_class = 'md';
-						} elseif ( $value[0] === 'lg_size' ){
-							$avatar_size = $avatar_size*3;
-							$avatar_size_class = 'lg';
-						} elseif ( $value[0] === 'xl_size' ){
-							$avatar_size = $avatar_size*4;
-							$avatar_size_class = 'xl';
-						}
-					}
-					if ( ( isset($value[0]) && $value[0]=== 'display_qualification' ) || ( isset($value[1]) && $value[1]=== 'display_qualification' ) ) {
-						$qualification = '<span class="tmb-user-qualification">' . esc_html( get_the_author_meta( 'user_qualification', $author ) ) . '</span>';
-					}
-
-					if ($single_text === 'overlay' && $single_elements_click !== 'yes') {
-						$inner_entry .= '<span class="tmb-avatar-size-' . $avatar_size_class . '">' . get_avatar( $author, $avatar_size ). '<span class="tmb-username-wrap"><span class="tmb-username-text">' . esc_html__('by','uncode') . ' ' . $author_name . '</span>' . $qualification . '</span>';
-					} else {
-						$inner_entry .= '<a href="'.$author_link.'" class="tmb-avatar-size-' . $avatar_size_class . '">' . get_avatar( $author, $avatar_size ) . '<span class="tmb-username-wrap"><span class="tmb-username-text">' . esc_html__('by','uncode') . ' ' . $author_name.'</span>' . $qualification . '</span></a>';
-					}
-					$inner_entry .= '</p>';
-				break;
-
-				case 'extra':
-					$inner_entry .= '<p class="t-entry-comments entry-small"><span class="extras">';
-
-					if( function_exists('uncode_dot_irecommendthis') && apply_filters('uncode_dot_irecommendthis', false) ) {
-						global $uncode_dot_irecommendthis;
-						if ($single_text !== 'overlay') {
-							$inner_entry .= $uncode_dot_irecommendthis->dot_recommend($block_data['id'], true);
-						} else {
-							if ($single_elements_click === 'yes') {
-								$inner_entry .= $uncode_dot_irecommendthis->dot_recommend($block_data['id'], true);
-							} else {
-								$inner_entry .= $uncode_dot_irecommendthis->dot_recommend($block_data['id'], false);
-							}
-						}
-					}
-
-					$num_comments = get_comments_number( $block_data['id'] );
-					$entry_comments = '<i class="fa fa-speech-bubble"></i><span>'.$num_comments.' '._nx( 'Comment', 'Comments', $num_comments, 'comments', 'uncode' ).'</span>';
-					if ($single_text === 'overlay' && $single_elements_click !== 'yes') {
-						$inner_entry .= '<span class="extras-wrap">' . $entry_comments . '</span>';
-					} else {
-						$inner_entry .= '<a class="extras-wrap" href="'.get_comments_link($block_data['id']).'" title="title">'.$entry_comments.'</a>';
-					}
-					$inner_entry .= '<span class="extras-wrap"><i class="fa fa-watch"></i><span>'.uncode_estimated_reading_time($block_data['id']).'</span></span></span></p>';
-				break;
-
-				case 'price':
-					if ( class_exists( 'WooCommerce' ) && ( !isset( $block_data['price_inline'] ) || $block_data['price_inline'] !== 'yes' ) ) {
-						$WC_Product = wc_get_product( $block_data['id'] );
-						$inner_entry .= '<span class="price '.trim(implode(' ', $title_classes)).'">'.$WC_Product->get_price_html().'</span>';
-					}
-				break;
-
-				case 'caption':
-					if ( isset($block_data['album_id']) && $block_data['album_id']!='' ) { //is Grouped Album
-						$inner_entry.= '<p class="t-entry-meta"><span>' . get_the_excerpt( $block_data['album_id'] ) . '</span></p>';
-					} elseif (isset($media_attributes->post_excerpt) && $media_attributes->post_excerpt !== '' && !( isset($block_data['media_caption_custom']) && $block_data['media_caption_custom'] ) ) {
-						$inner_entry.= '<p class="t-entry-meta"><span>' . $media_attributes->post_excerpt . '</span></p>';
-					} elseif ( isset($block_data['media_caption_custom']) && $block_data['media_caption_custom'] ) {
-						$inner_entry .= '<p class="t-entry-meta"><span>' . esc_attr( $block_data['media_caption_custom'] ) . '</span></p>';
-					}
-				break;
-
-				case 'description':
-					if ( isset($block_data['album_id']) && $block_data['album_id']!='' ) { //is Grouped Album
-						$album_post = get_post($block_data['album_id']);
-						$album_content = $album_post->post_content;
-						$inner_entry.= '<p class="t-entry-excerpt">' . $album_content . '</p>';
-					} elseif ( isset($block_data['media_subtitle_custom']) && $block_data['media_subtitle_custom'] !== '' ) {
-						$inner_entry .= '<p class="t-entry-excerpt">' . esc_attr( $block_data['media_subtitle_custom'] ) . '</p>';
-					} elseif (isset($media_attributes->post_content) && $media_attributes->post_content !== '') {
-						$inner_entry.= '<p class="t-entry-excerpt">' . $media_attributes->post_content . '</p>';
-					}
-				break;
-
-				case 'team-social':
-					if ($media_attributes->team) {
-						$team_socials = explode("\n", $media_attributes->team_social);
-						$inner_entry .= '<p class="t-entry-comments t-entry-member-social"><span class="extras">';
-
-						foreach ($team_socials as $key => $value) {
-							$value = trim($value);
-							if ($value !== '') {
-								if(filter_var($value, FILTER_VALIDATE_EMAIL)) {
-									$inner_entry .= '<a href="mailto:'.$value.'"><i class="fa fa-envelope-o"></i></a>';
-								} else {
-									$get_host = parse_url($value);
-
-									// Fix URLs without scheme
-									if ( ! isset( $get_host[ 'scheme' ] ) ) {
-										$value    = 'http://' . $value;
-										$get_host = parse_url( $value );
-									}
-
-									$host = str_replace("www.", "", $get_host['host']);
-									$host = explode('.', $host);
-									if ( strpos( get_site_url(), $host[0] ) !== false ) {
-										$inner_entry.= '<a href="'.esc_url($value).'"><i class="fa fa-user"></i></a>';
-									} else {
-										if ($host[0] === 'plus') {
-											$host[0] = 'google-' . $host[0];
-										}
-										$inner_entry.= '<a href="'.esc_url($value).'" target="_blank"><i class="fa fa-'.esc_attr($host[0]).'"></i></a>';
-									}
-								}
-							}
-						}
-						$inner_entry .= '</span></p>';
-					}
-				break;
-
-				case 'spacer':
-					if (isset($value[0])) {
-						switch ($value[0]) {
-							case 'half':
-								$spacer_class = 'half-space';
-								break;
-							case 'one':
-								$spacer_class = 'single-space';
-								break;
-							case 'two':
-								$spacer_class = 'double-space';
-								break;
-						}
-						$inner_entry.= '<div class="spacer spacer-one '.$spacer_class.'"></div>';
-					}
-				break;
-
-				case 'spacer_two':
-					if (isset($value[0])) {
-						switch ($value[0]) {
-							case 'half':
-								$spacer_class = 'half-space';
-								break;
-							case 'one':
-								$spacer_class = 'single-space';
-								break;
-							case 'two':
-								$spacer_class = 'double-space';
-								break;
-						}
-						$inner_entry.= '<div class="spacer spacer-two '.$spacer_class.'"></div>';
-					}
-				break;
-
-				case 'sep-one':
-				case 'sep-two':
-					$sep_class = '';
-					if ( isset($value[0]) ) {
-						if ( $value[0] === 'reduced' ) {
-							$sep_class = ' class="separator-reduced"';
-						} elseif ( $value[0] === 'extra' ) {
-							if ( isset( $block_data['media_full_width'] ) && $block_data['media_full_width'] ) {
-								$sep_extra = ' separator-extra-child';
-							}
-							$sep_class = ' class="separator-extra"';
-						}
-					}
-					$inner_entry.= '<hr'.$sep_class.' />';
-				break;
-
-				default:
-					if ($key !== 'media') {
-						$get_cf_value = get_post_meta($block_data['id'], $key, true);
-						if (isset($get_cf_value) && $get_cf_value !== '') {
-							$inner_entry.= '<div class="t-entry-cf-'.$key.'">' . $get_cf_value . '</div>';
-						}
-					}
-				break;
-			}
-		}
-
-		if (isset($media_attributes->team) && $media_attributes->team) {
-			$single_elements_click = 'yes';
-		}
-
-		$inline_price = '';
-		if (!empty($layout) && !(count($layout) === 1 && array_key_exists('media',$layout)) && $inner_entry !== '') {
-
-			if ( isset( $block_data['price_inline'] ) && $block_data['price_inline'] === 'yes' ) {
-				$inline_price = ' t-entry-inline-price';
-			}
-			if ($single_text !== 'overlay') {
-				$entry.= '<div class="t-entry-text">
-							<div class="t-entry-text-tc ' . $block_data['text_padding'] . $inline_price . '">';
-			}
-
-			$entry.= '<div class="t-entry">';
-
-			$entry .= $inner_entry;
-
-			$entry.= '</div>';
-
-			if ($single_text !== 'overlay') {
-				$entry.= '</div>
-					</div>';
-			}
-		}
-
-		if ($lightbox_classes) {
-			$div_data_attributes = array_map(function ($v, $k) { return $k . '="' . $v . '"'; }, $lightbox_classes, array_keys($lightbox_classes));
-			$lightbox_data = ' ' . implode(' ', $div_data_attributes);
-			$lightbox_data .= ' data-lbox="ilightbox_' . $el_id . '"';
-			$video_src = '';
-			if (isset($media_attributes->post_mime_type) && strpos($media_attributes->post_mime_type, 'video/') !== false) {
-				$video_src .= 'html5video:{preload:\'true\',';
-				$video_autoplay = get_post_meta($item_thumb_id, "_uncode_video_autoplay", true);
-				if ($video_autoplay) {
-					$video_src .= 'autoplay:\'true\',';
-				}
-				$alt_videos = get_post_meta($item_thumb_id, "_uncode_video_alternative", true);
-				if (!empty($alt_videos)) {
-					foreach ($alt_videos as $key => $value) {
-						$exloded_url = explode(".", strtolower($value));
-						$ext = end($exloded_url);
-						if ($ext !== '') {
-							$video_src .= $ext . ":'" . $value."',";
-						}
-					}
-				}
-				$video_src .= '},';
-			}
-
-
-			if (isset($media_attributes->metadata)) {
-				$media_metavalues = unserialize($media_attributes->metadata);
-				if ( uncode_privacy_allow_content( $consent_id ) === false ) {
-					$poster_th_id = get_post_meta($item_thumb_id, "_uncode_poster_image", true);
-					$poster_attributes = uncode_get_media_info($poster_th_id);
-					if ( is_object($poster_attributes) ) {
-						$poster_metavalues = unserialize($poster_attributes->metadata);
-						$media_dimensions = 'width:' . esc_attr($poster_metavalues['width']) . ',';
-						$media_dimensions .= 'height:' . esc_attr($poster_metavalues['height']) . ',';
-					} else {
-						$media_dimensions = '';
-					}
-				} else {
-					if (isset($media_metavalues['width']) && isset($media_metavalues['height']) && $media_metavalues['width'] !== '' && $media_metavalues['height'] !== '') {
-						$media_dimensions = 'width:' . $media_metavalues['width'] . ',';
-						$media_dimensions .= 'height:' . $media_metavalues['height'] . ',';
-					} else {
-						$media_dimensions = '';
-					}
-				}
-
-				if ( isset($poster_attributes->id) ) {
-					$data_options_th = wp_get_attachment_image_src($poster_attributes->id, 'medium');
-				} else {
-					if ( isset($media_attributes->id) ) {
-						$data_options_th = wp_get_attachment_image_src($media_attributes->id, 'medium');
-					}
-				}
-
-				if ( isset( $data_options_th ) && is_array( $data_options_th ) ) {
-					$lightbox_data .= ' data-options="'.$media_dimensions.$video_src.'thumbnail: \''. $data_options_th[0] .'\'"';
-				}
-			}
-		}
-
-		$layoutArray = array_keys($layout);
-		foreach ($layoutArray as $key => $value) {
-			if ($value === 'icon') {
-				unset($layoutArray[$key]);
-			}
-		}
-
-		if (!array_key_exists('media',$layout)) {
-			$block_classes[] = 'tmb-only-text';
-			$with_media = false;
-		} else {
-			$with_media = true;
-		}
-
-		if ($single_text === 'overlay') {
-			if ($with_media) {
-				$block_classes[] = 'tmb-media-first';
-				$block_classes[] = 'tmb-media-last';
-			}
-			$block_classes[] = 'tmb-content-overlay';
-		} else {
-			if ( $single_text === 'lateral' ) {
-				$block_classes[] = 'tmb-content-lateral';
-			} else {
-				$block_classes[] = 'tmb-content-under';
-			}
-
-			$layoutLast = (string) array_pop($layoutArray);
-			if ($with_media) {
-				if (($layoutLast === 'media' || $layoutLast === '') && $with_media) {
-					$block_classes[] = 'tmb-media-last';
-				} else {
-					$block_classes[] = 'tmb-media-first';
-				}
-			}
-		}
-
-		if ($single_back_color === '') {
-			$block_classes[] = 'tmb-no-bg';
-		} else {
-			$single_back_color = ' style-' . $single_back_color . '-bg';
-		}
-
-		$div_data_attributes = array_map(function ($v, $k) { return $k . '="' . $v . '"'; }, $tmb_data, array_keys($tmb_data));
-
-		$output = '';
-		if ( ot_get_option('_uncode_woocommerce_hooks') === 'on' && $is_product ) {
-			ob_start();
-			global $product;
-			$product = wc_get_product($block_data['id']);
-			do_action( 'woocommerce_before_shop_loop_item');
-			$output .= ob_get_clean();
-		}
-
-		if ( $lightbox_classes ) {
-			$block_classes[] = 'tmb-lightbox';
-		}
-
-		$output .= 	'<div class="'.implode(' ', $block_classes).'">
-						<div class="' . (($nested !== 'yes') ? 't-inside' : '').$single_back_color . $single_animation . '" '.implode(' ', $div_data_attributes) .'>';
-
-		if ( ot_get_option('_uncode_woocommerce_hooks') === 'on' && $is_product ) {
-			ob_start();
-			global $product;
-			$product = wc_get_product($block_data['id']);
-			do_action( 'woocommerce_before_shop_loop_item_title');
-			$output .= ob_get_clean();
-		}
-
-		if ($single_text === 'under' && $layoutLast === 'media') {
-			$output .= $entry;
-		}
-
-		if (array_key_exists('media',$layout) || $single_text === 'overlay') :
-			$output .= 		'<div class="t-entry-visual"><div class="t-entry-visual-tc"><div class="t-entry-visual-cont">';
-
-			//Over image categories
-			if ( isset($cat_over) && $cat_over !== '' ):
-				$output .= '<span class="t-cat-over' . $no_link_cat . ' ' . $block_data['text_padding'] . ' ' . $cat_over_bool . '">' . $cat_over . '</span>';
-			endif;
-
-			if ($style_preset === 'masonry' && ($images_size !== '' || ($single_text !== 'overlay' || $single_elements_click !== 'yes')) && array_key_exists('media',$layout)):
-
-				if ( uncode_privacy_allow_content( $consent_id ) === false && !isset($has_ratio) ) {
-					$poster_th_id = get_post_meta($item_thumb_id, "_uncode_poster_image", true);
-					$poster_attributes = uncode_get_media_info($poster_th_id);
-					if ( is_object($poster_attributes) ) {
-						$poster_metavalues = unserialize($poster_attributes->metadata);
-						$image_orig_w = esc_attr($poster_metavalues['width']);
-						$image_orig_h = esc_attr($poster_metavalues['height']);
-					}
-				}
-
-
-				if ( ( $media_type === 'image' || $media_type === 'email' || uncode_privacy_allow_content( $consent_id ) === false ) && $image_orig_w != 0 && $image_orig_h != 0) :
-					$dummy_padding = round(($image_orig_h / $image_orig_w) * 100, 1);
-					$output .= 			'<div class="dummy" style="padding-top: '.$dummy_padding.'%;"></div>';
-
-				endif;
-
-			endif;
-
-			if (($single_text !== 'overlay' || $single_elements_click !== 'yes') && $media_type === 'image'):
-
-				if ($style_preset === 'masonry') {
-					$a_classes[] = 'pushed';
-				}
-
-				$data_values = (isset($block_data['link']['target']) && !empty($block_data['link']['target']) && is_array($block_data['link'])) ? ' target="'.trim($block_data['link']['target']).'"' : '';
-
-				//Albums
-				if ( isset($block_data['explode_album']) && is_array($block_data['explode_album']) && !empty($block_data['explode_album']) ) {
-					$create_link = '#';
-					$album_item_dimensions = '';
-					$inline_hidden = '';
-					foreach ($block_data['explode_album'] as $key_album => $album_item_id) {
-						$album_item_attributes = uncode_get_album_item($album_item_id);
-
-						if ( $album_item_attributes['mime_type'] === 'oembed/facebook' || $album_item_attributes['mime_type'] === 'oembed/twitter' ) {
-							continue;
-						}
-
-						if ( $media_poster ) {
-							$album_th_id = $album_item_attributes['poster'];
-						} else {
-							$album_th_id = $album_item_id;
-						}
-
-						if ( $album_th_id == '' ) {
-							continue;
-						}
-
-						$thumb_attributes = uncode_get_media_info($album_th_id);
-						$album_th_metavalues = unserialize($thumb_attributes->metadata);
-
-						if ( !isset($album_th_metavalues['width']) || !isset($album_th_metavalues['height']) ) {
-							continue;
-						}
-
-						$album_th_w = $album_th_metavalues['width'];
-						$album_th_h = $album_th_metavalues['height'];
-						if ($album_item_attributes) {
-							$album_item_title = (isset($lightbox_classes['data-title']) && $lightbox_classes['data-title'] === true) ? $album_item_attributes['title'] : '';
-							$album_item_caption = (isset($lightbox_classes['data-caption']) && $lightbox_classes['data-caption'] === true) ? $album_item_attributes['caption'] : '';
-							if (isset($album_item_attributes['width']) && isset($album_item_attributes['height'])) {
-								$album_item_dimensions .= '{';
-								$album_item_dimensions .= '"title":"' . esc_attr($album_item_title) . '",';
-								$album_item_dimensions .= '"caption":"' . esc_html($album_item_caption) . '",';
-								//$album_item_dimensions .= '"post_mime_type":"' . esc_attr($album_item_attributes['mime_type']) . '",';
-
-								if (
-									$album_item_attributes['mime_type'] === 'oembed/vimeo' && uncode_privacy_allow_content( 'vimeo' ) === false
-									||
-									$album_item_attributes['mime_type'] === 'oembed/youtube' && uncode_privacy_allow_content( 'youtube' ) === false
-									||
-									$album_item_attributes['mime_type'] === 'oembed/spotify' && uncode_privacy_allow_content( 'spotify' ) === false
-									||
-									$album_item_attributes['mime_type'] === 'oembed/soundcloud' && uncode_privacy_allow_content( 'soundcloud' ) === false
-								) {
-									$poster_th_id = get_post_meta($album_th_id, "_uncode_poster_image", true);
-									$poster_attributes = uncode_get_media_info($poster_th_id);
-									$poster_metavalues = unserialize($poster_attributes->metadata);
-									$album_item_dimensions .= '"width":"' . esc_attr($poster_metavalues['width']) . '",';
-									$album_item_dimensions .= '"height":"' . esc_attr($poster_metavalues['height']) . '",';
-									$resize_album_item = wp_get_attachment_image_src($poster_th_id, 'medium');
-									$album_item_dimensions .= '"thumbnail":"' . esc_url($resize_album_item[0]) . '",';
-									$album_item_dimensions .= '"url":"' . esc_attr('#inline-' . $el_id . '-' . $album_th_id) . '","type":"inline"';
-									$inline_hidden .= '<div id="inline-' . esc_attr( $el_id . '-' . $album_th_id ) . '" class="ilightbox-html" style="display: none;">' . $album_item_attributes['url'] . '</div>';
-									apply_filters( 'uncode_before_checking_consent', true, $album_item_attributes['mime_type'] );
-								} else {
-									if (
-										$album_item_attributes['mime_type'] === 'oembed/vimeo'
-										||
-										$album_item_attributes['mime_type'] === 'oembed/youtube'
-										||
-										$album_item_attributes['mime_type'] === 'oembed/spotify'
-										||
-										$album_item_attributes['mime_type'] === 'oembed/soundcloud'
-									) {
-										$poster_th_id = get_post_meta($album_th_id, "_uncode_poster_image", true);
-										$poster_attributes = uncode_get_media_info($poster_th_id);
-										$poster_metavalues = unserialize($poster_attributes->metadata);
-										$album_item_dimensions .= '"width":"' . esc_attr($poster_metavalues['width']) . '",';
-										$album_item_dimensions .= '"height":"' . esc_attr($poster_metavalues['height']) . '",';
-										$resize_album_item = wp_get_attachment_image_src($poster_th_id, 'medium');
-										$album_item_dimensions .= '"thumbnail":"' . esc_url($resize_album_item[0]) . '",';
-									} else {
-										$album_item_dimensions .= '"width":"' . esc_attr($album_item_attributes['width']) . '",';
-										$album_item_dimensions .= '"height":"' . esc_attr($album_item_attributes['height']) . '",';
-										$resize_album_item = wp_get_attachment_image_src($thumb_attributes->id, 'medium');
-										$album_item_dimensions .= '"thumbnail":"' . esc_url($resize_album_item[0]) . '",';
-									}
-
-									$album_item_dimensions .= '"url":"' . esc_url($album_item_attributes['url']) . '"';
-								}
-								$album_item_dimensions .= '},';
-							}
-						}
-					}
-					$album_item_dimensions = trim(preg_replace('/\t+/', '', $album_item_dimensions));//remove tabs from string
-					$data_values .= ' data-album=\'[' . rtrim($album_item_dimensions, ',') . ']\'';
-				}
-				if ( isset($block_data['lb_index']) ) {
-					$data_values .= ' data-lb-index="' . $block_data['lb_index'] . '"';
-				}
-
-				if ( isset( $inline_hidden ) ) {
-					$output .= $inline_hidden;
-				}
-
-				$output .= '<a tabindex="-1" href="'. (($media_type === 'image') ? $create_link : '').'"'.((count($a_classes) > 0 ) ? ' class="'.trim(implode(' ', $a_classes)).'"' : '').$lightbox_data.$data_values.'>';
-
-			endif;
-
-			if (is_object($media_attributes) && $media_attributes->post_mime_type !== 'oembed/facebook' && $media_attributes->post_mime_type !== 'oembed/twitter') :
-
-			$single_limit_width = isset($block_data['limit-width']) && $block_data['limit-width'] === true ? ' limit-width' : '';
-
-			$output .= 	'<div class="t-entry-visual-overlay"' . $overlay_blend . '><div class="t-entry-visual-overlay-in '.$overlay_color.'"' . $overlay_opacity . '></div></div>
-									<div class="t-overlay-wrap' . $single_limit_width . '">
-										<div class="t-overlay-inner">
-											<div class="t-overlay-content">
-												<div class="t-overlay-text '.$block_data['text_padding']. $sep_extra . $inline_price .'">';
-
-			if ($single_text === 'overlay'):
-
-				$output .= $entry;
-
-			else:
-
-				$output .=					'<div class="t-entry t-single-line">';
-
-				if (array_key_exists('icon',$layout)) :
-
-					if ($single_icon !== '') :
-
-						$output .= 				'<i class="'.$single_icon. $icon_size . ' t-overlay-icon"></i>';
-
-					endif;
-
-				endif;
-
-				$output .= 						'</div>';
-
-			endif;
-
-			$output .= 						'</div></div></div></div>';
-
-			endif;
-
-			if (array_key_exists('media',$layout)) :
-
-				if ( ( isset($layout['media'][3]) && $layout['media'][3] === 'show-sale' ) || ( is_archive() && !isset($layout['media'][3]) ) ) {
-					global $woocommerce;
-					if ( class_exists( 'WooCommerce' ) ) {
-						if (isset($block_data['id'])) {
-							$product = wc_get_product($block_data['id']);
-							$post_obj = get_post($product);
-							if ( is_object($product) ) {
-								if ( $product->is_on_sale() ) {
-									$output .= apply_filters( 'woocommerce_sale_flash', '<div class="woocommerce"><span class="onsale">' . esc_html__( 'Sale!', 'woocommerce' ) . '</span></div>', $post_obj, $product );
-								} elseif ( ! $product->is_in_stock() ) {
-									$output .= apply_filters( 'uncode_woocommerce_out_of_stock', '<div class="font-ui"><div class="woocommerce"><span class="soldout">' . esc_html__( 'Out of stock', 'woocommerce' ) . '</span></div></div>', $post_obj, $product );
-								}
-							}
-						}
-					}
-				}
-
-				if ($style_preset === 'metro'):
-
-					if ($single_elements_click === 'yes' && $media_type === 'image'):
-
-						$a_classes[] = 't-background-click';
-
-						$data_values = !empty($block_data['link']['target']) ? ' target="'.trim($block_data['link']['target']).'"' : '';
-
-						$output .= 			'<a href="'. (($media_type === 'image') ? $create_link : '').'"'.((count($a_classes) > 0 ) ? ' class="'.trim(implode(' ', $a_classes)).'"' : '').$lightbox_data.$data_values.'>
-												<div class="t-background-cover'.($adaptive_async_class !== '' ? $adaptive_async_class : '').'" style="background-image:url(\''.$item_media.'\')"'.($adaptive_async_data !== '' ? $adaptive_async_data : '').'></div>
-											</a>';
-
-					else:
-
-						if ($media_type === 'image') :
-
-							$output .= 		'<div class="t-background-cover'.($adaptive_async_class !== '' ? $adaptive_async_class : '').'" style="background-image:url(\''.$item_media.'\')"'.($adaptive_async_data !== '' ? $adaptive_async_data : '').'></div>';
-
-						else:
-
-							$output .= 		'<div class="fluid-object '. trim(implode(' ', $title_classes)) . ' '.$object_class.'"'.$dummy_oembed.'>'.$media_code.'</div>';
-
-						endif;
-
-					endif;
-
-				else:
-
-					if ($media_type === 'image') :
+							$inner_entry .= '<div class="t-entry-excerpt'.$text_class.'">'.preg_replace('/<\/?a(.|\s)*?>/', '',
+$block_text).'</div>';
+} else {
+if (isset($value[0]) && ($value[0] === 'full')) {
+$inner_entry .= $block_text;
+} else {
+$inner_entry .='<div class="t-entry-excerpt'.$text_class.'">'.$block_text.'</div>';
+}
+}
+}
+
+break;
+
+case 'link':
+$btn_shape = ' btn-default';
+$btn_has_style = false;
+
+if ( isset($value[2]) ) {
+if ( $value[2] === 'outline_inv') {
+$btn_shape .= ' btn-outline';
+$btn_has_style = true;
+} elseif ( $value[2] === 'flat') {
+$btn_shape .= ' btn-flat';
+$btn_has_style = true;
+} elseif ( $value[2] === 'outline') {
+$btn_has_style = true;
+}
+}
+
+if (isset($value[1]) && $value[1] === 'small_size') {
+$btn_shape .= ' btn-sm';
+}
+
+if (isset($value[0]) && $value[0] !== 'default') {
+if ($value[0] === 'link') {
+$btn_shape = ' btn-link';
+} else {
+$btn_shape .= ' btn-' . $value[0];
+}
+}
+if ( uncode_btn_style() !== '' ) {
+$btn_shape .= ' ' . uncode_btn_style();
+}
+
+$data_values = (isset($block_data['link']['target']) && !empty($block_data['link']['target']) &&
+is_array($block_data['link'])) ? ' target="'.trim($block_data['link']['target']).'"' : '';
+$read_more_text = esc_html__('Read More','uncode');
+
+if (isset($block_data['read_more_text']) && $block_data['read_more_text'] !== '') {
+$read_more_text = $block_data['read_more_text'];
+} elseif (isset($value[3]) && !empty($value[3])) {
+$read_more_text = $value[3];
+} elseif (isset($value[2]) && !empty($value[2]) && $btn_has_style === false) {
+$read_more_text = $value[2];
+} elseif (isset($value[1]) && !empty($value[1]) && $value[1]!== 'default_size' && $value[1]!== 'small_size') {
+$read_more_text = $value[1];
+}
+
+if ($single_text === 'overlay' && $single_elements_click !== 'yes') {
+$inner_entry .= '<p class="t-entry-readmore"><span class="btn'.$btn_shape.'">' . $read_more_text . '</span></p>';
+} else {
+$inner_entry .= '<p class="t-entry-readmore"><a href="'.$create_link.'" class="btn'.$btn_shape.'"' . $data_values . '>'
+        . $read_more_text . '</a></p>';
+}
+break;
+
+case 'author':
+$author = get_post_field( 'post_author', $block_data['id'] );
+$author_name = get_the_author_meta( 'display_name', $author );
+$author_link = get_author_posts_url( $author );
+$inner_entry .= '<p class="t-entry-author">';
+    $avatar_size = 20;
+    $avatar_size_class = 'sm';
+    $qualification = false;
+    if (isset($value[0]) && !empty($value[0]) && $value[0]!== '' && $value[0]!== 'display_qualification') {
+    if ( $value[0] === 'md_size' ){
+    $avatar_size = $avatar_size*2;
+    $avatar_size_class = 'md';
+    } elseif ( $value[0] === 'lg_size' ){
+    $avatar_size = $avatar_size*3;
+    $avatar_size_class = 'lg';
+    } elseif ( $value[0] === 'xl_size' ){
+    $avatar_size = $avatar_size*4;
+    $avatar_size_class = 'xl';
+    }
+    }
+    if ( ( isset($value[0]) && $value[0]=== 'display_qualification' ) || ( isset($value[1]) && $value[1]===
+    'display_qualification' ) ) {
+    $qualification = '<span class="tmb-user-qualification">' . esc_html( get_the_author_meta( 'user_qualification',
+        $author ) ) . '</span>';
+    }
+
+    if ($single_text === 'overlay' && $single_elements_click !== 'yes') {
+    $inner_entry .= '<span class="tmb-avatar-size-' . $avatar_size_class . '">' . get_avatar( $author, $avatar_size ).
+        '<span class="tmb-username-wrap"><span class="tmb-username-text">' . esc_html__('by','uncode') . ' ' .
+                $author_name . '</span>' . $qualification . '</span>';
+        } else {
+        $inner_entry .= '<a href="'.$author_link.'" class="tmb-avatar-size-' . $avatar_size_class . '">' . get_avatar(
+            $author, $avatar_size ) . '<span class="tmb-username-wrap"><span class="tmb-username-text">' .
+                    esc_html__('by','uncode') . ' ' . $author_name.'</span>' . $qualification . '</span></a>';
+        }
+        $inner_entry .= '</p>';
+break;
+
+case 'extra':
+$inner_entry .= '<p class="t-entry-comments entry-small"><span class="extras">';
+
+        if( function_exists('uncode_dot_irecommendthis') && apply_filters('uncode_dot_irecommendthis', false) ) {
+        global $uncode_dot_irecommendthis;
+        if ($single_text !== 'overlay') {
+        $inner_entry .= $uncode_dot_irecommendthis->dot_recommend($block_data['id'], true);
+        } else {
+        if ($single_elements_click === 'yes') {
+        $inner_entry .= $uncode_dot_irecommendthis->dot_recommend($block_data['id'], true);
+        } else {
+        $inner_entry .= $uncode_dot_irecommendthis->dot_recommend($block_data['id'], false);
+        }
+        }
+        }
+
+        $num_comments = get_comments_number( $block_data['id'] );
+        $entry_comments = '<i class="fa fa-speech-bubble"></i><span>'.$num_comments.' '._nx( 'Comment', 'Comments',
+            $num_comments, 'comments', 'uncode' ).'</span>';
+        if ($single_text === 'overlay' && $single_elements_click !== 'yes') {
+        $inner_entry .= '<span class="extras-wrap">' . $entry_comments . '</span>';
+        } else {
+        $inner_entry .= '<a class="extras-wrap" href="'.get_comments_link($block_data['id']).'"
+            title="title">'.$entry_comments.'</a>';
+        }
+        $inner_entry .= '<span class="extras-wrap"><i
+                class="fa fa-watch"></i><span>'.uncode_estimated_reading_time($block_data['id']).'</span></span></span>
+</p>';
+break;
+
+case 'price':
+if ( class_exists( 'WooCommerce' ) && ( !isset( $block_data['price_inline'] ) || $block_data['price_inline'] !== 'yes' )
+) {
+$WC_Product = wc_get_product( $block_data['id'] );
+$inner_entry .= '<span class="price '.trim(implode(' ', $title_classes)).'">'.$WC_Product->get_price_html().'</span>';
+}
+break;
+
+case 'caption':
+if ( isset($block_data['album_id']) && $block_data['album_id']!='' ) { //is Grouped Album
+$inner_entry.= '<p class="t-entry-meta"><span>' . get_the_excerpt( $block_data['album_id'] ) . '</span></p>';
+} elseif (isset($media_attributes->post_excerpt) && $media_attributes->post_excerpt !== '' && !(
+isset($block_data['media_caption_custom']) && $block_data['media_caption_custom'] ) ) {
+$inner_entry.= '<p class="t-entry-meta"><span>' . $media_attributes->post_excerpt . '</span></p>';
+} elseif ( isset($block_data['media_caption_custom']) && $block_data['media_caption_custom'] ) {
+$inner_entry .= '<p class="t-entry-meta"><span>' . esc_attr( $block_data['media_caption_custom'] ) . '</span></p>';
+}
+break;
+
+case 'description':
+if ( isset($block_data['album_id']) && $block_data['album_id']!='' ) { //is Grouped Album
+$album_post = get_post($block_data['album_id']);
+$album_content = $album_post->post_content;
+$inner_entry.= '<p class="t-entry-excerpt">' . $album_content . '</p>';
+} elseif ( isset($block_data['media_subtitle_custom']) && $block_data['media_subtitle_custom'] !== '' ) {
+$inner_entry .= '<p class="t-entry-excerpt">' . esc_attr( $block_data['media_subtitle_custom'] ) . '</p>';
+} elseif (isset($media_attributes->post_content) && $media_attributes->post_content !== '') {
+$inner_entry.= '<p class="t-entry-excerpt">' . $media_attributes->post_content . '</p>';
+}
+break;
+
+case 'team-social':
+if ($media_attributes->team) {
+$team_socials = explode("\n", $media_attributes->team_social);
+$inner_entry .= '<p class="t-entry-comments t-entry-member-social"><span class="extras">';
+
+        foreach ($team_socials as $key => $value) {
+        $value = trim($value);
+        if ($value !== '') {
+        if(filter_var($value, FILTER_VALIDATE_EMAIL)) {
+        $inner_entry .= '<a href="mailto:'.$value.'"><i class="fa fa-envelope-o"></i></a>';
+        } else {
+        $get_host = parse_url($value);
+
+        // Fix URLs without scheme
+        if ( ! isset( $get_host[ 'scheme' ] ) ) {
+        $value = 'http://' . $value;
+        $get_host = parse_url( $value );
+        }
+
+        $host = str_replace("www.", "", $get_host['host']);
+        $host = explode('.', $host);
+        if ( strpos( get_site_url(), $host[0] ) !== false ) {
+        $inner_entry.= '<a href="'.esc_url($value).'"><i class="fa fa-user"></i></a>';
+        } else {
+        if ($host[0] === 'plus') {
+        $host[0] = 'google-' . $host[0];
+        }
+        $inner_entry.= '<a href="'.esc_url($value).'" target="_blank"><i class="fa fa-'.esc_attr($host[0]).'"></i></a>';
+        }
+        }
+        }
+        }
+        $inner_entry .= '</span></p>';
+}
+break;
+
+case 'spacer':
+if (isset($value[0])) {
+switch ($value[0]) {
+case 'half':
+$spacer_class = 'half-space';
+break;
+case 'one':
+$spacer_class = 'single-space';
+break;
+case 'two':
+$spacer_class = 'double-space';
+break;
+}
+$inner_entry.= '<div class="spacer spacer-one '.$spacer_class.'"></div>';
+}
+break;
+
+case 'spacer_two':
+if (isset($value[0])) {
+switch ($value[0]) {
+case 'half':
+$spacer_class = 'half-space';
+break;
+case 'one':
+$spacer_class = 'single-space';
+break;
+case 'two':
+$spacer_class = 'double-space';
+break;
+}
+$inner_entry.= '<div class="spacer spacer-two '.$spacer_class.'"></div>';
+}
+break;
+
+case 'sep-one':
+case 'sep-two':
+$sep_class = '';
+if ( isset($value[0]) ) {
+if ( $value[0] === 'reduced' ) {
+$sep_class = ' class="separator-reduced"';
+} elseif ( $value[0] === 'extra' ) {
+if ( isset( $block_data['media_full_width'] ) && $block_data['media_full_width'] ) {
+$sep_extra = ' separator-extra-child';
+}
+$sep_class = ' class="separator-extra"';
+}
+}
+$inner_entry.= '
+<hr'.$sep_class.' />';
+break;
+
+default:
+if ($key !== 'media') {
+$get_cf_value = get_post_meta($block_data['id'], $key, true);
+if (isset($get_cf_value) && $get_cf_value !== '') {
+$inner_entry.= '<div class="t-entry-cf-'.$key.'">' . $get_cf_value . '</div>';
+}
+}
+break;
+}
+}
+
+if (isset($media_attributes->team) && $media_attributes->team) {
+$single_elements_click = 'yes';
+}
+
+$inline_price = '';
+if (!empty($layout) && !(count($layout) === 1 && array_key_exists('media',$layout)) && $inner_entry !== '') {
+
+if ( isset( $block_data['price_inline'] ) && $block_data['price_inline'] === 'yes' ) {
+$inline_price = ' t-entry-inline-price';
+}
+if ($single_text !== 'overlay') {
+$entry.= '<div class="t-entry-text">
+    <div class="t-entry-text-tc ' . $block_data['text_padding'] . $inline_price . '">';
+        }
+
+        $entry.= '<div class="t-entry">';
+
+            $entry .= $inner_entry;
+
+            $entry.= '</div>';
+
+        if ($single_text !== 'overlay') {
+        $entry.= '</div>
+</div>';
+}
+}
+
+if ($lightbox_classes) {
+$div_data_attributes = array_map(function ($v, $k) { return $k . '="' . $v . '"'; }, $lightbox_classes,
+array_keys($lightbox_classes));
+$lightbox_data = ' ' . implode(' ', $div_data_attributes);
+$lightbox_data .= ' data-lbox="ilightbox_' . $el_id . '"';
+$video_src = '';
+if (isset($media_attributes->post_mime_type) && strpos($media_attributes->post_mime_type, 'video/') !== false) {
+$video_src .= 'html5video:{preload:\'true\',';
+$video_autoplay = get_post_meta($item_thumb_id, "_uncode_video_autoplay", true);
+if ($video_autoplay) {
+$video_src .= 'autoplay:\'true\',';
+}
+$alt_videos = get_post_meta($item_thumb_id, "_uncode_video_alternative", true);
+if (!empty($alt_videos)) {
+foreach ($alt_videos as $key => $value) {
+$exloded_url = explode(".", strtolower($value));
+$ext = end($exloded_url);
+if ($ext !== '') {
+$video_src .= $ext . ":'" . $value."',";
+}
+}
+}
+$video_src .= '},';
+}
+
+
+if (isset($media_attributes->metadata)) {
+$media_metavalues = unserialize($media_attributes->metadata);
+if ( uncode_privacy_allow_content( $consent_id ) === false ) {
+$poster_th_id = get_post_meta($item_thumb_id, "_uncode_poster_image", true);
+$poster_attributes = uncode_get_media_info($poster_th_id);
+if ( is_object($poster_attributes) ) {
+$poster_metavalues = unserialize($poster_attributes->metadata);
+$media_dimensions = 'width:' . esc_attr($poster_metavalues['width']) . ',';
+$media_dimensions .= 'height:' . esc_attr($poster_metavalues['height']) . ',';
+} else {
+$media_dimensions = '';
+}
+} else {
+if (isset($media_metavalues['width']) && isset($media_metavalues['height']) && $media_metavalues['width'] !== '' &&
+$media_metavalues['height'] !== '') {
+$media_dimensions = 'width:' . $media_metavalues['width'] . ',';
+$media_dimensions .= 'height:' . $media_metavalues['height'] . ',';
+} else {
+$media_dimensions = '';
+}
+}
+
+if ( isset($poster_attributes->id) ) {
+$data_options_th = wp_get_attachment_image_src($poster_attributes->id, 'medium');
+} else {
+if ( isset($media_attributes->id) ) {
+$data_options_th = wp_get_attachment_image_src($media_attributes->id, 'medium');
+}
+}
+
+if ( isset( $data_options_th ) && is_array( $data_options_th ) ) {
+$lightbox_data .= ' data-options="'.$media_dimensions.$video_src.'thumbnail: \''. $data_options_th[0] .'\'"';
+}
+}
+}
+
+$layoutArray = array_keys($layout);
+foreach ($layoutArray as $key => $value) {
+if ($value === 'icon') {
+unset($layoutArray[$key]);
+}
+}
+
+if (!array_key_exists('media',$layout)) {
+$block_classes[] = 'tmb-only-text';
+$with_media = false;
+} else {
+$with_media = true;
+}
+
+if ($single_text === 'overlay') {
+if ($with_media) {
+$block_classes[] = 'tmb-media-first';
+$block_classes[] = 'tmb-media-last';
+}
+$block_classes[] = 'tmb-content-overlay';
+} else {
+if ( $single_text === 'lateral' ) {
+$block_classes[] = 'tmb-content-lateral';
+} else {
+$block_classes[] = 'tmb-content-under';
+}
+
+$layoutLast = (string) array_pop($layoutArray);
+if ($with_media) {
+if (($layoutLast === 'media' || $layoutLast === '') && $with_media) {
+$block_classes[] = 'tmb-media-last';
+} else {
+$block_classes[] = 'tmb-media-first';
+}
+}
+}
+
+if ($single_back_color === '') {
+$block_classes[] = 'tmb-no-bg';
+} else {
+$single_back_color = ' style-' . $single_back_color . '-bg';
+}
+
+$div_data_attributes = array_map(function ($v, $k) { return $k . '="' . $v . '"'; }, $tmb_data, array_keys($tmb_data));
+
+$output = '';
+if ( ot_get_option('_uncode_woocommerce_hooks') === 'on' && $is_product ) {
+ob_start();
+global $product;
+$product = wc_get_product($block_data['id']);
+do_action( 'woocommerce_before_shop_loop_item');
+$output .= ob_get_clean();
+}
+
+if ( $lightbox_classes ) {
+$block_classes[] = 'tmb-lightbox';
+}
+
+$output .= '<div class="'.implode(' ', $block_classes).'">
+    <div
+        class="' . (($nested !== 'yes') ? 't-inside' : '').$single_back_color . $single_animation . '" '.implode(' ', $div_data_attributes) .'>
+        ';
+
+        if ( ot_get_option('_uncode_woocommerce_hooks') === 'on' && $is_product ) {
+        ob_start();
+        global $product;
+        $product = wc_get_product($block_data['id']);
+        do_action( 'woocommerce_before_shop_loop_item_title');
+        $output .= ob_get_clean();
+        }
+
+        if ($single_text === 'under' && $layoutLast === 'media') {
+        $output .= $entry;
+        }
+
+        if (array_key_exists('media',$layout) || $single_text === 'overlay') :
+        $output .= '<div class="t-entry-visual">
+            <div class="t-entry-visual-tc">
+                <div class="t-entry-visual-cont">';
+
+                    //Over image categories
+                    if ( isset($cat_over) && $cat_over !== '' ):
+                    $output .= '<span
+                        class="t-cat-over' . $no_link_cat . ' ' . $block_data['text_padding'] . ' ' . $cat_over_bool . '">'
+                        . $cat_over . '</span>';
+                    endif;
+
+                    if ($style_preset === 'masonry' && ($images_size !== '' || ($single_text !== 'overlay' ||
+                    $single_elements_click !== 'yes')) && array_key_exists('media',$layout)):
+
+                    if ( uncode_privacy_allow_content( $consent_id ) === false && !isset($has_ratio) ) {
+                    $poster_th_id = get_post_meta($item_thumb_id, "_uncode_poster_image", true);
+                    $poster_attributes = uncode_get_media_info($poster_th_id);
+                    if ( is_object($poster_attributes) ) {
+                    $poster_metavalues = unserialize($poster_attributes->metadata);
+                    $image_orig_w = esc_attr($poster_metavalues['width']);
+                    $image_orig_h = esc_attr($poster_metavalues['height']);
+                    }
+                    }
+
+
+                    if ( ( $media_type === 'image' || $media_type === 'email' || uncode_privacy_allow_content(
+                    $consent_id ) === false ) && $image_orig_w != 0 && $image_orig_h != 0) :
+                    $dummy_padding = round(($image_orig_h / $image_orig_w) * 100, 1);
+                    $output .= '<div class="dummy" style="padding-top: '.$dummy_padding.'%;"></div>';
+
+                    endif;
+
+                    endif;
+
+                    if (($single_text !== 'overlay' || $single_elements_click !== 'yes') && $media_type === 'image'):
+
+                    if ($style_preset === 'masonry') {
+                    $a_classes[] = 'pushed';
+                    }
+
+                    $data_values = (isset($block_data['link']['target']) && !empty($block_data['link']['target']) &&
+                    is_array($block_data['link'])) ? ' target="'.trim($block_data['link']['target']).'"' : '';
+
+                    //Albums
+                    if ( isset($block_data['explode_album']) && is_array($block_data['explode_album']) &&
+                    !empty($block_data['explode_album']) ) {
+                    $create_link = '#';
+                    $album_item_dimensions = '';
+                    $inline_hidden = '';
+                    foreach ($block_data['explode_album'] as $key_album => $album_item_id) {
+                    $album_item_attributes = uncode_get_album_item($album_item_id);
+
+                    if ( $album_item_attributes['mime_type'] === 'oembed/facebook' ||
+                    $album_item_attributes['mime_type'] === 'oembed/twitter' ) {
+                    continue;
+                    }
+
+                    if ( $media_poster ) {
+                    $album_th_id = $album_item_attributes['poster'];
+                    } else {
+                    $album_th_id = $album_item_id;
+                    }
+
+                    if ( $album_th_id == '' ) {
+                    continue;
+                    }
+
+                    $thumb_attributes = uncode_get_media_info($album_th_id);
+                    $album_th_metavalues = unserialize($thumb_attributes->metadata);
+
+                    if ( !isset($album_th_metavalues['width']) || !isset($album_th_metavalues['height']) ) {
+                    continue;
+                    }
+
+                    $album_th_w = $album_th_metavalues['width'];
+                    $album_th_h = $album_th_metavalues['height'];
+                    if ($album_item_attributes) {
+                    $album_item_title = (isset($lightbox_classes['data-title']) && $lightbox_classes['data-title'] ===
+                    true) ? $album_item_attributes['title'] : '';
+                    $album_item_caption = (isset($lightbox_classes['data-caption']) && $lightbox_classes['data-caption']
+                    === true) ? $album_item_attributes['caption'] : '';
+                    if (isset($album_item_attributes['width']) && isset($album_item_attributes['height'])) {
+                    $album_item_dimensions .= '{';
+                    $album_item_dimensions .= '"title":"' . esc_attr($album_item_title) . '",';
+                    $album_item_dimensions .= '"caption":"' . esc_html($album_item_caption) . '",';
+                    //$album_item_dimensions .= '"post_mime_type":"' . esc_attr($album_item_attributes['mime_type']) .
+                    '",';
+
+                    if (
+                    $album_item_attributes['mime_type'] === 'oembed/vimeo' && uncode_privacy_allow_content( 'vimeo' )
+                    === false
+                    ||
+                    $album_item_attributes['mime_type'] === 'oembed/youtube' && uncode_privacy_allow_content( 'youtube'
+                    ) === false
+                    ||
+                    $album_item_attributes['mime_type'] === 'oembed/spotify' && uncode_privacy_allow_content( 'spotify'
+                    ) === false
+                    ||
+                    $album_item_attributes['mime_type'] === 'oembed/soundcloud' && uncode_privacy_allow_content(
+                    'soundcloud' ) === false
+                    ) {
+                    $poster_th_id = get_post_meta($album_th_id, "_uncode_poster_image", true);
+                    $poster_attributes = uncode_get_media_info($poster_th_id);
+                    $poster_metavalues = unserialize($poster_attributes->metadata);
+                    $album_item_dimensions .= '"width":"' . esc_attr($poster_metavalues['width']) . '",';
+                    $album_item_dimensions .= '"height":"' . esc_attr($poster_metavalues['height']) . '",';
+                    $resize_album_item = wp_get_attachment_image_src($poster_th_id, 'medium');
+                    $album_item_dimensions .= '"thumbnail":"' . esc_url($resize_album_item[0]) . '",';
+                    $album_item_dimensions .= '"url":"' . esc_attr('#inline-' . $el_id . '-' . $album_th_id) .
+                    '","type":"inline"';
+                    $inline_hidden .= '<div id="inline-' . esc_attr( $el_id . '-' . $album_th_id ) . '"
+                        class="ilightbox-html" style="display: none;">' . $album_item_attributes['url'] . '</div>';
+                    apply_filters( 'uncode_before_checking_consent', true, $album_item_attributes['mime_type'] );
+                    } else {
+                    if (
+                    $album_item_attributes['mime_type'] === 'oembed/vimeo'
+                    ||
+                    $album_item_attributes['mime_type'] === 'oembed/youtube'
+                    ||
+                    $album_item_attributes['mime_type'] === 'oembed/spotify'
+                    ||
+                    $album_item_attributes['mime_type'] === 'oembed/soundcloud'
+                    ) {
+                    $poster_th_id = get_post_meta($album_th_id, "_uncode_poster_image", true);
+                    $poster_attributes = uncode_get_media_info($poster_th_id);
+                    $poster_metavalues = unserialize($poster_attributes->metadata);
+                    $album_item_dimensions .= '"width":"' . esc_attr($poster_metavalues['width']) . '",';
+                    $album_item_dimensions .= '"height":"' . esc_attr($poster_metavalues['height']) . '",';
+                    $resize_album_item = wp_get_attachment_image_src($poster_th_id, 'medium');
+                    $album_item_dimensions .= '"thumbnail":"' . esc_url($resize_album_item[0]) . '",';
+                    } else {
+                    $album_item_dimensions .= '"width":"' . esc_attr($album_item_attributes['width']) . '",';
+                    $album_item_dimensions .= '"height":"' . esc_attr($album_item_attributes['height']) . '",';
+                    $resize_album_item = wp_get_attachment_image_src($thumb_attributes->id, 'medium');
+                    $album_item_dimensions .= '"thumbnail":"' . esc_url($resize_album_item[0]) . '",';
+                    }
+
+                    $album_item_dimensions .= '"url":"' . esc_url($album_item_attributes['url']) . '"';
+                    }
+                    $album_item_dimensions .= '},';
+                    }
+                    }
+                    }
+                    $album_item_dimensions = trim(preg_replace('/\t+/', '', $album_item_dimensions));//remove tabs from
+                    string
+                    $data_values .= ' data-album=\'[' . rtrim($album_item_dimensions, ',') . ']\'';
+                    }
+                    if ( isset($block_data['lb_index']) ) {
+                    $data_values .= ' data-lb-index="' . $block_data['lb_index'] . '"';
+                    }
+
+                    if ( isset( $inline_hidden ) ) {
+                    $output .= $inline_hidden;
+                    }
+
+                    $output .= '<a tabindex="-1"
+                        href="'. (($media_type === 'image') ? $create_link : '').'"'.((count($a_classes) > 0 ) ? '
+                        class="'.trim(implode(' ', $a_classes)).'"' : '').$lightbox_data.$data_values.'>';
+
+                        endif;
+
+                        if (is_object($media_attributes) && $media_attributes->post_mime_type !== 'oembed/facebook' &&
+                        $media_attributes->post_mime_type !== 'oembed/twitter') :
+
+                        $single_limit_width = isset($block_data['limit-width']) && $block_data['limit-width'] === true ?
+                        ' limit-width' : '';
+
+                        $output .= '<div class="t-entry-visual-overlay"' . $overlay_blend . '>
+                            <div class="t-entry-visual-overlay-in '.$overlay_color.'"' . $overlay_opacity . '></div>
+                        </div>
+                        <div class="t-overlay-wrap' . $single_limit_width . '">
+                            <div class="t-overlay-inner">
+                                <div class="t-overlay-content">
+                                    <div
+                                        class="t-overlay-text '.$block_data['text_padding']. $sep_extra . $inline_price .'">
+                                        ';
+
+                                        if ($single_text === 'overlay'):
+
+                                        $output .= $entry;
+
+                                        else:
+
+                                        $output .= '<div class="t-entry t-single-line">';
+
+                                            if (array_key_exists('icon',$layout)) :
+
+                                            if ($single_icon !== '') :
+
+                                            $output .= '<i class="'.$single_icon. $icon_size . ' t-overlay-icon"></i>';
+
+                                            endif;
+
+                                            endif;
+
+                                            $output .= '</div>';
+
+                                        endif;
+
+                                        $output .= '</div>
+                                </div>
+                            </div>
+                        </div>';
+
+                        endif;
+
+                        if (array_key_exists('media',$layout)) :
+
+                        if ( ( isset($layout['media'][3]) && $layout['media'][3] === 'show-sale' ) || ( is_archive() &&
+                        !isset($layout['media'][3]) ) ) {
+                        global $woocommerce;
+                        if ( class_exists( 'WooCommerce' ) ) {
+                        if (isset($block_data['id'])) {
+                        $product = wc_get_product($block_data['id']);
+                        $post_obj = get_post($product);
+                        if ( is_object($product) ) {
+                        if ( $product->is_on_sale() ) {
+                        $output .= apply_filters( 'woocommerce_sale_flash', '<div class="woocommerce"><span
+                                class="onsale">' . esc_html__( 'Sale!', 'woocommerce' ) . '</span></div>', $post_obj,
+                        $product );
+                        } elseif ( ! $product->is_in_stock() ) {
+                        $output .= apply_filters( 'uncode_woocommerce_out_of_stock', '<div class="font-ui">
+                            <div class="woocommerce"><span class="soldout">' . esc_html__( 'Out of stock', 'woocommerce'
+                                    ) . '</span></div>
+                        </div>', $post_obj, $product );
+                        }
+                        }
+                        }
+                        }
+                        }
+
+                        if ($style_preset === 'metro'):
+
+                        if ($single_elements_click === 'yes' && $media_type === 'image'):
+
+                        $a_classes[] = 't-background-click';
+
+                        $data_values = !empty($block_data['link']['target']) ? '
+                        target="'.trim($block_data['link']['target']).'"' : '';
+
+                        $output .= '<a
+                            href="'. (($media_type === 'image') ? $create_link : '').'"'.((count($a_classes) > 0 ) ? '
+                            class="'.trim(implode(' ', $a_classes)).'"' : '').$lightbox_data.$data_values.'>
+                            <div class="t-background-cover'.($adaptive_async_class !== '' ? $adaptive_async_class : '').'"
+                                style="background-image:url(\''.$item_media.'\')"'.($adaptive_async_data !== '' ? $adaptive_async_data : '').'>
+                            </div>
+                        </a>';
+
+                        else:
+
+                        if ($media_type === 'image') :
+
+                        $output .= '<div
+                            class="t-background-cover'.($adaptive_async_class !== '' ? $adaptive_async_class : '').'"
+                            style="background-image:url(\''.$item_media.'\')"'.($adaptive_async_data !== '' ? $adaptive_async_data : '').'>
+                        </div>';
+
+                        else:
+
+                        $output .= '<div
+                            class="fluid-object '. trim(implode(' ', $title_classes)) . ' '.$object_class.'"'.$dummy_oembed.'>
+                            '.$media_code.'</div>';
+
+                        endif;
+
+                        endif;
+
+                        else:
+
+                        if ($media_type === 'image') :
 
                         global $post;
-						$media_alt = (isset($media_attributes->alt)) ? $media_attributes->alt : '';
-                        if ( isset($block_data['id']) && class_exists( 'WooCommerce' ) && $product = wc_get_product($block_data['id']) ) {
-                            $product_id = $product instanceof WC_Data ? $product->get_id() : $product->id;
+                        $media_alt = (isset($media_attributes->alt)) ? $media_attributes->alt : '';
+                        if ( isset($block_data['id']) && class_exists( 'WooCommerce' ) && $product =
+                        wc_get_product($block_data['id']) ) {
+                        $product_id = $product instanceof WC_Data ? $product->get_id() : $product->id;
                         } else {
-                            $product_id = $post ? $post->ID : false;
+                        $product_id = $post ? $post->ID : false;
                         }
-						if ( $media_poster ) {
-							$poster_th_id = get_post_meta($item_thumb_id, "_uncode_poster_image", true);
-							$media_attributes = uncode_get_media_info($poster_th_id);
-							$media_alt = (isset($media_attributes->alt)) ? $media_attributes->alt : '';
-						}
-                        $output .= apply_filters( 'post_thumbnail_html', '<img' . ( $adaptive_async_class !== '' ? ' class="' . trim( $adaptive_async_class ) . '"' : '' ) . ' src="' . $item_media . '" width="' . $image_orig_w . '" height="' . $image_orig_h . '" alt="' . $media_alt . '"' . ( $adaptive_async_data !== '' ? $adaptive_async_data : '' ) . ' />', $product_id, $item_thumb_id, array($image_orig_w, $image_orig_h), '');
+                        if ( $media_poster ) {
+                        $poster_th_id = get_post_meta($item_thumb_id, "_uncode_poster_image", true);
+                        $media_attributes = uncode_get_media_info($poster_th_id);
+                        $media_alt = (isset($media_attributes->alt)) ? $media_attributes->alt : '';
+                        }
+                        $output .= apply_filters( 'post_thumbnail_html', '<img' . ( $adaptive_async_class !==''
+                            ? ' class="' . trim( $adaptive_async_class ) . '"' : '' ) . ' src="' . $item_media
+                            . '" width="' . $image_orig_w . '" height="' . $image_orig_h . '" alt="' . $media_alt . '"'
+                            . ( $adaptive_async_data !=='' ? $adaptive_async_data : '' ) . ' />' , $product_id,
+                            $item_thumb_id, array($image_orig_w, $image_orig_h), '' ); elseif ($media_type==='email' ) :
+                            $output .=get_avatar($media_attributes->guid, $image_orig_w);
 
-					elseif ($media_type === 'email') :
+                            else:
+                            if ($object_class !== '') {
+                            $title_classes[] = $object_class;
+                            }
+                            if (isset($media_attributes->post_mime_type)) {
+                            switch ($media_attributes->post_mime_type) {
+                            case 'oembed/svg':
+                            case 'image/svg+xml':
+                            $title_classes = array('fluid-svg');
+                            break;
+                            case 'oembed/facebook':
+                            case 'oembed/twitter':
+                            $title_classes[] = 'social-object';
+                            if ($media_attributes->post_mime_type === 'oembed/facebook') {
+                            $title_classes[] = 'facebook-object';
+                            } else {
+                            if ($media_attributes->social_original) {
+                            $title_classes[] = 'twitter-object';
+                            } else {
+                            $title_classes[] = 'fluid-object';
+                            }
+                            }
+                            $dummy_oembed = '';
+                            break;
+                            default:
+                            if ( uncode_privacy_allow_content( $consent_id ) !== false ) {
+                            $title_classes[] = 'fluid-object';
+                            }
+                            break;
+                            }
+                            } else {
+                            $title_classes[] = 'fluid-object';
+                            }
 
-						$output .= get_avatar($media_attributes->guid, $image_orig_w);
+                            if ( uncode_privacy_allow_content( $consent_id ) === false ) {
+                            $title_classes[] = 'pushed';
+                            }
 
-					else:
-						if ($object_class !== '') {
-							$title_classes[] = $object_class;
-						}
-						if (isset($media_attributes->post_mime_type)) {
-							switch ($media_attributes->post_mime_type) {
-								case 'oembed/svg':
-								case 'image/svg+xml':
-									$title_classes = array('fluid-svg');
-								break;
-								case 'oembed/facebook':
-								case 'oembed/twitter':
-									$title_classes[] = 'social-object';
-									if ($media_attributes->post_mime_type === 'oembed/facebook') {
-										$title_classes[] = 'facebook-object';
-									} else {
-										if ($media_attributes->social_original) {
-											$title_classes[] = 'twitter-object';
-										} else {
-											$title_classes[] = 'fluid-object';
-										}
-									}
-									$dummy_oembed = '';
-								break;
-								default:
-									if ( uncode_privacy_allow_content( $consent_id ) !== false ) {
-										$title_classes[] = 'fluid-object';
-									}
-									break;
-							}
-						} else {
-							$title_classes[] = 'fluid-object';
-						}
+                            $output .= '<div class="'. trim(implode(' ', $title_classes)) . '"'.$dummy_oembed.'>
+                                '.$media_code.'</div>';
 
-						if ( uncode_privacy_allow_content( $consent_id ) === false ) {
-							$title_classes[] = 'pushed';
-						}
+                            endif;
 
-						$output .= 			'<div class="'. trim(implode(' ', $title_classes)) . '"'.$dummy_oembed.'>'.$media_code.'</div>';
+                            endif;
 
-					endif;
+                            endif;
 
-				endif;
+                            if (($single_text !== 'overlay' || $single_elements_click !== 'yes') && $media_type ===
+                            'image'):
 
-			endif;
+                            $output .= '
+                    </a>';
 
-			if (($single_text !== 'overlay' || $single_elements_click !== 'yes') && $media_type === 'image'):
+                    endif;
 
-				$output .= '</a>';
+                    if (class_exists( 'WooCommerce' ) && $is_product) {
+                    global $product;
+                    $product = wc_get_product($block_data['id']);
+                    if (!empty($product)) {
+                    if ( ( get_option('woocommerce_hide_out_of_stock_items') == 'yes' && ! $product->is_in_stock() ) ||
+                    ! $product->is_visible() ) {
+                    return;
+                    }
+                    $product_add_to_cart = sprintf( '<a href="%s" rel="nofollow" data-product_id="%s"
+                        data-product_sku="%s" class="%s %s product_type_%s product_button_loop"><span>%s</span></a>',
+                    esc_url( $product->add_to_cart_url() ),
+                    esc_attr( $block_data['id'] ),
+                    esc_attr( $product->get_sku() ),
+                    $product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
+                    $product->supports( 'ajax_add_to_cart' ) && get_option('woocommerce_enable_ajax_add_to_cart') ==
+                    'yes' ? 'ajax_add_to_cart' : '',
+                    esc_attr( $product->get_type() ),
+                    esc_html( $product->add_to_cart_text())
+                    );
 
-			endif;
+                    $output .= '<div class="add-to-cart-overlay">'.$product_add_to_cart.'</div>';
+                    }
 
-			if (class_exists( 'WooCommerce' ) && $is_product) {
-				global $product;
-				$product = wc_get_product($block_data['id']);
-				if (!empty($product)) {
-					if ( ( get_option('woocommerce_hide_out_of_stock_items') == 'yes' && ! $product->is_in_stock() ) || ! $product->is_visible() ) {
-						return;
-					}
-					$product_add_to_cart = sprintf( '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" class="%s %s product_type_%s product_button_loop"><span>%s</span></a>',
-						esc_url( $product->add_to_cart_url() ),
-						esc_attr( $block_data['id'] ),
-						esc_attr( $product->get_sku() ),
-						$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-						$product->supports( 'ajax_add_to_cart' ) && get_option('woocommerce_enable_ajax_add_to_cart') == 'yes' ? 'ajax_add_to_cart' : '',
-						esc_attr( $product->get_type() ),
-						esc_html( $product->add_to_cart_text())
-					);
+                    }
 
-					$output .= '<div class="add-to-cart-overlay">'.$product_add_to_cart.'</div>';
-				}
+                    $output .= '</div>
+            </div>
+        </div>';
 
-			}
+        endif;
 
-			$output .= '</div>
-				</div>
-			</div>';
+        if ( ( $single_text === 'under' && $layoutLast !== 'media' ) || ( $single_text === 'lateral' ) ) :
 
-		endif;
+        $output .= $entry;
 
-		if ( ( $single_text === 'under' && $layoutLast !== 'media' ) || ( $single_text === 'lateral' ) ) :
+        endif;
 
-			$output .= $entry;
+        if ( ot_get_option('_uncode_woocommerce_hooks') === 'on' && $is_product ) {
+        ob_start();
+        do_action( 'woocommerce_after_shop_loop_item_title');
+        $output .= ob_get_clean();
+        }
 
-		endif;
+        $output .= '</div>
+</div>';
 
-		if ( ot_get_option('_uncode_woocommerce_hooks') === 'on' && $is_product ) {
-			ob_start();
-			do_action( 'woocommerce_after_shop_loop_item_title');
-			$output .= ob_get_clean();
-		}
+if ( ot_get_option('_uncode_woocommerce_hooks') === 'on' && $is_product ) {
+ob_start();
+do_action( 'woocommerce_after_shop_loop_item');
+$output .= ob_get_clean();
+}
 
-		$output .= 		'</div>
-					</div>';
+do_action( 'uncode_create_single_block' );
 
-		if ( ot_get_option('_uncode_woocommerce_hooks') === 'on' && $is_product ) {
-			ob_start();
-			do_action( 'woocommerce_after_shop_loop_item');
-			$output .= ob_get_clean();
-		}
-
-		do_action( 'uncode_create_single_block' );
-
-		$post = $or_post;
-		return $output;
-	}
+$post = $or_post;
+return $output;
+}
 }
 
 /**
- * Create post info HTML
- */
+* Create post info HTML
+*/
 if (!function_exists('uncode_post_info')) {
-	function uncode_post_info() {
-		$categories = get_the_category();
-		$separator = ', ';
-		$output = array();
-		$cat_output = '';
+function uncode_post_info() {
+$categories = get_the_category();
+$separator = ', ';
+$output = array();
+$cat_output = '';
 
-		$output[] = '<div class="date-info">' . get_the_date() . '</div>';
+$output[] = '<div class="date-info">' . get_the_date() . '</div>';
 
-		if($categories){
-			foreach($categories as $category) {
-				$cat_output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( esc_html__( "View all posts in %s", 'uncode' ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
-			}
-			$output[] = '<div class="category-info"><span>|</span>' . esc_html__('In','uncode') . ' ' . trim($cat_output, $separator) . '</div>';
-		}
+if($categories){
+foreach($categories as $category) {
+$cat_output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( esc_html__( " View
+    all posts in %s", 'uncode' ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+}
+$output[] = '<div class="category-info"><span>|</span>' . esc_html__('In','uncode') . ' ' . trim($cat_output,
+    $separator) . '</div>';
+}
 
-		$output[] = '<div class="author-info"><span>|</span>' . esc_html__('By','uncode') . ' ' . '<a href="'.get_author_posts_url( get_the_author_meta( 'ID' ) ).'">'.get_the_author().'</a></div>';
+$output[] = '<div class="author-info"><span>|</span>' . esc_html__('By','uncode') . ' ' . '<a
+        href="'.get_author_posts_url( get_the_author_meta( 'ID' ) ).'">'.get_the_author().'</a></div>';
 
-		return '<div class="post-info">' . implode('', $output) . '</div>';
-	}
+return '<div class="post-info">' . implode('', $output) . '</div>';
+}
 }
 
 /**
- * Create portfolio info HTML
- */
+* Create portfolio info HTML
+*/
 if (!function_exists('uncode_portfolio_info')) {
-	function uncode_portfolio_info() {
-		$categories = wp_get_object_terms( get_the_id(), 'portfolio_category' );
-		$separator = ', ';
-		$output = array();
-		$cat_output = '';
+function uncode_portfolio_info() {
+$categories = wp_get_object_terms( get_the_id(), 'portfolio_category' );
+$separator = ', ';
+$output = array();
+$cat_output = '';
 
-		if($categories){
+if($categories){
 
-			foreach ( $categories as $cat ) {
-				$cat_output .= '<a href="'.get_term_link($cat->term_id, $cat->taxonomy).'" title="' . esc_attr( sprintf( esc_html__( "View all posts in %s", 'uncode' ), $cat->name ) ) . '">'.$cat->name.'</a>'.$separator;
-			}
-			$output[] = '<div class="category-info">' . esc_html__('In','uncode') . ' ' . trim($cat_output, $separator) . '</div>';
-		}
-		return '<div class="post-info">' . implode('', $output) . '</div>';
-	}
+foreach ( $categories as $cat ) {
+$cat_output .= '<a href="'.get_term_link($cat->term_id, $cat->taxonomy).'" title="' . esc_attr( sprintf( esc_html__( "
+    View all posts in %s", 'uncode' ), $cat->name ) ) . '">'.$cat->name.'</a>'.$separator;
+}
+$output[] = '<div class="category-info">' . esc_html__('In','uncode') . ' ' . trim($cat_output, $separator) . '</div>';
+}
+return '<div class="post-info">' . implode('', $output) . '</div>';
+}
 }
 
 /**
- * Create info box HTML
- */
+* Create info box HTML
+*/
 if (!function_exists('uncode_get_info_box')) {
-	function uncode_get_info_box($out, $atts) {
-		global $post;
-		$post_type = get_post_type();
-		$separator = ', ';
-		$author_id = !get_the_author_meta( 'ID' ) ? $post->post_author : get_the_author_meta( 'ID' );
-		$output = '';
+function uncode_get_info_box($out, $atts) {
+global $post;
+$post_type = get_post_type();
+$separator = ', ';
+$author_id = !get_the_author_meta( 'ID' ) ? $post->post_author : get_the_author_meta( 'ID' );
+$output = '';
 
-		switch ($out) {
-			case 'date':
-				return '<span class="date-info">' . get_the_date() . '</span>';
-				break;
+switch ($out) {
+case 'date':
+return '<span class="date-info">' . get_the_date() . '</span>';
+break;
 
-			case 'author':
-				$output .= '<span class="author-wrap">';
-				if ( $atts !== false && is_array( $atts ) && isset($atts['size']) && $atts['size'] !== false ) {
-					$output .= '<a href="'.get_author_posts_url( $author_id ).'"><span class="uncode-ib-avatar uncode-ib-avatar-size-' . $atts['size'][1] . '">' . get_avatar( $author_id, $atts['size'][0], false, get_the_author_meta( 'display_name' , $author_id ) ) . '</span></a>';
-				}
-				$by_prefix = esc_html__('By','uncode');
-				if ( $atts !== false && is_array( $atts ) && isset($atts['no_prefix']) && $atts['no_prefix'] === true ) {
-					$by_prefix = '';
-				}
-				$output .= '<span class="author-info">' . $by_prefix . ' ' . '<a href="'.get_author_posts_url( $author_id ).'">'.get_the_author_meta( 'display_name' , $author_id ).'</a></span>';
-				$output .= '</span>';
-				return $output;
-				break;
+case 'author':
+$output .= '<span class="author-wrap">';
+    if ( $atts !== false && is_array( $atts ) && isset($atts['size']) && $atts['size'] !== false ) {
+    $output .= '<a href="'.get_author_posts_url( $author_id ).'"><span
+            class="uncode-ib-avatar uncode-ib-avatar-size-' . $atts['size'][1] . '">' . get_avatar( $author_id,
+            $atts['size'][0], false, get_the_author_meta( 'display_name' , $author_id ) ) . '</span></a>';
+    }
+    $by_prefix = esc_html__('By','uncode');
+    if ( $atts !== false && is_array( $atts ) && isset($atts['no_prefix']) && $atts['no_prefix'] === true ) {
+    $by_prefix = '';
+    }
+    $output .= '<span class="author-info">' . $by_prefix . ' ' . '<a
+            href="'.get_author_posts_url( $author_id ).'">'.get_the_author_meta( 'display_name' , $author_id
+            ).'</a></span>';
+    $output .= '</span>';
+return $output;
+break;
 
-			case 'comments':
-				$num_comments = get_comments_number( get_the_id() );
-				if ( $num_comments > 0 ) {
-					$output .= '<a href="#commenta-area">';
-				} else {
-					$output .= '<span>';
-				}
-				$output .= $num_comments.' '._nx( 'Comment', 'Comments', $num_comments, 'comments', 'uncode' );
-				if ( $num_comments > 0 ) {
-					$output .= '</a>';
-				} else {
-					$output .= '</span>';
-				}
-				return $output;
-				break;
+case 'comments':
+$num_comments = get_comments_number( get_the_id() );
+if ( $num_comments > 0 ) {
+$output .= '<a href="#commenta-area">';
+    } else {
+    $output .= '<span>';
+        }
+        $output .= $num_comments.' '._nx( 'Comment', 'Comments', $num_comments, 'comments', 'uncode' );
+        if ( $num_comments > 0 ) {
+        $output .= '</a>';
+} else {
+$output .= '</span>';
+}
+return $output;
+break;
 
-			case 'reading':
-				$time = uncode_estimated_reading_time( get_the_id() );
-				return $time;
-				break;
+case 'reading':
+$time = uncode_estimated_reading_time( get_the_id() );
+return $time;
+break;
 
-			case 'tax':
-			default:
-				$tax_class = '';
-				if ( $post_type === 'post' ) {
-					$categories = get_the_category();
-				} else {
-					$custom_taxonomy = apply_filters( 'uncode_cpt_taxonomy_for_info_box', "{$post_type}_category" );
-					$categories      = wp_get_object_terms( get_the_id(), $custom_taxonomy );
+case 'tax':
+default:
+$tax_class = '';
+if ( $post_type === 'post' ) {
+$categories = get_the_category();
+} else {
+$custom_taxonomy = apply_filters( 'uncode_cpt_taxonomy_for_info_box', "{$post_type}_category" );
+$categories = wp_get_object_terms( get_the_id(), $custom_taxonomy );
 
-					if ( is_wp_error( $categories ) ) {
-						// Fallback to native post categories if
-						// the CPt has not a custom taxonomy
-						$categories = get_the_category();
-					}
-				}
-				if ( ! is_wp_error( $categories ) ) {
-					foreach( $categories as $category ) {
-						$output .= '<a href="'.get_term_link( $category->term_id ).'" title="' . esc_attr( sprintf( esc_html__( "View all posts in %s", 'uncode' ), $category->name ) ) . '" class="' . $tax_class . '">'.$category->name.'</a>'.$separator;
-					}
-				}
-				if ( $output !== '' ) {
-					$in_prefix = '';
-					if ( $atts !== true ) {
-						$in_prefix = esc_html__('In','uncode');
-					}
-					return '<span class="category-info">' . $in_prefix . ' ' . trim($output, $separator) . '</span>';
-				}
-				break;
-		}
+if ( is_wp_error( $categories ) ) {
+// Fallback to native post categories if
+// the CPt has not a custom taxonomy
+$categories = get_the_category();
+}
+}
+if ( ! is_wp_error( $categories ) ) {
+foreach( $categories as $category ) {
+$output .= '<a href="'.get_term_link( $category->term_id ).'" title="' . esc_attr( sprintf( esc_html__( " View all posts
+    in %s", 'uncode' ), $category->name ) ) . '" class="' . $tax_class . '">'.$category->name.'</a>'.$separator;
+}
+}
+if ( $output !== '' ) {
+$in_prefix = '';
+if ( $atts !== true ) {
+$in_prefix = esc_html__('In','uncode');
+}
+return '<span class="category-info">' . $in_prefix . ' ' . trim($output, $separator) . '</span>';
+}
+break;
+}
 
-	}
+}
 }
 
 /**
- * Build breadcrumb
- */
+* Build breadcrumb
+*/
 if (!function_exists('uncode_breadcrumbs')) {
-	function uncode_breadcrumbs($navigation_index = '') {
+function uncode_breadcrumbs($navigation_index = '') {
 
-		if ( apply_filters( 'uncode_woocommerce_breadcrumbs', false ) && function_exists( 'is_woocommerce' ) && is_woocommerce() && function_exists( 'woocommerce_breadcrumb' ) ) {
+if ( apply_filters( 'uncode_woocommerce_breadcrumbs', false ) && function_exists( 'is_woocommerce' ) && is_woocommerce()
+&& function_exists( 'woocommerce_breadcrumb' ) ) {
 
-			$args = apply_filters( 'woocommerce_breadcrumb_defaults', array(
-				'delimiter'   => '',
-				'wrap_before' => '<ol class="breadcrumb header-subtitle">',
-				'wrap_after'  => '</ol>',
-				'before'      => '<li>',
-				'after'       => '</li>',
-				'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
-			) );
+$args = apply_filters( 'woocommerce_breadcrumb_defaults', array(
+'delimiter' => '',
+'wrap_before' => '<ol class="breadcrumb header-subtitle">',
+    'wrap_after' => '</ol>',
+'before' => '<li>',
+    'after' => '</li>',
+'home' => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+) );
 
-			ob_start();
-			woocommerce_breadcrumb($args);
-			return ob_get_clean();
+ob_start();
+woocommerce_breadcrumb($args);
+return ob_get_clean();
 
-		}
-
-		/* === OPTIONS === */
-		$text['home'] = esc_html__('Home', 'uncode');
-
-		// text for the 'Home' link
-		$text['category'] = esc_html__('Archive by Category', 'uncode') . ' ' . '"%s"';
-
-		// text for a category page
-		$text['search'] = esc_html__('Search Results for', 'uncode') . ' ' . '"%s" Query';
-
-		// text for a search results page
-		$text['tag'] = esc_html__('Posts Tagged', 'uncode') . ' ' . '"%s"';
-
-		// text for a tag page
-		$text['author'] = esc_html__('Articles Posted by', 'uncode') . ' ' . '%s';
-
-		// text for an author page
-		$text['404'] = esc_html__('Error 404', 'uncode');
-
-		// text for the 404 page
-
-		$show_current = 1;
-
-		// 1 - show current post/page/category title in breadcrumbs, 0 - don't show
-		$show_on_home = 0;
-
-		// 1 - show breadcrumbs on the homepage, 0 - don't show
-		$show_home_link = 1;
-
-		// 1 - show the 'Home' link, 0 - don't show
-		$show_title = 1;
-
-		// 1 - show the title for the links, 0 - don't show
-		$delimiter = '';
-
-		// delimiter between crumbs
-		$before = '<li class="current">';
-
-		// tag before the current crumb
-		$after = '</li>';
-
-		// tag after the current crumb
-		/* === END OF OPTIONS === */
-
-		global $post;
-		$home_link = esc_url( apply_filters( 'uncode_breadcrumbs_home_url', home_url( '/' ) ) );
-		$link_before = '<li>';
-		$link_after = '</li>';
-		$link_attr = '';
-		$link = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after;
-
-		$parent_id = '';
-		if (is_object($post) && isset($post->post_parent)) {
-			$parent_id = $parent_id_2 = $post->post_parent;
-		}
-
-		$frontpage_id = get_option('page_on_front');
-		$html = '';
-
-		if (is_home() || is_front_page()) {
-
-			if ($show_on_home == 1) {
-				$html = '<ol><li><a href="' . $home_link . '">' . $text['home'] . '</a></li></ol>';
-			}
-		} else {
-
-			$html = '<ol class="breadcrumb header-subtitle">';
-			if ($show_home_link == 1) {
-				$html.= '<li><a href="' . $home_link . '">' . $text['home'] . '</a></li>';
-				if ($frontpage_id == 0 || $parent_id != $frontpage_id) {
-					$html.= $delimiter;
-				}
-			}
-
-			if (is_category()) {
-				$this_cat = get_category(get_query_var('cat') , false);
-				if ($this_cat ->parent != 0) {
-					$cats = get_category_parents($this_cat->parent, TRUE, $delimiter);
-					if ($show_current == 0) {
-						$cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
-					}
-					$cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
-					$cats = str_replace('</a>', '</a>' . $link_after, $cats);
-					if ($show_title == 0) {
-						$cats = preg_replace('/ title="(.*?)"/', '', $cats);
-					}
-					$html.= $cats;
-				}
-				if ($show_current == 1) {
-					$html.= $before . sprintf($text['category'], single_cat_title('', false)) . $after;
-				}
-			} elseif (is_search()) {
-				$html.= $before . sprintf($text['search'], get_search_query()) . $after;
-			} elseif (is_day()) {
-				$html.= sprintf($link, get_year_link(get_the_time('Y')) , get_the_time('Y')) . $delimiter;
-				$html.= sprintf($link, get_month_link(get_the_time('Y') , get_the_time('m')) , get_the_time('F')) . $delimiter;
-				$html.= $before . get_the_time('d') . $after;
-			} elseif (is_month()) {
-				$html.= sprintf($link, get_year_link(get_the_time('Y')) , get_the_time('Y')) . $delimiter;
-				$html.= $before . get_the_time('F') . $after;
-			} elseif (is_year()) {
-				$html.= $before . get_the_time('Y') . $after;
-			} elseif (is_single() && !is_attachment()) {
-				if (get_post_type() != 'post') {
-					$parent_link = '';
-					$parent_title = '';
-					if ($navigation_index !== '') {
-						$parent_link = get_permalink($navigation_index);
-						$parent_title = get_the_title($navigation_index);
-					} else {
-						$post_type = get_post_type_object(get_post_type());
-						$slug = $post_type->rewrite;
-						//$parent_link = esc_url( $home_link . ltrim($slug['slug'],'/') );
-						$parent_link = get_post_type_archive_link(get_post_type());
-						$parent_title = $post_type->labels->name;
-					}
-					$html .= sprintf($link, $parent_link, $parent_title);
-					if ($show_current == 1) {
-						$html .= $delimiter . $before . get_the_title() . $after;
-					}
-				} else {
-					$cat = get_the_category();
-					if (isset($cat[0])) {
-						$cat = $cat[0];
-						$cats = get_category_parents($cat, TRUE, $delimiter);
-						if ($show_current == 0) {
-							$cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
-						}
-						$cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
-						$cats = str_replace('</a>', '</a>' . $link_after, $cats);
-						if ($show_title == 0) {
-							$cats = preg_replace('/ title="(.*?)"/', '', $cats);
-						}
-						$html.= $cats;
-						if ($show_current == 1) {
-							$html.= $before . get_the_title() . $after;
-						}
-					}
-				}
-			} elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
-
-				if (is_tax()) {
-					$tax = get_taxonomy( get_queried_object()->taxonomy );
-					if ($show_current == 1) {
-						$html.= $before . sprintf(($tax->hierarchical ? $text['category'] : $text['tag']), single_cat_title('', false)) . $after;
-					}
-				} else {
-					$post_type = get_post_type_object(get_post_type());
-
-					if ( $post_type ) {
-						$html.= $before . $post_type->labels->singular_name . $after;
-					}
-				}
-
-			} elseif (is_attachment()) {
-				$parent = get_post($parent_id);
-				$cat = get_the_category($parent->ID);
-				$cat = isset($cat[0]) ? $cat[0] : false;
-				if ($cat) {
-					$cats = get_category_parents($cat, TRUE, $delimiter);
-					$cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats);
-					$cats = str_replace('</a>', '</a>' . $link_after, $cats);
-					if ($show_title == 0) {
-						$cats = preg_replace('/ title="(.*?)"/', '', $cats);
-					}
-					$html.= $cats;
-				}
-				$html.= sprintf($link, get_permalink($parent) , $parent->post_title);
-				if ($show_current == 1) {
-					$html.= $delimiter . $before . get_the_title() . $after;
-				}
-			} elseif (is_page() && !$parent_id) {
-				if ($show_current == 1) {
-					$html.= $before . get_the_title() . $after;
-				}
-			} elseif (is_page() && $parent_id) {
-				if ($parent_id != $frontpage_id) {
-					$breadcrumbs = array();
-					while ($parent_id) {
-						$page = get_page($parent_id);
-						if ($parent_id != $frontpage_id) {
-							$breadcrumbs[] = sprintf($link, get_permalink($page
-								->ID) , get_the_title($page->ID));
-						}
-						$parent_id = $page->post_parent;
-					}
-					$breadcrumbs = array_reverse($breadcrumbs);
-					for ($i = 0;$i < count($breadcrumbs);$i++) {
-						$html.= $breadcrumbs[$i];
-						if ($i != count($breadcrumbs) - 1) {
-							$html.= $delimiter;
-						}
-					}
-				}
-				if ($show_current == 1) {
-					if ($show_home_link == 1 || ($parent_id_2 != 0 && $parent_id_2 != $frontpage_id)) {
-						$html.= $delimiter;
-					}
-					$html.= $before . get_the_title() . $after;
-				}
-			} elseif (is_tag()) {
-				$html.= $before . sprintf($text['tag'], single_tag_title('', false)) . $after;
-			} elseif (is_author()) {
-				global $author;
-				$userdata = get_userdata($author);
-				$html.= $before . sprintf($text['author'], $userdata->display_name) . $after;
-			} elseif (is_404()) {
-				$html.= $before . $text['404'] . $after;
-			} elseif (has_post_format() && !is_singular()) {
-				$html.= get_post_format_string(get_post_format());
-			}
-
-			if (get_query_var('paged')) {
-				if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()) {
-					$html.= ' (';
-				}
-				$html.= '<li class="paged">' . esc_html__('Page', 'uncode' ) . ' ' . get_query_var('paged') . '</li>';
-				if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()) {
-					$html.= ')';
-				}
-			}
-
-			$html.= '</ol>';
-		}
-
-		return $html;
-	}
 }
 
-/**
- * Get image size for the dummy space
- */
-if (!function_exists('uncode_get_dummy_size')) {
-	function uncode_get_dummy_size($id, $size = null) {
-		$attachment_meta = get_post_meta($id, '_wp_attachment_metadata', true);
-		if ($size != null && isset($attachment_meta['sizes']) && array_key_exists($size, $attachment_meta['sizes'])) {
-			$attachment_meta = $attachment_meta['sizes'][$size];
-		}
-		$width = (isset($attachment_meta['width']) && $attachment_meta['width'] !== '') ? $attachment_meta['width'] : 1;
-		$height = (isset($attachment_meta['height']) && $attachment_meta['height'] !== '') ? $attachment_meta['height'] : 0;
+/* === OPTIONS === */
+$text['home'] = esc_html__('Home', 'uncode');
 
-		$dummy = round(($height / $width) * 100, 2);
+// text for the 'Home' link
+$text['category'] = esc_html__('Archive by Category', 'uncode') . ' ' . '"%s"';
 
-		return array(
-			'dummy' => $dummy,
-			'width' => $width,
-			'height' => $height,
-		);
-	}
-}
+// text for a category page
+$text['search'] = esc_html__('Search Results for', 'uncode') . ' ' . '"%s" Query';
+
+// text for a search results page
+$text['tag'] = esc_html__('Posts Tagged', 'uncode') . ' ' . '"%s"';
+
+// text for a tag page
+$text['author'] = esc_html__('Articles Posted by', 'uncode') . ' ' . '%s';
+
+// text for an author page
+$text['404'] = esc_html__('Error 404', 'uncode');
+
+// text for the 404 page
+
+$show_current = 1;
+
+// 1 - show current post/page/category title in breadcrumbs, 0 - don't show
+$show_on_home = 0;
+
+// 1 - show breadcrumbs on the homepage, 0 - don't show
+$show_home_link = 1;
+
+// 1 - show the 'Home' link, 0 - don't show
+$show_title = 1;
+
+// 1 - show the title for the links, 0 - don't show
+$delimiter = '';
+
+// delimiter between crumbs
+$before = '<li class="current">';
+
+    // tag before the current crumb
+    $after = '</li>';
+
+// tag after the current crumb
+/* === END OF OPTIONS === */
+
+global $post;
+$home_link = esc_url( apply_filters( 'uncode_breadcrumbs_home_url', home_url( '/' ) ) );
+$link_before = '<li>';
+    $link_after = '</li>';
+$link_attr = '';
+$link = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after; $parent_id='' ; if (is_object($post)
+    && isset($post->post_parent)) {
+    $parent_id = $parent_id_2 = $post->post_parent;
+    }
+
+    $frontpage_id = get_option('page_on_front');
+    $html = '';
+
+    if (is_home() || is_front_page()) {
+
+    if ($show_on_home == 1) {
+    $html = '<ol>
+        <li><a href="' . $home_link . '">' . $text['home'] . '</a></li>
+    </ol>';
+    }
+    } else {
+
+    $html = '<ol class="breadcrumb header-subtitle">';
+        if ($show_home_link == 1) {
+        $html.= '<li><a href="' . $home_link . '">' . $text['home'] . '</a></li>';
+        if ($frontpage_id == 0 || $parent_id != $frontpage_id) {
+        $html.= $delimiter;
+        }
+        }
+
+        if (is_category()) {
+        $this_cat = get_category(get_query_var('cat') , false);
+        if ($this_cat ->parent != 0) {
+        $cats = get_category_parents($this_cat->parent, TRUE, $delimiter);
+        if ($show_current == 0) {
+        $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
+        }
+        $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats); $cats=str_replace('</a>', '</a>' .
+            $link_after, $cats);
+            if ($show_title == 0) {
+            $cats = preg_replace('/ title="(.*?)"/', '', $cats);
+            }
+            $html.= $cats;
+            }
+            if ($show_current == 1) {
+            $html.= $before . sprintf($text['category'], single_cat_title('', false)) . $after;
+            }
+            } elseif (is_search()) {
+            $html.= $before . sprintf($text['search'], get_search_query()) . $after;
+            } elseif (is_day()) {
+            $html.= sprintf($link, get_year_link(get_the_time('Y')) , get_the_time('Y')) . $delimiter;
+            $html.= sprintf($link, get_month_link(get_the_time('Y') , get_the_time('m')) , get_the_time('F')) .
+            $delimiter;
+            $html.= $before . get_the_time('d') . $after;
+            } elseif (is_month()) {
+            $html.= sprintf($link, get_year_link(get_the_time('Y')) , get_the_time('Y')) . $delimiter;
+            $html.= $before . get_the_time('F') . $after;
+            } elseif (is_year()) {
+            $html.= $before . get_the_time('Y') . $after;
+            } elseif (is_single() && !is_attachment()) {
+            if (get_post_type() != 'post') {
+            $parent_link = '';
+            $parent_title = '';
+            if ($navigation_index !== '') {
+            $parent_link = get_permalink($navigation_index);
+            $parent_title = get_the_title($navigation_index);
+            } else {
+            $post_type = get_post_type_object(get_post_type());
+            $slug = $post_type->rewrite;
+            //$parent_link = esc_url( $home_link . ltrim($slug['slug'],'/') );
+            $parent_link = get_post_type_archive_link(get_post_type());
+            $parent_title = $post_type->labels->name;
+            }
+            $html .= sprintf($link, $parent_link, $parent_title);
+            if ($show_current == 1) {
+            $html .= $delimiter . $before . get_the_title() . $after;
+            }
+            } else {
+            $cat = get_the_category();
+            if (isset($cat[0])) {
+            $cat = $cat[0];
+            $cats = get_category_parents($cat, TRUE, $delimiter);
+            if ($show_current == 0) {
+            $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
+            }
+            $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats); $cats=str_replace('</a>', '</a>' .
+                $link_after, $cats);
+                if ($show_title == 0) {
+                $cats = preg_replace('/ title="(.*?)"/', '', $cats);
+                }
+                $html.= $cats;
+                if ($show_current == 1) {
+                $html.= $before . get_the_title() . $after;
+                }
+                }
+                }
+                } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
+
+                if (is_tax()) {
+                $tax = get_taxonomy( get_queried_object()->taxonomy );
+                if ($show_current == 1) {
+                $html.= $before . sprintf(($tax->hierarchical ? $text['category'] : $text['tag']), single_cat_title('',
+                false)) . $after;
+                }
+                } else {
+                $post_type = get_post_type_object(get_post_type());
+
+                if ( $post_type ) {
+                $html.= $before . $post_type->labels->singular_name . $after;
+                }
+                }
+
+                } elseif (is_attachment()) {
+                $parent = get_post($parent_id);
+                $cat = get_the_category($parent->ID);
+                $cat = isset($cat[0]) ? $cat[0] : false;
+                if ($cat) {
+                $cats = get_category_parents($cat, TRUE, $delimiter);
+                $cats = str_replace('<a', $link_before . '<a' . $link_attr, $cats); $cats=str_replace('</a>', '</a>' .
+                    $link_after, $cats);
+                    if ($show_title == 0) {
+                    $cats = preg_replace('/ title="(.*?)"/', '', $cats);
+                    }
+                    $html.= $cats;
+                    }
+                    $html.= sprintf($link, get_permalink($parent) , $parent->post_title);
+                    if ($show_current == 1) {
+                    $html.= $delimiter . $before . get_the_title() . $after;
+                    }
+                    } elseif (is_page() && !$parent_id) {
+                    if ($show_current == 1) {
+                    $html.= $before . get_the_title() . $after;
+                    }
+                    } elseif (is_page() && $parent_id) {
+                    if ($parent_id != $frontpage_id) {
+                    $breadcrumbs = array();
+                    while ($parent_id) {
+                    $page = get_page($parent_id);
+                    if ($parent_id != $frontpage_id) {
+                    $breadcrumbs[] = sprintf($link, get_permalink($page
+                    ->ID) , get_the_title($page->ID));
+                    }
+                    $parent_id = $page->post_parent;
+                    }
+                    $breadcrumbs = array_reverse($breadcrumbs);
+                    for ($i = 0;$i < count($breadcrumbs);$i++) { $html.=$breadcrumbs[$i]; if ($i !=count($breadcrumbs) -
+                        1) { $html.=$delimiter; } } } if ($show_current==1) { if ($show_home_link==1 || ($parent_id_2
+                        !=0 && $parent_id_2 !=$frontpage_id)) { $html.=$delimiter; } $html.=$before . get_the_title() .
+                        $after; } } elseif (is_tag()) { $html.=$before . sprintf($text['tag'], single_tag_title('',
+                        false)) . $after; } elseif (is_author()) { global $author; $userdata=get_userdata($author);
+                        $html.=$before . sprintf($text['author'], $userdata->display_name) . $after;
+                        } elseif (is_404()) {
+                        $html.= $before . $text['404'] . $after;
+                        } elseif (has_post_format() && !is_singular()) {
+                        $html.= get_post_format_string(get_post_format());
+                        }
+
+                        if (get_query_var('paged')) {
+                        if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() ||
+                        is_author()) {
+                        $html.= ' (';
+                        }
+                        $html.= '<li class="paged">' . esc_html__('Page', 'uncode' ) . ' ' . get_query_var('paged') . '
+                        </li>';
+                        if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() ||
+                        is_author()) {
+                        $html.= ')';
+                        }
+                        }
+
+                        $html.= '</ol>';
+    }
+
+    return $html;
+    }
+    }
+
+    /**
+    * Get image size for the dummy space
+    */
+    if (!function_exists('uncode_get_dummy_size')) {
+    function uncode_get_dummy_size($id, $size = null) {
+    $attachment_meta = get_post_meta($id, '_wp_attachment_metadata', true);
+    if ($size != null && isset($attachment_meta['sizes']) && array_key_exists($size, $attachment_meta['sizes'])) {
+    $attachment_meta = $attachment_meta['sizes'][$size];
+    }
+    $width = (isset($attachment_meta['width']) && $attachment_meta['width'] !== '') ? $attachment_meta['width'] : 1;
+    $height = (isset($attachment_meta['height']) && $attachment_meta['height'] !== '') ? $attachment_meta['height'] : 0;
+
+    $dummy = round(($height / $width) * 100, 2);
+
+    return array(
+    'dummy' => $dummy,
+    'width' => $width,
+    'height' => $height,
+    );
+    }
+    }
