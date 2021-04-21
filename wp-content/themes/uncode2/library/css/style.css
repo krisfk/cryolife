@@ -14815,6 +14815,10 @@ body .header-wrapper .style-light.owl-prev .owl-nav-container {
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-font-smoothing: antialiased;
+    width: 100%;
+    height: 100%;
+    max-width: 532px;
+    max-height: 532px;
 }
 
 .tmb .t-entry-visual .pushed,
