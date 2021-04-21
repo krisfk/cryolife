@@ -157,4 +157,4 @@ require_once get_template_directory() . '/core/inc/related-posts.php';
 require_once get_template_directory() . '/core/inc/deprecated-functions.php';
 
 
-set_post_thumbnail_size(340, 340, true);
+// set_post_thumbnail_size(340, 340, true);
