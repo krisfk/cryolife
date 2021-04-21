@@ -2035,7 +2035,7 @@ if (!function_exists('uncode_create_single_block')) {
 
 						$data_values = !empty($block_data['link']['target']) ? ' target="'.trim($block_data['link']['target']).'"' : '';
 
-						$output .= 			'<a href="'. (($media_type === 'image') ? $create_link : '').'"'.((count($a_classes) > 0 ) ? ' class="abcde '.trim(implode(' ', $a_classes)).'"' : '').$lightbox_data.$data_values.'>
+						$output .= 			'<a href="'. (($media_type === 'image') ? $create_link : '').'"'.((count($a_classes) > 0 ) ? ' class="'.trim(implode(' ', $a_classes)).'"' : '').$lightbox_data.$data_values.'>
 												<div class="t-background-cover'.($adaptive_async_class !== '' ? $adaptive_async_class : '').'" style="background-image:url(\''.$item_media.'\')"'.($adaptive_async_data !== '' ? $adaptive_async_data : '').'></div>
 											</a>';
 
@@ -2069,7 +2069,7 @@ if (!function_exists('uncode_create_single_block')) {
 							$media_attributes = uncode_get_media_info($poster_th_id);
 							$media_alt = (isset($media_attributes->alt)) ? $media_attributes->alt : '';
 						}
-                        $output .= apply_filters( 'post_thumbnail_html', '<img' . ( $adaptive_async_class !== '' ? ' class="' . trim( $adaptive_async_class ) . '"' : '' ) . ' src="' . $item_media . '" width="' . $image_orig_w . '" height="' . $image_orig_h . '" alt="' . $media_alt . '"' . ( $adaptive_async_data !== '' ? $adaptive_async_data : '' ) . ' />', $product_id, $item_thumb_id, array($image_orig_w, $image_orig_h), '');
+                        $output .= apply_filters( 'post_thumbnail_html', '<img' . ( $adaptive_async_class !== '' ? ' class="abcde' . trim( $adaptive_async_class ) . '"' : '' ) . ' src="' . $item_media . '" width="' . $image_orig_w . '" height="' . $image_orig_h . '" alt="' . $media_alt . '"' . ( $adaptive_async_data !== '' ? $adaptive_async_data : '' ) . ' />', $product_id, $item_thumb_id, array($image_orig_w, $image_orig_h), '');
 
 					elseif ($media_type === 'email') :
 
