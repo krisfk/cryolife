@@ -2035,7 +2035,7 @@ if (!function_exists('uncode_create_single_block')) {
 
 						$data_values = !empty($block_data['link']['target']) ? ' target="'.trim($block_data['link']['target']).'"' : '';
 
-						$output .= 			'<a href="'. (($media_type === 'image') ? $create_link : '').'"'.((count($a_classes) > 0 ) ? ' class="'.trim(implode(' ', $a_classes)).'"' : '').$lightbox_data.$data_values.'>
+						$output .= 			'<a href="'. (($media_type === 'image') ? $create_link : '').'"'.((count($a_classes) > 0 ) ? ' class="ffffff '.trim(implode(' ', $a_classes)).'"' : '').$lightbox_data.$data_values.'>
 												<div class="t-background-cover'.($adaptive_async_class !== '' ? $adaptive_async_class : '').'" style="background-image:url(\''.$item_media.'\')"'.($adaptive_async_data !== '' ? $adaptive_async_data : '').'></div>
 											</a>';
 
@@ -2481,8 +2481,8 @@ if (!function_exists('uncode_breadcrumbs')) {
 					if ($show_current == 1) {
 						$html.= $before . sprintf(($tax->hierarchical ? $text['category'] : $text['tag']), single_cat_title('', false)) . $after;
 					}
-				} else {
-					$post_type = get_post_type_object(get_post_type());
+				} else { 
+				  	$post_type = get_post_type_object(get_post_type());
 
 					if ( $post_type ) {
 						$html.= $before . $post_type->labels->singular_name . $after;
