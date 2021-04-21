@@ -2069,7 +2069,7 @@ if (!function_exists('uncode_create_single_block')) {
 							$media_attributes = uncode_get_media_info($poster_th_id);
 							$media_alt = (isset($media_attributes->alt)) ? $media_attributes->alt : '';
 						}
-                        // $output .= apply_filters( 'post_thumbnail_html', '<img' . ( $adaptive_async_class !== '' ? ' class="' . trim( $adaptive_async_class ) . '"' : '' ) . ' src="' . $item_media . '" width="' . $image_orig_w . '" height="' . $image_orig_h . '" alt="' . $media_alt . '"' . ( $adaptive_async_data !== '' ? $adaptive_async_data : '' ) . ' />', $product_id, $item_thumb_id, array($image_orig_w, $image_orig_h), '');
+                        $output .= apply_filters( 'post_thumbnail_html', '<img' . ( $adaptive_async_class !== '' ? ' class="' . trim( $adaptive_async_class ) . '"' : '' ) . ' src="' . $item_media . '" width="' . $image_orig_w . '" height="' . $image_orig_h . '" alt="' . $media_alt . '"' . ( $adaptive_async_data !== '' ? $adaptive_async_data : '' ) . ' />', $product_id, $item_thumb_id, array($image_orig_w, $image_orig_h), '');
 
 					elseif ($media_type === 'email') :
 
