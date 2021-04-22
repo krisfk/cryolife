@@ -20054,6 +20054,11 @@ strong.black {
     display: none !important;
 }
 
+.max-width-1440-row {
+    max-width: 1440px;
+    margin: auto;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
