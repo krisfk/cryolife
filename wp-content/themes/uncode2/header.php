@@ -246,6 +246,8 @@ if (is_admin_bar_showing()) {
             audio,
             video {
                 font-family: 'BemboStd';
+                font-size: 17px;
+
             }
 
             p:lang(en),
