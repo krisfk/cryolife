@@ -257,6 +257,13 @@ if (is_admin_bar_showing()) {
             ol li:lang(en) {
                 font-size: 19px;
             }
+
+            .font-size-submenu,
+            .menu-horizontal ul ul a,
+            .vmenu-container ul ul a,
+            .uncode-cart .cart-desc {
+                font-size: 18px;
+            }
             </style>
             <?php
 			$remove_menu = (isset($metabox_data['_uncode_specific_menu_remove'][0]) && $metabox_data['_uncode_specific_menu_remove'][0] === 'on') ? true : false;
