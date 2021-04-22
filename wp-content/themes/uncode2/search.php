@@ -103,7 +103,7 @@ if ($page_header_type !== '' && $page_header_type !== 'none') {
 		echo '<div id="page-header">';
 		// echo uncode_remove_p_tag( $page_header->html );
 		?>
-<div class="w-100 d-table flexible-margin-first-row search-header-row">
+<div class="w-100 d-table flexible-margin-first-row search-header-row max-width-1440-row">
 
     <div class="search-header-col w-50">
 
