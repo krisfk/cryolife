@@ -9347,7 +9347,7 @@ body[class*='vmenu-']:not(.menu-overlay):not(.menu-offcanvas) .logo-container {
     body[class*='hmenu-']:not(.hormenu-position-right) .navbar-nav-last>ul>li:last-child>a,
     body[class*='hmenu-']:not(.hormenu-position-right) .navbar-nav-last>ul>li:only-child>a {
         margin-right: 0px;
-        padding-right: 10px !important;
+        padding-right: 0px !important;
     }
     body[class*='hmenu-']:not(.hormenu-position-right) .navbar-nav-last>ul>li:last-child>a i,
     body[class*='hmenu-']:not(.hormenu-position-right) .navbar-nav-last>ul>li:only-child>a i {
