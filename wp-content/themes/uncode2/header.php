@@ -246,7 +246,7 @@ if (is_admin_bar_showing()) {
             audio,
             video {
                 font-family: 'BemboStd';
-                font-size: 17px;
+                font-size: 19px;
 
             }
 
@@ -255,7 +255,7 @@ if (is_admin_bar_showing()) {
             .table td:lang(en),
             ul li:lang(en),
             ol li:lang(en) {
-                font-size: 17px;
+                font-size: 19px;
             }
             </style>
             <?php
