@@ -4250,7 +4250,8 @@ button[type='submit'],
 
 .font-family-menu,
 .menu-container ul.menu-smart a:not(.social-menu-link) {
-    font-family: Poppins;
+    /* font-family: Poppins; */
+    font-family: 'BemboStd';
 }
 
 @media (max-width: 959px) {
