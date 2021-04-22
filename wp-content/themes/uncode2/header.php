@@ -47,11 +47,7 @@ if (is_admin_bar_showing()) {
 
     <?php wp_head(); ?>
 
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/library/css/prettyPhoto.css' ?>"
-        type="text/css" media="screen" charset="utf-8" />
 
-    <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri().'/library/js/jquery.prettyPhoto.js';?>">
-    </script> -->
 </head>
 <?php
 	global $LOGO, $metabox_data, $onepage, $fontsizes, $is_redirect, $menutype;
@@ -139,7 +135,7 @@ if (is_admin_bar_showing()) {
 
 ?>
 
-< body <?php body_class($background_color_css); echo wp_kses_post( $body_attr ); ?>>
+<body <?php body_class($background_color_css); echo wp_kses_post( $body_attr ); ?>>
     <?php echo uncode_remove_p_tag( $background_div ) ; ?>
     <?php do_action( 'before' );
 
@@ -157,12 +153,12 @@ if (is_admin_bar_showing()) {
 	}
 
 	?>
-    < div class=" box-wrapper<?php echo esc_html($back_class); ?>" <?php echo wp_kses_post($background_style); ?>>
-        < div class="box-container<?php echo esc_attr($boxed_width); ?>">
-            < script type="text/javascript">
-                UNCODE.initBox();
-                </script>
-                <?php
+    <div class="box-wrapper<?php echo esc_html($back_class); ?>" <?php echo wp_kses_post($background_style); ?>>
+        <div class="box-container<?php echo esc_attr($boxed_width); ?>">
+            <script type="text/javascript">
+            UNCODE.initBox();
+            </script>
+            <?php
 			$remove_menu = (isset($metabox_data['_uncode_specific_menu_remove'][0]) && $metabox_data['_uncode_specific_menu_remove'][0] === 'on') ? true : false;
 			if ( ! $remove_menu ) {
 				if ($is_redirect !== true) {
@@ -177,10 +173,10 @@ if (is_admin_bar_showing()) {
 				}
 			}
 			?>
-                <script type="text/javascript">
-                UNCODE.fixMenuHeight();
-                </script>
-                <div class="main-wrapper">
-                    <div class="main-container">
-                        <div class="page-wrapper<?php if ($onepage) { echo ' main-onepage'; } ?>">
-                            <div class="sections-container">
+            <script type="text/javascript">
+            UNCODE.fixMenuHeight();
+            </script>
+            <div class="main-wrapper">
+                <div class="main-container">
+                    <div class="page-wrapper<?php if ($onepage) { echo ' main-onepage'; } ?>">
+                        <div class="sections-container">
