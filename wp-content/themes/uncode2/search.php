@@ -100,31 +100,7 @@ if ($page_header_type !== '' && $page_header_type !== 'none') {
 	$header_html = $page_header->html;
 	if ($header_html !== '') {
 		echo '<div id="page-header">';
-
-		?>
-<div class="w-100 d-table flexible-margin-first-row search-header-row">
-
-    <div class="search-header-col w-50">
-
-        <h2>Search</h2>
-    </div>
-    <div class="search-header-col w-50">
-
-        <img class="w-100" src="http://165.22.180.89/wp-content/uploads/2021/04/1.search.jpg" alt="">
-    </div>
-</div>
-
-<?php 
-
-if($_GET['s'])
-{
-	?>
-<div class="results-for-div"> Results for: <?php echo $_GET['s'];?></div>
-
-<?php
-	?>
-<?php
-		// echo uncode_remove_p_tag( $page_header->html );
+		echo uncode_remove_p_tag( $page_header->html );
 		echo '</div>';
 	}
 }
@@ -344,6 +320,6 @@ if (have_posts()):
           </div>
         </div>';
 
-// end of the loop. 
+// end of the loop.
 
 get_footer(); ?>
