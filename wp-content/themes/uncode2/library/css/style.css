@@ -19865,7 +19865,7 @@ h3.black {
     width: 120px;
     display: block;
     background: #000 url(../img/arrow-right.png) no-repeat 14px center !important;
-    padding: 8px 21px 8px 35px;
+    padding: 8px 21px 3px 35px;
     text-align: center;
     color: #fff !important;
     transition: 0.2s all;
@@ -19884,7 +19884,7 @@ h3.black {
     width: 120px;
     display: block;
     background: #000 url(../img/arrow-right.png) no-repeat 14px center !important;
-    padding: 8px 21px 8px 35px;
+    padding: 8px 21px 3px 35px;
     text-align: center;
     color: #fff !important;
     transition: 0.2s all;
@@ -19899,7 +19899,7 @@ h3.black {
     width: 140px;
     display: block;
     background: #fff;
-    padding: 8px 15px 8px 15px;
+    padding: 8px 15px 3px 15px;
     text-align: center;
     color: #000 !important;
     transition: 0.2s all;
