@@ -50,6 +50,8 @@ if (is_admin_bar_showing()) {
     <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/library/css/prettyPhoto.css' ?>"
         type="text/css" media="screen" charset="utf-8" />
 
+    <script type="text/javascript" src="<?php echo get_template_directory_uri().'/library/js/jquery.prettyPhoto.js' ?>">
+    </script>
 </head>
 <?php
 	global $LOGO, $metabox_data, $onepage, $fontsizes, $is_redirect, $menutype;
