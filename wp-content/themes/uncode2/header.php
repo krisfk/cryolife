@@ -245,7 +245,7 @@ if (is_admin_bar_showing()) {
             mark,
             audio,
             video {
-                font-family: 'BemboStd';
+                font-family: 'BemboStd' !important;
                 font-size: 19px;
 
             }
