@@ -247,6 +247,14 @@ if (is_admin_bar_showing()) {
             video {
                 font-family: 'BemboStd';
             }
+
+            p:lang(en),
+            .table th:lang(en),
+            .table td:lang(en),
+            ul li:lang(en),
+            ol li:lang(en) {
+                font-size: 17px;
+            }
             </style>
             <?php
 			$remove_menu = (isset($metabox_data['_uncode_specific_menu_remove'][0]) && $metabox_data['_uncode_specific_menu_remove'][0] === 'on') ? true : false;
