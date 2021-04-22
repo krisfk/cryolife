@@ -20056,7 +20056,8 @@ strong.black {
 
 .max-width-1440-row {
     max-width: 1440px;
-    margin: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 @media (max-width: 1920px) {
