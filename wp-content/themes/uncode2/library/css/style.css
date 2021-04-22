@@ -74,8 +74,14 @@ Animations
 ----------------------------------------------------------
 */
 
+@font-face {
+    font-family: BemboStd;
+    src: url(../fonts/BemboStd.otf) format("opentype");
+}
+
 html {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: 'BemboStd';
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
