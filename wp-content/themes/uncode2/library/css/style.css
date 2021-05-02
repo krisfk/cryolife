@@ -20067,6 +20067,10 @@ strong.black {
     margin-right: auto !important;
 }
 
+.video-dummy-img {
+    width: 100%;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
