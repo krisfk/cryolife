@@ -20069,6 +20069,14 @@ strong.black {
 
 .video-dummy-img {
     width: 100%;
+    position: relative;
+    opacity: 0;
+}
+
+.video-div {}
+
+.video-div-row {
+    position: relative;
 }
 
 @media (max-width: 1920px) {
