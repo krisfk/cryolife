@@ -20068,7 +20068,7 @@ strong.black {
 }
 
 .video-dummy-img {
-    width: 100%;
+    width: 100% !important;
     position: relative;
     opacity: 0;
 }
