@@ -641,6 +641,10 @@ hr.separator-break {
     text-align: center;
 }
 
+.mobile-home-know-more a {
+    color: #777777;
+}
+
 @media (max-width: 1499px) {
     .std-block-padding {
         padding: 54px 36px 54px 36px;
