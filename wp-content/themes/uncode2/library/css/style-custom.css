@@ -2604,7 +2604,8 @@ p .thank-you {
 .style-light table.variations label,
 .style-dark .style-light table.variations label {
     color: #f89178;
-    font-family: 'BemboStd';
+    /* font-family: 'BemboStd'; */
+    font-family: 'Open Sans', sans-serif;
 }
 
 
