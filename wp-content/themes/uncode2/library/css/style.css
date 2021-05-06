@@ -629,9 +629,16 @@ hr.separator-break {
     font-size: 28px
 }
 
-.home-mobile-h2 {}
+.home-mobile-h2 h2 {
+    font-size: 16px !important;
+    line-height: 1.2;
+    margin: 0;
+    color: #000 !important;
+}
 
-.mobile-home-know-more {}
+.mobile-home-know-more {
+    text-align: center;
+}
 
 @media (max-width: 1499px) {
     .std-block-padding {
@@ -16022,7 +16029,7 @@ body .header-wrapper .style-light.owl-prev .owl-nav-container {
 }
 
 .tmb-woocommerce.tmb .t-entry-inline-price .t-entry .price::before {
-    content: '–';
+    content: 'â€“';
     display: inline-block;
     padding: 0 0.325em;
 }
