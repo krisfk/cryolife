@@ -637,8 +637,13 @@ hr.separator-break {
     color: #000 !important;
 }
 
+.home-mobile-h2 {
+    display: none;
+}
+
 .mobile-home-know-more {
     text-align: center;
+    display: none;
 }
 
 .mobile-home-know-more a {
@@ -14329,6 +14334,13 @@ body .header-wrapper .style-light.owl-prev .owl-nav-container {
     #page-header .remove-menu-padding-mobile .header-content,
     #page-header .remove-menu-padding-mobile .uncont {
         padding-top: 0px !important;
+    }
+    .home-mobile-h2 {
+        display: block;
+    }
+    .mobile-home-know-more {
+        text-align: center;
+        display: block;
     }
 }
 
