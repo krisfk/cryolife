@@ -629,6 +629,10 @@ hr.separator-break {
     font-size: 28px
 }
 
+.home-mobile-h2 {}
+
+.mobile-home-know-more {}
+
 @media (max-width: 1499px) {
     .std-block-padding {
         padding: 54px 36px 54px 36px;
