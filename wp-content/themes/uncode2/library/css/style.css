@@ -14334,6 +14334,9 @@ body .header-wrapper .style-light.owl-prev .owl-nav-container {
     .inside-white-block.white-overlay-block-1 {
         display: none;
     }
+    .home .flexible-margin-first-row {
+        margin: 0;
+    }
     #page-header .remove-menu-padding-mobile .header-content,
     #page-header .remove-menu-padding-mobile .uncont {
         padding-top: 0px !important;
