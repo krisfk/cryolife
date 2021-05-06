@@ -625,6 +625,8 @@ hr.separator-break {
     padding: 72px 36px 72px 36px;
 }
 
+.statistic-row b {}
+
 @media (max-width: 1499px) {
     .std-block-padding {
         padding: 54px 36px 54px 36px;
