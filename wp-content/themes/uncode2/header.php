@@ -52,6 +52,9 @@ if (is_admin_bar_showing()) {
 
     <script type="text/javascript" src="<?php echo get_template_directory_uri().'/library/js/jquery.prettyPhoto.js' ?>">
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+
 </head>
 <?php
 	global $LOGO, $metabox_data, $onepage, $fontsizes, $is_redirect, $menutype;
@@ -245,8 +248,10 @@ if (is_admin_bar_showing()) {
             mark,
             audio,
             video {
-                font-family: 'BemboStd' !important;
+                /* font-family: 'BemboStd' !important; */
                 font-size: 19px;
+                font-family: 'Open Sans', sans-serif;
+
 
             }
 
