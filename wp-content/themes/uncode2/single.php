@@ -694,7 +694,7 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 	echo '</div>';
 	?>
 <div style="text-align:center;margin-top:20px;"><img
-        src="<?php echo get_template_directory_uri().'/library/img/pattern-bar.jpg';?>" alt=""></div>
+        src="<?php echo get_template_directory_uri().'/library/img/news_bar.jpg';?>" alt=""></div>
 
 <?php
 	
