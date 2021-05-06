@@ -14331,6 +14331,9 @@ body .header-wrapper .style-light.owl-prev .owl-nav-container {
 }
 
 @media (max-width: 960px) {
+    .inside-white-block.white-overlay-block-1 {
+        display: none;
+    }
     #page-header .remove-menu-padding-mobile .header-content,
     #page-header .remove-menu-padding-mobile .uncont {
         padding-top: 0px !important;
