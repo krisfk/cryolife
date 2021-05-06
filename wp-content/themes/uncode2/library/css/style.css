@@ -642,7 +642,7 @@ hr.separator-break {
 }
 
 .mobile-home-know-more a {
-    color: #777777;
+    color: #777777 !important;
 }
 
 @media (max-width: 1499px) {
