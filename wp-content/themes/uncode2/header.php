@@ -34,7 +34,7 @@ if (is_admin_bar_showing()) {
 <html class="<?php echo esc_attr($html_class); ?>" <?php language_attributes(); ?> xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>"> -->
     <?php if (wp_is_mobile()) : ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <?php else : ?>
@@ -54,6 +54,7 @@ if (is_admin_bar_showing()) {
     </script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
 </head>
 <?php

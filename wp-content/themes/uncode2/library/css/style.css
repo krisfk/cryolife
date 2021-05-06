@@ -13319,6 +13319,10 @@ div[class*='shift_y_neg'].shift_y_neg_single .isotope-filters ul.menu-smart>li>s
     margin-top: -72px !important;
 }
 
+.salesforce-form table {}
+
+.salesforce-form td {}
+
 @media (max-width: 959px) {
     .justified-wrapper.double-gutter {
         margin-top: -36px !important;
