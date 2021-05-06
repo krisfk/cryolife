@@ -13326,6 +13326,11 @@ div[class*='shift_y_neg'].shift_y_neg_single .isotope-filters ul.menu-smart>li>s
 .salesforce-form td {
     vertical-align: bottom;
     border: none;
+    width: 50%;
+}
+
+.salesforce-form td input {
+    width: 100%;
 }
 
 @media (max-width: 959px) {
