@@ -20266,4 +20266,13 @@ a marquee {
     h2 {
         text-align: center !important;
     }
+    .home-first-table {
+        display: block;
+    }
+    .home-first-table tr {
+        display: block;
+    }
+    .home-first-table tr td {
+        display: block;
+    }
 }
