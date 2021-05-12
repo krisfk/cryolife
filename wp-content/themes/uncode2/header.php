@@ -56,25 +56,26 @@ if (is_admin_bar_showing()) {
 
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
     <script type="text/javascript">
-    // var $ = jQuery;
-    // $(function() {
+    var $ = jQuery;
+    $(function() {
 
-    //     $(window).scroll(function() {
-    //         if ($(window).scrollTop() >= 18) {
-    //             $('.marquee-a').css({
-    //                 'position': 'fixed'
-    //             });
-    //             $('.marquee-a').css({
-    //                 'left': '0px'
-    //             });
-    //             $('.marquee-a').css({
-    //                 'top': '0px'
-    //             });
+        $(window).scroll(function() {
+            if ($(window).scrollTop() >= 18) {
+                alert(70);
+                $('.marquee-a').css({
+                    'position': 'fixed'
+                });
+                $('.marquee-a').css({
+                    'left': '0px'
+                });
+                $('.marquee-a').css({
+                    'top': '0px'
+                });
 
 
-    //         }
-    //     })
-    // })
+            }
+        })
+    })
     </script>
 </head>
 <?php
