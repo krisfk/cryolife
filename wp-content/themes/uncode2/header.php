@@ -192,7 +192,8 @@ if (is_admin_bar_showing()) {
 	?>
     <a href="javascript:void(0);" class="marquee-a">
         <marquee width="100%" direction="left" height="100px">
-            <?php
+            <a href="http://www.yahoo.com.hk">
+                <?php
             
             $args = array(
                 'p'         => 3976, // ID of a page, post, or custom type
@@ -203,7 +204,7 @@ if (is_admin_bar_showing()) {
               echo get_the_content();
               wp_reset_postdata();
               
-            ?>
+            ?></a>
         </marquee>
     </a>
     <div class="box-wrapper<?php echo esc_html($back_class); ?>" <?php echo wp_kses_post($background_style); ?>>
