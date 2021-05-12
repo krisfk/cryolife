@@ -61,7 +61,7 @@ if (is_admin_bar_showing()) {
 
         $(window).scroll(function() {
             if ($(window).scrollTop() >= 18) {
-                alert(70);
+                // alert(70);
                 $('.marquee-a').css({
                     'position': 'fixed'
                 });
