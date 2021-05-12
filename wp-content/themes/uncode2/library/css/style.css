@@ -19925,7 +19925,7 @@ h3.black {
     text-align: center;
     color: #fff !important;
     transition: 0.2s all;
-    margin: 40px 0 0 0;
+    margin: 40px 0 40px 0;
 }
 
 .video-btn:hover {
@@ -19944,7 +19944,7 @@ h3.black {
     text-align: center;
     color: #fff !important;
     transition: 0.2s all;
-    margin: 40px 0 0 0;
+    margin: 40px 0 40px 0;
 }
 
 .more-btn:hover {
@@ -19959,7 +19959,7 @@ h3.black {
     text-align: center;
     color: #000 !important;
     transition: 0.2s all;
-    margin: 40px 0 0 0;
+    margin: 40px 0 40px 0;
     border: 1px solid #e5e5e5;
 }
 
