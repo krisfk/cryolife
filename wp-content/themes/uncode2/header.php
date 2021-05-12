@@ -62,7 +62,7 @@ if (is_admin_bar_showing()) {
         $(window).scroll(function() {
             if ($(window).scrollTop() >= 18) {
                 // alert(70);
-                $('marquee').css({
+                $('.marquee-a').css({
                     'position': 'fixed',
                     'left': '0px',
                     'top': '0px',
@@ -77,7 +77,7 @@ if (is_admin_bar_showing()) {
 
 
             } else {
-                $('marquee').css({
+                $('.marquee-a').css({
                     'position': 'relative'
                 })
 
@@ -190,10 +190,10 @@ if (is_admin_bar_showing()) {
 	}
 
 	?>
-    <!-- <a href="javascript:void(0);" class="marquee-a"> -->
-    <marquee width="100%" direction="left" height="100px">
-        <a href="http://www.yahoo.com.hk">
-            <?php
+    <div class="marquee-a">
+        <marquee width="100%" direction="left" height="100px">
+            <a href="http://www.yahoo.com.hk">
+                <?php
             
             $args = array(
                 'p'         => 3976, // ID of a page, post, or custom type
@@ -205,119 +205,119 @@ if (is_admin_bar_showing()) {
               wp_reset_postdata();
               
             ?></a>
-    </marquee>
-    <!-- </a> -->
-    <div class="box-wrapper<?php echo esc_html($back_class); ?>" <?php echo wp_kses_post($background_style); ?>>
-        <div class="box-container<?php echo esc_attr($boxed_width); ?>">
-            <script type="text/javascript">
-            UNCODE.initBox();
-            </script>
+        </marquee>
+        <!-- </a> -->
+        <div class="box-wrapper<?php echo esc_html($back_class); ?>" <?php echo wp_kses_post($background_style); ?>>
+            <div class="box-container<?php echo esc_attr($boxed_width); ?>">
+                <script type="text/javascript">
+                UNCODE.initBox();
+                </script>
 
-            <style type="text/css">
-            html,
-            body,
-            div,
-            span,
-            applet,
-            object,
-            iframe,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6,
-            p,
-            blockquote,
-            pre,
-            a,
-            abbr,
-            acronym,
-            address,
-            big,
-            cite,
-            code,
-            del,
-            dfn,
-            em,
-            img,
-            ins,
-            kbd,
-            q,
-            s,
-            samp,
-            small,
-            strike,
-            strong,
-            sub,
-            sup,
-            tt,
-            var,
-            b,
-            u,
-            i,
-            center,
-            dl,
-            dt,
-            dd,
-            ol,
-            ul,
-            li,
-            fieldset,
-            form,
-            label,
-            legend,
-            table,
-            caption,
-            tbody,
-            tfoot,
-            thead,
-            tr,
-            th,
-            td,
-            article,
-            aside,
-            canvas,
-            details,
-            embed,
-            figure,
-            figcaption,
-            footer,
-            header,
-            hgroup,
-            menu,
-            nav,
-            output,
-            ruby,
-            section,
-            summary,
-            time,
-            mark,
-            audio,
-            video {
-                /* font-family: 'BemboStd' !important; */
-                font-size: 19px;
-                font-family: 'Open Sans', sans-serif;
+                <style type="text/css">
+                html,
+                body,
+                div,
+                span,
+                applet,
+                object,
+                iframe,
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                p,
+                blockquote,
+                pre,
+                a,
+                abbr,
+                acronym,
+                address,
+                big,
+                cite,
+                code,
+                del,
+                dfn,
+                em,
+                img,
+                ins,
+                kbd,
+                q,
+                s,
+                samp,
+                small,
+                strike,
+                strong,
+                sub,
+                sup,
+                tt,
+                var,
+                b,
+                u,
+                i,
+                center,
+                dl,
+                dt,
+                dd,
+                ol,
+                ul,
+                li,
+                fieldset,
+                form,
+                label,
+                legend,
+                table,
+                caption,
+                tbody,
+                tfoot,
+                thead,
+                tr,
+                th,
+                td,
+                article,
+                aside,
+                canvas,
+                details,
+                embed,
+                figure,
+                figcaption,
+                footer,
+                header,
+                hgroup,
+                menu,
+                nav,
+                output,
+                ruby,
+                section,
+                summary,
+                time,
+                mark,
+                audio,
+                video {
+                    /* font-family: 'BemboStd' !important; */
+                    font-size: 19px;
+                    font-family: 'Open Sans', sans-serif;
 
 
-            }
+                }
 
-            p:lang(en),
-            .table th:lang(en),
-            .table td:lang(en),
-            ul li:lang(en),
-            ol li:lang(en) {
-                font-size: 19px;
-            }
+                p:lang(en),
+                .table th:lang(en),
+                .table td:lang(en),
+                ul li:lang(en),
+                ol li:lang(en) {
+                    font-size: 19px;
+                }
 
-            .font-size-submenu,
-            .menu-horizontal ul ul a,
-            .vmenu-container ul ul a,
-            .uncode-cart .cart-desc {
-                font-size: 18px;
-            }
-            </style>
-            <?php
+                .font-size-submenu,
+                .menu-horizontal ul ul a,
+                .vmenu-container ul ul a,
+                .uncode-cart .cart-desc {
+                    font-size: 18px;
+                }
+                </style>
+                <?php
 			$remove_menu = (isset($metabox_data['_uncode_specific_menu_remove'][0]) && $metabox_data['_uncode_specific_menu_remove'][0] === 'on') ? true : false;
 			if ( ! $remove_menu ) {
 				if ($is_redirect !== true) {
@@ -332,10 +332,10 @@ if (is_admin_bar_showing()) {
 				}
 			}
 			?>
-            <script type="text/javascript">
-            UNCODE.fixMenuHeight();
-            </script>
-            <div class="main-wrapper">
-                <div class="main-container">
-                    <div class="page-wrapper<?php if ($onepage) { echo ' main-onepage'; } ?>">
-                        <div class="sections-container">
+                <script type="text/javascript">
+                UNCODE.fixMenuHeight();
+                </script>
+                <div class="main-wrapper">
+                    <div class="main-container">
+                        <div class="page-wrapper<?php if ($onepage) { echo ' main-onepage'; } ?>">
+                            <div class="sections-container">
