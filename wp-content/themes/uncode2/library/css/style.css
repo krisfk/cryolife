@@ -20144,12 +20144,12 @@ strong.black {
     position: relative;
 }
 
-.marquee {
+marquee {
     font-size: 14px;
     height: 18px;
 }
 
-a .marquee {
+a marquee {
     color: #fff;
     background: #919396;
 }
