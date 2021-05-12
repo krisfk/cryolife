@@ -20152,6 +20152,7 @@ strong.black {
 marquee a {
     color: #fff;
     font-size: 14px;
+    height: 18px;
     background: #919396;
 }
 

@@ -60,7 +60,7 @@ if (is_admin_bar_showing()) {
     $(function() {
 
         $(window).scroll(function() {
-            if ($(window).scrollTop() >= 18) {
+            if ($(window).scrollTop() >= 20) {
                 // alert(70);
                 $('.marquee-a').css({
                     'position': 'fixed',
