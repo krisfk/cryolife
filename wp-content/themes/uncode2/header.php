@@ -192,7 +192,6 @@ if (is_admin_bar_showing()) {
 	?>
     <a href="javascript:void(0);" class="marquee-a">
         <marquee width="100%" direction="left" height="100px">
-            <!-- 3976 -->
             <?php
             
             $args = array(
@@ -201,13 +200,9 @@ if (is_admin_bar_showing()) {
               );
               $marquee = new WP_Query($args);
               $marquee -> the_post();
-              echo get_the_title();
+              echo get_the_content();
               wp_reset_postdata();
-            // if ( $latest -> have_posts() ) : while ( $latest -> have_posts() ) : $latest -> the_post();
-            
-                // get_template_part( 'templates/content', 'post' );
-            
-            // endwhile; endif; wp_reset_postdata();
+              
             ?>
         </marquee>
     </a>
