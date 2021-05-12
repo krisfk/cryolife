@@ -161,6 +161,8 @@ if (is_admin_bar_showing()) {
 	}
 
 	?>
+
+    <div>fds</div>
     <div class="box-wrapper<?php echo esc_html($back_class); ?>" <?php echo wp_kses_post($background_style); ?>>
         <div class="box-container<?php echo esc_attr($boxed_width); ?>">
             <script type="text/javascript">
