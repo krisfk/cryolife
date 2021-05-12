@@ -14349,7 +14349,7 @@ body .header-wrapper .style-light.owl-prev .owl-nav-container {
         display: none;
     }
     .home .flexible-margin-first-row {
-        margin: 0;
+        margin: 0 !important;
     }
     #page-header .remove-menu-padding-mobile .header-content,
     #page-header .remove-menu-padding-mobile .uncont {
