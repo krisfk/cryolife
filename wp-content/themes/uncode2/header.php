@@ -161,8 +161,13 @@ if (is_admin_bar_showing()) {
 	}
 
 	?>
-
-    <div>fds</div>
+    <marquee width="60%" direction="left" height="100px">
+        To be in line with Government’s anti-epidemic measures, all members in the public places (indoor and outdoor)
+        at the campus must wear a face mask unless you are performing a strenuous physical activity, including sports
+        activity, in public outdoor places. Restaurant diners are also required to wear a face mask except when eating
+        or drinking. The requirement does not apply to persons who are under the age of two, persons who have lawful
+        authority or reasonable excuse for not wearing a mask.
+    </marquee>
     <div class="box-wrapper<?php echo esc_html($back_class); ?>" <?php echo wp_kses_post($background_style); ?>>
         <div class="box-container<?php echo esc_attr($boxed_width); ?>">
             <script type="text/javascript">
