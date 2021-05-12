@@ -20271,6 +20271,7 @@ a marquee {
     }
     .home-first-table tr td {
         display: block;
+        text-align: center;
     }
     .home-first-table tr td:first-child {
         text-align: center;
