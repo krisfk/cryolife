@@ -56,6 +56,7 @@ if (is_admin_bar_showing()) {
 
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
     <script type="text/javascript">
+    var $ = jQuery;
     $(function() {
 
         $(window).scroll(function() {
