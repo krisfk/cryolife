@@ -63,14 +63,17 @@ if (is_admin_bar_showing()) {
             if ($(window).scrollTop() >= 18) {
                 // alert(70);
                 $('.marquee-a').css({
-                    'position': 'fixed'
+                    'position': 'fixed',
+                    'left': '0px',
+                    'top': '0px',
+                    'height': '18px',
+                    'width': '100%',
+
+                    'z-index': '10000',
+
+
                 });
-                $('.marquee-a').css({
-                    'left': '0px'
-                });
-                $('.marquee-a').css({
-                    'top': '0px'
-                });
+
 
 
             }
