@@ -76,6 +76,11 @@ if (is_admin_bar_showing()) {
 
 
 
+            } else {
+                $('.marquee-a').css({
+                    'position': 'relative'
+                })
+
             }
         })
     })
