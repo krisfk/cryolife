@@ -20220,9 +20220,11 @@ a marquee {
         background: url(../img/orange-btn-bg.jpg);
         background-size: 100% 100%;
         height: 30px !important;
-        width: 64px;
+        /* width: 64px; */
+        width: auto;
+        ;
         text-align: center;
-        padding: 0 !important;
+        padding: 0 10px !important;
         /* display: inline-block !important; */
         float: left;
         color: #fff !important;
@@ -20233,9 +20235,10 @@ a marquee {
         background: url(../img/orange-btn-bg.jpg);
         background-size: 100% 100%;
         height: 30px !important;
-        width: 142px;
+        /* width: 142px; */
+        width: auto;
         text-align: center;
-        padding: 0 !important;
+        padding: 0 10px !important;
         display: inline-block;
         float: left;
         color: #fff !important;
