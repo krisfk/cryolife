@@ -20158,6 +20158,14 @@ a marquee {
     top: 18px !important;
 }
 
+.cli-style-v2 .cli-bar-message {
+    font-size: 13px;
+}
+
+.cli-style-v2 a.privacy {
+    font-size: 13px;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
