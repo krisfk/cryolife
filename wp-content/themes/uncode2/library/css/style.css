@@ -20154,7 +20154,9 @@ a marquee {
     background: #919396;
 }
 
-#masthead.is_stuck .menu-container {}
+#masthead.is_stuck .menu-container {
+    top: 18px !important;
+}
 
 @media (max-width: 1920px) {
     .home-banner-main {
