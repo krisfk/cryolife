@@ -20149,7 +20149,7 @@ marquee {
     height: 18px;
 }
 
-a marquee {
+marquee a {
     color: #fff;
     background: #919396;
 }
