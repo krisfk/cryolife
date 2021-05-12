@@ -195,13 +195,14 @@ if (is_admin_bar_showing()) {
             <!-- 3976 -->
             <?php
             
-            $marquee = new WP_Query( array (
-                'p'               => 3976,
-            ));
-            $marquee -> the_post();
-            echo get_the_content();
-            wp_reset_postdata();
-
+            $args = array(
+                'p'         => 3976, // ID of a page, post, or custom type
+                'post_type' => 'page'
+              );
+              $marquee = new WP_Query($args);
+              $marquee -> the_post();
+              echo get_the_title();
+              wp_reset_postdata();
             // if ( $latest -> have_posts() ) : while ( $latest -> have_posts() ) : $latest -> the_post();
             
                 // get_template_part( 'templates/content', 'post' );
