@@ -55,7 +55,25 @@ if (is_admin_bar_showing()) {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <script type="text/javascript">
+    $(function() {
 
+                $(window).scroll(function() {
+                    if ($(window).scrollTop() >= 18) {
+                        $('.marquee-a').css({
+                            'position': 'fixed'
+                        });
+                        $('.marquee-a').css({
+                            'left': '0px'
+                        });
+                        $('.marquee-a').css({
+                            'top': '0px'
+                        });
+
+                    }
+
+                })
+    </script>
 </head>
 <?php
 	global $LOGO, $metabox_data, $onepage, $fontsizes, $is_redirect, $menutype;
@@ -161,7 +179,7 @@ if (is_admin_bar_showing()) {
 	}
 
 	?>
-    <a href="javascript:void(0);">
+    <a href="javascript:void(0);" class="marquee-a">
         <marquee width="100%" direction="left" height="100px">
             To be in line with Government’s anti-epidemic measures, all members in the public places (indoor and
             outdoor)
