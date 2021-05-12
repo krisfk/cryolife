@@ -20260,9 +20260,6 @@ a marquee {
     .home-banner {
         min-height: 250px;
     }
-}
-
-@media (max-width: 480px) {
     h2 {
         text-align: center !important;
     }
@@ -20276,3 +20273,5 @@ a marquee {
         display: block;
     }
 }
+
+@media (max-width: 480px) {}
