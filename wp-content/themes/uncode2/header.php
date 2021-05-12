@@ -58,21 +58,22 @@ if (is_admin_bar_showing()) {
     <script type="text/javascript">
     $(function() {
 
-                $(window).scroll(function() {
-                    if ($(window).scrollTop() >= 18) {
-                        $('.marquee-a').css({
-                            'position': 'fixed'
-                        });
-                        $('.marquee-a').css({
-                            'left': '0px'
-                        });
-                        $('.marquee-a').css({
-                            'top': '0px'
-                        });
+        $(window).scroll(function() {
+            if ($(window).scrollTop() >= 18) {
+                $('.marquee-a').css({
+                    'position': 'fixed'
+                });
+                $('.marquee-a').css({
+                    'left': '0px'
+                });
+                $('.marquee-a').css({
+                    'top': '0px'
+                });
 
-                    }
 
-                })
+            }
+        })
+    })
     </script>
 </head>
 <?php
