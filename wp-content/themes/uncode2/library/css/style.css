@@ -20144,6 +20144,16 @@ strong.black {
     position: relative;
 }
 
+.marquee {
+    font-size: 14px;
+    height: 18px;
+}
+
+a .marquee {
+    color: #fff;
+    background: #919396;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
