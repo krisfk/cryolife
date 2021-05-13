@@ -20121,7 +20121,9 @@ strong.black {
     opacity: 0;
 }
 
-.video-div {}
+.video-div {
+    margin: 43px 0 0 0;
+}
 
 .video-div video {
     position: absolute;
