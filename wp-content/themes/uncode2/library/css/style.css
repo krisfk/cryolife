@@ -306,6 +306,10 @@ script {
     display: none !important;
 }
 
+#cookie-law-info-bar br {
+    display: none;
+}
+
 @media print {
     .box-container {
         width: 100% !important;
