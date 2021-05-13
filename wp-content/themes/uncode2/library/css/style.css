@@ -20291,7 +20291,8 @@ a marquee {
         transition: 0.2s all;
         margin: 40px 0 40px 0;
     }
-    .compare-table td p.p1 {
+    .compare-table td p.p1,
+    .compare-table td p.p1 b {
         font-size: 14px;
     }
 }
