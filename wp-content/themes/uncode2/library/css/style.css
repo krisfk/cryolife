@@ -20282,4 +20282,25 @@ a marquee {
     }
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .more-btn {
+        width: 100%;
+        display: block;
+        background: #000 url(../img/arrow-right.png) no-repeat 35% center !important;
+        padding: 8px 21px 3px 35px;
+        text-align: center;
+        color: #fff !important;
+        transition: 0.2s all;
+        margin: 40px 0 40px 0;
+    }
+    .video-btn {
+        width: 100%;
+        display: block;
+        background: #000 url(../img/arrow-right.png) no-repeat 35% center !important;
+        padding: 8px 21px 3px 35px;
+        text-align: center;
+        color: #fff !important;
+        transition: 0.2s all;
+        margin: 40px 0 40px 0;
+    }
+}
