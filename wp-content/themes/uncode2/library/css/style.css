@@ -310,6 +310,10 @@ script {
     display: none;
 }
 
+.marquee-a {
+    display: flex;
+}
+
 @media print {
     .box-container {
         width: 100% !important;
