@@ -20295,6 +20295,9 @@ a marquee {
     .compare-table td p.p1 b {
         font-size: 14px;
     }
+    .compare-table td {
+        padding: 1px;
+    }
 }
 
 @media (max-width: 960px) {
