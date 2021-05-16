@@ -251,6 +251,12 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 }
 ?>
 <a href="/contact-form/" class="ask-us-anything-a"></a>
+
+<script type="text/javascript">
+window.addEventListener('hashchange', function() {
+    console.log('The hash has changed!')
+}, false);
+</script>
 <?php
 wp_footer(); ?>
 </body>
