@@ -253,8 +253,11 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 <a href="/contact-form/" class="ask-us-anything-a"></a>
 
 <script type="text/javascript">
+var hash = window.location.hash;
+alert(hash)
+
 $(window).on('hashchange', function(e) {
-    console.log('hash changed');
+    // console.log('hash changed');
 });
 </script>
 <?php
