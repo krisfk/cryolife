@@ -85,9 +85,9 @@ if (is_admin_bar_showing()) {
         })
     })
 
-    window.addEventListener('hashchange', function() {
-        console.log('The hash has changed!')
-    }, false);
+    // window.addEventListener('hashchange', function() {
+    //     console.log('The hash has changed!')
+    // }, false);
     </script>
 </head>
 <?php
