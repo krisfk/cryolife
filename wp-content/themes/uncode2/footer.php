@@ -256,7 +256,7 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 var hash = window.location.hash;
 if (hash) {
     alert(hash);
-    $('html,body').scrollTop($(hash).scrollTop() - 500);
+    $('html,body').scrollTop($("'" + hash + "'").scrollTop() - 500);
 }
 // alert(hash)
 
