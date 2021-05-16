@@ -259,7 +259,7 @@ if (hash) {
     // alert($/(hash).scrollTop());
     // $('#our-state-of-the-art-equipment').offset().top
 
-    $('html,body').scrollTop($(hash).offset().top);
+    $('html,body').scrollTop($(hash).offset().top - 200);
 }
 // alert(hash)
 
