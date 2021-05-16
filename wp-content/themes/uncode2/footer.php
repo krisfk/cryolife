@@ -258,7 +258,16 @@ if (hash) {
     $('html,body').scrollTop($(hash).offset().top - 150);
 }
 
-$(window).on('hashchange', function(e) {});
+$(window).on('hashchange', function(e) {
+
+    var hash = window.location.hash;
+
+
+    $('html,body').scrollTop($(hash).offset().top - 150);
+
+
+
+});
 </script>
 <?php
 wp_footer(); ?>
