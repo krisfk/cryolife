@@ -253,14 +253,15 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 <a href="/contact-form/" class="ask-us-anything-a"></a>
 
 <script type="text/javascript">
-window.onload = function() {
-    var hash = window.location.hash;
+var hash = window.location.hash;
+if (hash) {
+    // alert(hash);
+    // alert($/(hash).scrollTop());
+    // $('#our-state-of-the-art-equipment').offset().top
 
-    alert($(hash).scrollTop());
-
-
+    $('html,body').scrollTop($(hash).offset().top);
 }
-
+// alert(hash)
 
 $(window).on('hashchange', function(e) {
     // console.log('hash changed');
