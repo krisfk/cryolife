@@ -255,17 +255,10 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 <script type="text/javascript">
 var hash = window.location.hash;
 if (hash) {
-    // alert(hash);
-    // alert($/(hash).scrollTop());
-    // $('#our-state-of-the-art-equipment').offset().top
-
     $('html,body').scrollTop($(hash).offset().top - 100);
 }
-// alert(hash)
 
-$(window).on('hashchange', function(e) {
-    // console.log('hash changed');
-});
+$(window).on('hashchange', function(e) {});
 </script>
 <?php
 wp_footer(); ?>
