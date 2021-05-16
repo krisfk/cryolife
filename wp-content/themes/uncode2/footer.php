@@ -263,8 +263,13 @@ function update_scroll_top() {
 
     var hash = window.location.hash;
     if (hash) {
+        if ($(window).width() <= 480) {
+            $('html,body').scrollTop($(hash).offset().top);
 
-        $('html,body').scrollTop($(hash).offset().top - 100);
+        } else {
+            $('html,body').scrollTop($(hash).offset().top - 100);
+
+        }
     }
 }
 </script>
