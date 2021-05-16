@@ -253,21 +253,20 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 <a href="/contact-form/" class="ask-us-anything-a"></a>
 
 <script type="text/javascript">
-var hash = window.location.hash;
-if (hash) {
-    $('html,body').scrollTop($(hash).offset().top - 100);
-}
+update_scroll_top();
 
 $(window).on('hashchange', function(e) {
+    update_scroll_top()
+});
+
+function update_scroll_top() {
 
     var hash = window.location.hash;
+    if (hash) {
 
-
-    $('html,body').scrollTop($(hash).offset().top - 100);
-
-
-
-});
+        $('html,body').scrollTop($(hash).offset().top - 100);
+    }
+}
 </script>
 <?php
 wp_footer(); ?>
