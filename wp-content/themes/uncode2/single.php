@@ -753,13 +753,13 @@ if(get_field('slideshow_on_the_top'))
 
 <script type="text/javascript">
 $(function() {
-    setTimeout(() => {
-        $('.single-post-feature-img-top img').remove()
-        $('.single-post-feature-img-top').append($('.post-media'))
-        $('.tmb .t-entry-visual').eq(0).css({
-            'margin': '0 auto'
-        })
-    }, 2000);
+    // setTimeout(() => {
+    //     $('.single-post-feature-img-top img').remove()
+    //     $('.single-post-feature-img-top').append($('.post-media'))
+    //     $('.tmb .t-entry-visual').eq(0).css({
+    //         'margin': '0 auto'
+    //     })
+    // }, 2000);
 
 
 })
