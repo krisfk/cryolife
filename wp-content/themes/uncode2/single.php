@@ -155,37 +155,6 @@ if ($page_breadcrumb === '') {
 	$show_breadcrumb = ($page_breadcrumb === 'off') ? false : true;
 }
 
-/** Get title info **/
-$generic_show_title = ot_get_option('_uncode_' . $post_type . '_title');
-$page_show_title = (isset($metabox_data['_uncode_specific_title'][0])) ? $metabox_data['_uncode_specific_title'][0] : '';
-if ($page_show_title === '') {
-	$show_title = ($generic_show_title === 'off') ? false : true;
-} else {
-	$show_title = ($page_show_title === 'off') ? false : true;
-}
-
-/** Get media info **/
-$generic_show_media = ot_get_option('_uncode_' . $post_type . '_media');
-$page_show_media = (isset($metabox_data['_uncode_specific_media'][0])) ? $metabox_data['_uncode_specific_media'][0] : '';
-if ($page_show_media === '') {
-	$show_media = ($generic_show_media === 'off') ? false : true;
-} else {
-	$show_media = ($page_show_media === 'off') ? false : true;
-}
-
-if ( !$show_media && $featured_image !== '' && $featured_image != 0 ) {
-	$generic_show_featured_media = ot_get_option('_uncode_' . $post_type . '_featured_media');
-	$page_show_featured_media = (isset($metabox_data['_uncode_specific_featured_media'][0]) && $metabox_data['_uncode_specific_featured_media'][0] !== '') ? $metabox_data['_uncode_specific_featured_media'][0] : $generic_show_featured_media;
-
-	if ( $page_show_featured_media === 'on' ) {
-		$media = $featured_image;
-	}
-} else {
-	$page_show_featured_media = false;
-}
-
-$show_media = $page_show_featured_media && $page_show_featured_media!=='off' ? true : $show_media;
-
 /**
  * DATA COLLECTION - END
  *
@@ -686,100 +655,43 @@ while (have_posts()):
 // echo $feat_image;
 // echo "'>";
 
+
+/** Get title info **/
+$generic_show_title = ot_get_option('_uncode_' . $post_type . '_title');
+$page_show_title = (isset($metabox_data['_uncode_specific_title'][0])) ? $metabox_data['_uncode_specific_title'][0] : '';
+if ($page_show_title === '') {
+	$show_title = ($generic_show_title === 'off') ? false : true;
+} else {
+	$show_title = ($page_show_title === 'off') ? false : true;
+}
+
+/** Get media info **/
+$generic_show_media = ot_get_option('_uncode_' . $post_type . '_media');
+$page_show_media = (isset($metabox_data['_uncode_specific_media'][0])) ? $metabox_data['_uncode_specific_media'][0] : '';
+if ($page_show_media === '') {
+	$show_media = ($generic_show_media === 'off') ? false : true;
+} else {
+	$show_media = ($page_show_media === 'off') ? false : true;
+}
+
+if ( !$show_media && $featured_image !== '' && $featured_image != 0 ) {
+	$generic_show_featured_media = ot_get_option('_uncode_' . $post_type . '_featured_media');
+	$page_show_featured_media = (isset($metabox_data['_uncode_specific_featured_media'][0]) && $metabox_data['_uncode_specific_featured_media'][0] !== '') ? $metabox_data['_uncode_specific_featured_media'][0] : $generic_show_featured_media;
+
+	if ( $page_show_featured_media === 'on' ) {
+		$media = $featured_image;
+	}
+} else {
+	$page_show_featured_media = false;
+}
+
+$show_media = $page_show_featured_media && $page_show_featured_media!=='off' ? true : $show_media;
+
+
 echo '<div class="single-post-feature-img-top">';
 
 // echo 99999;
-if ($media !== '' && !$with_builder && $show_media && !post_password_required()) {
-	if ($layout === 'sidebar_right' || $layout === 'sidebar_left') {
-		$media_size = 12 - $sidebar_size;
-	} else {
-		$media_size = 12;
-	}
 
-	$media_array = explode(',', $media);
-	$media_counter = count($media_array);
-	$rand_id = uncode_big_rand();
-	if ($media_counter === 0) {
-		$media_array = array( $media );
-	}
-
-	if ($media_display === 'isotope') {
-		$media_content.='<div id="gallery-' . $rand_id . '" class="isotope-system post-media">
-			<div class="isotope-wrapper half-gutter">
-		  <div class="isotope-container isotope-layout style-masonry" data-type="masonry" data-layout="masonry" data-lg="1000" data-md="600" data-sm="480">';
-	}
-
-	foreach ($media_array as $key => $value) {//check if albums are set among medias
-		if ( get_post_mime_type($value) == 'oembed/gallery' && wp_get_post_parent_id($value) ) {
-			$parent_id = wp_get_post_parent_id($value);
-			$media_album_ids = get_post_meta($parent_id, '_uncode_featured_media', true);
-			$media_arr = explode(',', $media);//eplode $media string to add album IDs
-			$media_album_ids_arr = explode(',', $media_album_ids);
-			if ( is_array($media_album_ids_arr) && !empty($media_album_ids_arr) ) {
-				unset($media_array[$key]);//remove album featured image from array
-				$media_album_ids_arr = array_reverse($media_album_ids_arr);
-				foreach ($media_album_ids_arr as $_key => $_value) {
-					array_splice($media_array, $key, 0, $_value);
-					array_splice($media_arr, $key, 0, $_value);
-				}
-			}
-			$media = implode(",", $media_arr);//implode $media again after adding album IDs
-		}
-	}
-
-	foreach ($media_array as $key => $value) {
-		if ($media_display === 'carousel') {
-			$value = $media;
-		}
-		$block_data = array();
-		$block_data['media_id'] = $value;
-		$block_data['classes'] = array(
-			'tmb'
-		);
-		$block_data['text_padding'] = 'no-block-padding';
-		if ($media_display === 'isotope') {
-			$block_data['single_width'] = 4;
-			$block_data['classes'][] = 'tmb-iso-w4';
-		} else {
-			$block_data['single_width'] = $media_size;
-		}
-		$block_data['single_style'] = $style;
-		$block_data['single_text'] = 'under';
-		$block_data['classes'][] = 'tmb-' . $style;
-		if ($media_display === 'isotope') {
-			$block_data['classes'][] = 'tmb-overlay-anim';
-			$block_data['classes'][] = 'tmb-overlay-text-anim';
-			$block_data['single_icon'] = 'fa fa-plus2';
-			$block_data['overlay_color'] = ($style == 'light') ? 'style-black-bg' : 'style-white-bg';
-			$block_data['overlay_opacity'] = '20';
-			$lightbox_classes = array();
-			$lightbox_classes['data-noarr'] = false;
-		} else {
-			$lightbox_classes = false;
-			$block_data['link_class'] = 'inactive-link';
-			$block_data['link'] = '#';
-		}
-		$block_data['title_classes'] = array();
-		$block_data['tmb_data'] = array();
-		$block_layout['media'] = array();
-		$block_layout['icon'] = array();
-		$media_html = uncode_create_single_block($block_data, $rand_id, 'masonry', $block_layout, $lightbox_classes, false, true);
-		if ($media_display !== 'isotope') {
-			$media_content.= '<div class="post-media">' . $media_html . '</div>';
-		} else {
-			$media_content.= $media_html;
-		}
-		if ($media_display === 'carousel') {
-			break;
-		}
-	}
-
-	if ($media_display === 'isotope') {
-		$media_content.= '</div>
-			</div>
-		</div>';
-	}
-}
 if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	
 	the_post_thumbnail( 'full' );
