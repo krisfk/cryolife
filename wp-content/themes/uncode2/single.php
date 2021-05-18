@@ -743,6 +743,10 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 .single-post-feature-img-top img {
     display: none
 }
+
+.post-media {
+    display: none;
+}
 </style>
 <?php
           	echo $navigation_content . '
@@ -754,6 +758,11 @@ endwhile;
 if(get_field('slideshow_on_the_top'))
 {
 	?>
+<style>
+.post-media {
+    display: block;
+}
+</style>
 <script type="text/javascript">
 $(function() {
     $('.single-post-feature-img-top img').remove()
