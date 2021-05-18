@@ -747,5 +747,25 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 
 endwhile;
 // end of the loop.
+if(get_field('slideshow_on_the_top'))
+{
+	?>
+
+<script type="text/javascript">
+$(function() {
+    $('.single-post-feature-img-top img').remove()
+    $('.single-post-feature-img-top').append($('.post-media'))
+    $('.tmb .t-entry-visual').eq(0).css({
+        'margin': '0 auto'
+    })
+
+})
+</script>
+<?php
+}
+	?>
+
+<?
+}
 
 get_footer(); ?>
