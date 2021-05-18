@@ -769,7 +769,7 @@ else{
 	?>
 <style type="text/css">
 .single-post-feature-img-top img {
-    display: block;
+    display: inline-block;
 }
 </style>
 <?php
