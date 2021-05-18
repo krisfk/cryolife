@@ -769,6 +769,6 @@ if(get_field('slideshow_on_the_top'))
 	?>
 
 <?
-}
+
 
 get_footer(); ?>
