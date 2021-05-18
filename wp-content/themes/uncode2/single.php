@@ -747,7 +747,7 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 
 endwhile;
 // end of the loop.
-if(get_field())
+if(get_field('slideshow_on_the_top'))
 {
 	?>
 <?php
