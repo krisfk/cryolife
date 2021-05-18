@@ -739,6 +739,10 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
     width: 100%;
     position: absolute;
 }
+
+.single-post-feature-img-top img {
+    display: none
+}
 </style>
 <?php
           	echo $navigation_content . '
@@ -759,6 +763,15 @@ $(function() {
     })
 })
 </script>
+<?php
+}
+else{
+	?>
+<style type="text/css">
+.single-post-feature-img-top img {
+    display: block;
+}
+</style>
 <?php
 }
 
