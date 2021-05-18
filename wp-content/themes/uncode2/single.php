@@ -686,7 +686,7 @@ while (have_posts()):
 // echo $feat_image;
 // echo "'>";
 
-echo '<div class="single-post-feature-img-top">';
+echo '<div class="single-post-feature-img-top" style="display:none">';
 
 // echo 99999;
 
