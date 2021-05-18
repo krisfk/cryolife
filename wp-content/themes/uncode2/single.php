@@ -155,6 +155,37 @@ if ($page_breadcrumb === '') {
 	$show_breadcrumb = ($page_breadcrumb === 'off') ? false : true;
 }
 
+/** Get title info **/
+$generic_show_title = ot_get_option('_uncode_' . $post_type . '_title');
+$page_show_title = (isset($metabox_data['_uncode_specific_title'][0])) ? $metabox_data['_uncode_specific_title'][0] : '';
+if ($page_show_title === '') {
+	$show_title = ($generic_show_title === 'off') ? false : true;
+} else {
+	$show_title = ($page_show_title === 'off') ? false : true;
+}
+
+/** Get media info **/
+$generic_show_media = ot_get_option('_uncode_' . $post_type . '_media');
+$page_show_media = (isset($metabox_data['_uncode_specific_media'][0])) ? $metabox_data['_uncode_specific_media'][0] : '';
+if ($page_show_media === '') {
+	$show_media = ($generic_show_media === 'off') ? false : true;
+} else {
+	$show_media = ($page_show_media === 'off') ? false : true;
+}
+
+if ( !$show_media && $featured_image !== '' && $featured_image != 0 ) {
+	$generic_show_featured_media = ot_get_option('_uncode_' . $post_type . '_featured_media');
+	$page_show_featured_media = (isset($metabox_data['_uncode_specific_featured_media'][0]) && $metabox_data['_uncode_specific_featured_media'][0] !== '') ? $metabox_data['_uncode_specific_featured_media'][0] : $generic_show_featured_media;
+
+	if ( $page_show_featured_media === 'on' ) {
+		$media = $featured_image;
+	}
+} else {
+	$page_show_featured_media = false;
+}
+
+$show_media = $page_show_featured_media && $page_show_featured_media!=='off' ? true : $show_media;
+
 /**
  * DATA COLLECTION - END
  *
@@ -654,39 +685,6 @@ while (have_posts()):
 // echo "<img='";
 // echo $feat_image;
 // echo "'>";
-
-
-/** Get title info **/
-$generic_show_title = ot_get_option('_uncode_' . $post_type . '_title');
-$page_show_title = (isset($metabox_data['_uncode_specific_title'][0])) ? $metabox_data['_uncode_specific_title'][0] : '';
-if ($page_show_title === '') {
-	$show_title = ($generic_show_title === 'off') ? false : true;
-} else {
-	$show_title = ($page_show_title === 'off') ? false : true;
-}
-
-/** Get media info **/
-$generic_show_media = ot_get_option('_uncode_' . $post_type . '_media');
-$page_show_media = (isset($metabox_data['_uncode_specific_media'][0])) ? $metabox_data['_uncode_specific_media'][0] : '';
-if ($page_show_media === '') {
-	$show_media = ($generic_show_media === 'off') ? false : true;
-} else {
-	$show_media = ($page_show_media === 'off') ? false : true;
-}
-
-if ( !$show_media && $featured_image !== '' && $featured_image != 0 ) {
-	$generic_show_featured_media = ot_get_option('_uncode_' . $post_type . '_featured_media');
-	$page_show_featured_media = (isset($metabox_data['_uncode_specific_featured_media'][0]) && $metabox_data['_uncode_specific_featured_media'][0] !== '') ? $metabox_data['_uncode_specific_featured_media'][0] : $generic_show_featured_media;
-
-	if ( $page_show_featured_media === 'on' ) {
-		$media = $featured_image;
-	}
-} else {
-	$page_show_featured_media = false;
-}
-
-$show_media = $page_show_featured_media && $page_show_featured_media!=='off' ? true : $show_media;
-
 
 echo '<div class="single-post-feature-img-top">';
 
