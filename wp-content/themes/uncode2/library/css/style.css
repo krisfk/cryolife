@@ -6898,6 +6898,10 @@ tbody.collapse.in {
     /* display: block; */
 }
 
+.post-content img.size-full {
+    display: block;
+}
+
 .ie9 .post-content img[src$='.svg'] {
     width: 100%;
 }
