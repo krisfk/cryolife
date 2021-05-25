@@ -19849,9 +19849,9 @@ html:not(.no-cssanimations) .animate_when_parent_almost_visible[data-speed='1000
     padding: 0 !important;
 }
 
-.full-width img {
-    /* display: block;
-    width: 100%; */
+.col-lg-6 .full-width img {
+    display: block;
+    width: 100%;
 }
 
 .w-100 {
