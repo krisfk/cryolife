@@ -20161,7 +20161,7 @@ a marquee {
 }
 
 #masthead.is_stuck .menu-container {
-    background: #fff;
+    background-color: #fff !important;
 }
 
 @media (max-width: 1920px) {
