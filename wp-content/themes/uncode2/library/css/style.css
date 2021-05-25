@@ -11281,7 +11281,11 @@ div[class*='shift_y_neg'].shift_y_neg_single .isotope-filters ul.menu-smart>li>s
 
 .ilightbox-holder img.ilightbox-image {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto 10px auto !important;
+    display: block;
 }
 
 .ilightbox-holder .ilightbox-container .ilightbox-caption {
