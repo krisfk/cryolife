@@ -6895,6 +6895,7 @@ tbody.collapse.in {
 
 .post-content img {
     max-width: 100%;
+    display: block;
 }
 
 .ie9 .post-content img[src$='.svg'] {
