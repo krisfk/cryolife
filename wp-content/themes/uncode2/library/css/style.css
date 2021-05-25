@@ -314,6 +314,10 @@ script {
     display: flex;
 }
 
+.mobile-only {
+    display: none;
+}
+
 @media print {
     .box-container {
         width: 100% !important;
@@ -20180,7 +20184,11 @@ a marquee {
 
 @media (max-width: 1200px) {}
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+    .mobile-only {
+        display: block;
+    }
+}
 
 @media (max-width: 959px) {
     .mobile-flex-col {
