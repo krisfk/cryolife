@@ -20128,6 +20128,7 @@ strong.black {
     width: 100% !important;
     position: relative;
     opacity: 0;
+    display: inline !important;
 }
 
 .video-div {
