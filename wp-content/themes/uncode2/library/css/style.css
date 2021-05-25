@@ -20160,6 +20160,10 @@ a marquee {
     font-size: 13px;
 }
 
+#masthead.is_stuck .menu-container {
+    background: #fff;
+}
+
 @media (max-width: 1920px) {
     .home-banner-main {
         min-height: 600px;
