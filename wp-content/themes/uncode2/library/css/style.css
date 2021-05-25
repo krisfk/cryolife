@@ -8789,6 +8789,7 @@ li.menu-item-button>a .menu-item>span {
     position: relative;
     width: 100%;
     height: 100%;
+    padding: 5px 0 5px 0;
 }
 
 @media (max-width: 959px) {
