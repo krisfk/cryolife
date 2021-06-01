@@ -20008,6 +20008,7 @@ h3.black {
     position: absolute !important;
     right: 0;
     bottom: 0;
+    display: none;
     z-index: 1000;
     width: 300px;
     background: #fff;
