@@ -8870,7 +8870,8 @@ li.menu-item-button>a .menu-item>span {
 @media (min-width: 960px) {
     .hmenu:not(.menu-item-link)>a,
     .hmenu-center:not(.menu-item-link)>a {
-        height: 0px;
+        /* height: 0px; */
+        height: 48px;
     }
 }
 
