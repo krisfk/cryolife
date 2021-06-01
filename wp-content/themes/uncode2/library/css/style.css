@@ -20202,7 +20202,7 @@ a marquee {
     }
 }
 
-@media (max-width: 959px) {
+@media (max-width: 1280px) {
     .mobile-flex-col {
         padding: 0px 36px 0px 36px !important;
     }
