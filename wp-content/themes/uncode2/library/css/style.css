@@ -5203,18 +5203,18 @@ Animations
         box-shadow: none !important;
     }
     
-    :hover.icon-box .icon-automatic-video {
+     :hover.icon-box .icon-automatic-video {
         bottom: -10%;
         left: -10%;
         right: -10%;
         top: -10%;
     }
     
-    :hover.icon-box .icon-automatic-video .icon-automatic-video-inner-bg {
+     :hover.icon-box .icon-automatic-video .icon-automatic-video-inner-bg {
         opacity: 0.5;
     }
     
-    :hover.icon-box .icon-automatic-video .icon-automatic-video-outer-bg {
+     :hover.icon-box .icon-automatic-video .icon-automatic-video-outer-bg {
         opacity: 0.15;
     }
     
@@ -13720,8 +13720,8 @@ SmartMenu: Offcanvas
         padding-bottom: 0.15em;
     }
     
-    :not(.already-animated).el-text>*>span.heading-text-inner .split-word:not(.split-word-empty) .split-word-flow,
-    :not(.already-animated).el-text>*>i>span.heading-text-inner .split-word:not(.split-word-empty) .split-word-flow {
+     :not(.already-animated).el-text>*>span.heading-text-inner .split-word:not(.split-word-empty) .split-word-flow,
+     :not(.already-animated).el-text>*>i>span.heading-text-inner .split-word:not(.split-word-empty) .split-word-flow {
         overflow: hidden;
     }
     
@@ -14420,7 +14420,7 @@ SmartMenu: Offcanvas
         opacity: 0.5;
     }
     
-    :not(.tmb-no-bg).tmb>.t-inside .half-block-padding hr.separator-extra {
+     :not(.tmb-no-bg).tmb>.t-inside .half-block-padding hr.separator-extra {
         margin-left: -18px !important;
         width: calc(100% + 36px);
     }
@@ -14429,7 +14429,7 @@ SmartMenu: Offcanvas
         width: calc(150% + 18px);
     }
     
-    :not(.tmb-no-bg).tmb>.t-inside .single-block-padding hr.separator-extra {
+     :not(.tmb-no-bg).tmb>.t-inside .single-block-padding hr.separator-extra {
         margin-left: -36px !important;
         width: calc(100% + 72px);
     }
@@ -14438,7 +14438,7 @@ SmartMenu: Offcanvas
         width: calc(150% + 36px);
     }
     
-    :not(.tmb-no-bg).tmb>.t-inside .double-block-padding hr.separator-extra {
+     :not(.tmb-no-bg).tmb>.t-inside .double-block-padding hr.separator-extra {
         margin-left: -72px !important;
         width: calc(100% + 144px);
     }
@@ -14467,7 +14467,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    :not(.tmb-no-bg).tmb>.t-inside .triple-block-padding hr.separator-extra {
+     :not(.tmb-no-bg).tmb>.t-inside .triple-block-padding hr.separator-extra {
         margin-left: -108px !important;
         width: calc(100% + 216px);
     }
@@ -14506,7 +14506,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    :not(.tmb-no-bg).tmb>.t-inside .quad-block-padding hr.separator-extra {
+     :not(.tmb-no-bg).tmb>.t-inside .quad-block-padding hr.separator-extra {
         margin-left: -144px !important;
         width: calc(100% + 288px);
     }
@@ -14868,7 +14868,7 @@ SmartMenu: Offcanvas
         height: 100%;
     }
     
-    :not(.tmb-overlay-showed).tmb .t-entry-visual .t-entry-visual-overlay {
+     :not(.tmb-overlay-showed).tmb .t-entry-visual .t-entry-visual-overlay {
         opacity: 0;
     }
     
@@ -15152,8 +15152,8 @@ SmartMenu: Offcanvas
         opacity: 0;
     }
     
-    :not(.tmb-overlay-showed).tmb-overlay-anim.tmb .t-entry-visual:hover .t-entry-visual-overlay,
-    :not(.tmb-overlay-showed).tmb-overlay-anim.tmb .t-entry-visual:focus .t-entry-visual-overlay {
+     :not(.tmb-overlay-showed).tmb-overlay-anim.tmb .t-entry-visual:hover .t-entry-visual-overlay,
+     :not(.tmb-overlay-showed).tmb-overlay-anim.tmb .t-entry-visual:focus .t-entry-visual-overlay {
         opacity: 1;
         transition-delay: 150ms;
     }
@@ -15375,7 +15375,7 @@ SmartMenu: Offcanvas
         margin-top: 0px !important;
     }
     
-    :not(.tmb-post).tmb .t-entry>*:not(hr) {
+     :not(.tmb-post).tmb .t-entry>*:not(hr) {
         margin: 9px 0px 0px 0px;
     }
     
@@ -18143,7 +18143,7 @@ SmartMenu: Offcanvas
         background-repeat: no-repeat;
     }
     
-    :root .mejs-poster img {
+     :root .mejs-poster img {
         display: none;
     }
     
@@ -20159,6 +20159,9 @@ SmartMenu: Offcanvas
             display: none;
         }
         .home .flexible-margin-first-row {
+            margin: 0 !important;
+        }
+        .flexible-margin-first-row {
             margin: 0 !important;
         }
         #page-header .remove-menu-padding-mobile .header-content,
