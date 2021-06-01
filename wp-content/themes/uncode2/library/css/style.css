@@ -8769,6 +8769,7 @@ li.menu-item-button>a .menu-item>span {
 @media (max-width: 959px) {
     .menu-wrapper.menu-sticky .menu-container {
         position: fixed;
+        background-color: #fff;
     }
 }
 
