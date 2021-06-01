@@ -3356,7 +3356,7 @@ body.compose-mode .main-container .uncode-scroll-visible.add-zoomout .t-backgrou
     display: table-cell;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     .col-lg-0,
     .col-lg-1,
     .col-lg-2,
