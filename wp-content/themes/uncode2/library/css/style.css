@@ -20155,13 +20155,14 @@ strong.black {
 }
 
 marquee {
-    font-size: 14px;
-    height: 18px;
+    font-size: 19px;
+    height: 48px;
 }
 
 a marquee {
     color: #fff;
-    background: #919396;
+    background: #EB793F;
+    line-height: 46px;
 }
 
 #masthead.is_stuck .menu-container {
