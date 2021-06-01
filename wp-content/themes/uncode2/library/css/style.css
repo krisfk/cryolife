@@ -20184,9 +20184,9 @@ a marquee {
     .home-banner-main {
         min-height: 600px;
     }
-    .home-banner {
+    /* .home-banner {
         min-height: 750px;
-    }
+    } */
 }
 
 @media (max-width: 1200px) {}
