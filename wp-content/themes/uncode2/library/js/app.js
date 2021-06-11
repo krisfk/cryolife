@@ -545,11 +545,14 @@
                 menuOpen = new CustomEvent('menuMobileOpen');
             UNCODE.menuOpened = false;
             $mobileToggleButton.on('click', function(event) {
-                alert(5);
+                // alert(5);
                 var btn = this;
                 if ($(btn).hasClass('overlay-close')) return;
                 event.preventDefault();
-                if (UNCODE.wwidth < UNCODE.mediaQuery) {
+                if (
+                    $(window).width() <= 1280
+                    // UNCODE.wwidth < UNCODE.mediaQuery
+                ) {
                     $box = $(this).closest('.box-container').find('.main-menu-container');
                     $el = $(this).closest('.box-container').find('.menu-horizontal-inner:not(.row-brand), .menu-sidebar-inner');
                     $el_transp = $('.menu-absolute.menu-transparent');
