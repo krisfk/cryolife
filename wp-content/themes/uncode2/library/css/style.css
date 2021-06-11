@@ -429,6 +429,9 @@ Animations
         .main-container {
             padding-top: 0px !important;
         }
+        .video-div {
+            margin: 0 0 0 0;
+        }
     }
     
     .sections-container {
@@ -20030,7 +20033,7 @@ min-height: 750px;
     
     @media (max-width: 1280px) {
         .video-div {
-            margin: 0 0 0 0;
+            margin: 43px 0 0 0;
         }
         .mobile-flex-col {
             padding: 0px 36px 0px 36px !important;
