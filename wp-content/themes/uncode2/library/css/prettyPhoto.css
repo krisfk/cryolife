@@ -608,11 +608,11 @@ div.pp_overlay {
 
 div.pp_pic_holder {
     display: none;
-    /* position: absolute; */
-    position: fixed;
+    position: absolute;
+    /* position: fixed; */
     width: 100px;
     z-index: 10000;
-    height: 100% !important;
+    /* height: 100% !important; */
 }
 
 .pp_content {
