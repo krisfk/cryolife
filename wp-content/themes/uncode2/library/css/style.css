@@ -20023,6 +20023,11 @@ min-height: 750px;
         }
     }
     
+    .mobile-flex-row .row-inner {
+        display: flex;
+        /* flex-direction: column-reverse; */
+    }
+    
     @media (max-width: 1280px) {
         .mobile-flex-col {
             padding: 0px 36px 0px 36px !important;
