@@ -12352,8 +12352,8 @@ SmartMenu: Offcanvas
         animation-name: alpha-in;
     }
     /*
- *  KenBurns and BackWash animation reset
- */
+*  KenBurns and BackWash animation reset
+*/
     
     .owl-item:not(.index-active) .with-kburns .background-inner.uncode-kburns,
     .header-wrapper.with-kburns .owl-item:not(.index-active) .t-background-cover.uncode-kburns {
@@ -12366,8 +12366,8 @@ SmartMenu: Offcanvas
         animation: none !important;
     }
     /*
- *  Owl Carousel - Animate Plugin
- */
+*  Owl Carousel - Animate Plugin
+*/
     
     .owl-carousel .animated {
         -webkit-animation-duration: 400ms;
@@ -19704,10 +19704,10 @@ SmartMenu: Offcanvas
         margin: 66px 0 0 0 !important;
     }
     /* h1.black {
-    color: #000 !important;
-    font-weight: normal;
-    padding: 0 0 30px 0;
-    font-size: 48px;
+color: #000 !important;
+font-weight: normal;
+padding: 0 0 30px 0;
+font-size: 48px;
 } */
     
     h2.black {
@@ -19973,14 +19973,14 @@ SmartMenu: Offcanvas
     }
     
     marquee {
-        font-size: 19px;
-        height: 48px;
+        font-size: 15px;
+        height: 30px;
     }
     
     a marquee {
         color: #fff;
         background: #EB793F;
-        line-height: 46px;
+        line-height: 30px;
     }
     
     #masthead.is_stuck .menu-container {
@@ -20010,8 +20010,8 @@ SmartMenu: Offcanvas
             min-height: 600px;
         }
         /* .home-banner {
-        min-height: 750px;
-    } */
+    min-height: 750px;
+} */
     }
     
     @media (max-width: 1200px) {}
