@@ -20023,7 +20023,7 @@ min-height: 750px;
         }
     }
     
-    @media (max-width: 1280px) {
+    @media (max-width: 1281px) {
         .mobile-flex-col {
             padding: 0px 36px 0px 36px !important;
         }
