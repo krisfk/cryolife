@@ -20007,6 +20007,12 @@ font-size: 48px;
         .menu-container {
             background-color: #fff !important;
         }
+        .navbar-nav-last>ul>li:last-child>a.login-btn {
+            line-height: 30px;
+        }
+        .navbar-nav-last>ul>li:last-child>a.register-now-btn {
+            line-height: 30px;
+        }
     }
     
     @media (max-width: 1920px) {
