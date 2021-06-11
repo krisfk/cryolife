@@ -66,7 +66,7 @@ if (is_admin_bar_showing()) {
                     'position': 'fixed',
                     'left': '0px',
                     'top': '0px',
-                    'height': '48px',
+                    'height': '30px',
                     'width': '100%',
 
                     'z-index': '10000',
