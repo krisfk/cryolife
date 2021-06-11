@@ -7420,7 +7420,7 @@ Animations
         border-left-width: 0 !important;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-smart>li>a {
             padding: 0px 14px 0px 14px;
         }
@@ -20033,8 +20033,8 @@ min-height: 750px;
     
     @media (max-width: 1281px) {
         /* .video-div {
-        margin: 10px 0 0 0;
-    } */
+    margin: 10px 0 0 0;
+} */
         .mobile-flex-col {
             padding: 0px 36px 0px 36px !important;
         }
@@ -20077,14 +20077,13 @@ min-height: 750px;
             height: 30px !important;
             /* width: 64px; */
             width: auto;
-            ;
             text-align: center;
             padding: 0 10px !important;
             /* display: inline-block !important; */
             float: left;
             color: #fff !important;
             margin: 1px 10px 14px 35px !important;
-            line-height: 30px;
+            /* line-height: 30px; */
         }
         .navbar-nav-last>ul>li:last-child>a.register-now-btn {
             background: url(../img/orange-btn-bg.jpg);
@@ -20098,7 +20097,7 @@ min-height: 750px;
             float: left;
             color: #fff !important;
             margin: 1px 0 0 0;
-            line-height: 30px;
+            /* line-height: 30px; */
         }
     }
     
