@@ -7297,7 +7297,7 @@ Animations
         display: inline;
     }
     
-    @media (max-width: 959px) {
+    @media (max-width: 1279px) {
         body[class*='hmenu'] ul.menu-smart>li,
         ul.menu-smart.menu-horizontal>li,
         .navbar-cta ul.menu-smart>li {
@@ -8574,7 +8574,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (max-width: 1280px) {
+    @media (max-width: 1279px) {
         .menu-wrapper {
             position: relative;
             z-index: 1000;
@@ -8687,7 +8687,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (max-width: 1280px) {
+    @media (max-width: 1279px) {
         .menu-wrapper.menu-sticky .main-menu-container,
         .menu-wrapper.menu-hide-only .main-menu-container {
             overflow: scroll;
@@ -8955,7 +8955,7 @@ SmartMenu: Offcanvas
         line-height: 1em;
     }
     
-    @media (max-width: 1280px) {
+    @media (max-width: 1279px) {
         .menu-wrapper div[class*='col-lg-'] {
             display: block;
         }
@@ -9537,7 +9537,7 @@ SmartMenu: Offcanvas
 ----------------------------------------------------------
 */
     
-    @media (max-width: 1280px) {
+    @media (max-width: 1279px) {
         .menu-container {
             z-index: 1000;
         }
@@ -10137,7 +10137,7 @@ SmartMenu: Offcanvas
         display: block;
     }
     
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1279px) {
         .mobile-menu-button {
             display: inline-block;
             opacity: 1 !important;
@@ -20028,7 +20028,7 @@ min-height: 750px;
         /* flex-direction: column-reverse; */
     }
     
-    @media (max-width: 1280px) {
+    @media (max-width: 1279px) {
         .mobile-flex-col {
             padding: 0px 36px 0px 36px !important;
         }

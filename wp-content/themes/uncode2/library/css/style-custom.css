@@ -4733,7 +4733,7 @@ body:not(.menu-force-opacity).menu-overlay .menu-transparent:not(.is_stuck):not(
 
 /* Menu submenu mobile backgrounds colors */
 
-@media (max-width: 959px) {
+@media (max-width: 1279px) {
     .submenu-light .menu-smart,
     .submenu-light .menu-sidebar-inner,
     .submenu-light .main-menu-container {
