@@ -20024,7 +20024,7 @@ min-height: 750px;
     }
     
     .mobile-flex-row .row-inner {
-        display: block !important;
+        /* display: block !important; */
         /* flex-direction: column-reverse; */
     }
     
