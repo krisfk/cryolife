@@ -531,7 +531,7 @@
     UNCODE.menuSystem = function() {
 
         function menuMobile() {
-            alert(3);
+            // alert(3);
             var $body = $('body'),
                 $mobileToggleButton = $('.mobile-menu-button'),
                 $box,
@@ -545,6 +545,7 @@
                 menuOpen = new CustomEvent('menuMobileOpen');
             UNCODE.menuOpened = false;
             $mobileToggleButton.on('click', function(event) {
+                alert(5);
                 var btn = this;
                 if ($(btn).hasClass('overlay-close')) return;
                 event.preventDefault();
@@ -3215,8 +3216,10 @@
                     // just the end callback.
                     else {
                         callback = active ?
-                            function() { cb();
-                                fn(); } :
+                            function() {
+                                cb();
+                                fn();
+                            } :
                             fn;
 
                         active = true;
