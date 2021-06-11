@@ -300,7 +300,7 @@ if (is_admin_bar_showing()) {
             audio,
             video {
                 /* font-family: 'BemboStd' !important; */
-                font-size: 19px;
+                font-size: 15px;
                 font-family: 'Open Sans', sans-serif;
 
 
@@ -311,7 +311,7 @@ if (is_admin_bar_showing()) {
             .table td:lang(en),
             ul li:lang(en),
             ol li:lang(en) {
-                font-size: 19px;
+                font-size: 15px;
             }
 
             .font-size-submenu,
