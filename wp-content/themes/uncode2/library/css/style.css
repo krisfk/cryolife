@@ -13241,6 +13241,7 @@ SmartMenu: Offcanvas
         vertical-align: bottom;
         border: none;
         width: 50%;
+        padding-left: 0px;
     }
     
     .salesforce-form td input {
