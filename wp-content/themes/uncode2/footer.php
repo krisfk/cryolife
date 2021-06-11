@@ -190,9 +190,9 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 						if ( $is_redirect !== true && $footer_content!=='' )  : ?>
 <footer id="colophon" class="<?php echo esc_attr( $class_footer ); ?>">
     <?php
-								echo uncode_switch_stock_string( $footer_content );
+							//	echo uncode_switch_stock_string( $footer_content );
 
-								$is_footer = false;
+							//	$is_footer = false;
 							?>
 </footer>
 <?php endif; ?>
