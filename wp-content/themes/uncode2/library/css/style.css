@@ -8786,7 +8786,7 @@ SmartMenu: Offcanvas
         .hmenu:not(.menu-item-link)>a,
         .hmenu-center:not(.menu-item-link)>a {
             /* height: 0px; */
-            height: 48px;
+            height: 30px;
         }
     }
     
@@ -20010,7 +20010,7 @@ font-size: 48px;
             min-height: 600px;
         }
         /* .home-banner {
-    min-height: 750px;
+min-height: 750px;
 } */
     }
     
