@@ -606,7 +606,7 @@ div.pp_overlay {
 div.pp_pic_holder {
     display: none;
     position: absolute;
-    width: 800px !important;
+    width: 100px;
     z-index: 10000
 }
 
