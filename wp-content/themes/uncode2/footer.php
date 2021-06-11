@@ -73,7 +73,7 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 	if (isset($footer_block) && !empty($footer_block) && $footer_block !== 'none') {
 		$footer_block = apply_filters( 'wpml_object_id', $footer_block, 'post', true );
 		$footer_block_post_content = get_post_field('post_content', $footer_block);
-		echo $footer_block;
+		// echo $footer_block;
 
 		// Check if we have a content block created with VC
 		$has_vc_row = strpos( $footer_block_post_content, '[vc_row' ) !== false ? true : false;
