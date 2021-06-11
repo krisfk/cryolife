@@ -302,6 +302,7 @@ if (is_admin_bar_showing()) {
                 /* font-family: 'BemboStd' !important; */
                 font-size: 15px;
                 font-family: 'Open Sans', sans-serif;
+                line-height: 1.5;
 
 
             }
@@ -312,6 +313,8 @@ if (is_admin_bar_showing()) {
             ul li:lang(en),
             ol li:lang(en) {
                 font-size: 15px;
+                line-height: 1.5;
+
             }
 
             .font-size-submenu,
