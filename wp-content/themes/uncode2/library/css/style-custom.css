@@ -3775,7 +3775,7 @@ button[type='submit'],
     border-color: #f2f2f2 !important;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     .overlay.style-light-bg {
         background-color: rgba(255, 255, 255, 0.95) !important;
     }
@@ -4275,7 +4275,7 @@ button[type='submit'],
     font-size: 12px;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     .font-size-menu,
     .menu-container ul.menu-smart>li>a:not(.social-menu-link),
     .menu-container:not(.vmenu-container) ul.menu-smart>li>a,
@@ -4460,7 +4460,7 @@ body:not(.menu-force-opacity) .style-dark-override:not(.is_stuck):not(.is_mobile
     color: #888888;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     body[class*='hmenu-'] .submenu-light .menu-smart ul a:hover,
     body[class*='hmenu-'] .submenu-light .menu-smart ul a:focus {
         color: rgba(136, 136, 136, 0.5);
@@ -4472,7 +4472,7 @@ body:not(.menu-force-opacity) .style-dark-override:not(.is_stuck):not(.is_mobile
     color: #888888;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     body[class*='vmenu-'] .submenu-light .menu-smart.menu-cta-inner ul a:hover,
     body[class*='vmenu-'] .submenu-light .menu-smart.menu-cta-inner ul a:focus {
         color: rgba(136, 136, 136, 0.5);
@@ -4484,7 +4484,7 @@ body:not(.menu-force-opacity) .style-dark-override:not(.is_stuck):not(.is_mobile
     color: #ffffff;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     body[class*='hmenu-'] .submenu-dark .menu-smart ul a:hover,
     body[class*='hmenu-'] .submenu-dark .menu-smart ul a:focus {
         color: rgba(255, 255, 255, 0.5);
@@ -4496,7 +4496,7 @@ body:not(.menu-force-opacity) .style-dark-override:not(.is_stuck):not(.is_mobile
     color: #ffffff;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     body[class*='vmenu-'] .submenu-dark .menu-smart.menu-cta-inner ul a:hover,
     body[class*='vmenu-'] .submenu-dark .menu-smart.menu-cta-inner ul a:focus {
         color: rgba(255, 255, 255, 0.5);
@@ -4548,7 +4548,7 @@ body:not(.menu-force-opacity) .style-dark-override:not(.is_stuck):not(.is_mobile
 
 /* Menu megamenu title colors */
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     .submenu-light .menu-horizontal .menu-smart>.mega-menu .mega-menu-inner>li>a {
         color: #888888;
     }
@@ -4686,7 +4686,7 @@ body:not(.menu-force-opacity).menu-overlay .menu-transparent:not(.is_stuck):not(
 
 /* Submenu borders transparent  */
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     .submenu-transparent.submenu-light .menu-smart ul,
     .submenu-transparent.submenu-light .menu-smart li ul li {
         border-color: rgba(234, 234, 234, 1);
@@ -4867,7 +4867,7 @@ body:not(.menu-force-opacity) .style-dark-override:not(.is_stuck):not(.is_mobile
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     .menu-shadows {
         box-shadow: 0 4px 10px -10px rgba(0, 0, 0, 0.6);
     }
@@ -4905,7 +4905,7 @@ body:not(.menu-force-opacity)[class*='hmenu-'] .menu-primary.is_stuck .menu-cont
     background-color: transparent !important;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     .menu-overlay .menu-dark.submenu-light .menu-smart:not(.menu-cta-inner) ul a {
         color: #ffffff;
     }
@@ -4915,7 +4915,7 @@ body:not(.menu-force-opacity)[class*='hmenu-'] .menu-primary.is_stuck .menu-cont
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     .menu-overlay .menu-light.submenu-dark .menu-smart:not(.menu-cta-inner) ul a {
         color: #888888;
     }
