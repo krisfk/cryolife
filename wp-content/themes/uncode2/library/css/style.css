@@ -20032,9 +20032,9 @@ min-height: 750px;
     }
     
     @media (max-width: 1280px) {
-        .video-div {
-            margin: 43px 0 0 0;
-        }
+        /* .video-div {
+            margin: 10px 0 0 0;
+        } */
         .mobile-flex-col {
             padding: 0px 36px 0px 36px !important;
         }
