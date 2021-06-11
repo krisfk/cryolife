@@ -430,7 +430,7 @@ Animations
             padding-top: 0px !important;
         }
         .video-div {
-            margin: 0 0 0 0;
+            margin: 0 0 0 0 !important;
         }
     }
     
@@ -791,9 +791,6 @@ Animations
         .body-borders[data-border='27'] .right-border,
         .body-borders[data-border='27'] .left-border {
             width: 9px;
-        }
-        .video-div {
-            margin: 0 0 0 0;
         }
     }
     
