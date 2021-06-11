@@ -792,6 +792,9 @@ Animations
         .body-borders[data-border='27'] .left-border {
             width: 9px;
         }
+        .video-div {
+            margin: 0 0 0 0;
+        }
     }
     
     .body-borders[data-border='36'] .top-border,
