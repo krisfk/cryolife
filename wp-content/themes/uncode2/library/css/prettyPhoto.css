@@ -611,7 +611,7 @@ div.pp_pic_holder {
     position: absolute;
     /* position: fixed; */
     width: 100px;
-    z-index: 10000;
+    z-index: 11000;
     /* height: 100% !important; */
 }
 
