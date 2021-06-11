@@ -316,6 +316,10 @@ Animations
         display: none;
     }
     
+    footer img {
+        margin: 0 90px 0 0;
+    }
+    
     @media print {
         .box-container {
             width: 100% !important;
