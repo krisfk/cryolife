@@ -481,7 +481,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .desktop-hidden {
             display: none !important;
         }
@@ -829,7 +829,7 @@ Animations
         margin: 9px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body[data-border='9'] .vmenu-container {
             padding-top: 9px;
             height: calc(100% - 9px) !important;
@@ -869,7 +869,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body[data-border='18'] .vmenu-container {
             padding-top: 18px;
             height: calc(100% - 18px) !important;
@@ -909,7 +909,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body[data-border='27'] .vmenu-container {
             padding-top: 27px;
             height: calc(100% - 27px) !important;
@@ -949,7 +949,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body[data-border='36'] .vmenu-container {
             padding-top: 36px;
             height: calc(100% - 36px) !important;
@@ -1457,14 +1457,14 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .row-inner.restrict,
         .row-inner.restrict>div {
             height: 1px;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .row-inner.expand {
             height: 100%;
         }
@@ -1556,7 +1556,7 @@ Animations
         height: 100%;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .row .uncont.col-custom-width {
             border: 36px;
             border-style: solid;
@@ -2227,7 +2227,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-inner {
             margin-left: -36px;
         }
@@ -2652,7 +2652,7 @@ Animations
         padding-right: 0px !important;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-parent.limit-width.fill-col-left {
             padding-left: 36px;
         }
@@ -2665,7 +2665,7 @@ Animations
         padding: 0px !important;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container>.row-parent .row-child>.row-inner>div {
             padding: 0px 0px 0px 36px;
         }
@@ -2675,7 +2675,7 @@ Animations
         padding: 0px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-no-gutter>.row-inner,
         .main-container .row-container .col-no-gutter>.row-inner {
             margin-left: 0px;
@@ -2696,14 +2696,14 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-one-gutter>.row-inner,
         .main-container .row-container .col-one-gutter>.row-inner {
             margin-left: -1px;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-one-gutter>.row-inner>div,
         .main-container .row-container .col-one-gutter>.row-inner>div {
             padding-left: 1px;
@@ -2722,20 +2722,20 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-one-gutter>.row-inner {
             margin-left: -1px;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-half-gutter>.row-inner,
         .main-container .row-container .col-half-gutter>.row-inner {
             margin-left: -18px;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-half-gutter>.row-inner>div,
         .main-container .row-container .col-half-gutter>.row-inner>div {
             padding-left: 18px;
@@ -2754,14 +2754,14 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-std-gutter>.row-inner,
         .main-container .row-container .col-std-gutter>.row-inner {
             margin-left: -54px;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-std-gutter>.row-inner>div,
         .main-container .row-container .col-std-gutter>.row-inner>div {
             padding-left: 54px;
@@ -2769,14 +2769,14 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-double-gutter>.row-inner,
         .main-container .row-container .col-double-gutter>.row-inner {
             margin-left: -72px;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container .row-child.col-double-gutter>.row-inner>div,
         .main-container .row-container .col-double-gutter>.row-inner>div {
             padding-left: 72px;
@@ -3143,7 +3143,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .row-container.limit-width.boxed-row {
             box-sizing: border-box;
             background-clip: content-box;
@@ -3157,34 +3157,34 @@ Animations
         opacity: 0;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .post-body>.row-container .row-child.col-one-gutter>.row-inner,
         .main-container .post-body>.row-container .col-one-gutter>.row-inner {
             width: calc(100% + 1px);
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .post-body>.row-container .row-child.col-one-gutter>.row-inner {
             width: calc(100% + 1px);
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .post-body>.row-container .row-child.col-half-gutter>.row-inner,
         .main-container .post-body>.row-container .col-half-gutter>.row-inner {
             width: calc(100% + 18px);
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .post-body>.row-container .row-child.col-std-gutter>.row-inner,
         .main-container .post-body>.row-container .col-std-gutter>.row-inner {
             width: calc(100% + 54px);
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .main-container .post-body>.row-container .row-child.col-double-gutter>.row-inner,
         .main-container .post-body>.row-container .col-double-gutter>.row-inner {
             width: calc(100% + 72px);
@@ -3524,61 +3524,61 @@ Animations
 ----------------------------------------------------------
 */
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_half {
             left: 18px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_single {
             left: 36px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_double {
             left: 72px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_triple {
             left: 108px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_quad {
             left: 144px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_neg_half {
             left: -18px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_neg_single {
             left: -36px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_neg_double {
             left: -72px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_neg_triple {
             left: -108px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.vc-safe-mode) .shift_x_neg_quad {
             left: -144px !important;
         }
@@ -5356,7 +5356,7 @@ Animations
         padding-left: 18px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .icon-box-left .icon-box-content {
             padding-left: 36px;
         }
@@ -5370,7 +5370,7 @@ Animations
         padding-right: 18px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .icon-box-right .icon-box-content {
             padding-right: 36px;
         }
@@ -5463,7 +5463,7 @@ Animations
         pointer-events: none;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .nav-tabs>li.active>a {
             border-bottom-width: 2px;
             border-bottom-style: solid;
@@ -6293,7 +6293,7 @@ Animations
         margin-top: 0;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .plan.plan-most-popular {
             position: relative;
             z-index: 2;
@@ -6307,7 +6307,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .col-no-gutter .plan {
             margin-left: -1px !important;
         }
@@ -6954,7 +6954,7 @@ Animations
         table-layout: fixed;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .sticky-element {
             height: auto !important;
         }
@@ -7305,7 +7305,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body[class*='hmenu'] ul.menu-smart>li,
         ul.menu-smart.menu-horizontal>li,
         .navbar-cta ul.menu-smart>li {
@@ -7360,7 +7360,7 @@ Animations
         min-height: 1px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         ul.menu-smart li *,
         ul.menu-smart li *:before,
         ul.menu-smart li *:after {
@@ -7379,7 +7379,7 @@ Animations
 ----------------------------------------------------------
 */
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-smart {
             padding: 0px 13px 0px 13px;
         }
@@ -7401,7 +7401,7 @@ Animations
         font-size: 12px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-mini.menu-smart ul a {
             padding: 5px 9px 5px 9px !important;
         }
@@ -7417,7 +7417,7 @@ Animations
         border-left-width: 0 !important;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-smart>li>a {
             padding: 0px 14px 0px 14px;
         }
@@ -7450,7 +7450,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body.menu-overlay-center .menu-primary .menu-smart .search-icon {
             display: inline-block;
         }
@@ -7515,7 +7515,7 @@ Animations
         top: 0.25em;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body[class*='hmenu-'] .menu-smart ul>li>a i.fa-dropdown {
             float: right;
             top: 5px;
@@ -7580,7 +7580,7 @@ Animations
         top: 0 !important;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-smart>li.menu-btn-container>a {
             padding-top: 0;
             padding-bottom: 0;
@@ -7645,7 +7645,7 @@ Animations
         line-height: 0px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-horizontal {
             height: 100%;
             width: 100%;
@@ -7655,7 +7655,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-horizontal>div {
             height: 100%;
             display: inline-table;
@@ -7689,7 +7689,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-horizontal .menu-smart>.mega-menu .mega-menu-inner {
             padding: 27px 0px 27px 0px;
         }
@@ -7784,7 +7784,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-horizontal .menu-smart ul {
             padding: 18px 18px 18px 18px;
         }
@@ -7808,7 +7808,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .vmenu-container {
             overflow-y: auto !important;
         }
@@ -7820,7 +7820,7 @@ Animations
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .vmenu-container .main-menu-container form.search {
             padding: 18px 54px 18px 54px;
         }
@@ -7862,7 +7862,7 @@ Animations
         margin: 0px 0px 0px 9px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .vmenu-container .menu-accordion ul ul {
             padding: 12px 0px 12px 0px;
         }
@@ -7876,7 +7876,7 @@ Animations
         padding: 0px 5px 0px 5px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .vmenu .vmenu-container.menu-no-borders .main-menu-container>div:first-child>* {
             padding-top: 0px;
         }
@@ -7963,7 +7963,7 @@ Animations
         border: none;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-accordion .menu-smart a {
             padding: 5px 54px 5px 54px;
         }
@@ -8182,7 +8182,7 @@ SmartMenu: Overlay
 ----------------------------------------------------------
 */
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-overlay .vmenu-container .menu-sidebar-inner {
             max-width: 800px;
             margin: 0 auto;
@@ -8274,13 +8274,13 @@ SmartMenu: Offcanvas
 ----------------------------------------------------------
 */
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-offcanvas.vmenu-top .navbar-main {
             margin: 18px 0px 0px 0px !important;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-offcanvas.boxed-width .box-container {
             overflow: hidden;
             position: relative;
@@ -8298,7 +8298,7 @@ SmartMenu: Offcanvas
 ----------------------------------------------------------
 */
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .hmenu:not(.hmenu-center-split) .navbar-nav-first:not(.navbar-cta) {
             width: 100%;
         }
@@ -8380,7 +8380,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-primary.menu-borders,
         .menu-primary .menu-borders {
             border-bottom-width: 1px;
@@ -8394,7 +8394,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .vmenu-borders {
             border-right-width: 1px;
             border-right-style: solid;
@@ -8476,7 +8476,7 @@ SmartMenu: Offcanvas
 ----------------------------------------------------------
 */
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-no-arrows .menu-smart>li>a i.fa-dropdown {
             display: none;
         }
@@ -8495,7 +8495,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .hmenu .menu-horizontal-inner {
             width: 100%;
         }
@@ -8526,7 +8526,7 @@ SmartMenu: Offcanvas
         height: auto;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-accordion .menu-smart.menu-no-dividers a {
             padding: 6px 18px 6px 18px !important;
         }
@@ -8585,7 +8585,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-animated .menu-horizontal .menu-smart>li>ul.mega-menu-inner>li a,
         .menu-animated .menu-horizontal .menu-smart>li>ul:not(.mega-menu-inner):not(.cart_list) li>a,
         .menu-animated .menu-horizontal .menu-smart>li>ul.cart_list>li:not(.removing-item) {
@@ -8719,7 +8719,7 @@ SmartMenu: Offcanvas
         position: relative;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .row-menu-inner {
             display: table;
             height: 100%;
@@ -8756,7 +8756,7 @@ SmartMenu: Offcanvas
         height: 100%;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .hmenu .menu-primary .menu-smart>li>a,
         .hmenu-center .menu-primary .menu-smart>li>a {
             height: 100%;
@@ -8782,7 +8782,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .hmenu:not(.menu-item-link)>a,
         .hmenu-center:not(.menu-item-link)>a {
             /* height: 0px; */
@@ -8790,7 +8790,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .navbar-cta ul.menu-smart>li>a {
             height: 100%;
             line-height: 1em;
@@ -8812,7 +8812,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-overlay-center #masthead .menu-icons>li>a {
             height: 100%;
             line-height: 1em;
@@ -8862,7 +8862,7 @@ SmartMenu: Offcanvas
         line-height: 0px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .hmenu-center .menu-container-mobile.menu-hide {
             position: relative !important;
             transform: none !important;
@@ -8905,7 +8905,7 @@ SmartMenu: Offcanvas
         transition: background-color 0.4s ease-in-out;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .vmenu .main-header .menu-container {
             overflow-y: auto;
             box-sizing: border-box;
@@ -9070,7 +9070,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .uncode-logo-mobile .menu-wrapper .mobile-logo,
         .uncode-logo-mobile #masthead .mobile-logo {
             transform: translateX(-10000px);
@@ -9137,7 +9137,7 @@ SmartMenu: Offcanvas
         position: relative;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-primary .row {
             border-collapse: collapse;
         }
@@ -9169,7 +9169,7 @@ SmartMenu: Offcanvas
 ----------------------------------------------------------
 */
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body.hmenu-position-right .menu-primary-inner {
             text-align: right;
         }
@@ -9517,7 +9517,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) and (min-width: 960px) {
+    @media (min-width: 1280px) and (min-width: 1280px) {
         body[class*='vmenu-'] .main-menu-container {
             height: 100% !important;
         }
@@ -9671,7 +9671,7 @@ SmartMenu: Offcanvas
         position: relative;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body.menu-offcanvas .main-header {
             position: absolute;
             top: 0px;
@@ -9731,7 +9731,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-overlay .vmenu-container .menu-primary-inner {
             padding-top: 0;
         }
@@ -9810,27 +9810,27 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-overlay .logo-container,
         .menu-offcanvas .logo-container {
             text-align: left;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-overlay-left .logo-container,
         .vmenu-position-left.menu-offcanvas .logo-container {
             text-align: right;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-overlay-center .logo-container {
             text-align: center;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .menu-overlay-left .mmb-container,
         .vmenu-position-left.menu-offcanvas .mmb-container {
             left: 0 !important;
@@ -9847,7 +9847,7 @@ SmartMenu: Offcanvas
         text-align: left;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .top-menu.top-menu-padding .menu-bloginfo {
             padding-top: 12px;
             padding-bottom: 12px;
@@ -9867,7 +9867,7 @@ SmartMenu: Offcanvas
 *
 ******************************/
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         body:not(.rtl) ul.sm-rtl {
             direction: rtl;
         }
@@ -10149,7 +10149,7 @@ SmartMenu: Offcanvas
         line-height: 20px;
     }
     
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1280px) {
         .overlay-menu .menu-button-overlay {
             transform: translateY(-50%);
         }
@@ -10245,7 +10245,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1280px) {
         .mobile-shopping-cart {
             z-index: 1000;
         }
@@ -10296,7 +10296,7 @@ SmartMenu: Offcanvas
         display: inline-block !important;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .isotope-filters ul.menu-smart li {
             float: none;
         }
@@ -10308,13 +10308,13 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .isotope-filters ul.menu-smart li.float-left {
             float: left;
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .isotope-filters ul.menu-smart li.float-right {
             float: right;
         }
@@ -12271,7 +12271,7 @@ SmartMenu: Offcanvas
         bottom: auto;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .owl-dots-outside.owl-dots-db-space .owl-dots {
             bottom: -87px;
         }
@@ -13873,7 +13873,7 @@ SmartMenu: Offcanvas
         color: #000000;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .header-scrolled .header-wrapper .header-scrolldown {
             opacity: 0 !important;
         }
@@ -13930,7 +13930,7 @@ SmartMenu: Offcanvas
         opacity: 0;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .header-scrolled .header-scroll-opacity .header-main-container {
             opacity: 0 !important;
         }
@@ -14134,7 +14134,7 @@ SmartMenu: Offcanvas
         height: 100% !important;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .chrome .header-wrapper .column_parent {
             height: 0 !important;
         }
@@ -14214,7 +14214,7 @@ SmartMenu: Offcanvas
         background-size: 38px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         #page-header {
             display: table-row;
             width: 100%;
@@ -14246,7 +14246,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         #page-header .remove-menu-padding .header-content,
         #page-header .remove-menu-padding .uncont {
             padding-top: 0px !important;
@@ -16120,7 +16120,7 @@ SmartMenu: Offcanvas
 ----------------------------------------------------------
 */
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .overlay {
             position: fixed;
             width: 100%;
@@ -16766,7 +16766,7 @@ SmartMenu: Offcanvas
         bottom: 22px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .footer-scroll-top.footer-scroll-higher {
             bottom: 61px;
         }
@@ -16799,7 +16799,7 @@ SmartMenu: Offcanvas
         opacity: 0.8;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .chrome .site-info {
             height: auto !important;
         }
@@ -16870,7 +16870,7 @@ SmartMenu: Offcanvas
         background-clip: padding-box;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         div.comment-meta.post-meta {
             margin-left: 90px;
         }
@@ -16917,7 +16917,7 @@ SmartMenu: Offcanvas
         min-height: 72px;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .comment-content .gravatar img.avatar {
             display: block;
         }
@@ -16962,7 +16962,7 @@ SmartMenu: Offcanvas
         text-transform: uppercase;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .comment-content .comment-reply-link {
             position: absolute;
             top: 0;
@@ -17000,7 +17000,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .comments-area .form-indent .comment-form .form-submit {
             margin-left: 108px;
         }
@@ -17111,7 +17111,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 1280px) {
         .author-profile.author-profile-box-left .author-profile-content>*:first-child,
         .author-profile.author-profile-box-right .author-profile-content>*:first-child,
         .author-profile.author-profile-box-left .uncode-avatar-wrapper>*:first-child,
