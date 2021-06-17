@@ -70,7 +70,9 @@ if (is_admin_bar_showing()) {
         $(window).on('beforeunload', function() {
             // isSunday = (0 == (new Date()).getDay());
             if ($('.salesforce-form').hasClass('dirty')) {
-                return "Because it's Sunday, I'll be nice and let you know you forgot to save!";
+
+
+                // return "Because it's Sunday, I'll be nice and let you know you forgot to save!";
             }
         })
 
