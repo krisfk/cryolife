@@ -181,7 +181,7 @@ add_action( 'rest_api_init', function () {
   function abandon_sf_func($request)
   {
   
-	echo 1;
+	// echo 1;
 	  // insert the post and set the category
 //   $post_id = wp_insert_post(array (
 // 	  'post_type' => 'application',
