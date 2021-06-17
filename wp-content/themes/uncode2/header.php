@@ -80,18 +80,6 @@ if (is_admin_bar_showing()) {
                 var description = $('.salesforce-form textarea').val();
 
 
-                $.post("/wp-json/api/abandon_sf", {
-                        first_name: first_name,
-                        last_name: last_name,
-                        email: email,
-                        mobile: mobile,
-                        topic: topic,
-                        description: description
-                    },
-                    function(data, status) {
-
-                    });
-
 
 
 
@@ -108,14 +96,7 @@ if (is_admin_bar_showing()) {
                     },
                     dataType: "json",
                 }).done(function(response) {
-                    // 
-                    // if (response.status) {
 
-                    // $('.form-div').fadeOut(0);
-                    // $('.result-txt-div').html('<?php echo get_field('applied_txt');?>');
-
-                    // }
-                    alert('done');
 
                 }).fail(function(Response) {});
 
