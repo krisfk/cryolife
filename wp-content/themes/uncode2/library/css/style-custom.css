@@ -2261,6 +2261,11 @@ body.textual-accent-color .row-container .post-content small a:not(.btn),
     color: #000000 !important;
 }
 
+.wpcf7 .wpcf7-validation-errors,
+.wpcf7 span.wpcf7-not-valid-tip {
+    color: #f00 !important;
+}
+
 .color-accent-darker,
 body.textual-accent-color .post-content p:not(.entry-small):not(.panel-title):not(.t-entry-member-social) a:not(.btn-text-skin):hover:not(.btn),
 body.textual-accent-color .post-content p:not(.entry-small):not(.panel-title):not(.t-entry-member-social) a:not(.btn-text-skin):focus:not(.btn),
