@@ -256,6 +256,12 @@ if (is_admin_bar_showing()) {
 
 
       if (get_field('hide_marquee') === NULL || get_field('hide_marquee')) {
+          ?>
+
+    <script type="text/javascript">
+    $('body').addClass('no-marquee');
+    </script>
+    <?php
         // true
       } else {
           ?>
