@@ -329,7 +329,7 @@ Animations
     }
     
     .wpcf7-form table .wpcf7-not-valid-tip {
-        color: #f00;
+        color: #f00 !important;
     }
     
     @media print {
