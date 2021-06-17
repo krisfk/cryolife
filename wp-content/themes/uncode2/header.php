@@ -53,9 +53,9 @@ if (is_admin_bar_showing()) {
     <script type="text/javascript" src="<?php echo get_template_directory_uri().'/library/js/jquery.prettyPhoto.js' ?>">
     </script>
 
-    <!-- <script type="text/javascript"
+    <script type="text/javascript"
         src="<?php echo get_template_directory_uri().'/library/js/jquery.are-you-sure.js' ?>">
-    </script> -->
+    </script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
