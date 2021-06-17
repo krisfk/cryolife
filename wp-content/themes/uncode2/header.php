@@ -64,6 +64,11 @@ if (is_admin_bar_showing()) {
     var $ = jQuery;
     $(function() {
 
+        $("a[rel^='prettyPhoto']").click(function(e) {
+            e.preventDefault();
+
+        })
+
         $('.salesforce-form').areYouSure({
             'silent': true
         });
