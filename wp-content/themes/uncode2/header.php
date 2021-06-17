@@ -64,47 +64,47 @@ if (is_admin_bar_showing()) {
     var $ = jQuery;
     $(function() {
 
-                $('.salesforce-form').areYouSure({
-                    'silent': true
+        $('.salesforce-form').areYouSure({
+            'silent': true
+        });
+        $(window).on('beforeunload', function() {
+            // isSunday = (0 == (new Date()).getDay());
+            if ($('.salesforce-form').hasClass('dirty')) {
+                return "Because it's Sunday, I'll be nice and let you know you forgot to save!";
+            }
+        })
+
+
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() >= 18) {
+                // alert(70);
+                $('.marquee-a').css({
+                    'position': 'fixed',
+                    'left': '0px',
+                    'top': '0px',
+                    'height': '30px',
+                    'width': '100%',
+
+                    'z-index': '10000',
+
+
                 });
-                $(window).on('beforeunload', function() {
-                        // isSunday = (0 == (new Date()).getDay());
-                        if ($('.salesforce-form').hasClass('dirty')) {
-                            return "Because it's Sunday, I'll be nice and let you know you forgot to save!";
-                        }
-                    }
 
 
 
-                    $(window).scroll(function() {
-                        if ($(window).scrollTop() >= 18) {
-                            // alert(70);
-                            $('.marquee-a').css({
-                                'position': 'fixed',
-                                'left': '0px',
-                                'top': '0px',
-                                'height': '30px',
-                                'width': '100%',
-
-                                'z-index': '10000',
-
-
-                            });
-
-
-
-                        } else {
-                            $('.marquee-a').css({
-                                'position': 'relative'
-                            })
-
-                        }
-                    })
+            } else {
+                $('.marquee-a').css({
+                    'position': 'relative'
                 })
 
-            // window.addEventListener('hashchange', function() {
-            //     console.log('The hash has changed!')
-            // }, false);
+            }
+        })
+    })
+
+    // window.addEventListener('hashchange', function() {
+    //     console.log('The hash has changed!')
+    // }, false);
     </script>
 </head>
 <?php
