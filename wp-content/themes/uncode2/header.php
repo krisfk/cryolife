@@ -64,9 +64,9 @@ if (is_admin_bar_showing()) {
     var $ = jQuery;
     $(function() {
 
-        // $('.salesforce-form').areYouSure({
-        //     'silent': true
-        // });
+        $('.salesforce-form').areYouSure({
+            'silent': true
+        });
         $(window).on('beforeunload', function() {
             if ($('.salesforce-form').hasClass('dirty')) {
 
