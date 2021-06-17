@@ -168,3 +168,28 @@ function add_slug_body_class( $classes ) {
 	add_filter( 'body_class', 'add_slug_body_class' );
 	
 set_post_thumbnail_size(300, 300, true);
+
+
+
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'api', '/abandon_sf', array(
+	  'methods' => 'POST',
+	  'callback' => 'abandon_sf_func',
+	) );
+  } );
+  
+  function abandon_sf_func($request)
+  {
+  
+	echo 1;
+	  // insert the post and set the category
+//   $post_id = wp_insert_post(array (
+// 	  'post_type' => 'application',
+// 	  'post_title' => $request->get_param( 'customer_name' ). ' application',
+// 	  'post_status' => 'publish',
+// 	  'comment_status' => 'closed',   // if you prefer
+// 	  'ping_status' => 'closed',      // if you prefer
+//   ));
+  
+
+}
