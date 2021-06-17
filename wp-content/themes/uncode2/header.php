@@ -67,6 +67,7 @@ if (is_admin_bar_showing()) {
         $("a[rel^='prettyPhoto']").click(function(e) {
             e.preventDefault();
 
+            alert(6)
         })
 
         $('.salesforce-form').areYouSure({
