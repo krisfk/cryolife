@@ -47,11 +47,7 @@ if (is_admin_bar_showing()) {
 
     <?php wp_head(); ?>
 
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/library/css/prettyPhoto.css' ?>"
-        type="text/css" media="screen" charset="utf-8" />
 
-    <script type="text/javascript" src="<?php echo get_template_directory_uri().'/library/js/jquery.prettyPhoto.js' ?>">
-    </script>
 
     <script type="text/javascript"
         src="<?php echo get_template_directory_uri().'/library/js/jquery.are-you-sure.js' ?>">
