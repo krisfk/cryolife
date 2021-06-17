@@ -251,18 +251,14 @@ if (is_admin_bar_showing()) {
         'post_type' => 'page'
       );
       $marquee = new WP_Query($args);
-      if($marquee->have_posts())
-
-      {
-
-
+      
       $marquee -> the_post();
 
 
 
-
-
-      ?>
+if(get_the_content())
+{
+    ?>
     <a href="<?php echo get_field('marquee_link')?>" target="_blank" class="marquee-a">
         <marquee width="100%" direction="left" height="100px">
             <?php
@@ -272,13 +268,10 @@ if (is_admin_bar_showing()) {
         </marquee>
     </a>
     <?php
-    
 }
-else
-{
-    echo 111;
-}
-?>
+
+      ?>
+
     <div class="box-wrapper<?php echo esc_html($back_class); ?>" <?php echo wp_kses_post($background_style); ?>>
         <div class="box-container<?php echo esc_attr($boxed_width); ?>">
             <script type="text/javascript">
