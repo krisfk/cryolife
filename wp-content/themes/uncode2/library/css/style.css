@@ -320,6 +320,14 @@ Animations
         margin: 0 90px 0 0;
     }
     
+    .wpcf7-form table {
+        border: none;
+    }
+    
+    .wpcf7-form table td {
+        border: none;
+    }
+    
     @media print {
         .box-container {
             width: 100% !important;
