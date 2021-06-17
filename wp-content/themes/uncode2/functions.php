@@ -173,7 +173,7 @@ set_post_thumbnail_size(300, 300, true);
 
 add_action( 'rest_api_init', function () {
 	register_rest_route( 'api', '/abandon_sf', array(
-	  'methods' => 'GET',
+	  'methods' => 'POST',
 	  'callback' => 'abandon_sf_func',
 	) );
   } );

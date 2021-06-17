@@ -71,18 +71,21 @@ if (is_admin_bar_showing()) {
             // isSunday = (0 == (new Date()).getDay());
             if ($('.salesforce-form').hasClass('dirty')) {
 
-                alert(778);
-                //                 $.post("/wp-json/api/abandon_sf", {
-                //                         name: "Donald Duck",
-                //                         city: "Duckburg"
-                //                     },
-                //                     function(data, status) {
-                // =                        alert(999);
+                // alert(778);
+                $.post("/wp-json/api/abandon_sf", {
+                        name: "Donald Duck",
+                        city: "Duckburg"
+                    },
+                    function(data, status) {
+                        // =                        alert(999);
 
-                //                     });
+                    });
 
                 // http://165.22.180.89/en/wp-json/api/abandon_sf
             }
+            return "Good bye";
+
+
         })
 
 
