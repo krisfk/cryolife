@@ -68,20 +68,14 @@ if (is_admin_bar_showing()) {
             'silent': true
         });
         $(window).on('beforeunload', function() {
-            // isSunday = (0 == (new Date()).getDay());
             if ($('.salesforce-form').hasClass('dirty')) {
 
-                // alert(778);
                 var first_name = $('#first_name').val();
                 var last_name = $('#last_name').val();
                 var email = $('#email').val();
                 var mobile = $('#mobile').val();
                 var topic = $('.salesforce-form select').val();
                 var description = $('.salesforce-form textarea').val();
-
-
-
-
 
                 $.ajax({
                     type: "POST",
