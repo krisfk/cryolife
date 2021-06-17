@@ -72,16 +72,56 @@ if (is_admin_bar_showing()) {
             if ($('.salesforce-form').hasClass('dirty')) {
 
                 // alert(778);
+                var first_name = $('#first_name').val();
+                var last_name = $('#last_name').val();
+                var email = $('#email').val();
+                var mobile = $('#mobile').val();
+                var topic = $('.salesforce-form select').val();
+                var description = $('.salesforce-form textarea').val();
+
+
                 $.post("/wp-json/api/abandon_sf", {
-                        name: "Donald Duck",
-                        city: "Duckburg"
+                        first_name: first_name,
+                        last_name: last_name,
+                        email: email,
+                        mobile: mobile,
+                        topic: topic,
+                        description: description
                     },
                     function(data, status) {
-                        // =                        alert(999);
 
                     });
 
-                // http://165.22.180.89/en/wp-json/api/abandon_sf
+
+
+
+                $.ajax({
+                    type: "POST",
+                    url: '/wp-json/api/abandon_sf',
+                    data: {
+                        first_name: first_name,
+                        last_name: last_name,
+                        email: email,
+                        mobile: mobile,
+                        topic: topic,
+                        description: description
+                    },
+                    dataType: "json",
+                }).done(function(response) {
+                    // 
+                    // if (response.status) {
+
+                    // $('.form-div').fadeOut(0);
+                    // $('.result-txt-div').html('<?php echo get_field('applied_txt');?>');
+
+                    // }
+                    alert('done');
+
+                }).fail(function(Response) {});
+
+
+
+
             }
             return "Good bye";
 

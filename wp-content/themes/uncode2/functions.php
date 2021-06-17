@@ -177,9 +177,11 @@ add_action( 'rest_api_init', function () {
 	  'callback' => 'abandon_sf_func',
 	) );
   } );
+
   
-  function abandon_sf_func($request)
-  {
+  
+function abandon_sf_func($request)
+{
 
 	// insert the post and set the category
 $post_id = wp_insert_post(array (
@@ -190,14 +192,20 @@ $post_id = wp_insert_post(array (
     'ping_status' => 'closed',      // if you prefer
 ));
 
+// first_name: first_name,
+// last_name: last_name,
+// email: email,
+// mobile: mobile,
+// topic: topic,
+// description: description
+
 if ($post_id) {
-    // add_post_meta($post_id, 'loan_type', $request->get_param( 'loan_type' ));
-    // add_post_meta($post_id, 'customer_name', $request->get_param( 'customer_name' ));
-    // add_post_meta($post_id, 'customer_tel', $request->get_param( 'customer_tel' ));
-	// add_post_meta($post_id, 'customer_hkid', $request->get_param( 'customer_id_full' ));
-	// add_post_meta($post_id, 'customer_dob', $request->get_param( 'customer_dob' ));
-	// add_post_meta($post_id, 'where_from', $request->get_param( 'where_from' ));
-	// add_post_meta($post_id, 'submission_date_time',current_time( 'mysql' )  );
+    add_post_meta($post_id, 'first_name', $request->get_param( 'loan_type' ));
+    add_post_meta($post_id, 'last_name', $request->get_param( 'last_name' ));
+    add_post_meta($post_id, 'email', $request->get_param( 'email' ));
+	add_post_meta($post_id, 'mobile', $request->get_param( 'mobile' ));
+	add_post_meta($post_id, 'topic', $request->get_param( 'topic' ));
+	add_post_meta($post_id, 'description', $request->get_param( 'description' ));
 
 
 	# PHP7+
