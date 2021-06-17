@@ -20027,6 +20027,10 @@ font-size: 48px;
         top: 0px !important;
     }
     
+    .no-marquee .video-div {
+        margin: 32px 0 0 0;
+    }
+    
     .cli-style-v2 .cli-bar-message {
         font-size: 13px;
     }
