@@ -98,7 +98,7 @@ if (is_admin_bar_showing()) {
 
 
             }
-            return "Good bye";
+            // return "Good bye";
 
 
         })
