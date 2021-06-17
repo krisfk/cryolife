@@ -332,6 +332,10 @@ Animations
         color: #f00 !important;
     }
     
+    .wpcf7-not-valid-tip {
+        color: #f00 !important;
+    }
+    
     @media print {
         .box-container {
             width: 100% !important;
