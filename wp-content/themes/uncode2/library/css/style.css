@@ -328,6 +328,10 @@ Animations
         border: none;
     }
     
+    .wpcf7-form table .wpcf7-not-valid-tip {
+        color: #f00;
+    }
+    
     @media print {
         .box-container {
             width: 100% !important;
