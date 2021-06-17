@@ -68,6 +68,8 @@ if (is_admin_bar_showing()) {
             'silent': true
         });
         $(window).on('beforeunload', function() {
+
+
             if ($('.salesforce-form').hasClass('dirty')) {
 
                 var first_name = $('#first_name').val();
@@ -94,6 +96,8 @@ if (is_admin_bar_showing()) {
 
                 }).fail(function(Response) {});
 
+
+                return "good bye";
 
 
 
