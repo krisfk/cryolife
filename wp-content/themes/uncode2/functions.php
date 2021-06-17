@@ -200,7 +200,7 @@ $post_id = wp_insert_post(array (
 // description: description
 
 if ($post_id) {
-    add_post_meta($post_id, 'first_name', $request->get_param( 'loan_type' ));
+    add_post_meta($post_id, 'first_name', $request->get_param( 'first_name' ));
     add_post_meta($post_id, 'last_name', $request->get_param( 'last_name' ));
     add_post_meta($post_id, 'email', $request->get_param( 'email' ));
 	add_post_meta($post_id, 'mobile', $request->get_param( 'mobile' ));
