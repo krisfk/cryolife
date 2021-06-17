@@ -71,13 +71,15 @@ if (is_admin_bar_showing()) {
             // isSunday = (0 == (new Date()).getDay());
             if ($('.salesforce-form').hasClass('dirty')) {
 
-
+                alert(778);
                 $.post("/wp-json/api/abandon_sf", {
                         name: "Donald Duck",
                         city: "Duckburg"
                     },
                     function(data, status) {
-                        console.log(data);
+                        // console.log(data);
+                        alert(999);
+
                         // alert("Data: " + data + "\nStatus: " + status);
                     });
 
