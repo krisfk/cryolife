@@ -332,6 +332,10 @@ Animations
         padding-left: 0px;
     }
     
+    .wpcf7-form table td input {
+        width: 100%;
+    }
+    
     .wpcf7-form table .wpcf7-not-valid-tip {
         color: #f00 !important;
     }
