@@ -335,11 +335,14 @@ Animations
     .wpcf7-not-valid-tip {
         color: #f00 !important;
     }
-
-    .pum-content.popmake-content
-     table td{
-         border:none;
-     }
+    
+    .pum-content.popmake-content table {
+        border: none;
+    }
+    
+    .pum-content.popmake-content table td {
+        border: none;
+    }
     
     @media print {
         .box-container {
