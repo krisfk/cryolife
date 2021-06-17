@@ -72,16 +72,14 @@ if (is_admin_bar_showing()) {
             if ($('.salesforce-form').hasClass('dirty')) {
 
                 alert(778);
-                $.post("/wp-json/api/abandon_sf", {
-                        name: "Donald Duck",
-                        city: "Duckburg"
-                    },
-                    function(data, status) {
-                        // console.log(data);
-                        alert(999);
+                //                 $.post("/wp-json/api/abandon_sf", {
+                //                         name: "Donald Duck",
+                //                         city: "Duckburg"
+                //                     },
+                //                     function(data, status) {
+                // =                        alert(999);
 
-                        // alert("Data: " + data + "\nStatus: " + status);
-                    });
+                //                     });
 
                 // http://165.22.180.89/en/wp-json/api/abandon_sf
             }
