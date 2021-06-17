@@ -326,6 +326,10 @@ Animations
     
     .wpcf7-form table td {
         border: none;
+        vertical-align: bottom;
+        border: none;
+        width: 50%;
+        padding-left: 0px;
     }
     
     .wpcf7-form table .wpcf7-not-valid-tip {
