@@ -20023,6 +20023,10 @@ font-size: 48px;
         top: 30px !important;
     }
     
+    .no-marquee #masthead.is_stuck .menu-container {
+        top: 0px !important;
+    }
+    
     .cli-style-v2 .cli-bar-message {
         font-size: 13px;
     }
