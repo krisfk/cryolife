@@ -20229,3 +20229,11 @@ min-height: 750px;
             display: block;
         }
     }
+    
+    .salesforce-form {
+        display: none;
+    }
+    
+    .wpcf7-form {
+        display: block;
+    }
