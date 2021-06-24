@@ -64,6 +64,17 @@ if (is_admin_bar_showing()) {
     var $ = jQuery;
     $(function() {
 
+        var h = $(window).height() * 0.7;
+        var w = $(window).width() * 0.7;
+
+        $(".ask-us-anything-a").prettyPhoto({
+            show_title: false,
+            social_tools: '',
+            allow_resize: false,
+            default_height: h,
+            default_width: w
+        });
+
 
 
         $('.salesforce-form').areYouSure({
