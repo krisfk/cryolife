@@ -251,9 +251,25 @@ if ( ! function_exists( 'uncode_get_current_post_type' ) || uncode_get_current_p
 
 }
 ?>
-<a href="/contact-form/" class="ask-us-anything-a"></a>
+<a href="/contact-form/?iframe=true" class="ask-us-anything-a" target="_blank"></a>
 
 <script type="text/javascript">
+$(function() {
+
+    var h = $(window).height() * 0.7;
+    var w = $(window).width() * 0.7;
+
+    $(".ask-us-anything-a").prettyPhoto({
+        show_title: false,
+        social_tools: '',
+        allow_resize: false,
+        default_height: h,
+        default_width: w
+    });
+
+
+})
+
 update_scroll_top();
 
 $(window).on('hashchange', function(e) {
