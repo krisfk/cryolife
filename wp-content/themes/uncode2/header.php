@@ -64,8 +64,8 @@ if (is_admin_bar_showing()) {
     var $ = jQuery;
     $(function() {
 
-        var h = $(window).height() * 0.7;
-        var w = $(window).width() * 0.7;
+        var h = $(window).height() * 0.9;
+        var w = $(window).width() * 0.9;
 
         $(".ask-us-anything-a").prettyPhoto({
             show_title: false,
