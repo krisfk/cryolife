@@ -19733,11 +19733,11 @@ SmartMenu: Offcanvas
     }
     
     .flexible-margin-first-row {
-        margin: 120px 0 0 0 !important;
+        margin: 0px 0 0 0 !important;
     }
     
     .home .flexible-margin-first-row {
-        margin: 100px 0 0 0 !important;
+        margin: 0px 0 0 0 !important;
     }
     /* h1.black {
 color: #000 !important;
