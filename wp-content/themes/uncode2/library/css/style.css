@@ -19864,6 +19864,10 @@ font-size: 48px;
         z-index: 1000;
     }
     
+    html[lang="zh-HK"] .ask-us-anything-a {
+        display: none;
+    }
+    
     .have-inside-white-block {
         position: relative;
     }
