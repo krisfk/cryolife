@@ -54,7 +54,7 @@ if (!class_exists('unmenu')) {
 			if ($stylemain === '') {
 				$stylemain = $general_style;
 			}
-
+			$stylemain='light';
 			$type = ($type == '') ? 'hmenu-right' : $type;
 			$vertical = (strpos($type, 'vmenu') !== false || $type === 'menu-overlay' || $type === 'menu-overlay-center') ? true : false;
 
