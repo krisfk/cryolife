@@ -19865,7 +19865,15 @@ font-size: 48px;
     }
     
     html[lang="zh-HK"] .ask-us-anything-a {
-        display: none;
+        background: url(../img/ask-us-anything-icon-zh.png);
+        background-size: 100% 100%;
+        display: block;
+        width: 80px;
+        height: 80px !important;
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        z-index: 1000;
     }
     
     .have-inside-white-block {
