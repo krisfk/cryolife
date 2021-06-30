@@ -336,6 +336,11 @@ Animations
         width: 100%;
     }
     
+    table td input[type="text"] {
+        border: 1px solid #000;
+        border-radius: 5px;
+    }
+    
     .wpcf7-form table .wpcf7-not-valid-tip {
         color: #f00 !important;
     }
