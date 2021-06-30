@@ -6891,6 +6891,7 @@ Animations
     
     .post-content img.size-full {
         display: block;
+        width: 100%;
     }
     
     .ie9 .post-content img[src$='.svg'] {
