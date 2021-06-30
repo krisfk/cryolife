@@ -4345,6 +4345,10 @@ button[type='submit'],
     color: #888888;
 }
 
+a:-webkit-any-link {
+    color: #f89178;
+}
+
 .menu-light .menu-smart a {
     color: #888888;
 }
