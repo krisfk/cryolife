@@ -570,7 +570,6 @@ if (!class_exists('unmenu')) {
 
 						$currentLang = qtrans_getLanguage();
 						echo $currentLang;
-						echo 1234567;
 						$search_inner .= 	'<a class="login-btn" href="https://cryolifehk.force.com/customer/s/login" target="_blank">Login</a>';
 						$search_inner .= 	'<a class="register-now-btn" href="https://cryolifehk.formtitan.com/ftd8e33f871615871999320_copy" target="_blank">Register</a>';
 
