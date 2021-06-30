@@ -5484,3 +5484,5 @@ body:not(.menu-force-opacity) .style-dark-override:not(.is_stuck):not(.is_mobile
     border-radius: 16px;
     background-clip: padding-box;
 }
+
+.abc {}
