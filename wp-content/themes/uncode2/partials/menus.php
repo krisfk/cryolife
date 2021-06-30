@@ -571,13 +571,13 @@ if (!class_exists('unmenu')) {
 						// $currentLang = qtrans_getLanguage();
 						// echo $currentLang;
 					
-						$login_txt = $GLOBALS['q_config']['language'] =='zh' : '登入';
-						$login_txt = $GLOBALS['q_config']['language'] =='cn' : '登入';
-						$login_txt = $GLOBALS['q_config']['language'] =='en' : 'Login';
+						$login_txt = $GLOBALS['q_config']['language'] =='zh' ? '登入' : '';
+						$login_txt = $GLOBALS['q_config']['language'] =='cn' ? '登入' : $login_txt;
+						$login_txt = $GLOBALS['q_config']['language'] =='en' ? 'Login' : $login_txt;
 						
-						$register_txt =  $GLOBALS['q_config']['language'] =='zh' : '註冊';
-						$register_txt =  $GLOBALS['q_config']['language'] =='cn' : '注册';
-						$register_txt =  $GLOBALS['q_config']['language'] =='en' : 'Register';
+						$register_txt =  $GLOBALS['q_config']['language'] =='zh' ? '註冊' :'';
+						$register_txt =  $GLOBALS['q_config']['language'] =='cn' ? '注册':$register_txt;
+						$register_txt =  $GLOBALS['q_config']['language'] =='en' ? 'Register':$register_txt;
 
 						$search_inner .= 	'<a class="login-btn" href="https://cryolifehk.force.com/customer/s/login" target="_blank">'.$login_txt.'</a>';
 						$search_inner .= 	'<a class="register-now-btn" href="https://cryolifehk.formtitan.com/ftd8e33f871615871999320_copy" target="_blank">'.$register_txt.'</a>';
