@@ -176,6 +176,7 @@ if (is_admin_bar_showing()) {
 	$vmenu_position = ot_get_option('_uncode_vmenu_position');
 	$fontsizes = ot_get_option( '_uncode_heading_font_sizes');
 	$background = ot_get_option( '_uncode_body_background');
+    $background['background-color']='light';
 
 	if (isset($metabox_data['_uncode_specific_body_background'])) {
 		$specific_background = unserialize($metabox_data['_uncode_specific_body_background'][0]);
