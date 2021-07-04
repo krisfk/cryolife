@@ -1908,6 +1908,10 @@ code {
     font-size: 18px;
 }
 
+.logo-image.main-logo {
+    height: 70px;
+}
+
 @media (max-width: 1499px) {
     .uncode-slider .text-lead>* {
         font-size: 16px;
