@@ -692,10 +692,10 @@ while (have_posts()):
 
 // echo 99999;
 
-// if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	
 	the_post_thumbnail( 'full' );
-	// }
+	}
 	// echo '</div>';
 	?>
 <div style="text-align:center;margin-top:20px;"><img
