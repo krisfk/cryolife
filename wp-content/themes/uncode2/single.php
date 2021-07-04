@@ -687,8 +687,9 @@ while (have_posts()):
 // echo "'>";
 
 echo '<div class="single-post-feature-img-top" style="">';
+echo wp_get_attachment_image( get_post_thumbnail_id(), 'thumbnail' ); 
 
-echo 99999;
+echo 999991;
 
 echo get_the_post_thumbnail();
 
