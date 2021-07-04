@@ -688,7 +688,7 @@ while (have_posts()):
 // the_post_thumbnail( 'full' );
 
 
-echo '<div class="single-post-feature-img-top" style="">';
+// echo '<div class="single-post-feature-img-top" style="">';
 
 // echo 99999;
 
@@ -696,7 +696,7 @@ echo '<div class="single-post-feature-img-top" style="">';
 	
 	the_post_thumbnail( 'full' );
 	// }
-	echo '</div>';
+	// echo '</div>';
 	?>
 <div style="text-align:center;margin-top:20px;"><img
         src="<?php echo get_template_directory_uri().'/library/img/news_bar.jpg';?>" alt=""></div>
