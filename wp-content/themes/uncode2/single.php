@@ -687,7 +687,9 @@ while (have_posts()):
 // echo "'>";
 // the_post_thumbnail( 'full' );
 
-
+?>
+<div class="single-post-feature-img-top">
+    <?php
 // echo '<div class="single-post-feature-img-top" style="">';
 
 // echo 99999;
@@ -696,61 +698,61 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 	
 	the_post_thumbnail( 'full' );
 	}
-	// echo '</div>';
+	echo '</div>';
 	?>
-<div style="text-align:center;margin-top:20px;"><img
-        src="<?php echo get_template_directory_uri().'/library/img/news_bar.jpg';?>" alt=""></div>
+    <div style="text-align:center;margin-top:20px;"><img
+            src="<?php echo get_template_directory_uri().'/library/img/news_bar.jpg';?>" alt=""></div>
 
-<?php
+    <?php
 	
 	echo 	'<article id="post-'. get_the_ID().'" class="'.implode(' ', get_post_class('page-body' . $bg_color)) .'">
           <div class="post-wrapper">
           	<div class="post-body">';
 			 ?>
-<?php
+    <?php
 			 echo uncode_remove_p_tag($the_content);
 			 echo'</div>' ;
 		
 			 ?>
-<?php
+    <?php
 			 if(get_field('bottom_youtube_video_code'))
 			 {
 				 ?>
-<div class="video-responsive"><iframe
-        src="https://www.youtube.com/embed/<?php echo get_field('bottom_youtube_video_code');?>?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1"
-        width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
-<?php
+    <div class="video-responsive"><iframe
+            src="https://www.youtube.com/embed/<?php echo get_field('bottom_youtube_video_code');?>?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1"
+            width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+    <?php
 			 }
 			 ?>
 
 
 
-<style>
-.video-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-    margin: 20px 0 0 0;
-}
+    <style>
+    .video-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+        margin: 20px 0 0 0;
+    }
 
-.video-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
+    .video-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
 
-.single-post-feature-img-top img {
-    display: none
-}
+    .single-post-feature-img-top img {
+        display: none
+    }
 
-.post-media {
-    display: none;
-}
-</style>
-<?php
+    .post-media {
+        display: none;
+    }
+    </style>
+    <?php
           	echo $navigation_content . '
           </div>
         </article>';
@@ -760,30 +762,30 @@ endwhile;
 if(get_field('slideshow_on_the_top'))
 {
 	?>
-<style>
-.post-media {
-    display: block;
-}
-</style>
-<script type="text/javascript">
-$(function() {
-    $('.single-post-feature-img-top img').remove()
-    $('.single-post-feature-img-top').append($('.post-media'))
-    $('.tmb .t-entry-visual').eq(0).css({
-        'margin': '0 auto'
+    <style>
+    .post-media {
+        display: block;
+    }
+    </style>
+    <script type="text/javascript">
+    $(function() {
+        $('.single-post-feature-img-top img').remove()
+        $('.single-post-feature-img-top').append($('.post-media'))
+        $('.tmb .t-entry-visual').eq(0).css({
+            'margin': '0 auto'
+        })
     })
-})
-</script>
-<?php
+    </script>
+    <?php
 }
 else{
 	?>
-<style type="text/css">
-.single-post-feature-img-top img {
-    display: inline-block;
-}
-</style>
-<?php
+    <style type="text/css">
+    .single-post-feature-img-top img {
+        display: inline-block;
+    }
+    </style>
+    <?php
 }
 
 get_footer(); ?>
