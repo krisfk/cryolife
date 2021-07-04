@@ -1908,9 +1908,10 @@ code {
     font-size: 18px;
 }
 
-.logo-image.main-logo {
+
+/* .logo-image.main-logo {
     height: 70px !important;
-}
+} */
 
 @media (max-width: 1499px) {
     .uncode-slider .text-lead>* {
