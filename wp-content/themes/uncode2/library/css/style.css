@@ -7349,7 +7349,7 @@ Animations
             display: block;
         }
         #main-logo .navbar-brand img {
-            height: 50px !important;
+            /* height: 50px !important; */
         }
     }
     
