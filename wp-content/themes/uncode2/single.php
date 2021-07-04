@@ -686,13 +686,9 @@ while (have_posts()):
 // echo $feat_image;
 // echo "'>";
 
-// echo '<div class="single-post-feature-img-top" style="">';
-// echo wp_get_attachment_image( get_post_thumbnail_id(), 'thumbnail' ); 
+echo '<div class="single-post-feature-img-top" style="">';
 
-// echo 999991;
-
-// echo get_the_ID();
-
+// echo 99999;
 
 if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	
