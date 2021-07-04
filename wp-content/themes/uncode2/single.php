@@ -687,7 +687,7 @@ while (have_posts()):
 // echo "'>";
 // the_post_thumbnail( 'full' );
 
-echo get_the_post_thumbnail( 'full' );
+// echo get_the_post_thumbnail( 'full' );
 echo '<div class="single-post-feature-img-top" style="">';
 
 // echo 99999;
