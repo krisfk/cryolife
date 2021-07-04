@@ -687,15 +687,15 @@ while (have_posts()):
 // echo "'>";
 // the_post_thumbnail( 'full' );
 
-// echo get_the_post_thumbnail( 'full' );
+
 echo '<div class="single-post-feature-img-top" style="">';
 
 // echo 99999;
 
-if (if has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+// if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	
-	echo get_the_post_thumbnail( 'full' );
-	}
+	the_post_thumbnail( 'full' );
+	// }
 	echo '</div>';
 	?>
 <div style="text-align:center;margin-top:20px;"><img
