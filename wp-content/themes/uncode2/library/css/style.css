@@ -7348,6 +7348,9 @@ Animations
         .navbar-cta ul.menu-smart>li {
             display: block;
         }
+        #main-logo .navbar-brand img {
+            height: 50px;
+        }
     }
     
     @media (min-width: 1281px) {
