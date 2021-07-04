@@ -7350,6 +7350,8 @@ Animations
         }
         #main-logo .navbar-brand img {
             /* height: 50px !important; */
+            position: relative;
+            top: -10px;
         }
     }
     
