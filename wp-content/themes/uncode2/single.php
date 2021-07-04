@@ -741,11 +741,11 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 }
 
 .single-post-feature-img-top img {
-    display: none
+    /* display: none */
 }
 
 .post-media {
-    display: none;
+    /* display: none; */
 }
 </style>
 <?php
