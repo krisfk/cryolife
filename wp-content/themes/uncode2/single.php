@@ -688,7 +688,7 @@ while (have_posts()):
 // the_post_thumbnail( 'full' );
 
 ?>
-<div class="single-post-feature-img-top">
+<div class="single-post-feature-img-topf">
     <?php
 // echo '<div class="single-post-feature-img-top" style="">';
 
