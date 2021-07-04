@@ -685,16 +685,16 @@ while (have_posts()):
 // echo "<img='";
 // echo $feat_image;
 // echo "'>";
-the_post_thumbnail( 'full' );
+// the_post_thumbnail( 'full' );
 
-
+echo get_the_post_thumbnail( 'full' );
 echo '<div class="single-post-feature-img-top" style="">';
 
 // echo 99999;
 
-if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+if (if has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	
-	the_post_thumbnail( 'full' );
+	echo get_the_post_thumbnail( 'full' );
 	}
 	echo '</div>';
 	?>
