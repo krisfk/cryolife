@@ -691,7 +691,7 @@ while (have_posts()):
 
 // echo 999991;
 
-echo get_the_ID();
+// echo get_the_ID();
 
 
 if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
