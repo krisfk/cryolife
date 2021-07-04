@@ -1913,6 +1913,10 @@ code {
     height: 70px !important;
 } */
 
+div[data-name="commenta-area"] {
+    display: none;
+}
+
 @media (max-width: 1499px) {
     .uncode-slider .text-lead>* {
         font-size: 16px;
