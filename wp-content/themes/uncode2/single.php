@@ -685,6 +685,8 @@ while (have_posts()):
 // echo "<img='";
 // echo $feat_image;
 // echo "'>";
+the_post_thumbnail( 'full' );
+
 
 echo '<div class="single-post-feature-img-top" style="">';
 
