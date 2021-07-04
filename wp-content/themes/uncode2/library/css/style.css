@@ -14362,6 +14362,7 @@ SmartMenu: Offcanvas
     
     .post-info {
         margin: 18px 0px 0px 0px;
+        display: none;
     }
     
     .post-info span {
