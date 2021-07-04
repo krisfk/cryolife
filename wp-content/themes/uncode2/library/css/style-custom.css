@@ -1909,7 +1909,7 @@ code {
 }
 
 .logo-image.main-logo {
-    height: 70px;
+    height: 70px !important;
 }
 
 @media (max-width: 1499px) {
