@@ -1951,7 +1951,7 @@ h1:not([class*='fontsize-']),
 h2:not([class*='fontsize-']),
 .h2:not([class*='fontsize-']) {
     /* font-size: 36px; */
-    font-size: 22px;
+    font-size: 28px;
 }
 
 @media (max-width: 959px) {
