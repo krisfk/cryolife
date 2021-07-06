@@ -3388,7 +3388,7 @@ Animations
         display: table-cell;
     }
     
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
         .col-lg-0,
         .col-lg-1,
         .col-lg-2,
@@ -7342,7 +7342,7 @@ Animations
         display: inline;
     }
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         body[class*='hmenu'] ul.menu-smart>li,
         ul.menu-smart.menu-horizontal>li,
         .navbar-cta ul.menu-smart>li {
@@ -7355,7 +7355,7 @@ Animations
         }
     }
     
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
         body[class*='hmenu'] ul.menu-smart>li,
         ul.menu-smart.menu-horizontal>li,
         .navbar-cta ul.menu-smart>li {
@@ -7429,7 +7429,7 @@ Animations
 ----------------------------------------------------------
 */
     
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
         .menu-smart {
             padding: 0px 13px 0px 13px;
         }
@@ -7467,7 +7467,7 @@ Animations
         border-left-width: 0 !important;
     }
     
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
         .menu-smart>li>a {
             padding: 0px 14px 0px 14px;
         }
@@ -7664,7 +7664,7 @@ Animations
         display: table-cell;
     }
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         .menu-horizontal {
             overflow: hidden;
         }
@@ -7705,7 +7705,7 @@ Animations
         }
     }
     
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
         .menu-horizontal>div {
             height: 100%;
             display: inline-table;
@@ -7828,7 +7828,7 @@ Animations
         position: relative;
     }
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         .menu-horizontal {
             overflow: hidden;
         }
@@ -8044,7 +8044,7 @@ Animations
 ----------------------------------------------------------
 */
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         ul.menu-smart {
             width: 100% !important;
         }
@@ -8348,7 +8348,7 @@ SmartMenu: Offcanvas
 ----------------------------------------------------------
 */
     
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
         .hmenu:not(.hmenu-center-split) .navbar-nav-first:not(.navbar-cta) {
             width: 100%;
         }
@@ -8545,7 +8545,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
         .hmenu .menu-horizontal-inner {
             width: 100%;
         }
@@ -8624,7 +8624,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         .menu-wrapper {
             position: relative;
             z-index: 1000;
@@ -8737,7 +8737,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         .menu-wrapper.menu-sticky .main-menu-container,
         .menu-wrapper.menu-hide-only .main-menu-container {
             overflow: scroll;
@@ -8920,7 +8920,7 @@ SmartMenu: Offcanvas
         }
     }
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         body:not(.menu-mobile-centered) .main-menu-container .menu-smart ul a:not(.cart-thumb):not(.btn) {
             margin-left: 5px;
         }
@@ -9005,7 +9005,7 @@ SmartMenu: Offcanvas
         line-height: 1em;
     }
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         .menu-wrapper div[class*='col-lg-'] {
             display: block;
         }
@@ -9220,7 +9220,7 @@ SmartMenu: Offcanvas
 ----------------------------------------------------------
 */
     
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
         body.hmenu-position-right .menu-primary-inner {
             text-align: right;
         }
@@ -9588,7 +9588,7 @@ SmartMenu: Offcanvas
 ----------------------------------------------------------
 */
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         .menu-container {
             z-index: 1000;
         }
@@ -10188,7 +10188,7 @@ SmartMenu: Offcanvas
         display: block;
     }
     
-    @media screen and (max-width: 1279px) {
+    @media screen and (max-width: 1280px) {
         .mobile-menu-button {
             display: inline-block;
             opacity: 1 !important;
@@ -20118,7 +20118,7 @@ min-height: 750px;
         /* flex-direction: column-reverse; */
     }
     
-    @media (max-width: 1279px) {
+    @media (max-width: 1280px) {
         /* .video-div {
     margin: 10px 0 0 0;
 } */
