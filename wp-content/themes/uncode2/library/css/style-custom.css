@@ -4704,6 +4704,10 @@ body:not(.menu-force-opacity).menu-overlay .menu-transparent:not(.is_stuck):not(
 
 /* Submenu borders transparent  */
 
+.navbar-nav-last {
+    display: none;
+}
+
 @media (min-width: 960px) {
     .submenu-transparent.submenu-light .menu-smart ul,
     .submenu-transparent.submenu-light .menu-smart li ul li {
