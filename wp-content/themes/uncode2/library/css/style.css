@@ -19687,7 +19687,7 @@ SmartMenu: Offcanvas
     }
     
     .nav.navbar-nav.navbar-nav-last {
-        /* display: none !important; */
+        display: none !important;
     }
     
     .home-subtitle-big-font {
