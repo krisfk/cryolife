@@ -4705,7 +4705,7 @@ body:not(.menu-force-opacity).menu-overlay .menu-transparent:not(.is_stuck):not(
 /* Submenu borders transparent  */
 
 .navbar-nav-last {
-    display: none;
+    display: none !important;
 }
 
 @media (min-width: 960px) {
